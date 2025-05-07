@@ -28,12 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            mainDashboardUserControl1 = new Consultation.App.Dashboard.MainDashboardUserControl();
+            SuspendLayout();
+            // 
+            // mainDashboardUserControl1
+            // 
+            mainDashboardUserControl1.BackColor = SystemColors.AppWorkspace;
+            mainDashboardUserControl1.Location = new Point(-2, 1);
+            mainDashboardUserControl1.Name = "mainDashboardUserControl1";
+            mainDashboardUserControl1.Size = new Size(1326, 623);
+            mainDashboardUserControl1.TabIndex = 0;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1153, 636);
+            Controls.Add(mainDashboardUserControl1);
+            Name = "Form1";
+            Text = "Form1";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Dashboard.MainDashboardUserControl mainDashboardUserControl1;
     }
 }
