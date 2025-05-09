@@ -33,17 +33,18 @@
             // 
             // mainDashboardUserControl1
             // 
-            mainDashboardUserControl1.BackColor = SystemColors.AppWorkspace;
-            mainDashboardUserControl1.Location = new Point(-2, 1);
+            mainDashboardUserControl1.BackColor = Color.White;
+            mainDashboardUserControl1.ForeColor = Color.Red;
+            mainDashboardUserControl1.Location = new Point(283, 61);
             mainDashboardUserControl1.Name = "mainDashboardUserControl1";
-            mainDashboardUserControl1.Size = new Size(1326, 623);
+            mainDashboardUserControl1.Size = new Size(1620, 980);
             mainDashboardUserControl1.TabIndex = 0;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1153, 636);
+            ClientSize = new Size(1904, 1041);
             Controls.Add(mainDashboardUserControl1);
             Name = "Form1";
             Text = "Form1";

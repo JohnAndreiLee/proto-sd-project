@@ -9,40 +9,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Dashboard\Front Display Tabs\" />
+    <Folder Include="Dashboard\Upcoming Schedule Panel\" />
     <Folder Include="Presenters\" />
     <Folder Include="Views\IViews\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.7" />
-    <PackageReference Include="Mtf.Controls" Version="1.0.93" />
+    <PackageReference Include="MaterialSkin.2" Version="2.3.1" />
     <PackageReference Include="Syncfusion.Core.WinForms" Version="29.1.41" />
     <PackageReference Include="Syncfusion.SfInput.WinForms" Version="29.1.41" />
     <PackageReference Include="Syncfusion.Tools.Windows" Version="29.1.41" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Dashboard\Front Display Tabs\NewConsultationTab.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Dashboard\Front Display Tabs\PendingTaskTab.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Dashboard\Front Display Tabs\ActiveBulletinsTab.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Dashboard\Front Display Tabs\UpcomingEventsTab.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Dashboard\Upcoming Schedule Panel\UpcomingSchedulePanel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Dashboard\Upcoming Schedule Panel\TodayTab.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Dashboard\Upcoming Schedule Panel\ThisWeekTab.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

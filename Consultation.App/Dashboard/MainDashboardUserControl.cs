@@ -14,10 +14,19 @@ namespace Consultation.App.Dashboard
         public MainDashboardUserControl()
         {
             InitializeComponent();
-            Color containerColor = Form1.DefaultForeColor;
-            textBoxExt1.BackColor = containerColor;
-            textBoxExt1.BorderColor = containerColor;
-            textBoxExt1.BorderStyle = BorderStyle.None; // Optional
+
+        }
+
+        private void BulletinButton_Click(object sender, EventArgs e)
+        {
+            //BulletinButton.ForeColor = Color.FromArgb(192, 0, 0);
+            //ConsultationButton.ForeColor = Color.DimGray;
+        }
+
+        private void ConsultationButton_Click(object sender, EventArgs e)
+        {
+            //ConsultationButton.ForeColor = Color.FromArgb(192, 0, 0);
+            //BulletinButton.ForeColor = Color.DimGray;
         }
     }
 }
