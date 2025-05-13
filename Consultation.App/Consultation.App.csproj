@@ -9,8 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Dashboard\Front Display Tabs\" />
-    <Folder Include="Dashboard\Upcoming Schedule Panel\" />
+    <Compile Remove="Dashboard\Front Display Tabs\**" />
+    <Compile Remove="Dashboard\Upcoming Schedule Panel\**" />
+    <EmbeddedResource Remove="Dashboard\Front Display Tabs\**" />
+    <EmbeddedResource Remove="Dashboard\Upcoming Schedule Panel\**" />
+    <None Remove="Dashboard\Front Display Tabs\**" />
+    <None Remove="Dashboard\Upcoming Schedule Panel\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Presenters\" />
     <Folder Include="Views\IViews\" />
   </ItemGroup>

@@ -1,6 +1,6 @@
 ﻿namespace Consultation.App.Dashboard.Activity_Feed_Panel
 {
-    partial class UpcomingSchedulePanel
+    partial class BulletinCard
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,12 +30,13 @@
         {
             SuspendLayout();
             // 
-            // ActivityFeedPanel
+            // BulletinCard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Name = "ActivityFeedPanel";
-            Size = new Size(460, 589);
+            BackColor = Color.DarkGray;
+            Name = "BulletinCard";
+            Size = new Size(840, 170);
             ResumeLayout(false);
         }
 

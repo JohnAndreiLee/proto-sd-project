@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Consultation.App.Dashboard.Activity_Feed_Panel
 {
-    public partial class ThisWeekTab : UserControl
+    public partial class ConsultationCard : UserControl
     {
-        public ThisWeekTab()
+        public ConsultationCard()
         {
             InitializeComponent();
         }

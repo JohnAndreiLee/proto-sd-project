@@ -1,6 +1,6 @@
 ﻿namespace Consultation.App.Dashboard.Activity_Feed_Panel
 {
-    partial class ThisWeekTab
+    partial class Bulletin
     {
         /// <summary> 
         /// Required designer variable.

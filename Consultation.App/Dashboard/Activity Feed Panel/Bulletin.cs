@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Consultation.App.Dashboard.Activity_Feed_Panel
 {
-    public partial class UpcomingSchedulePanel : UserControl
+    public partial class Bulletin : UserControl
     {
-        public UpcomingSchedulePanel()
+        public Bulletin()
         {
             InitializeComponent();
         }

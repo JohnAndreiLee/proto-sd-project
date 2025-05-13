@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            ActivityFeedPanel = new MaterialSkin.Controls.MaterialCard();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            bulletinCard1 = new Activity_Feed_Panel.BulletinCard();
+            bulletinCard2 = new Activity_Feed_Panel.BulletinCard();
             autoLabel1 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             materialCard2 = new MaterialSkin.Controls.MaterialCard();
             ConsultationButton = new Syncfusion.WinForms.Controls.SfButton();
@@ -53,6 +56,9 @@
             autoLabel4 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             panel2 = new Panel();
             panel4 = new Panel();
+            bulletinCard3 = new Activity_Feed_Panel.BulletinCard();
+            ActivityFeedPanel.SuspendLayout();
+            flowLayoutPanel1.SuspendLayout();
             materialCard2.SuspendLayout();
             materialCard3.SuspendLayout();
             materialCard4.SuspendLayout();
@@ -61,26 +67,61 @@
             materialCard8.SuspendLayout();
             SuspendLayout();
             // 
-            // materialCard1
+            // ActivityFeedPanel
             // 
-            materialCard1.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard1.Depth = 0;
-            materialCard1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard1.Location = new Point(53, 351);
-            materialCard1.Margin = new Padding(14);
-            materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
-            materialCard1.Name = "materialCard1";
-            materialCard1.Padding = new Padding(14);
-            materialCard1.Size = new Size(900, 600);
-            materialCard1.TabIndex = 0;
+            ActivityFeedPanel.BackColor = Color.FromArgb(255, 255, 255);
+            ActivityFeedPanel.Controls.Add(flowLayoutPanel1);
+            ActivityFeedPanel.Depth = 0;
+            ActivityFeedPanel.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            ActivityFeedPanel.Location = new Point(53, 351);
+            ActivityFeedPanel.Margin = new Padding(14);
+            ActivityFeedPanel.MouseState = MaterialSkin.MouseState.HOVER;
+            ActivityFeedPanel.Name = "ActivityFeedPanel";
+            ActivityFeedPanel.Padding = new Padding(14);
+            ActivityFeedPanel.Size = new Size(900, 600);
+            ActivityFeedPanel.TabIndex = 0;
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.AutoScroll = true;
+            flowLayoutPanel1.Controls.Add(bulletinCard1);
+            flowLayoutPanel1.Controls.Add(bulletinCard2);
+            flowLayoutPanel1.Controls.Add(bulletinCard3);
+            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
+            flowLayoutPanel1.Location = new Point(17, 0);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(883, 600);
+            flowLayoutPanel1.TabIndex = 0;
+            // 
+            // bulletinCard1
+            // 
+            bulletinCard1.AllowDrop = true;
+            bulletinCard1.AutoScroll = true;
+            bulletinCard1.AutoSize = true;
+            bulletinCard1.BackColor = Color.FromArgb(224, 224, 224);
+            bulletinCard1.Location = new Point(3, 3);
+            bulletinCard1.Name = "bulletinCard1";
+            bulletinCard1.Size = new Size(0, 0);
+            bulletinCard1.TabIndex = 0;
+            // 
+            // bulletinCard2
+            // 
+            bulletinCard2.AllowDrop = true;
+            bulletinCard2.AutoScroll = true;
+            bulletinCard2.AutoSize = true;
+            bulletinCard2.BackColor = SystemColors.AppWorkspace;
+            bulletinCard2.Location = new Point(3, 9);
+            bulletinCard2.Name = "bulletinCard2";
+            bulletinCard2.Size = new Size(0, 0);
+            bulletinCard2.TabIndex = 13;
             // 
             // autoLabel1
             // 
-            autoLabel1.Font = new Font("Archivo Black", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            autoLabel1.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             autoLabel1.Location = new Point(17, 20);
             autoLabel1.Name = "autoLabel1";
             autoLabel1.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Custom;
-            autoLabel1.Size = new Size(164, 30);
+            autoLabel1.Size = new Size(136, 25);
             autoLabel1.TabIndex = 1;
             autoLabel1.Text = "Activity Feed";
             // 
@@ -105,7 +146,7 @@
             ConsultationButton.BackColor = SystemColors.ButtonHighlight;
             ConsultationButton.FlatStyle = FlatStyle.Popup;
             ConsultationButton.FocusRectangleVisible = true;
-            ConsultationButton.Font = new Font("Archivo Medium", 9.749999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ConsultationButton.Font = new Font("Microsoft Sans Serif", 9.749999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ConsultationButton.ForeColor = Color.DimGray;
             ConsultationButton.Location = new Point(787, 20);
             ConsultationButton.Name = "ConsultationButton";
@@ -122,7 +163,7 @@
             BulletinButton.BackColor = SystemColors.ButtonHighlight;
             BulletinButton.FlatStyle = FlatStyle.Popup;
             BulletinButton.FocusRectangleVisible = true;
-            BulletinButton.Font = new Font("Archivo", 9.749999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            BulletinButton.Font = new Font("Microsoft Sans Serif", 9.749999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             BulletinButton.ForeColor = Color.FromArgb(192, 0, 0);
             BulletinButton.Location = new Point(685, 20);
             BulletinButton.Name = "BulletinButton";
@@ -151,12 +192,12 @@
             // 
             // autoLabel5
             // 
-            autoLabel5.Font = new Font("Archivo", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            autoLabel5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             autoLabel5.ForeColor = Color.DimGray;
             autoLabel5.Location = new Point(29, 14);
             autoLabel5.Name = "autoLabel5";
             autoLabel5.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Custom;
-            autoLabel5.Size = new Size(154, 22);
+            autoLabel5.Size = new Size(158, 20);
             autoLabel5.TabIndex = 6;
             autoLabel5.Text = "New Consultations";
             // 
@@ -171,23 +212,23 @@
             // 
             // WelcomeLabel
             // 
-            WelcomeLabel.Font = new Font("Archivo", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            WelcomeLabel.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             WelcomeLabel.ForeColor = Color.Black;
             WelcomeLabel.Location = new Point(45, 19);
             WelcomeLabel.Name = "WelcomeLabel";
             WelcomeLabel.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Custom;
-            WelcomeLabel.Size = new Size(169, 45);
+            WelcomeLabel.Size = new Size(167, 37);
             WelcomeLabel.TabIndex = 4;
             WelcomeLabel.Text = "Welcome ";
             // 
             // autoLabel3
             // 
-            autoLabel3.Font = new Font("Archivo", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            autoLabel3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             autoLabel3.ForeColor = Color.Gray;
             autoLabel3.Location = new Point(51, 64);
             autoLabel3.Name = "autoLabel3";
             autoLabel3.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Custom;
-            autoLabel3.Size = new Size(296, 22);
+            autoLabel3.Size = new Size(313, 20);
             autoLabel3.TabIndex = 5;
             autoLabel3.Text = "Here's what's happening at UM  today";
             // 
@@ -207,12 +248,12 @@
             // 
             // autoLabel6
             // 
-            autoLabel6.Font = new Font("Archivo", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            autoLabel6.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             autoLabel6.ForeColor = Color.DimGray;
             autoLabel6.Location = new Point(31, 14);
             autoLabel6.Name = "autoLabel6";
             autoLabel6.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Custom;
-            autoLabel6.Size = new Size(146, 22);
+            autoLabel6.Size = new Size(149, 20);
             autoLabel6.TabIndex = 7;
             autoLabel6.Text = "Upcoming Events";
             // 
@@ -233,12 +274,12 @@
             // 
             // autoLabel7
             // 
-            autoLabel7.Font = new Font("Archivo", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            autoLabel7.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             autoLabel7.ForeColor = Color.DimGray;
             autoLabel7.Location = new Point(34, 14);
             autoLabel7.Name = "autoLabel7";
             autoLabel7.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Custom;
-            autoLabel7.Size = new Size(129, 22);
+            autoLabel7.Size = new Size(132, 20);
             autoLabel7.TabIndex = 13;
             autoLabel7.Text = "Active Bulletins";
             // 
@@ -266,12 +307,12 @@
             // 
             // autoLabel8
             // 
-            autoLabel8.Font = new Font("Archivo", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            autoLabel8.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             autoLabel8.ForeColor = Color.DimGray;
             autoLabel8.Location = new Point(34, 14);
             autoLabel8.Name = "autoLabel8";
             autoLabel8.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Custom;
-            autoLabel8.Size = new Size(123, 22);
+            autoLabel8.Size = new Size(126, 20);
             autoLabel8.TabIndex = 14;
             autoLabel8.Text = "Pending Tasks";
             // 
@@ -348,11 +389,11 @@
             // 
             // autoLabel4
             // 
-            autoLabel4.Font = new Font("Archivo Black", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            autoLabel4.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             autoLabel4.Location = new Point(17, 20);
             autoLabel4.Name = "autoLabel4";
             autoLabel4.Position = Syncfusion.Windows.Forms.Tools.AutoLabelPosition.Custom;
-            autoLabel4.Size = new Size(242, 30);
+            autoLabel4.Size = new Size(204, 25);
             autoLabel4.TabIndex = 1;
             autoLabel4.Text = "Upcoming Schedule";
             // 
@@ -372,6 +413,14 @@
             panel4.Size = new Size(16, 150);
             panel4.TabIndex = 12;
             // 
+            // bulletinCard3
+            // 
+            bulletinCard3.BackColor = Color.DarkGray;
+            bulletinCard3.Location = new Point(3, 15);
+            bulletinCard3.Name = "bulletinCard3";
+            bulletinCard3.Size = new Size(840, 170);
+            bulletinCard3.TabIndex = 14;
+            // 
             // MainDashboardUserControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -388,10 +437,14 @@
             Controls.Add(WelcomeLabel);
             Controls.Add(materialCard3);
             Controls.Add(materialCard2);
-            Controls.Add(materialCard1);
+            Controls.Add(ActivityFeedPanel);
             ForeColor = Color.Red;
             Name = "MainDashboardUserControl";
             Size = new Size(1620, 980);
+            Load += MainDashboardUserControl_Load;
+            ActivityFeedPanel.ResumeLayout(false);
+            flowLayoutPanel1.ResumeLayout(false);
+            flowLayoutPanel1.PerformLayout();
             materialCard2.ResumeLayout(false);
             materialCard2.PerformLayout();
             materialCard3.ResumeLayout(false);
@@ -409,8 +462,6 @@
         }
 
         #endregion
-
-        private MaterialSkin.Controls.MaterialCard materialCard1;
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel1;
         private MaterialSkin.Controls.MaterialCard materialCard2;
         private Syncfusion.WinForms.Controls.SfButton BulletinButton;
@@ -435,5 +486,10 @@
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel8;
         private Syncfusion.WinForms.Controls.SfButton ThisWeekButton;
         private Syncfusion.WinForms.Controls.SfButton TodayButton;
+        public MaterialSkin.Controls.MaterialCard ActivityFeedPanel;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private Activity_Feed_Panel.BulletinCard bulletinCard1;
+        private Activity_Feed_Panel.BulletinCard bulletinCard2;
+        private Activity_Feed_Panel.BulletinCard bulletinCard3;
     }
 }
