@@ -33,10 +33,10 @@
             label2 = new Label();
             label1 = new Label();
             panel2 = new Panel();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
             label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -89,23 +89,14 @@
             panel2.Size = new Size(1295, 77);
             panel2.TabIndex = 2;
             // 
-            // label3
+            // label6
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(59, 29);
-            label3.Name = "label3";
-            label3.Size = new Size(93, 15);
-            label3.TabIndex = 0;
-            label3.Text = "Faculty Member";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(378, 29);
-            label4.Name = "label4";
-            label4.Size = new Size(21, 15);
-            label4.TabIndex = 1;
-            label4.Text = "I.D";
+            label6.AutoSize = true;
+            label6.Location = new Point(1139, 29);
+            label6.Name = "label6";
+            label6.Size = new Size(47, 15);
+            label6.TabIndex = 3;
+            label6.Text = "Actions";
             // 
             // label5
             // 
@@ -116,14 +107,23 @@
             label5.TabIndex = 2;
             label5.Text = "Umindanao Email";
             // 
-            // label6
+            // label4
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(1139, 29);
-            label6.Name = "label6";
-            label6.Size = new Size(47, 15);
-            label6.TabIndex = 3;
-            label6.Text = "Actions";
+            label4.AutoSize = true;
+            label4.Location = new Point(378, 29);
+            label4.Name = "label4";
+            label4.Size = new Size(21, 15);
+            label4.TabIndex = 1;
+            label4.Text = "I.D";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(59, 29);
+            label3.Name = "label3";
+            label3.Size = new Size(93, 15);
+            label3.TabIndex = 0;
+            label3.Text = "Faculty Member";
             // 
             // FacultyListCard
             // 
