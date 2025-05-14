@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Consultation.App.Consultation.Dashboard
+namespace Student_Faculty
 {
-    public partial class Archive : Form
+    public partial class FacultyListCard : UserControl
     {
-        public Archive()
+        public FacultyListCard()
         {
             InitializeComponent();
         }
