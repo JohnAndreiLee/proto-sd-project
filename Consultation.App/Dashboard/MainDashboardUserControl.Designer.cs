@@ -53,11 +53,13 @@
             autoLabel4 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             panel2 = new Panel();
             panel4 = new Panel();
+            today1 = new Consultation.App.Dashboard.Upcoming_Schedule.Today();
             materialCard2.SuspendLayout();
             materialCard3.SuspendLayout();
             materialCard4.SuspendLayout();
             materialCard5.SuspendLayout();
             materialCard6.SuspendLayout();
+            materialCard7.SuspendLayout();
             materialCard8.SuspendLayout();
             SuspendLayout();
             // 
@@ -107,9 +109,9 @@
             ConsultationButton.FocusRectangleVisible = true;
             ConsultationButton.Font = new Font("Microsoft Sans Serif", 9.749999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ConsultationButton.ForeColor = Color.DimGray;
-            ConsultationButton.Location = new Point(787, 20);
+            ConsultationButton.Location = new Point(772, 20);
             ConsultationButton.Name = "ConsultationButton";
-            ConsultationButton.Size = new Size(96, 28);
+            ConsultationButton.Size = new Size(111, 28);
             ConsultationButton.Style.BackColor = SystemColors.ButtonHighlight;
             ConsultationButton.Style.ForeColor = Color.DimGray;
             ConsultationButton.TabIndex = 11;
@@ -278,6 +280,7 @@
             // materialCard7
             // 
             materialCard7.BackColor = Color.FromArgb(255, 255, 255);
+            materialCard7.Controls.Add(today1);
             materialCard7.Depth = 0;
             materialCard7.ForeColor = Color.FromArgb(222, 0, 0, 0);
             materialCard7.Location = new Point(994, 351);
@@ -319,6 +322,7 @@
             ThisWeekButton.TabIndex = 13;
             ThisWeekButton.Text = "This Week";
             ThisWeekButton.UseVisualStyleBackColor = false;
+            ThisWeekButton.Click += ThisWeekButton_Click;
             // 
             // TodayButton
             // 
@@ -334,6 +338,7 @@
             TodayButton.TabIndex = 12;
             TodayButton.Text = "Today";
             TodayButton.UseVisualStyleBackColor = false;
+            TodayButton.Click += TodayButton_Click;
             // 
             // sfButton2
             // 
@@ -372,6 +377,13 @@
             panel4.Size = new Size(16, 150);
             panel4.TabIndex = 12;
             // 
+            // today1
+            // 
+            today1.Location = new Point(0, 0);
+            today1.Name = "today1";
+            today1.Size = new Size(574, 600);
+            today1.TabIndex = 0;
+            // 
             // MainDashboardUserControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -403,6 +415,7 @@
             materialCard5.PerformLayout();
             materialCard6.ResumeLayout(false);
             materialCard6.PerformLayout();
+            materialCard7.ResumeLayout(false);
             materialCard8.ResumeLayout(false);
             materialCard8.PerformLayout();
             ResumeLayout(false);
@@ -435,5 +448,6 @@
         private Syncfusion.WinForms.Controls.SfButton ThisWeekButton;
         private Syncfusion.WinForms.Controls.SfButton TodayButton;
         public MaterialSkin.Controls.MaterialCard ActivityFeedPanel;
+        private Upcoming_Schedule.Today today1;
     }
 }

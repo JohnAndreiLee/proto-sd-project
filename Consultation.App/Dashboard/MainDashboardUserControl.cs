@@ -34,5 +34,13 @@ namespace Consultation.App.Dashboard
         {
             ActivityFeedPanel.Controls.Add(new Bulletin());
         }
+
+        private void TodayButton_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void ThisWeekButton_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
