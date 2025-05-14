@@ -34,7 +34,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.DarkGray;
+            BackColor = Color.WhiteSmoke;
             Name = "BulletinCard";
             Size = new Size(840, 170);
             ResumeLayout(false);

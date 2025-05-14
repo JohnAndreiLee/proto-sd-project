@@ -28,10 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            SuspendLayout();
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.AutoScroll = true;
+            flowLayoutPanel1.Location = new Point(19, 3);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(881, 597);
+            flowLayoutPanel1.TabIndex = 0;
+            // 
+            // Bulletin
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(flowLayoutPanel1);
+            Name = "Bulletin";
+            Size = new Size(900, 600);
+            ResumeLayout(false);
         }
 
         #endregion
+
+        public FlowLayoutPanel flowLayoutPanel1;
     }
 }

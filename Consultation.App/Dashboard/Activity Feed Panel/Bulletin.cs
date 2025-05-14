@@ -15,6 +15,11 @@ namespace Consultation.App.Dashboard.Activity_Feed_Panel
         public Bulletin()
         {
             InitializeComponent();
+
+            for (int i = 0; i < 10; i++)
+            {
+                flowLayoutPanel1.Controls.Add(new BulletinCard());
+            }
         }
     }
 }

@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             ActivityFeedPanel = new MaterialSkin.Controls.MaterialCard();
-            flowLayoutPanel1 = new FlowLayoutPanel();
-            bulletinCard1 = new Activity_Feed_Panel.BulletinCard();
-            bulletinCard2 = new Activity_Feed_Panel.BulletinCard();
             autoLabel1 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             materialCard2 = new MaterialSkin.Controls.MaterialCard();
             ConsultationButton = new Syncfusion.WinForms.Controls.SfButton();
@@ -56,9 +53,6 @@
             autoLabel4 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             panel2 = new Panel();
             panel4 = new Panel();
-            bulletinCard3 = new Activity_Feed_Panel.BulletinCard();
-            ActivityFeedPanel.SuspendLayout();
-            flowLayoutPanel1.SuspendLayout();
             materialCard2.SuspendLayout();
             materialCard3.SuspendLayout();
             materialCard4.SuspendLayout();
@@ -70,7 +64,6 @@
             // ActivityFeedPanel
             // 
             ActivityFeedPanel.BackColor = Color.FromArgb(255, 255, 255);
-            ActivityFeedPanel.Controls.Add(flowLayoutPanel1);
             ActivityFeedPanel.Depth = 0;
             ActivityFeedPanel.ForeColor = Color.FromArgb(222, 0, 0, 0);
             ActivityFeedPanel.Location = new Point(53, 351);
@@ -80,40 +73,6 @@
             ActivityFeedPanel.Padding = new Padding(14);
             ActivityFeedPanel.Size = new Size(900, 600);
             ActivityFeedPanel.TabIndex = 0;
-            // 
-            // flowLayoutPanel1
-            // 
-            flowLayoutPanel1.AutoScroll = true;
-            flowLayoutPanel1.Controls.Add(bulletinCard1);
-            flowLayoutPanel1.Controls.Add(bulletinCard2);
-            flowLayoutPanel1.Controls.Add(bulletinCard3);
-            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel1.Location = new Point(17, 0);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(883, 600);
-            flowLayoutPanel1.TabIndex = 0;
-            // 
-            // bulletinCard1
-            // 
-            bulletinCard1.AllowDrop = true;
-            bulletinCard1.AutoScroll = true;
-            bulletinCard1.AutoSize = true;
-            bulletinCard1.BackColor = Color.FromArgb(224, 224, 224);
-            bulletinCard1.Location = new Point(3, 3);
-            bulletinCard1.Name = "bulletinCard1";
-            bulletinCard1.Size = new Size(0, 0);
-            bulletinCard1.TabIndex = 0;
-            // 
-            // bulletinCard2
-            // 
-            bulletinCard2.AllowDrop = true;
-            bulletinCard2.AutoScroll = true;
-            bulletinCard2.AutoSize = true;
-            bulletinCard2.BackColor = SystemColors.AppWorkspace;
-            bulletinCard2.Location = new Point(3, 9);
-            bulletinCard2.Name = "bulletinCard2";
-            bulletinCard2.Size = new Size(0, 0);
-            bulletinCard2.TabIndex = 13;
             // 
             // autoLabel1
             // 
@@ -413,14 +372,6 @@
             panel4.Size = new Size(16, 150);
             panel4.TabIndex = 12;
             // 
-            // bulletinCard3
-            // 
-            bulletinCard3.BackColor = Color.DarkGray;
-            bulletinCard3.Location = new Point(3, 15);
-            bulletinCard3.Name = "bulletinCard3";
-            bulletinCard3.Size = new Size(840, 170);
-            bulletinCard3.TabIndex = 14;
-            // 
             // MainDashboardUserControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -442,9 +393,6 @@
             Name = "MainDashboardUserControl";
             Size = new Size(1620, 980);
             Load += MainDashboardUserControl_Load;
-            ActivityFeedPanel.ResumeLayout(false);
-            flowLayoutPanel1.ResumeLayout(false);
-            flowLayoutPanel1.PerformLayout();
             materialCard2.ResumeLayout(false);
             materialCard2.PerformLayout();
             materialCard3.ResumeLayout(false);
@@ -487,9 +435,5 @@
         private Syncfusion.WinForms.Controls.SfButton ThisWeekButton;
         private Syncfusion.WinForms.Controls.SfButton TodayButton;
         public MaterialSkin.Controls.MaterialCard ActivityFeedPanel;
-        private FlowLayoutPanel flowLayoutPanel1;
-        private Activity_Feed_Panel.BulletinCard bulletinCard1;
-        private Activity_Feed_Panel.BulletinCard bulletinCard2;
-        private Activity_Feed_Panel.BulletinCard bulletinCard3;
     }
 }

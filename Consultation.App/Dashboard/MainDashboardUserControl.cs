@@ -20,18 +20,19 @@ namespace Consultation.App.Dashboard
 
         private void BulletinButton_Click(object sender, EventArgs e)
         {
-            flowLayoutPanel1.Controls.Clear();
-            flowLayoutPanel1.Controls.Add(new Bulletin());
+            ActivityFeedPanel.Controls.Clear();
+            ActivityFeedPanel.Controls.Add(new Bulletin());
         }
 
         private void ConsultationButton_Click(object sender, EventArgs e)
         {
-            flowLayoutPanel1.Controls.Clear();
+            ActivityFeedPanel.Controls.Clear();
+            ActivityFeedPanel.Controls.Add(new Consultation2());
         }
 
         private void MainDashboardUserControl_Load(object sender, EventArgs e)
         {
-            flowLayoutPanel1.Controls.Add(new Bulletin());
+            ActivityFeedPanel.Controls.Add(new Bulletin());
         }
     }
 }

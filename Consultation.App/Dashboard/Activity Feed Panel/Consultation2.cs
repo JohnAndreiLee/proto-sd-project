@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Consultation.App.Dashboard.Activity_Feed_Panel
 {
-    public partial class Consultation : UserControl
+    public partial class Consultation2 : UserControl
     {
-        public Consultation()
+        public Consultation2()
         {
             InitializeComponent();
+
+            for (int i = 0; i < 10; i++)
+            {
+                flowLayoutPanel1.Controls.Add(new ConsultationCard());
+            }
         }
     }
 }

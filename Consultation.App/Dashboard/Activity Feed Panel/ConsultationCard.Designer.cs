@@ -28,17 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
+            BulletinTitle = new Syncfusion.Windows.Forms.Tools.AutoLabel();
+            autoLabel1 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             SuspendLayout();
+            // 
+            // BulletinTitle
+            // 
+            BulletinTitle.Location = new Point(36, 25);
+            BulletinTitle.Name = "BulletinTitle";
+            BulletinTitle.Size = new Size(65, 15);
+            BulletinTitle.TabIndex = 0;
+            BulletinTitle.Text = "autoLabel1";
+            // 
+            // autoLabel1
+            // 
+            autoLabel1.Location = new Point(36, 58);
+            autoLabel1.Name = "autoLabel1";
+            autoLabel1.Size = new Size(65, 15);
+            autoLabel1.TabIndex = 1;
+            autoLabel1.Text = "autoLabel1";
             // 
             // ConsultationCard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.WhiteSmoke;
+            Controls.Add(autoLabel1);
+            Controls.Add(BulletinTitle);
             Name = "ConsultationCard";
             Size = new Size(840, 170);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Syncfusion.Windows.Forms.Tools.AutoLabel BulletinTitle;
+        private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel1;
     }
 }
