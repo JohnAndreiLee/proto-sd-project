@@ -8,19 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Consultation.App.Consultation.Dashboard
+namespace Consultation.App.ConsultationManagement
 {
-    public partial class Dashbaord : Form
+    public partial class ConsultationCard : UserControl
     {
-        public Dashbaord()
+        public ConsultationCard()
         {
             InitializeComponent();
-        }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            Schedule schedule = new Schedule();
-            schedule.Show();
         }
     }
 }

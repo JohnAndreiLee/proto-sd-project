@@ -77,7 +77,7 @@
             sidePanel.ForeColor = SystemColors.ControlText;
             sidePanel.Location = new Point(0, 0);
             sidePanel.Name = "sidePanel";
-            sidePanel.Size = new Size(260, 749);
+            sidePanel.Size = new Size(260, 1031);
             sidePanel.TabIndex = 0;
             // 
             // buttonSecurity
@@ -203,7 +203,7 @@
             buttonConsulation.Text = "Consulation";
             buttonConsulation.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonConsulation.UseVisualStyleBackColor = false;
-            buttonConsulation.Click += buttonConsulation_Click_1;
+            buttonConsulation.Click += buttonConsulation_Click;
             // 
             // buttonBulletin
             // 
@@ -256,7 +256,7 @@
             profilePanel.Controls.Add(labelProfileName);
             profilePanel.Controls.Add(pictureBoxProfile);
             profilePanel.Dock = DockStyle.Bottom;
-            profilePanel.Location = new Point(0, 654);
+            profilePanel.Location = new Point(0, 936);
             profilePanel.Name = "profilePanel";
             profilePanel.Size = new Size(260, 95);
             profilePanel.TabIndex = 1;
@@ -306,7 +306,7 @@
             headerPanel.ForeColor = SystemColors.ControlText;
             headerPanel.Location = new Point(260, 0);
             headerPanel.Name = "headerPanel";
-            headerPanel.Size = new Size(1110, 100);
+            headerPanel.Size = new Size(1424, 100);
             headerPanel.TabIndex = 1;
             // 
             // mainPanel
@@ -314,14 +314,14 @@
             mainPanel.Dock = DockStyle.Fill;
             mainPanel.Location = new Point(260, 100);
             mainPanel.Name = "mainPanel";
-            mainPanel.Size = new Size(1110, 649);
+            mainPanel.Size = new Size(1424, 931);
             mainPanel.TabIndex = 2;
             // 
             // MainView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1370, 749);
+            ClientSize = new Size(1684, 1031);
             Controls.Add(mainPanel);
             Controls.Add(headerPanel);
             Controls.Add(sidePanel);

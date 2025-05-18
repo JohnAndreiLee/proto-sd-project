@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Consultation.App.Consultation.Dashboard
+namespace Consultation.App.ConsultationManagement
 {
-    public partial class Archive : Form
+    public partial class AddSchedule : Form
     {
-        public Archive()
+        public AddSchedule()
         {
             InitializeComponent();
         }
