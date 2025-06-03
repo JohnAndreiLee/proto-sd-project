@@ -1,20 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Consultation.App.ConsultationManagement
 {
     public partial class AddSchedule : Form
     {
-        public AddSchedule()
+        private CSWindow csWindow;
+
+        public AddSchedule(CSWindow csWindow)
         {
             InitializeComponent();
+            this.csWindow = csWindow;
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            string studentName = Student.Text;
+            string date = guna2Date.Value.ToShortDateString();
+            string time = guna2Time.Text;
+
+            csWindow.AddConsultationCard(date, time, studentName);
+            this.Close();
         }
     }
 }

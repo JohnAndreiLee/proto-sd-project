@@ -33,9 +33,11 @@
             // 
             // flowLayoutPanel1
             // 
+            flowLayoutPanel1.AutoScroll = true;
+            flowLayoutPanel1.AutoScrollMinSize = new Size(10, 10);
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1486, 657);
+            flowLayoutPanel1.Size = new Size(1553, 809);
             flowLayoutPanel1.TabIndex = 0;
             // 
             // CSWindow

@@ -1,18 +1,14 @@
 ﻿using Consultation.App.ConsultationManagement;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Consultation.App.Views
 {
     public partial class MainView : Form
     {
+      
+        private ConsultationWindow consultationWindow;
+
         public MainView()
         {
             InitializeComponent();
@@ -20,8 +16,41 @@ namespace Consultation.App.Views
 
         private void buttonConsulation_Click(object sender, EventArgs e)
         {
-            ConsultationWindow consultationWindow = new ConsultationWindow();
-            consultationWindow.Show();
+            if (consultationWindow == null || consultationWindow.IsDisposed)
+            {
+                consultationWindow = new ConsultationWindow();
+
+                
+                consultationWindow.StartPosition = FormStartPosition.Manual;
+
+            
+                consultationWindow.Location = new Point(262, 16);
+
+                consultationWindow.Show();
+            }
+            else if (!consultationWindow.Visible)
+            {
+                consultationWindow.Show();
+            }
+            else
+            {
+                consultationWindow.BringToFront();
+            }
+        }
+
+       
+        private void CloseAllChildWindows()
+        {
+            if (consultationWindow != null && !consultationWindow.IsDisposed)
+            {
+                consultationWindow.Close();
+                consultationWindow = null;
+            }
+        }
+
+        private void MainView_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

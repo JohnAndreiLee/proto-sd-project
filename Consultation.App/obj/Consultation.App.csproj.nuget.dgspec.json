@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PC\\Source\\Repos\\proto-sd-project\\Consultation.App\\Consultation.App.csproj": {}
+    "C:\\Users\\MAE DARYLE BAGNOL\\Source\\Repos\\proto-sd-project\\Consultation.App\\Consultation.App.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PC\\Source\\Repos\\proto-sd-project\\Consultation.App\\Consultation.App.csproj": {
+    "C:\\Users\\MAE DARYLE BAGNOL\\Source\\Repos\\proto-sd-project\\Consultation.App\\Consultation.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\Source\\Repos\\proto-sd-project\\Consultation.App\\Consultation.App.csproj",
+        "projectUniqueName": "C:\\Users\\MAE DARYLE BAGNOL\\Source\\Repos\\proto-sd-project\\Consultation.App\\Consultation.App.csproj",
         "projectName": "Consultation.App",
-        "projectPath": "C:\\Users\\PC\\Source\\Repos\\proto-sd-project\\Consultation.App\\Consultation.App.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\Source\\Repos\\proto-sd-project\\Consultation.App\\obj\\",
+        "projectPath": "C:\\Users\\MAE DARYLE BAGNOL\\Source\\Repos\\proto-sd-project\\Consultation.App\\Consultation.App.csproj",
+        "packagesPath": "C:\\Users\\MAE DARYLE BAGNOL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MAE DARYLE BAGNOL\\Source\\Repos\\proto-sd-project\\Consultation.App\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MAE DARYLE BAGNOL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0-windows7.0": {
@@ -86,7 +86,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -15,13 +15,13 @@ namespace Consultation.App.ConsultationManagement
         public CSWindow()
         {
             InitializeComponent();
+        }
 
-            for (int i = 0; i < 10; i++)
-            {
-
-               flowLayoutPanel1.Controls.Add(new ConsultationCard());
-
-            }
+        public void AddConsultationCard(string date, string time, string name)
+        {
+            ConsultationCard card = new ConsultationCard();
+            card.SetData(date, time, name);
+            flowLayoutPanel1.Controls.Add(card); // Make sure this matches your FlowLayoutPanel name
         }
     }
 }
