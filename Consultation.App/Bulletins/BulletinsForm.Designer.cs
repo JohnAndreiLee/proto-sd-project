@@ -28,20 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             materialCard1 = new MaterialSkin.Controls.MaterialCard();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            btnCreateBulletin = new Guna.UI2.WinForms.Guna2Button();
+            panelBulletinCard = new MaterialSkin.Controls.MaterialCard();
             materialCard1.SuspendLayout();
             SuspendLayout();
             // 
             // materialCard1
             // 
             materialCard1.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard1.Controls.Add(guna2Button1);
+            materialCard1.Controls.Add(btnCreateBulletin);
             materialCard1.Depth = 0;
             materialCard1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard1.Location = new Point(19, 23);
+            materialCard1.Location = new Point(21, 15);
             materialCard1.Margin = new Padding(14);
             materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard1.Name = "materialCard1";
@@ -49,23 +50,37 @@
             materialCard1.Size = new Size(1600, 80);
             materialCard1.TabIndex = 0;
             // 
-            // guna2Button1
+            // btnCreateBulletin
             // 
-            guna2Button1.BorderRadius = 7;
-            guna2Button1.CustomizableEdges = customizableEdges1;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.FromArgb(192, 0, 0);
-            guna2Button1.Font = new Font("Arial", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(1420, 21);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button1.Size = new Size(143, 36);
-            guna2Button1.TabIndex = 3;
-            guna2Button1.Text = "Create Bulletin";
+            btnCreateBulletin.BorderRadius = 7;
+            btnCreateBulletin.CustomizableEdges = customizableEdges3;
+            btnCreateBulletin.DisabledState.BorderColor = Color.DarkGray;
+            btnCreateBulletin.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnCreateBulletin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnCreateBulletin.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnCreateBulletin.FillColor = Color.FromArgb(190, 0, 2);
+            btnCreateBulletin.Font = new Font("Inter", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCreateBulletin.ForeColor = Color.White;
+            btnCreateBulletin.Location = new Point(1427, 22);
+            btnCreateBulletin.Name = "btnCreateBulletin";
+            btnCreateBulletin.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnCreateBulletin.Size = new Size(136, 36);
+            btnCreateBulletin.TabIndex = 3;
+            btnCreateBulletin.Text = "Create Bulletin";
+            btnCreateBulletin.Click += btnCreateBulletin_Click;
+            // 
+            // panelBulletinCard
+            // 
+            panelBulletinCard.BackColor = Color.FromArgb(255, 255, 255);
+            panelBulletinCard.Depth = 0;
+            panelBulletinCard.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            panelBulletinCard.Location = new Point(72, 123);
+            panelBulletinCard.Margin = new Padding(14);
+            panelBulletinCard.MouseState = MaterialSkin.MouseState.HOVER;
+            panelBulletinCard.Name = "panelBulletinCard";
+            panelBulletinCard.Padding = new Padding(14);
+            panelBulletinCard.Size = new Size(1500, 790);
+            panelBulletinCard.TabIndex = 1;
             // 
             // BulletinsForm
             // 
@@ -73,6 +88,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(1642, 941);
+            Controls.Add(panelBulletinCard);
             Controls.Add(materialCard1);
             Name = "BulletinsForm";
             Text = "BulletinsForm";
@@ -83,6 +99,7 @@
         #endregion
 
         private MaterialSkin.Controls.MaterialCard materialCard1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnCreateBulletin;
+        private MaterialSkin.Controls.MaterialCard panelBulletinCard;
     }
 }

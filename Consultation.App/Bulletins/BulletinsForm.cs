@@ -15,6 +15,13 @@ namespace Consultation.App.Bulletins
         public BulletinsForm()
         {
             InitializeComponent();
+            panelBulletinCard.Controls.Add(new BulletinCardUserControl());
+        }
+
+        private void btnCreateBulletin_Click(object sender, EventArgs e)
+        {
+            CreateBulletinForm bulletinForm = new CreateBulletinForm();
+            bulletinForm.ShowDialog();
         }
     }
 }

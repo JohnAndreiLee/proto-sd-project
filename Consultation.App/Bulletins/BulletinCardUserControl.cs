@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Consultation.App.Bulletins
 {
-    public partial class CreateBulletinForm : Form
+    public partial class BulletinCardUserControl : UserControl
     {
-        public CreateBulletinForm()
+        public BulletinCardUserControl()
         {
             InitializeComponent();
-        }
-
-        private void btnPublishBulletin_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
