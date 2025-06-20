@@ -1,6 +1,6 @@
-﻿namespace Consultation.App.Consultation.Dashboard
+﻿namespace Consultation.App.Bulletins
 {
-    partial class Archive
+    partial class CreateBulletinForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Archive";
+            SuspendLayout();
+            // 
+            // CreateBulletinForm
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(434, 561);
+            Name = "CreateBulletinForm";
+            Text = "Create New Bulletin";
+            ResumeLayout(false);
         }
 
         #endregion

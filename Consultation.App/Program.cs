@@ -1,4 +1,5 @@
-using Consultation.App.Views;
+using Consultation.App.Bulletins;
+
 namespace Consultation.App
 {
     internal static class Program
@@ -13,7 +14,7 @@ namespace Consultation.App
             // see https://aka.ms/applicationconfiguration.
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1NNaF5cXmBCf1FpRmJGdld5fUVHYVZUTXxaS00DNHVRdkdmWXpecXRcQ2BcV0BwVktWYUA=");
             ApplicationConfiguration.Initialize();
-            Application.Run(new MainView());
+            Application.Run(new BulletinsForm());
         }
     }
 }

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Consultation.App.Consultation.Dashboard
+namespace Consultation.App.Bulletins
 {
-    public partial class Archive : Form
+    public partial class BulletinsForm : Form
     {
-        public Archive()
+        public BulletinsForm()
         {
             InitializeComponent();
         }

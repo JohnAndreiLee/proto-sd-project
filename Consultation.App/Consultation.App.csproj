@@ -9,8 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Presenters\" />
-    <Folder Include="Views\IViews\" />
+    <Compile Remove="Presenters\**" />
+    <EmbeddedResource Remove="Presenters\**" />
+    <None Remove="Presenters\**" />
   </ItemGroup>
 
   <ItemGroup>
