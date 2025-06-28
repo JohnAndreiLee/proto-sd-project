@@ -15,7 +15,6 @@ namespace Consultation.App.Bulletins
         public BulletinsForm()
         {
             InitializeComponent();
-
             btnBulletinView_Click(btnBulletinView, EventArgs.Empty);
         }
 
@@ -35,7 +34,6 @@ namespace Consultation.App.Bulletins
 
             panelBulletinCard.Controls.Clear();
             panelBulletinCard.Controls.Add(new BulletinCardUserControl());
-
         }
 
         private void btnArchive_Click(object sender, EventArgs e)
@@ -49,13 +47,13 @@ namespace Consultation.App.Bulletins
             panelBulletinCard.Controls.Clear();
             panelBulletinCard.Controls.Add(new ArchiveCardUserControl());
         }
+
         private void MoveUnderline(Guna.UI2.WinForms.Guna2Button targetButton)
         {
             panelUnderline.Width = targetButton.Width;
             panelUnderline.Left = targetButton.Left;
-            panelUnderline.Top = targetButton.Bottom - 4; // Adjust as needed
+            panelUnderline.Top = targetButton.Bottom - 4;
             panelUnderline.Visible = true;
         }
-
     }
 }
