@@ -126,7 +126,7 @@ namespace Consultation.App.Presenters
                 ChildForms.Dashboard => new DashboardView(),
                 ChildForms.Bulletin => new BulletinView(),
                 ChildForms.Reports => new ReportsView(),
-                ChildForms.UserManagement => new UserManagementView(),
+                ChildForms.UserManagement => new UserManagementView2(),
                 _ => new Form() { Text = "Not Implemented" }
             };
         }

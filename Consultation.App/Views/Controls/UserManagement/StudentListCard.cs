@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Consultation.App.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,24 @@ namespace Student_Faculty
         public StudentListCard()
         {
             InitializeComponent();
+
+            for (int i = 0; i < 10; ++i)
+            {
+                var student = new StudentCard();
+                student.SetStudentInfo(
+                    $"Student {i + 1}",
+                    $"UM{i + 1000}",
+                    "CPE-321/L",
+                    $"student{i + 1}@umindanao.edu.ph",
+                    "Active"
+                );
+                flowLayoutPanel2.Controls.Add(student); 
+            }
+        }
+
+        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+            
         }
     }
 }

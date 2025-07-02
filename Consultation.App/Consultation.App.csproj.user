@@ -14,11 +14,11 @@
     <Compile Update="Views\Controls\UserManagement\StudentCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Views\UserManagementView.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Views\Controls\UserManagement\StudentListCard.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\UserManagementView.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\LogInView.cs">
       <SubType>Form</SubType>
