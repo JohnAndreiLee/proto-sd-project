@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserManagementView));
             panel1 = new Panel();
             flowLayoutPanelstudafac = new FlowLayoutPanel();
             comboBox3 = new ComboBox();
@@ -44,15 +46,22 @@
             label4 = new Label();
             panel5 = new Panel();
             label7 = new Label();
+            label3 = new Label();
+            label6 = new Label();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            backStageView1 = new Syncfusion.Windows.Forms.BackStageView(components);
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BackColor = SystemColors.Control;
+            panel1.BackColor = Color.White;
             panel1.BorderStyle = BorderStyle.Fixed3D;
             panel1.Controls.Add(flowLayoutPanelstudafac);
             panel1.Controls.Add(comboBox3);
@@ -64,7 +73,7 @@
             panel1.Location = new Point(200, 269);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1396, 720);
+            panel1.Size = new Size(1396, 752);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
@@ -72,10 +81,10 @@
             // 
             flowLayoutPanelstudafac.BackColor = SystemColors.Control;
             flowLayoutPanelstudafac.BorderStyle = BorderStyle.FixedSingle;
-            flowLayoutPanelstudafac.Location = new Point(45, 145);
+            flowLayoutPanelstudafac.Location = new Point(39, 137);
             flowLayoutPanelstudafac.Margin = new Padding(3, 4, 3, 4);
             flowLayoutPanelstudafac.Name = "flowLayoutPanelstudafac";
-            flowLayoutPanelstudafac.Size = new Size(1295, 775);
+            flowLayoutPanelstudafac.Size = new Size(1270, 526);
             flowLayoutPanelstudafac.TabIndex = 6;
             // 
             // comboBox3
@@ -141,6 +150,8 @@
             // 
             panel2.BackColor = SystemColors.Control;
             panel2.BorderStyle = BorderStyle.Fixed3D;
+            panel2.Controls.Add(pictureBox1);
+            panel2.Controls.Add(label3);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label1);
             panel2.Location = new Point(200, 154);
@@ -152,7 +163,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(27, 52);
+            label2.Location = new Point(15, 40);
             label2.Name = "label2";
             label2.Size = new Size(36, 20);
             label2.TabIndex = 1;
@@ -162,7 +173,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(27, 20);
+            label1.Location = new Point(15, 9);
             label1.Name = "label1";
             label1.Size = new Size(110, 20);
             label1.TabIndex = 0;
@@ -172,6 +183,8 @@
             // 
             panel3.BackColor = SystemColors.Control;
             panel3.BorderStyle = BorderStyle.Fixed3D;
+            panel3.Controls.Add(pictureBox2);
+            panel3.Controls.Add(label6);
             panel3.Controls.Add(label5);
             panel3.Controls.Add(label4);
             panel3.Location = new Point(587, 154);
@@ -183,7 +196,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(23, 52);
+            label5.Location = new Point(13, 40);
             label5.Name = "label5";
             label5.Size = new Size(36, 20);
             label5.TabIndex = 1;
@@ -193,7 +206,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(23, 20);
+            label4.Location = new Point(13, 9);
             label4.Name = "label4";
             label4.Size = new Size(129, 20);
             label4.TabIndex = 0;
@@ -208,18 +221,62 @@
             panel5.Location = new Point(200, 2);
             panel5.Margin = new Padding(3, 4, 3, 4);
             panel5.Name = "panel5";
-            panel5.Size = new Size(1895, 133);
+            panel5.Size = new Size(1728, 133);
             panel5.TabIndex = 4;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 48F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(19, 9);
+            label7.Location = new Point(15, 14);
             label7.Name = "label7";
-            label7.Size = new Size(825, 106);
+            label7.Size = new Size(734, 106);
             label7.TabIndex = 0;
-            label7.Text = "Students and Faculty";
+            label7.Text = "User Management";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(16, 66);
+            label3.Name = "label3";
+            label3.Size = new Size(50, 20);
+            label3.TabIndex = 2;
+            label3.Text = "label3";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(16, 66);
+            label6.Name = "label6";
+            label6.Size = new Size(50, 20);
+            label6.TabIndex = 2;
+            label6.Text = "label6";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(245, 9);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(64, 64);
+            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(245, 9);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(64, 64);
+            pictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox2.TabIndex = 3;
+            pictureBox2.TabStop = false;
+            // 
+            // backStageView1
+            // 
+            backStageView1.BackStage = null;
+            backStageView1.HostControl = null;
+            backStageView1.HostForm = this;
             // 
             // UserManagementView
             // 
@@ -242,6 +299,8 @@
             panel3.PerformLayout();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
 
@@ -263,5 +322,10 @@
         private Panel panel5;
         private Label label7;
         private FlowLayoutPanel flowLayoutPanelstudafac;
+        private Label label3;
+        private Label label6;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private Syncfusion.Windows.Forms.BackStageView backStageView1;
     }
 }

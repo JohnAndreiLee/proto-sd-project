@@ -39,14 +39,18 @@
             lblIDFM = new Label();
             label3 = new Label();
             flowLayoutPanel2 = new FlowLayoutPanel();
+            textBox1 = new TextBox();
+            comboBox1 = new ComboBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Cornsilk;
+            panel1.BackColor = SystemColors.Control;
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(comboBox1);
+            panel1.Controls.Add(textBox1);
             panel1.Controls.Add(flowLayoutPanel1);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
@@ -86,7 +90,7 @@
             // 
             // panel2
             // 
-            panel2.BackColor = Color.Khaki;
+            panel2.BackColor = SystemColors.Control;
             panel2.BorderStyle = BorderStyle.FixedSingle;
             panel2.Controls.Add(label8);
             panel2.Controls.Add(label7);
@@ -115,9 +119,9 @@
             label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.Location = new Point(779, 23);
             label7.Name = "label7";
-            label7.Size = new Size(53, 20);
+            label7.Size = new Size(40, 20);
             label7.TabIndex = 5;
-            label7.Text = "Status";
+            label7.Text = "Role";
             // 
             // label5
             // 
@@ -125,9 +129,9 @@
             label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.Location = new Point(484, 23);
             label5.Name = "label5";
-            label5.Size = new Size(132, 20);
+            label5.Size = new Size(112, 20);
             label5.TabIndex = 2;
-            label5.Text = "Umindanao Email";
+            label5.Text = " Email Address\r\n";
             // 
             // lblIDFM
             // 
@@ -145,9 +149,9 @@
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.Location = new Point(67, 23);
             label3.Name = "label3";
-            label3.Size = new Size(122, 20);
+            label3.Size = new Size(105, 20);
             label3.TabIndex = 0;
-            label3.Text = "Faculty Member";
+            label3.Text = "Faculty Name\r\n";
             // 
             // flowLayoutPanel2
             // 
@@ -156,6 +160,22 @@
             flowLayoutPanel2.Name = "flowLayoutPanel2";
             flowLayoutPanel2.Size = new Size(1295, 560);
             flowLayoutPanel2.TabIndex = 3;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(227, 28);
+            textBox1.Margin = new Padding(3, 4, 3, 4);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(189, 27);
+            textBox1.TabIndex = 3;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(485, 23);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(188, 28);
+            comboBox1.TabIndex = 5;
             // 
             // FacultyListCard
             // 
@@ -187,5 +207,7 @@
         private FlowLayoutPanel flowLayoutPanel2;
         private Label label7;
         private Label label8;
+        private TextBox textBox1;
+        private ComboBox comboBox1;
     }
 }
