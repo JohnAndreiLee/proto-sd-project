@@ -798,23 +798,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\leejo\\.nuget\\packages\\": {},
-    "D:\\Programs\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Van\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Project Files\\Visual Studio\\repo\\proto_sd_project\\Consultation.App\\Consultation.App.csproj",
+      "projectUniqueName": "C:\\Users\\Van\\Source\\Repos\\proto-sd-project-Log-In-\\Consultation.App\\Consultation.App.csproj",
       "projectName": "Consultation.App",
-      "projectPath": "D:\\Project Files\\Visual Studio\\repo\\proto_sd_project\\Consultation.App\\Consultation.App.csproj",
-      "packagesPath": "C:\\Users\\leejo\\.nuget\\packages\\",
-      "outputPath": "D:\\Project Files\\Visual Studio\\repo\\proto_sd_project\\Consultation.App\\obj\\",
+      "projectPath": "C:\\Users\\Van\\Source\\Repos\\proto-sd-project-Log-In-\\Consultation.App\\Consultation.App.csproj",
+      "packagesPath": "C:\\Users\\Van\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Van\\Source\\Repos\\proto-sd-project-Log-In-\\Consultation.App\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\Programs\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\leejo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Van\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -840,8 +840,7 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.300"
+      }
     },
     "frameworks": {
       "net8.0-windows7.0": {
@@ -879,7 +878,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

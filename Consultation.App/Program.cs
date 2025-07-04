@@ -13,7 +13,13 @@ namespace Consultation.App
             // see https://aka.ms/applicationconfiguration.
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1NNaF5cXmBCf1FpRmJGdld5fUVHYVZUTXxaS00DNHVRdkdmWXpecXRcQ2BcV0BwVktWYUA=");
             ApplicationConfiguration.Initialize();
-            Application.Run(new MainView());
+
+            LogIn loginForm = new LogIn();
+
+            if (loginForm.ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new MainView());
+            }
         }
     }
 }
