@@ -56,12 +56,12 @@
             // 
             // dockingClientPanel1
             // 
-            dockingClientPanel1.BackgroundImage = Properties.Icons.RedOrangeBGAdjusted;
+            dockingClientPanel1.BackgroundImage = Properties.Icons.RedBg_1_;
             dockingClientPanel1.Controls.Add(pictureBox1);
             dockingClientPanel1.Controls.Add(panel1);
-            dockingClientPanel1.Location = new Point(0, 0);
+            dockingClientPanel1.Location = new Point(-23, 0);
             dockingClientPanel1.Name = "dockingClientPanel1";
-            dockingClientPanel1.Size = new Size(1931, 1080);
+            dockingClientPanel1.Size = new Size(1940, 1080);
             dockingClientPanel1.TabIndex = 0;
             // 
             // pictureBox1
