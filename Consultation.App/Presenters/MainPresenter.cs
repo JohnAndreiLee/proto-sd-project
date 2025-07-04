@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using Consultation.App.Views;
+using Consultation.App.ConsultationManagement;
 
 namespace Consultation.App.Presenters
 {
@@ -65,7 +66,12 @@ namespace Consultation.App.Presenters
 
         private void ConsultationEvent(object? sender, EventArgs e)
         {
-            _mainView.SetMessage("Consultation Event Triggered");
+            if (_currentForm != ChildForms.Consultation)
+            {
+                LoadChildForm(ChildForms.Consultation);
+                _mainView.Header("Consultation");
+                _currentForm = ChildForms.Consultation;
+            }
         }
 
         private void SFManagementEvent(object? sender, EventArgs e)
@@ -123,6 +129,7 @@ namespace Consultation.App.Presenters
         {
             return formType switch
             {
+                ChildForms.Consultation => new ConsultationView(),
                 ChildForms.Dashboard => new DashboardView(),
                 ChildForms.Bulletin => new BulletinView(),
                 ChildForms.Reports => new ReportsView(),

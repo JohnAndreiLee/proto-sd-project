@@ -21,7 +21,7 @@ namespace Consultation.App.ConsultationManagement
         {
             ConsultationCard card = new ConsultationCard();
             card.SetData(date, time, name);
-            flowLayoutPanel1.Controls.Add(card); // Make sure this matches your FlowLayoutPanel name
+            WindowPanel.Controls.Add(card); 
         }
     }
 }

@@ -20,8 +20,7 @@ namespace Consultation.App.ConsultationManagement
 
         public void SetData(string date, string time, string name)
         {
-            LabelDate.Text = date;
-            LabelTime.Text = time;
+           
             LabelName.Text = name;
         }
     }

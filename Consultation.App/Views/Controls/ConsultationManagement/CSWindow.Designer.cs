@@ -28,30 +28,73 @@
         /// </summary>
         private void InitializeComponent()
         {
-            flowLayoutPanel1 = new FlowLayoutPanel();
+            components = new System.ComponentModel.Container();
+            flowLayout1 = new Syncfusion.Windows.Forms.Tools.FlowLayout(components);
+            WindowPanel = new MaterialSkin.Controls.MaterialCard();
+            materialCard2 = new MaterialSkin.Controls.MaterialCard();
+            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            ((System.ComponentModel.ISupportInitialize)flowLayout1).BeginInit();
+            WindowPanel.SuspendLayout();
+            materialCard2.SuspendLayout();
             SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // WindowPanel
             // 
-            flowLayoutPanel1.AutoScroll = true;
-            flowLayoutPanel1.AutoScrollMinSize = new Size(10, 10);
-            flowLayoutPanel1.Location = new Point(0, 0);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1553, 809);
-            flowLayoutPanel1.TabIndex = 0;
+            WindowPanel.BackColor = Color.FromArgb(255, 255, 255);
+            WindowPanel.Controls.Add(materialCard2);
+            WindowPanel.Depth = 0;
+            WindowPanel.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            WindowPanel.Location = new Point(14, 15);
+            WindowPanel.Margin = new Padding(14);
+            WindowPanel.MouseState = MaterialSkin.MouseState.HOVER;
+            WindowPanel.Name = "WindowPanel";
+            WindowPanel.Padding = new Padding(14);
+            WindowPanel.Size = new Size(1434, 754);
+            WindowPanel.TabIndex = 0;
+            // 
+            // materialCard2
+            // 
+            materialCard2.BackColor = Color.FromArgb(255, 255, 255);
+            materialCard2.Controls.Add(guna2HtmlLabel1);
+            materialCard2.Depth = 0;
+            materialCard2.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialCard2.Location = new Point(0, 0);
+            materialCard2.Margin = new Padding(14);
+            materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
+            materialCard2.Name = "materialCard2";
+            materialCard2.Padding = new Padding(14);
+            materialCard2.Size = new Size(1434, 70);
+            materialCard2.TabIndex = 0;
+            // 
+            // guna2HtmlLabel1
+            // 
+            guna2HtmlLabel1.BackColor = Color.Transparent;
+            guna2HtmlLabel1.Font = new Font("Archivo SemiBold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel1.Location = new Point(25, 20);
+            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            guna2HtmlLabel1.Size = new Size(192, 34);
+            guna2HtmlLabel1.TabIndex = 1;
+            guna2HtmlLabel1.Text = "Active Consultation";
             // 
             // CSWindow
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(flowLayoutPanel1);
+            Controls.Add(WindowPanel);
             Name = "CSWindow";
-            Size = new Size(1486, 657);
+            Size = new Size(1462, 797);
+            ((System.ComponentModel.ISupportInitialize)flowLayout1).EndInit();
+            WindowPanel.ResumeLayout(false);
+            materialCard2.ResumeLayout(false);
+            materialCard2.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private FlowLayoutPanel flowLayoutPanel1;
+        private Syncfusion.Windows.Forms.Tools.FlowLayout flowLayout1;
+        private MaterialSkin.Controls.MaterialCard WindowPanel;
+        private MaterialSkin.Controls.MaterialCard materialCard2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }

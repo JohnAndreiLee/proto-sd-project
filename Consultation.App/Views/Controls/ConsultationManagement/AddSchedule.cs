@@ -27,5 +27,7 @@ namespace Consultation.App.ConsultationManagement
             csWindow.AddConsultationCard(date, time, studentName);
             this.Close();
         }
+
+     
     }
 }
