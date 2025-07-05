@@ -16,5 +16,10 @@ namespace Consultation.App.Bulletins
         {
             InitializeComponent();
         }
+
+        private void textContent_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
