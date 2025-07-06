@@ -117,7 +117,119 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="guna2CircleButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
   <data name="textContent.Text" xml:space="preserve">
     <value>Dear School Community, Due to an important faculty meeting scheduled for tomorrow, May 6th, 2024, the school will be closed for all regular classes. The meeting will focus on: • Curriculum updates for the upcoming semester • Student assessment strategies • Professional development initiatives • Safety protocols review All students are advised to stay home and use this time for</value>
+  </data>
+  <data name="guna2CircleButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Dear Students and Parents, The mid-term examinations will be conducted from May 15-20, 2024. Please find the detailed schedule below: May 15: Mathematics (9:00 AM - 12:00 PM) May 16: Science (9:00 AM - 12:00 PM) May 17: English (9:00 AM - 12:00 PM) May 18: Social Studies (9:00 AM - 12:00 PM) May 19: Filipino (9:00 AM - 12:00 PM) May 20: Computer Science </value>
+  </data>
+  <data name="guna2CircleButton3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="richTextBox2.Text" xml:space="preserve">
+    <value>Dear Students and Faculty, We are excited to announce the arrival of new books in our library! The collection includes: • Latest fiction and non-fiction titles • Academic reference materials • Research journals and periodicals • Digital resources and e-books The new books are now available for borrowing. Please visit the library during operating hours: Monday - Friday: 8:00 AM - 6:0</value>
   </data>
 </root>

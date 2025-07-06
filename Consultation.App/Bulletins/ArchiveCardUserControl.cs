@@ -21,5 +21,30 @@ namespace Consultation.App.Bulletins
         {
 
         }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ArchiveCardUserControl_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2GradientCircleButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2CircleButton2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
