@@ -28,28 +28,94 @@
         /// </summary>
         private void InitializeComponent()
         {
-            flowLayoutPanel1 = new FlowLayoutPanel();
+            components = new System.ComponentModel.Container();
+            flowLayout1 = new Syncfusion.Windows.Forms.Tools.FlowLayout(components);
+            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            materialCard2 = new MaterialSkin.Controls.MaterialCard();
+            guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            WindowPanelArchive = new FlowLayoutPanel();
+            ((System.ComponentModel.ISupportInitialize)flowLayout1).BeginInit();
+            materialCard1.SuspendLayout();
+            materialCard2.SuspendLayout();
             SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // guna2HtmlLabel1
             // 
-            flowLayoutPanel1.Location = new Point(0, 0);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1486, 657);
-            flowLayoutPanel1.TabIndex = 0;
+            guna2HtmlLabel1.BackColor = Color.Transparent;
+            guna2HtmlLabel1.Font = new Font("Archivo SemiBold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel1.Location = new Point(20, 19);
+            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            guna2HtmlLabel1.Size = new Size(217, 34);
+            guna2HtmlLabel1.TabIndex = 0;
+            guna2HtmlLabel1.Text = "Archived Consultation";
+            // 
+            // materialCard1
+            // 
+            materialCard1.BackColor = Color.FromArgb(255, 255, 255);
+            materialCard1.Controls.Add(WindowPanelArchive);
+            materialCard1.Controls.Add(materialCard2);
+            materialCard1.Depth = 0;
+            materialCard1.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialCard1.Location = new Point(14, 14);
+            materialCard1.Margin = new Padding(14);
+            materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
+            materialCard1.Name = "materialCard1";
+            materialCard1.Padding = new Padding(14);
+            materialCard1.Size = new Size(1434, 753);
+            materialCard1.TabIndex = 0;
+            // 
+            // materialCard2
+            // 
+            materialCard2.BackColor = Color.FromArgb(255, 255, 255);
+            materialCard2.Controls.Add(guna2HtmlLabel2);
+            materialCard2.Depth = 0;
+            materialCard2.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialCard2.Location = new Point(0, 2);
+            materialCard2.Margin = new Padding(14);
+            materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
+            materialCard2.Name = "materialCard2";
+            materialCard2.Padding = new Padding(14);
+            materialCard2.Size = new Size(1434, 70);
+            materialCard2.TabIndex = 0;
+            // 
+            // guna2HtmlLabel2
+            // 
+            guna2HtmlLabel2.BackColor = Color.Transparent;
+            guna2HtmlLabel2.Font = new Font("Archivo SemiBold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel2.Location = new Point(17, 14);
+            guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            guna2HtmlLabel2.Size = new Size(217, 34);
+            guna2HtmlLabel2.TabIndex = 0;
+            guna2HtmlLabel2.Text = "Archived Consultation";
+            // 
+            // WindowPanelArchive
+            // 
+            WindowPanelArchive.Location = new Point(0, 74);
+            WindowPanelArchive.Name = "WindowPanelArchive";
+            WindowPanelArchive.Size = new Size(1434, 679);
+            WindowPanelArchive.TabIndex = 1;
             // 
             // ArchiveWindow
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(flowLayoutPanel1);
+            Controls.Add(materialCard1);
             Name = "ArchiveWindow";
-            Size = new Size(1486, 657);
+            Size = new Size(1462, 797);
+            ((System.ComponentModel.ISupportInitialize)flowLayout1).EndInit();
+            materialCard1.ResumeLayout(false);
+            materialCard2.ResumeLayout(false);
+            materialCard2.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private FlowLayoutPanel flowLayoutPanel1;
+        private Syncfusion.Windows.Forms.Tools.FlowLayout flowLayout1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private MaterialSkin.Controls.MaterialCard materialCard1;
+        private FlowLayoutPanel WindowPanelArchive;
+        private MaterialSkin.Controls.MaterialCard materialCard2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
     }
 }

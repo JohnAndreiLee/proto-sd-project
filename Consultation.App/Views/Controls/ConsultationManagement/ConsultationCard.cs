@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Consultation.App.Views.Controls.ConsultationManagement;
 using Syncfusion.Windows.Forms.Tools;
 
 namespace Consultation.App.ConsultationManagement
@@ -29,6 +30,27 @@ namespace Consultation.App.ConsultationManagement
             MenuContext.Show(guna2Button1, guna2Button1.Width / 2, guna2Button1.Height);
         }
 
-   
+        public event EventHandler ArchiveClicked;
+        private void archiveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ArchiveClicked?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void viewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ViewConsultation viewForm = new ViewConsultation();
+            viewForm.ShowDialog();
+        }
+
+        private void rescheduleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reschedule rescheduleForm = new Reschedule();
+            rescheduleForm.ShowDialog();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Parent.Controls.Remove(this);
+        }
     }
 }

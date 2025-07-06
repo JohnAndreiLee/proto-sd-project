@@ -16,13 +16,11 @@ namespace Consultation.App.ConsultationManagement
         {
             InitializeComponent();
 
-            for (int i = 0; i < 10; i++)
-            {
+        }
 
-                flowLayoutPanel1.Controls.Add(new ArchiveCard());
-
-            }
-
+        public void AddToArchive(ConsultationCard card)
+        {
+            WindowPanelArchive.Controls.Add(card);
         }
     }
 }

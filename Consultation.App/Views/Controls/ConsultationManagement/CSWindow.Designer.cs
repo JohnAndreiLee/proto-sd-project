@@ -33,7 +33,7 @@
             WindowPanelDesign = new MaterialSkin.Controls.MaterialCard();
             materialCard2 = new MaterialSkin.Controls.MaterialCard();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            WindowPanel = new FlowLayoutPanel();
+            WindowPanelConsultation = new FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)flowLayout1).BeginInit();
             WindowPanelDesign.SuspendLayout();
             materialCard2.SuspendLayout();
@@ -43,7 +43,7 @@
             // 
             WindowPanelDesign.BackColor = Color.FromArgb(255, 255, 255);
             WindowPanelDesign.Controls.Add(materialCard2);
-            WindowPanelDesign.Controls.Add(WindowPanel);
+            WindowPanelDesign.Controls.Add(WindowPanelConsultation);
             WindowPanelDesign.Depth = 0;
             WindowPanelDesign.ForeColor = Color.FromArgb(222, 0, 0, 0);
             WindowPanelDesign.Location = new Point(14, 15);
@@ -78,12 +78,12 @@
             guna2HtmlLabel1.TabIndex = 1;
             guna2HtmlLabel1.Text = "Active Consultation";
             // 
-            // WindowPanel
+            // WindowPanelConsultation
             // 
-            WindowPanel.Location = new Point(0, 71);
-            WindowPanel.Name = "WindowPanel";
-            WindowPanel.Size = new Size(1434, 683);
-            WindowPanel.TabIndex = 1;
+            WindowPanelConsultation.Location = new Point(0, 71);
+            WindowPanelConsultation.Name = "WindowPanelConsultation";
+            WindowPanelConsultation.Size = new Size(1434, 683);
+            WindowPanelConsultation.TabIndex = 1;
             // 
             // CSWindow
             // 
@@ -105,6 +105,6 @@
         private MaterialSkin.Controls.MaterialCard WindowPanelDesign;
         private MaterialSkin.Controls.MaterialCard materialCard2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private FlowLayoutPanel WindowPanel;
+        private FlowLayoutPanel WindowPanelConsultation;
     }
 }

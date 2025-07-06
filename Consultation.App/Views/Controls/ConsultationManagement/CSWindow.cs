@@ -10,8 +10,11 @@ using System.Windows.Forms;
 
 namespace Consultation.App.ConsultationManagement
 {
+
     public partial class CSWindow : UserControl
     {
+
+        public event EventHandler<ConsultationCard> CardArchived;
         public CSWindow()
         {
             InitializeComponent();
@@ -21,7 +24,21 @@ namespace Consultation.App.ConsultationManagement
         {
             ConsultationCard card = new ConsultationCard();
             card.SetData(date, time, name);
-            WindowPanel.Controls.Add(card); 
+
+            // Subscribe to archive event
+            card.ArchiveClicked += (s, e) =>
+            {
+                // Let the main form handle it
+                CardArchived?.Invoke(this, card);
+            };
+
+            WindowPanelConsultation.Controls.Add(card);
         }
+
+        public void RemoveCard(ConsultationCard card)
+        {
+            WindowPanelConsultation.Controls.Remove(card);
+        }
+
     }
 }

@@ -278,6 +278,7 @@
             guna2Button2.TabIndex = 11;
             guna2Button2.Text = "Cancel";
             guna2Button2.TextOffset = new Point(6, 0);
+            guna2Button2.Click += guna2Button2_Click;
             // 
             // Reschedule
             // 
@@ -298,6 +299,7 @@
             Controls.Add(guna2HtmlLabel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Reschedule";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Reschedule";
             materialCard1.ResumeLayout(false);
             materialCard1.PerformLayout();

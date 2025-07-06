@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -38,9 +40,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -53,10 +54,8 @@
             viewToolStripMenuItem = new ToolStripMenuItem();
             editToolStripMenuItem = new ToolStripMenuItem();
             rescheduleToolStripMenuItem = new ToolStripMenuItem();
-            markAsCompleteToolStripMenuItem = new ToolStripMenuItem();
             archiveToolStripMenuItem = new ToolStripMenuItem();
             deleteToolStripMenuItem = new ToolStripMenuItem();
-            guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
             materialCard1.SuspendLayout();
             MenuContext.SuspendLayout();
             SuspendLayout();
@@ -83,6 +82,31 @@
             materialCard1.RightToLeft = RightToLeft.No;
             materialCard1.Size = new Size(1350, 122);
             materialCard1.TabIndex = 0;
+            // 
+            // guna2TextBox5
+            // 
+            guna2TextBox5.BackColor = Color.Transparent;
+            guna2TextBox5.BorderRadius = 15;
+            guna2TextBox5.CustomizableEdges = customizableEdges1;
+            guna2TextBox5.DefaultText = "Pending";
+            guna2TextBox5.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            guna2TextBox5.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            guna2TextBox5.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox5.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox5.FillColor = Color.MistyRose;
+            guna2TextBox5.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox5.Font = new Font("Inter", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            guna2TextBox5.ForeColor = Color.Red;
+            guna2TextBox5.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox5.Location = new Point(1176, 13);
+            guna2TextBox5.Margin = new Padding(3, 4, 3, 4);
+            guna2TextBox5.Name = "guna2TextBox5";
+            guna2TextBox5.PlaceholderText = "";
+            guna2TextBox5.SelectedText = "";
+            guna2TextBox5.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2TextBox5.Size = new Size(114, 38);
+            guna2TextBox5.TabIndex = 9;
+            guna2TextBox5.TextAlign = HorizontalAlignment.Center;
             // 
             // guna2TextBox4
             // 
@@ -225,7 +249,7 @@
             // MenuContext
             // 
             MenuContext.Font = new Font("Archivo Medium", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            MenuContext.Items.AddRange(new ToolStripItem[] { viewToolStripMenuItem, editToolStripMenuItem, rescheduleToolStripMenuItem, markAsCompleteToolStripMenuItem, archiveToolStripMenuItem, deleteToolStripMenuItem });
+            MenuContext.Items.AddRange(new ToolStripItem[] { viewToolStripMenuItem, editToolStripMenuItem, rescheduleToolStripMenuItem, archiveToolStripMenuItem, deleteToolStripMenuItem });
             MenuContext.Name = "guna2ContextMenuStrip1";
             MenuContext.RenderMode = ToolStripRenderMode.Professional;
             MenuContext.RenderStyle.ArrowColor = Color.FromArgb(151, 143, 255);
@@ -237,75 +261,47 @@
             MenuContext.RenderStyle.SelectionForeColor = Color.White;
             MenuContext.RenderStyle.SeparatorColor = Color.Gainsboro;
             MenuContext.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            MenuContext.Size = new Size(201, 160);
+            MenuContext.Size = new Size(163, 134);
             // 
             // viewToolStripMenuItem
             // 
             viewToolStripMenuItem.Alignment = ToolStripItemAlignment.Right;
             viewToolStripMenuItem.Image = Properties.Icons.show;
             viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            viewToolStripMenuItem.Size = new Size(200, 26);
+            viewToolStripMenuItem.Size = new Size(162, 26);
             viewToolStripMenuItem.Text = "View";
+            viewToolStripMenuItem.Click += viewToolStripMenuItem_Click;
             // 
             // editToolStripMenuItem
             // 
             editToolStripMenuItem.Image = Properties.Icons.pencil;
             editToolStripMenuItem.Name = "editToolStripMenuItem";
-            editToolStripMenuItem.Size = new Size(200, 26);
+            editToolStripMenuItem.Size = new Size(162, 26);
             editToolStripMenuItem.Text = "Edit";
             // 
             // rescheduleToolStripMenuItem
             // 
             rescheduleToolStripMenuItem.Image = Properties.Icons.rescheduling;
             rescheduleToolStripMenuItem.Name = "rescheduleToolStripMenuItem";
-            rescheduleToolStripMenuItem.Size = new Size(200, 26);
+            rescheduleToolStripMenuItem.Size = new Size(162, 26);
             rescheduleToolStripMenuItem.Text = "Reschedule";
-            // 
-            // markAsCompleteToolStripMenuItem
-            // 
-            markAsCompleteToolStripMenuItem.Image = Properties.Icons._checked;
-            markAsCompleteToolStripMenuItem.Name = "markAsCompleteToolStripMenuItem";
-            markAsCompleteToolStripMenuItem.Size = new Size(200, 26);
-            markAsCompleteToolStripMenuItem.Text = "Mark as complete";
+            rescheduleToolStripMenuItem.Click += rescheduleToolStripMenuItem_Click;
             // 
             // archiveToolStripMenuItem
             // 
             archiveToolStripMenuItem.Image = Properties.Icons.archive;
             archiveToolStripMenuItem.Name = "archiveToolStripMenuItem";
-            archiveToolStripMenuItem.Size = new Size(200, 26);
+            archiveToolStripMenuItem.Size = new Size(162, 26);
             archiveToolStripMenuItem.Text = "Archive";
+            archiveToolStripMenuItem.Click += archiveToolStripMenuItem_Click;
             // 
             // deleteToolStripMenuItem
             // 
             deleteToolStripMenuItem.Image = Properties.Icons.bin;
             deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            deleteToolStripMenuItem.Size = new Size(200, 26);
+            deleteToolStripMenuItem.Size = new Size(162, 26);
             deleteToolStripMenuItem.Text = "Delete";
-            // 
-            // guna2TextBox5
-            // 
-            guna2TextBox5.BackColor = Color.Transparent;
-            guna2TextBox5.BorderRadius = 15;
-            guna2TextBox5.CustomizableEdges = customizableEdges1;
-            guna2TextBox5.DefaultText = "Pending";
-            guna2TextBox5.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox5.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox5.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox5.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox5.FillColor = Color.MistyRose;
-            guna2TextBox5.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox5.Font = new Font("Inter", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2TextBox5.ForeColor = Color.Red;
-            guna2TextBox5.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox5.Location = new Point(1176, 13);
-            guna2TextBox5.Margin = new Padding(3, 4, 3, 4);
-            guna2TextBox5.Name = "guna2TextBox5";
-            guna2TextBox5.PlaceholderText = "";
-            guna2TextBox5.SelectedText = "";
-            guna2TextBox5.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2TextBox5.Size = new Size(114, 38);
-            guna2TextBox5.TabIndex = 9;
-            guna2TextBox5.TextAlign = HorizontalAlignment.Center;
+            deleteToolStripMenuItem.Click += deleteToolStripMenuItem_Click;
             // 
             // ConsultationCard
             // 
@@ -342,7 +338,6 @@
         private ToolStripMenuItem viewToolStripMenuItem;
         private ToolStripMenuItem editToolStripMenuItem;
         private ToolStripMenuItem rescheduleToolStripMenuItem;
-        private ToolStripMenuItem markAsCompleteToolStripMenuItem;
         private ToolStripMenuItem archiveToolStripMenuItem;
         private ToolStripMenuItem deleteToolStripMenuItem;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;

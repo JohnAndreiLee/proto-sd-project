@@ -36,7 +36,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             materialCard2 = new MaterialSkin.Controls.MaterialCard();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            btnSchedule = new Guna.UI2.WinForms.Guna2Button();
             underlinePanel = new Panel();
             btnArchive = new Guna.UI2.WinForms.Guna2Button();
             btnConsultation = new Guna.UI2.WinForms.Guna2Button();
@@ -48,7 +48,7 @@
             // materialCard2
             // 
             materialCard2.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard2.Controls.Add(guna2Button1);
+            materialCard2.Controls.Add(btnSchedule);
             materialCard2.Controls.Add(underlinePanel);
             materialCard2.Controls.Add(btnArchive);
             materialCard2.Controls.Add(btnConsultation);
@@ -62,27 +62,27 @@
             materialCard2.Size = new Size(1600, 80);
             materialCard2.TabIndex = 1;
             // 
-            // guna2Button1
+            // btnSchedule
             // 
-            guna2Button1.BorderColor = Color.Red;
-            guna2Button1.BorderRadius = 8;
-            guna2Button1.BorderThickness = 1;
-            guna2Button1.CustomizableEdges = customizableEdges1;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.Transparent;
-            guna2Button1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button1.ForeColor = Color.Red;
-            guna2Button1.Location = new Point(1343, 17);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.PressedColor = Color.FromArgb(255, 128, 128);
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button1.Size = new Size(195, 36);
-            guna2Button1.TabIndex = 5;
-            guna2Button1.Text = "Schedule Consultation";
-            guna2Button1.Click += guna2Button1_Click;
+            btnSchedule.BorderColor = Color.Red;
+            btnSchedule.BorderRadius = 8;
+            btnSchedule.BorderThickness = 1;
+            btnSchedule.CustomizableEdges = customizableEdges1;
+            btnSchedule.DisabledState.BorderColor = Color.DarkGray;
+            btnSchedule.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnSchedule.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnSchedule.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSchedule.FillColor = Color.Transparent;
+            btnSchedule.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSchedule.ForeColor = Color.Red;
+            btnSchedule.Location = new Point(1343, 17);
+            btnSchedule.Name = "btnSchedule";
+            btnSchedule.PressedColor = Color.FromArgb(255, 128, 128);
+            btnSchedule.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnSchedule.Size = new Size(195, 36);
+            btnSchedule.TabIndex = 5;
+            btnSchedule.Text = "Schedule Consultation";
+            btnSchedule.Click += btnSchedule_Click_1;
             // 
             // underlinePanel
             // 
@@ -157,7 +157,7 @@
             Controls.Add(materialCard2);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ConsultationView";
-            Text = "ConsultationWindow";          
+            Text = "ConsultationWindow";
             materialCard2.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -169,7 +169,7 @@
         private Guna.UI2.WinForms.Guna2Button btnArchive;
         private FlowLayoutPanel flowLayoutPanel1;
         private ConsultationCard consultationCard1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnSchedule;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
     }
 }
