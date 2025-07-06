@@ -20,8 +20,15 @@ namespace Consultation.App.ConsultationManagement
 
         public void SetData(string date, string time, string name)
         {
-           
+
             LabelName.Text = name;
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            MenuContext.Show(guna2Button1, guna2Button1.Width / 2, guna2Button1.Height);
+        }
+
+   
     }
 }

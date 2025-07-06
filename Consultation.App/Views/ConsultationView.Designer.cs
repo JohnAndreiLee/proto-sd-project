@@ -157,8 +157,7 @@
             Controls.Add(materialCard2);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ConsultationView";
-            Text = "ConsultationWindow";
-            Load += ConsultationView_Load;
+            Text = "ConsultationWindow";          
             materialCard2.ResumeLayout(false);
             ResumeLayout(false);
         }

@@ -30,27 +30,29 @@
         {
             components = new System.ComponentModel.Container();
             flowLayout1 = new Syncfusion.Windows.Forms.Tools.FlowLayout(components);
-            WindowPanel = new MaterialSkin.Controls.MaterialCard();
+            WindowPanelDesign = new MaterialSkin.Controls.MaterialCard();
             materialCard2 = new MaterialSkin.Controls.MaterialCard();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            WindowPanel = new FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)flowLayout1).BeginInit();
-            WindowPanel.SuspendLayout();
+            WindowPanelDesign.SuspendLayout();
             materialCard2.SuspendLayout();
             SuspendLayout();
             // 
-            // WindowPanel
+            // WindowPanelDesign
             // 
-            WindowPanel.BackColor = Color.FromArgb(255, 255, 255);
-            WindowPanel.Controls.Add(materialCard2);
-            WindowPanel.Depth = 0;
-            WindowPanel.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            WindowPanel.Location = new Point(14, 15);
-            WindowPanel.Margin = new Padding(14);
-            WindowPanel.MouseState = MaterialSkin.MouseState.HOVER;
-            WindowPanel.Name = "WindowPanel";
-            WindowPanel.Padding = new Padding(14);
-            WindowPanel.Size = new Size(1434, 754);
-            WindowPanel.TabIndex = 0;
+            WindowPanelDesign.BackColor = Color.FromArgb(255, 255, 255);
+            WindowPanelDesign.Controls.Add(materialCard2);
+            WindowPanelDesign.Controls.Add(WindowPanel);
+            WindowPanelDesign.Depth = 0;
+            WindowPanelDesign.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            WindowPanelDesign.Location = new Point(14, 15);
+            WindowPanelDesign.Margin = new Padding(14);
+            WindowPanelDesign.MouseState = MaterialSkin.MouseState.HOVER;
+            WindowPanelDesign.Name = "WindowPanelDesign";
+            WindowPanelDesign.Padding = new Padding(14);
+            WindowPanelDesign.Size = new Size(1434, 754);
+            WindowPanelDesign.TabIndex = 0;
             // 
             // materialCard2
             // 
@@ -76,15 +78,22 @@
             guna2HtmlLabel1.TabIndex = 1;
             guna2HtmlLabel1.Text = "Active Consultation";
             // 
+            // WindowPanel
+            // 
+            WindowPanel.Location = new Point(0, 71);
+            WindowPanel.Name = "WindowPanel";
+            WindowPanel.Size = new Size(1434, 683);
+            WindowPanel.TabIndex = 1;
+            // 
             // CSWindow
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(WindowPanel);
+            Controls.Add(WindowPanelDesign);
             Name = "CSWindow";
             Size = new Size(1462, 797);
             ((System.ComponentModel.ISupportInitialize)flowLayout1).EndInit();
-            WindowPanel.ResumeLayout(false);
+            WindowPanelDesign.ResumeLayout(false);
             materialCard2.ResumeLayout(false);
             materialCard2.PerformLayout();
             ResumeLayout(false);
@@ -93,8 +102,9 @@
         #endregion
 
         private Syncfusion.Windows.Forms.Tools.FlowLayout flowLayout1;
-        private MaterialSkin.Controls.MaterialCard WindowPanel;
+        private MaterialSkin.Controls.MaterialCard WindowPanelDesign;
         private MaterialSkin.Controls.MaterialCard materialCard2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private FlowLayoutPanel WindowPanel;
     }
 }

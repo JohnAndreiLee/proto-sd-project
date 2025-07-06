@@ -118,79 +118,106 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="material-symbols--admin-panel-settings-outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\material-symbols--admin-panel-settings-outline1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LOGO FINAL" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LOGO FINAL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LOGO FINAL (Phone)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LOGO FINAL (Phone).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="material-symbols--chat-bubble-outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\material-symbols--chat-bubble-outline1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lsicon--setting-outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lsicon--setting-outline1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="material-symbols--format-list-bulleted" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\material-symbols--format-list-bulleted1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="add-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="material-symbols--groups-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\material-symbols--groups-21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="civil-engineering" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\civil-engineering.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="LOGO name (Custom) (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LOGO name (Custom) (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="streamline--graph-bar-increase" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\streamline--graph-bar-increase1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="schedule" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\schedule1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="electrical-engineering" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\electrical-engineering.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="schedule (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\schedule (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="more" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\more.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="material-symbols--dashboard-outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\material-symbols--dashboard-outline2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="chemical engineering" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\chemical engineering.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="computer engineering" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\computer engineering.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="electronics engineering" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\electronics engineering.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="mechanical-engineering" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mechanical-engineering.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="material-symbols--admin-panel-settings-outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\material-symbols--admin-panel-settings-outline1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="material-symbols--person-2-outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\material-symbols--person-2-outline1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="material-symbols--dashboard-outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\material-symbols--dashboard-outline2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LOGO name" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LOGO name.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LOGO FINAL (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LOGO FINAL (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="material-symbols--groups-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\material-symbols--groups-21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="show" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\show.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="computer engineering" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\computer engineering.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mechanical-engineering" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mechanical-engineering.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="streamline--graph-bar-increase" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\streamline--graph-bar-increase1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="more" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\more.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="archive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\archive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="up-arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\up-arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pencil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pencil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="electrical-engineering" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\electrical-engineering.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="material-symbols--format-list-bulleted" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\material-symbols--format-list-bulleted1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="checked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO FINAL (Custom)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO FINAL (Custom).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lsicon--setting-outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lsicon--setting-outline1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chemical engineering" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chemical engineering.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="schedule" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\schedule1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="material-symbols--chat-bubble-outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\material-symbols--chat-bubble-outline1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO FINAL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO FINAL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="schedule (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\schedule (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rescheduling" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rescheduling.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="material-symbols--person-2-outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\material-symbols--person-2-outline1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="civil-engineering" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\civil-engineering.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOGO FINAL (Phone)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOGO FINAL (Phone).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

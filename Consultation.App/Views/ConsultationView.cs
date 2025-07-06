@@ -29,7 +29,7 @@ namespace Consultation.App.ConsultationManagement
 
         private void btnConsultation_Click_1(object sender, EventArgs e)
         {
-            ShowConsultationView();
+          ShowConsultationView();
         }
 
         private void btnArchive_Click(object sender, EventArgs e)
@@ -58,9 +58,6 @@ namespace Consultation.App.ConsultationManagement
             addSchedule.ShowDialog();
         }
 
-        private void ConsultationView_Load(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
