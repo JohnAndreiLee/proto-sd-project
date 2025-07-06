@@ -47,18 +47,20 @@
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             materialCard1 = new MaterialSkin.Controls.MaterialCard();
-            guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            CurrentDate = new Guna.UI2.WinForms.Guna2TextBox();
+            CurrentTime = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            Timepicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            Datepicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            TextBoxReason = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            btnReschedule = new Guna.UI2.WinForms.Guna2Button();
+            btnCancel = new Guna.UI2.WinForms.Guna2Button();
+            pictureBox1 = new PictureBox();
             materialCard1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -90,8 +92,8 @@
             // materialCard1
             // 
             materialCard1.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard1.Controls.Add(guna2TextBox3);
-            materialCard1.Controls.Add(guna2TextBox2);
+            materialCard1.Controls.Add(CurrentDate);
+            materialCard1.Controls.Add(CurrentTime);
             materialCard1.Controls.Add(guna2HtmlLabel3);
             materialCard1.Depth = 0;
             materialCard1.ForeColor = Color.FromArgb(222, 0, 0, 0);
@@ -103,45 +105,47 @@
             materialCard1.Size = new Size(450, 80);
             materialCard1.TabIndex = 2;
             // 
-            // guna2TextBox3
+            // CurrentDate
             // 
-            guna2TextBox3.BorderRadius = 10;
-            guna2TextBox3.CustomizableEdges = customizableEdges11;
-            guna2TextBox3.DefaultText = "";
-            guna2TextBox3.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox3.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox3.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox3.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox3.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Font = new Font("Segoe UI", 9F);
-            guna2TextBox3.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Location = new Point(17, 37);
-            guna2TextBox3.Name = "guna2TextBox3";
-            guna2TextBox3.PlaceholderText = "";
-            guna2TextBox3.SelectedText = "";
-            guna2TextBox3.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2TextBox3.Size = new Size(200, 36);
-            guna2TextBox3.TabIndex = 8;
+            CurrentDate.BorderRadius = 10;
+            CurrentDate.CustomizableEdges = customizableEdges11;
+            CurrentDate.DefaultText = "";
+            CurrentDate.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            CurrentDate.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            CurrentDate.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            CurrentDate.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            CurrentDate.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            CurrentDate.Font = new Font("Segoe UI", 9F);
+            CurrentDate.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            CurrentDate.Location = new Point(17, 37);
+            CurrentDate.Name = "CurrentDate";
+            CurrentDate.PlaceholderText = "";
+            CurrentDate.ReadOnly = true;
+            CurrentDate.SelectedText = "";
+            CurrentDate.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            CurrentDate.Size = new Size(200, 36);
+            CurrentDate.TabIndex = 8;
             // 
-            // guna2TextBox2
+            // CurrentTime
             // 
-            guna2TextBox2.BorderRadius = 10;
-            guna2TextBox2.CustomizableEdges = customizableEdges13;
-            guna2TextBox2.DefaultText = "";
-            guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Font = new Font("Segoe UI", 9F);
-            guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Location = new Point(233, 37);
-            guna2TextBox2.Name = "guna2TextBox2";
-            guna2TextBox2.PlaceholderText = "";
-            guna2TextBox2.SelectedText = "";
-            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2TextBox2.Size = new Size(200, 36);
-            guna2TextBox2.TabIndex = 7;
+            CurrentTime.BorderRadius = 10;
+            CurrentTime.CustomizableEdges = customizableEdges13;
+            CurrentTime.DefaultText = "";
+            CurrentTime.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            CurrentTime.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            CurrentTime.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            CurrentTime.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            CurrentTime.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            CurrentTime.Font = new Font("Segoe UI", 9F);
+            CurrentTime.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            CurrentTime.Location = new Point(233, 37);
+            CurrentTime.Name = "CurrentTime";
+            CurrentTime.PlaceholderText = "";
+            CurrentTime.ReadOnly = true;
+            CurrentTime.SelectedText = "";
+            CurrentTime.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            CurrentTime.Size = new Size(200, 36);
+            CurrentTime.TabIndex = 7;
             // 
             // guna2HtmlLabel3
             // 
@@ -153,55 +157,62 @@
             guna2HtmlLabel3.TabIndex = 6;
             guna2HtmlLabel3.Text = "Current Schedule";
             // 
-            // guna2DateTimePicker1
+            // Timepicker
             // 
-            guna2DateTimePicker1.Checked = true;
-            guna2DateTimePicker1.CustomizableEdges = customizableEdges9;
-            guna2DateTimePicker1.Font = new Font("Segoe UI", 9F);
-            guna2DateTimePicker1.Format = DateTimePickerFormat.Long;
-            guna2DateTimePicker1.Location = new Point(273, 204);
-            guna2DateTimePicker1.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            guna2DateTimePicker1.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            guna2DateTimePicker1.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2DateTimePicker1.Size = new Size(200, 55);
-            guna2DateTimePicker1.TabIndex = 3;
-            guna2DateTimePicker1.Value = new DateTime(2025, 7, 6, 11, 1, 18, 647);
+            Timepicker.Checked = true;
+            Timepicker.CustomFormat = "hh:mm tt";
+            Timepicker.CustomizableEdges = customizableEdges9;
+            Timepicker.Font = new Font("Segoe UI", 9F);
+            Timepicker.Format = DateTimePickerFormat.Custom;
+            Timepicker.ImeMode = ImeMode.Off;
+            Timepicker.Location = new Point(273, 204);
+            Timepicker.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            Timepicker.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            Timepicker.Name = "Timepicker";
+            Timepicker.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            Timepicker.ShowUpDown = true;
+            Timepicker.Size = new Size(200, 55);
+            Timepicker.TabIndex = 3;
+            Timepicker.TextAlign = HorizontalAlignment.Center;
+            Timepicker.Value = new DateTime(2025, 7, 6, 11, 1, 18, 647);
             // 
-            // guna2DateTimePicker2
+            // Datepicker
             // 
-            guna2DateTimePicker2.Checked = true;
-            guna2DateTimePicker2.CustomizableEdges = customizableEdges7;
-            guna2DateTimePicker2.Font = new Font("Segoe UI", 9F);
-            guna2DateTimePicker2.Format = DateTimePickerFormat.Long;
-            guna2DateTimePicker2.Location = new Point(23, 204);
-            guna2DateTimePicker2.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            guna2DateTimePicker2.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            guna2DateTimePicker2.Name = "guna2DateTimePicker2";
-            guna2DateTimePicker2.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2DateTimePicker2.Size = new Size(202, 55);
-            guna2DateTimePicker2.TabIndex = 4;
-            guna2DateTimePicker2.Value = new DateTime(2025, 7, 6, 11, 1, 21, 130);
+            Datepicker.Checked = true;
+            Datepicker.CustomizableEdges = customizableEdges7;
+            Datepicker.Font = new Font("Segoe UI", 9F);
+            Datepicker.Format = DateTimePickerFormat.Long;
+            Datepicker.Location = new Point(23, 204);
+            Datepicker.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            Datepicker.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            Datepicker.Name = "Datepicker";
+            Datepicker.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            Datepicker.Size = new Size(202, 55);
+            Datepicker.TabIndex = 4;
+            Datepicker.TextAlign = HorizontalAlignment.Center;
+            Datepicker.Value = new DateTime(2025, 7, 6, 11, 1, 21, 130);
             // 
-            // guna2TextBox1
+            // TextBoxReason
             // 
-            guna2TextBox1.BorderRadius = 10;
-            guna2TextBox1.CustomizableEdges = customizableEdges5;
-            guna2TextBox1.DefaultText = "";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Segoe UI", 9F);
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(23, 275);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PlaceholderText = "Enter reason for rescheduling...";
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2TextBox1.Size = new Size(450, 125);
-            guna2TextBox1.TabIndex = 5;
+            TextBoxReason.BorderRadius = 10;
+            TextBoxReason.CustomizableEdges = customizableEdges5;
+            TextBoxReason.DefaultText = "";
+            TextBoxReason.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            TextBoxReason.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            TextBoxReason.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            TextBoxReason.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            TextBoxReason.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            TextBoxReason.Font = new Font("Segoe UI", 9F);
+            TextBoxReason.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            TextBoxReason.Location = new Point(23, 275);
+            TextBoxReason.Name = "TextBoxReason";
+            TextBoxReason.PlaceholderForeColor = Color.Gray;
+            TextBoxReason.PlaceholderText = "Enter reason for rescheduling...";
+            TextBoxReason.SelectedText = "";
+            TextBoxReason.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            TextBoxReason.Size = new Size(450, 125);
+            TextBoxReason.TabIndex = 5;
+            TextBoxReason.TextOffset = new Point(0, -35);
             // 
             // guna2HtmlLabel4
             // 
@@ -233,52 +244,64 @@
             guna2HtmlLabel6.TabIndex = 9;
             guna2HtmlLabel6.Text = "Schedule Time";
             // 
-            // guna2Button1
+            // btnReschedule
             // 
-            guna2Button1.BorderColor = Color.DarkRed;
-            guna2Button1.BorderRadius = 8;
-            guna2Button1.CustomizableEdges = customizableEdges3;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.DarkRed;
-            guna2Button1.Font = new Font("Archivo", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Image = Properties.Icons.up_arrow;
-            guna2Button1.ImageAlign = HorizontalAlignment.Left;
-            guna2Button1.Location = new Point(326, 412);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button1.Size = new Size(147, 36);
-            guna2Button1.TabIndex = 10;
-            guna2Button1.Text = "Reschedule";
-            guna2Button1.TextOffset = new Point(6, 0);
+            btnReschedule.BorderColor = Color.DarkRed;
+            btnReschedule.BorderRadius = 8;
+            btnReschedule.CustomizableEdges = customizableEdges3;
+            btnReschedule.DisabledState.BorderColor = Color.DarkGray;
+            btnReschedule.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnReschedule.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnReschedule.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnReschedule.FillColor = Color.DarkRed;
+            btnReschedule.Font = new Font("Archivo", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnReschedule.ForeColor = Color.White;
+            btnReschedule.Image = Properties.Icons.up_arrow;
+            btnReschedule.ImageAlign = HorizontalAlignment.Left;
+            btnReschedule.Location = new Point(326, 412);
+            btnReschedule.Name = "btnReschedule";
+            btnReschedule.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnReschedule.Size = new Size(147, 36);
+            btnReschedule.TabIndex = 10;
+            btnReschedule.Text = "Reschedule";
+            btnReschedule.TextOffset = new Point(6, 0);
+            btnReschedule.Click += btnReschedule_Click;
             // 
-            // guna2Button2
+            // btnCancel
             // 
-            guna2Button2.BorderColor = Color.Red;
-            guna2Button2.BorderRadius = 8;
-            guna2Button2.BorderThickness = 1;
-            guna2Button2.CustomizableEdges = customizableEdges1;
-            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button2.FillColor = Color.Transparent;
-            guna2Button2.Font = new Font("Archivo", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2Button2.ForeColor = Color.Red;
-            guna2Button2.Image = Properties.Icons.close;
-            guna2Button2.ImageAlign = HorizontalAlignment.Left;
-            guna2Button2.ImageSize = new Size(10, 10);
-            guna2Button2.Location = new Point(216, 412);
-            guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button2.Size = new Size(92, 36);
-            guna2Button2.TabIndex = 11;
-            guna2Button2.Text = "Cancel";
-            guna2Button2.TextOffset = new Point(6, 0);
-            guna2Button2.Click += guna2Button2_Click;
+            btnCancel.BorderColor = Color.Red;
+            btnCancel.BorderRadius = 8;
+            btnCancel.BorderThickness = 1;
+            btnCancel.CustomizableEdges = customizableEdges1;
+            btnCancel.DisabledState.BorderColor = Color.DarkGray;
+            btnCancel.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnCancel.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnCancel.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnCancel.FillColor = Color.Transparent;
+            btnCancel.Font = new Font("Archivo", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCancel.ForeColor = Color.Red;
+            btnCancel.Image = Properties.Icons.close;
+            btnCancel.ImageAlign = HorizontalAlignment.Left;
+            btnCancel.ImageSize = new Size(10, 10);
+            btnCancel.Location = new Point(216, 412);
+            btnCancel.Name = "btnCancel";
+            btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnCancel.Size = new Size(92, 36);
+            btnCancel.TabIndex = 11;
+            btnCancel.Text = "Cancel";
+            btnCancel.TextOffset = new Point(6, 0);
+            btnCancel.Click += btnCancel_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.FromArgb(255, 136, 77);
+            pictureBox1.Image = Properties.Icons.clock;
+            pictureBox1.Location = new Point(282, 224);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(15, 15);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 14;
+            pictureBox1.TabStop = false;
             // 
             // Reschedule
             // 
@@ -286,14 +309,15 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(500, 460);
-            Controls.Add(guna2Button2);
-            Controls.Add(guna2Button1);
+            Controls.Add(pictureBox1);
+            Controls.Add(btnCancel);
+            Controls.Add(btnReschedule);
             Controls.Add(guna2HtmlLabel6);
             Controls.Add(guna2HtmlLabel5);
             Controls.Add(guna2HtmlLabel4);
-            Controls.Add(guna2TextBox1);
-            Controls.Add(guna2DateTimePicker2);
-            Controls.Add(guna2DateTimePicker1);
+            Controls.Add(TextBoxReason);
+            Controls.Add(Datepicker);
+            Controls.Add(Timepicker);
             Controls.Add(materialCard1);
             Controls.Add(guna2HtmlLabel2);
             Controls.Add(guna2HtmlLabel1);
@@ -303,6 +327,7 @@
             Text = "Reschedule";
             materialCard1.ResumeLayout(false);
             materialCard1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -313,16 +338,17 @@
         private MaterialSkin.Controls.MaterialCard materialCard1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker2;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker Datepicker;
+        private Guna.UI2.WinForms.Guna2DateTimePicker Timepicker;
+        private Guna.UI2.WinForms.Guna2TextBox TextBoxReason;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2TextBox CurrentDate;
+        private Guna.UI2.WinForms.Guna2TextBox CurrentTime;
+        private Guna.UI2.WinForms.Guna2Button btnCancel;
+        private Guna.UI2.WinForms.Guna2Button btnReschedule;
+        private PictureBox pictureBox1;
     }
 }

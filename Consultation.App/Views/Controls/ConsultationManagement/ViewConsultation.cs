@@ -17,7 +17,23 @@ namespace Consultation.App.Views.Controls.ConsultationManagement
             InitializeComponent();
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void btnReschedule_Click(object sender, EventArgs e)
+        {
+            Reschedule reschedule = new Reschedule();
+            reschedule.ShowDialog();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
         {
             this.Close();
         }
