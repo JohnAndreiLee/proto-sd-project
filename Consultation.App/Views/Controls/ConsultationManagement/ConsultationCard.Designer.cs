@@ -28,26 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            textLocation = new Guna.UI2.WinForms.Guna2TextBox();
             guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            textFaculty = new Guna.UI2.WinForms.Guna2TextBox();
+            textTime = new Guna.UI2.WinForms.Guna2TextBox();
+            textDate = new Guna.UI2.WinForms.Guna2TextBox();
+            textIDnumber = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            LabelNotes = new Guna.UI2.WinForms.Guna2HtmlLabel();
             LabelCourse = new Guna.UI2.WinForms.Guna2HtmlLabel();
             LabelName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             MenuContext = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
@@ -63,13 +66,14 @@
             // materialCard1
             // 
             materialCard1.BackColor = Color.FromArgb(255, 255, 255);
+            materialCard1.Controls.Add(textLocation);
             materialCard1.Controls.Add(guna2TextBox5);
-            materialCard1.Controls.Add(guna2TextBox4);
-            materialCard1.Controls.Add(guna2TextBox3);
-            materialCard1.Controls.Add(guna2TextBox2);
-            materialCard1.Controls.Add(guna2TextBox1);
+            materialCard1.Controls.Add(textFaculty);
+            materialCard1.Controls.Add(textTime);
+            materialCard1.Controls.Add(textDate);
+            materialCard1.Controls.Add(textIDnumber);
             materialCard1.Controls.Add(guna2Button1);
-            materialCard1.Controls.Add(guna2HtmlLabel1);
+            materialCard1.Controls.Add(LabelNotes);
             materialCard1.Controls.Add(LabelCourse);
             materialCard1.Controls.Add(LabelName);
             materialCard1.Depth = 0;
@@ -83,11 +87,32 @@
             materialCard1.Size = new Size(1350, 122);
             materialCard1.TabIndex = 0;
             // 
+            // textLocation
+            // 
+            textLocation.BorderRadius = 15;
+            textLocation.CustomizableEdges = customizableEdges15;
+            textLocation.DefaultText = "2025-05-10";
+            textLocation.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            textLocation.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            textLocation.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            textLocation.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            textLocation.FillColor = Color.Gainsboro;
+            textLocation.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            textLocation.Font = new Font("Segoe UI", 9F);
+            textLocation.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            textLocation.Location = new Point(712, 86);
+            textLocation.Name = "textLocation";
+            textLocation.PlaceholderText = "";
+            textLocation.SelectedText = "";
+            textLocation.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            textLocation.Size = new Size(145, 28);
+            textLocation.TabIndex = 10;
+            // 
             // guna2TextBox5
             // 
             guna2TextBox5.BackColor = Color.Transparent;
             guna2TextBox5.BorderRadius = 15;
-            guna2TextBox5.CustomizableEdges = customizableEdges1;
+            guna2TextBox5.CustomizableEdges = customizableEdges17;
             guna2TextBox5.DefaultText = "Pending";
             guna2TextBox5.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             guna2TextBox5.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -103,99 +128,99 @@
             guna2TextBox5.Name = "guna2TextBox5";
             guna2TextBox5.PlaceholderText = "";
             guna2TextBox5.SelectedText = "";
-            guna2TextBox5.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2TextBox5.ShadowDecoration.CustomizableEdges = customizableEdges18;
             guna2TextBox5.Size = new Size(114, 38);
             guna2TextBox5.TabIndex = 9;
             guna2TextBox5.TextAlign = HorizontalAlignment.Center;
             // 
-            // guna2TextBox4
+            // textFaculty
             // 
-            guna2TextBox4.BorderRadius = 15;
-            guna2TextBox4.CustomizableEdges = customizableEdges3;
-            guna2TextBox4.DefaultText = "2025-05-10";
-            guna2TextBox4.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox4.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox4.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox4.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox4.FillColor = Color.Gainsboro;
-            guna2TextBox4.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox4.Font = new Font("Segoe UI", 9F);
-            guna2TextBox4.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox4.Location = new Point(539, 86);
-            guna2TextBox4.Name = "guna2TextBox4";
-            guna2TextBox4.PlaceholderText = "";
-            guna2TextBox4.SelectedText = "";
-            guna2TextBox4.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2TextBox4.Size = new Size(145, 28);
-            guna2TextBox4.TabIndex = 8;
+            textFaculty.BorderRadius = 15;
+            textFaculty.CustomizableEdges = customizableEdges19;
+            textFaculty.DefaultText = "2025-05-10";
+            textFaculty.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            textFaculty.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            textFaculty.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            textFaculty.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            textFaculty.FillColor = Color.Gainsboro;
+            textFaculty.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            textFaculty.Font = new Font("Segoe UI", 9F);
+            textFaculty.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            textFaculty.Location = new Point(539, 86);
+            textFaculty.Name = "textFaculty";
+            textFaculty.PlaceholderText = "";
+            textFaculty.SelectedText = "";
+            textFaculty.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            textFaculty.Size = new Size(145, 28);
+            textFaculty.TabIndex = 8;
             // 
-            // guna2TextBox3
+            // textTime
             // 
-            guna2TextBox3.BorderRadius = 15;
-            guna2TextBox3.CustomizableEdges = customizableEdges5;
-            guna2TextBox3.DefaultText = "2025-05-10";
-            guna2TextBox3.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox3.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox3.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox3.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox3.FillColor = Color.Gainsboro;
-            guna2TextBox3.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Font = new Font("Segoe UI", 9F);
-            guna2TextBox3.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Location = new Point(364, 86);
-            guna2TextBox3.Name = "guna2TextBox3";
-            guna2TextBox3.PlaceholderText = "";
-            guna2TextBox3.SelectedText = "";
-            guna2TextBox3.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2TextBox3.Size = new Size(145, 28);
-            guna2TextBox3.TabIndex = 7;
+            textTime.BorderRadius = 15;
+            textTime.CustomizableEdges = customizableEdges21;
+            textTime.DefaultText = "2025-05-10";
+            textTime.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            textTime.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            textTime.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            textTime.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            textTime.FillColor = Color.Gainsboro;
+            textTime.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            textTime.Font = new Font("Segoe UI", 9F);
+            textTime.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            textTime.Location = new Point(364, 86);
+            textTime.Name = "textTime";
+            textTime.PlaceholderText = "";
+            textTime.SelectedText = "";
+            textTime.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            textTime.Size = new Size(145, 28);
+            textTime.TabIndex = 7;
             // 
-            // guna2TextBox2
+            // textDate
             // 
-            guna2TextBox2.BorderRadius = 15;
-            guna2TextBox2.CustomizableEdges = customizableEdges7;
-            guna2TextBox2.DefaultText = "2025-05-10";
-            guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.FillColor = Color.Gainsboro;
-            guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Font = new Font("Segoe UI", 9F);
-            guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Location = new Point(186, 86);
-            guna2TextBox2.Name = "guna2TextBox2";
-            guna2TextBox2.PlaceholderText = "";
-            guna2TextBox2.SelectedText = "";
-            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2TextBox2.Size = new Size(145, 28);
-            guna2TextBox2.TabIndex = 6;
+            textDate.BorderRadius = 15;
+            textDate.CustomizableEdges = customizableEdges23;
+            textDate.DefaultText = "2025-05-10";
+            textDate.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            textDate.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            textDate.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            textDate.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            textDate.FillColor = Color.Gainsboro;
+            textDate.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            textDate.Font = new Font("Segoe UI", 9F);
+            textDate.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            textDate.Location = new Point(186, 86);
+            textDate.Name = "textDate";
+            textDate.PlaceholderText = "";
+            textDate.SelectedText = "";
+            textDate.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            textDate.Size = new Size(145, 28);
+            textDate.TabIndex = 6;
             // 
-            // guna2TextBox1
+            // textIDnumber
             // 
-            guna2TextBox1.BorderRadius = 15;
-            guna2TextBox1.CustomizableEdges = customizableEdges9;
-            guna2TextBox1.DefaultText = "ID: CON-2025-001";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FillColor = Color.Gainsboro;
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Segoe UI", 9F);
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(25, 86);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PlaceholderText = "";
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2TextBox1.Size = new Size(133, 28);
-            guna2TextBox1.TabIndex = 5;
+            textIDnumber.BorderRadius = 15;
+            textIDnumber.CustomizableEdges = customizableEdges25;
+            textIDnumber.DefaultText = "ID: CON-2025-001";
+            textIDnumber.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            textIDnumber.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            textIDnumber.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            textIDnumber.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            textIDnumber.FillColor = Color.Gainsboro;
+            textIDnumber.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            textIDnumber.Font = new Font("Segoe UI", 9F);
+            textIDnumber.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            textIDnumber.Location = new Point(25, 86);
+            textIDnumber.Name = "textIDnumber";
+            textIDnumber.PlaceholderText = "";
+            textIDnumber.SelectedText = "";
+            textIDnumber.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            textIDnumber.Size = new Size(133, 28);
+            textIDnumber.TabIndex = 5;
             // 
             // guna2Button1
             // 
             guna2Button1.BackColor = Color.Transparent;
-            guna2Button1.CustomizableEdges = customizableEdges11;
+            guna2Button1.CustomizableEdges = customizableEdges27;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -210,27 +235,27 @@
             guna2Button1.ImageSize = new Size(25, 25);
             guna2Button1.Location = new Point(1302, 13);
             guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges28;
             guna2Button1.Size = new Size(36, 36);
             guna2Button1.TabIndex = 4;
             guna2Button1.Click += guna2Button1_Click;
             // 
-            // guna2HtmlLabel1
+            // LabelNotes
             // 
-            guna2HtmlLabel1.BackColor = Color.Transparent;
-            guna2HtmlLabel1.Font = new Font("Inter", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2HtmlLabel1.Location = new Point(25, 48);
-            guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(675, 25);
-            guna2HtmlLabel1.TabIndex = 3;
-            guna2HtmlLabel1.Text = "Student struggling with algebra concepts. Parent requested additional support strategies.";
+            LabelNotes.BackColor = Color.Transparent;
+            LabelNotes.Font = new Font("Inter", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LabelNotes.Location = new Point(25, 48);
+            LabelNotes.Name = "LabelNotes";
+            LabelNotes.Size = new Size(675, 25);
+            LabelNotes.TabIndex = 3;
+            LabelNotes.Text = "Student struggling with algebra concepts. Parent requested additional support strategies.";
             // 
             // LabelCourse
             // 
             LabelCourse.BackColor = Color.Transparent;
             LabelCourse.Font = new Font("Archivo", 15.75F, FontStyle.Bold);
             LabelCourse.ForeColor = Color.DimGray;
-            LabelCourse.Location = new Point(240, 12);
+            LabelCourse.Location = new Point(239, 12);
             LabelCourse.Name = "LabelCourse";
             LabelCourse.Size = new Size(185, 34);
             LabelCourse.TabIndex = 2;
@@ -278,6 +303,7 @@
             editToolStripMenuItem.Name = "editToolStripMenuItem";
             editToolStripMenuItem.Size = new Size(162, 26);
             editToolStripMenuItem.Text = "Edit";
+            editToolStripMenuItem.Click += editToolStripMenuItem_Click;
             // 
             // rescheduleToolStripMenuItem
             // 
@@ -328,12 +354,12 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel LabelDate;
         private Guna.UI2.WinForms.Guna2HtmlLabel LabelName;
         private Guna.UI2.WinForms.Guna2HtmlLabel LabelCourse;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel LabelNotes;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox textFaculty;
+        private Guna.UI2.WinForms.Guna2TextBox textTime;
+        private Guna.UI2.WinForms.Guna2TextBox textDate;
+        private Guna.UI2.WinForms.Guna2TextBox textIDnumber;
         private Guna.UI2.WinForms.Guna2ContextMenuStrip MenuContext;
         private ToolStripMenuItem viewToolStripMenuItem;
         private ToolStripMenuItem editToolStripMenuItem;
@@ -341,5 +367,6 @@
         private ToolStripMenuItem archiveToolStripMenuItem;
         private ToolStripMenuItem deleteToolStripMenuItem;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
+        private Guna.UI2.WinForms.Guna2TextBox textLocation;
     }
 }

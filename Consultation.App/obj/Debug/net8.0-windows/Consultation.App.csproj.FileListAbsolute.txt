@@ -248,7 +248,6 @@ C:\Users\MAE DARYLE BAGNOL\Source\Repos\proto-sd-project\Consultation.App\bin\De
 C:\Users\MAE DARYLE BAGNOL\Source\Repos\proto-sd-project\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.csproj.AssemblyReference.cache
 C:\Users\MAE DARYLE BAGNOL\Source\Repos\proto-sd-project\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Properties.Icons.resources
 C:\Users\MAE DARYLE BAGNOL\Source\Repos\proto-sd-project\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.ConsultationManagement.ConsultationView.resources
-C:\Users\MAE DARYLE BAGNOL\Source\Repos\proto-sd-project\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.ConsultationManagement.AddSchedule.resources
 C:\Users\MAE DARYLE BAGNOL\Source\Repos\proto-sd-project\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.ConsultationManagement.ArchiveWindow.resources
 C:\Users\MAE DARYLE BAGNOL\Source\Repos\proto-sd-project\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.ConsultationManagement.ConsultationCard.resources
 C:\Users\MAE DARYLE BAGNOL\Source\Repos\proto-sd-project\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.ConsultationManagement.CSWindow.resources
@@ -288,3 +287,4 @@ C:\Users\MAE DARYLE BAGNOL\Source\Repos\proto-sd-project\Consultation.App\obj\De
 C:\Users\MAE DARYLE BAGNOL\Source\Repos\proto-sd-project\Consultation.App\obj\Debug\net8.0-windows\ref\Consultation.App.dll
 C:\Users\MAE DARYLE BAGNOL\Source\Repos\proto-sd-project\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.Controls.ConsultationManagement.Reschedule.resources
 C:\Users\MAE DARYLE BAGNOL\Source\Repos\proto-sd-project\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.Controls.ConsultationManagement.ViewConsultation.resources
+C:\Users\MAE DARYLE BAGNOL\Source\Repos\proto-sd-project\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.ConsultationManagement.EditSchedule.resources

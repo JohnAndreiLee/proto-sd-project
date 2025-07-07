@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -43,11 +41,12 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             materialCard1 = new MaterialSkin.Controls.MaterialCard();
-            CurrentDate = new Guna.UI2.WinForms.Guna2TextBox();
             CurrentTime = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             Timepicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -59,6 +58,7 @@
             btnReschedule = new Guna.UI2.WinForms.Guna2Button();
             btnCancel = new Guna.UI2.WinForms.Guna2Button();
             pictureBox1 = new PictureBox();
+            CurrentDate = new Guna.UI2.WinForms.Guna2TextBox();
             materialCard1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -104,27 +104,6 @@
             materialCard1.Padding = new Padding(14);
             materialCard1.Size = new Size(450, 80);
             materialCard1.TabIndex = 2;
-            // 
-            // CurrentDate
-            // 
-            CurrentDate.BorderRadius = 10;
-            CurrentDate.CustomizableEdges = customizableEdges11;
-            CurrentDate.DefaultText = "";
-            CurrentDate.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            CurrentDate.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            CurrentDate.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            CurrentDate.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            CurrentDate.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            CurrentDate.Font = new Font("Segoe UI", 9F);
-            CurrentDate.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            CurrentDate.Location = new Point(17, 37);
-            CurrentDate.Name = "CurrentDate";
-            CurrentDate.PlaceholderText = "";
-            CurrentDate.ReadOnly = true;
-            CurrentDate.SelectedText = "";
-            CurrentDate.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            CurrentDate.Size = new Size(200, 36);
-            CurrentDate.TabIndex = 8;
             // 
             // CurrentTime
             // 
@@ -303,6 +282,27 @@
             pictureBox1.TabIndex = 14;
             pictureBox1.TabStop = false;
             // 
+            // CurrentDate
+            // 
+            CurrentDate.BorderRadius = 10;
+            CurrentDate.CustomizableEdges = customizableEdges11;
+            CurrentDate.DefaultText = "";
+            CurrentDate.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            CurrentDate.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            CurrentDate.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            CurrentDate.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            CurrentDate.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            CurrentDate.Font = new Font("Segoe UI", 9F);
+            CurrentDate.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            CurrentDate.Location = new Point(17, 37);
+            CurrentDate.Name = "CurrentDate";
+            CurrentDate.PlaceholderText = "";
+            CurrentDate.ReadOnly = true;
+            CurrentDate.SelectedText = "";
+            CurrentDate.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            CurrentDate.Size = new Size(200, 36);
+            CurrentDate.TabIndex = 8;
+            // 
             // Reschedule
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -345,10 +345,10 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2TextBox CurrentDate;
         private Guna.UI2.WinForms.Guna2TextBox CurrentTime;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
         private Guna.UI2.WinForms.Guna2Button btnReschedule;
         private PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2TextBox CurrentDate;
     }
 }

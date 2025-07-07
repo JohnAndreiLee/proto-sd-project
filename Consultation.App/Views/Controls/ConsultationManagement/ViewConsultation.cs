@@ -25,7 +25,15 @@ namespace Consultation.App.Views.Controls.ConsultationManagement
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-
+            textIDnumber.ReadOnly = false;
+            textCode.ReadOnly = false;
+            textLocation.ReadOnly = false;
+            textNotes.ReadOnly = false;
+            textPersonel.ReadOnly = false;
+            textRequestDate.ReadOnly = false;
+            textSchedTime.ReadOnly = false;
+            textStudent.ReadOnly = false;
+            textScheduleDate.ReadOnly = false;
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

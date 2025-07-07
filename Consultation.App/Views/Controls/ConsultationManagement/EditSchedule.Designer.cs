@@ -1,6 +1,6 @@
 ﻿namespace Consultation.App.ConsultationManagement
 {
-    partial class AddSchedule
+    partial class EditSchedule
     {
         /// <summary>
         /// Required designer variable.
@@ -59,23 +59,23 @@
             guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             Student = new Guna.UI2.WinForms.Guna2TextBox();
             cancelbutton = new Guna.UI2.WinForms.Guna2Button();
-            Submitbutton = new Guna.UI2.WinForms.Guna2Button();
+            btnChanges = new Guna.UI2.WinForms.Guna2Button();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            pictureBox1 = new PictureBox();
             guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            Idnumber = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
+            Location = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
+            CourseCode = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            pictureBox1 = new PictureBox();
+            Faculty = new Guna.UI2.WinForms.Guna2TextBox();
             guna2CustomGradientPanel1.SuspendLayout();
             materialCard1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -212,34 +212,42 @@
             cancelbutton.FillColor = Color.White;
             cancelbutton.Font = new Font("Inter", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cancelbutton.ForeColor = Color.Red;
-            cancelbutton.Location = new Point(594, 43);
+            cancelbutton.Image = Properties.Icons.close1;
+            cancelbutton.ImageAlign = HorizontalAlignment.Left;
+            cancelbutton.ImageSize = new Size(12, 12);
+            cancelbutton.Location = new Point(647, 43);
             cancelbutton.Name = "cancelbutton";
             cancelbutton.ShadowDecoration.CustomizableEdges = customizableEdges4;
             cancelbutton.Size = new Size(110, 44);
             cancelbutton.TabIndex = 22;
             cancelbutton.Text = "Cancel";
+            cancelbutton.TextOffset = new Point(8, 0);
             cancelbutton.Click += guna2Button3_Click;
             // 
-            // Submitbutton
+            // btnChanges
             // 
-            Submitbutton.BackColor = Color.Transparent;
-            Submitbutton.BorderColor = Color.Transparent;
-            Submitbutton.BorderRadius = 6;
-            Submitbutton.CustomizableEdges = customizableEdges1;
-            Submitbutton.DisabledState.BorderColor = Color.DarkGray;
-            Submitbutton.DisabledState.CustomBorderColor = Color.DarkGray;
-            Submitbutton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            Submitbutton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            Submitbutton.FillColor = Color.White;
-            Submitbutton.Font = new Font("Inter", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Submitbutton.ForeColor = Color.Red;
-            Submitbutton.Location = new Point(710, 43);
-            Submitbutton.Name = "Submitbutton";
-            Submitbutton.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            Submitbutton.Size = new Size(228, 44);
-            Submitbutton.TabIndex = 21;
-            Submitbutton.Text = "Schedule Consultation";
-            Submitbutton.Click += guna2Button2_Click;
+            btnChanges.BackColor = Color.Transparent;
+            btnChanges.BorderColor = Color.Transparent;
+            btnChanges.BorderRadius = 6;
+            btnChanges.CustomizableEdges = customizableEdges1;
+            btnChanges.DisabledState.BorderColor = Color.DarkGray;
+            btnChanges.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnChanges.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnChanges.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnChanges.FillColor = Color.White;
+            btnChanges.Font = new Font("Inter", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnChanges.ForeColor = Color.Red;
+            btnChanges.Image = Properties.Icons.arrow1;
+            btnChanges.ImageAlign = HorizontalAlignment.Left;
+            btnChanges.ImageSize = new Size(15, 15);
+            btnChanges.Location = new Point(763, 43);
+            btnChanges.Name = "btnChanges";
+            btnChanges.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnChanges.Size = new Size(164, 44);
+            btnChanges.TabIndex = 21;
+            btnChanges.Text = "Save Changes";
+            btnChanges.TextOffset = new Point(3, 0);
+            btnChanges.Click += guna2Button2_Click;
             // 
             // guna2HtmlLabel1
             // 
@@ -254,7 +262,7 @@
             // guna2CustomGradientPanel1
             // 
             guna2CustomGradientPanel1.Controls.Add(guna2HtmlLabel3);
-            guna2CustomGradientPanel1.Controls.Add(Submitbutton);
+            guna2CustomGradientPanel1.Controls.Add(btnChanges);
             guna2CustomGradientPanel1.Controls.Add(cancelbutton);
             guna2CustomGradientPanel1.CustomizableEdges = customizableEdges5;
             guna2CustomGradientPanel1.FillColor = Color.FromArgb(239, 68, 68);
@@ -272,29 +280,29 @@
             guna2HtmlLabel3.BackColor = Color.Transparent;
             guna2HtmlLabel3.Font = new Font("Archivo", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel3.ForeColor = Color.White;
-            guna2HtmlLabel3.Location = new Point(12, 26);
+            guna2HtmlLabel3.Location = new Point(23, 43);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            guna2HtmlLabel3.Size = new Size(425, 50);
+            guna2HtmlLabel3.Size = new Size(267, 50);
             guna2HtmlLabel3.TabIndex = 23;
-            guna2HtmlLabel3.Text = "Schedule New Consultation";
+            guna2HtmlLabel3.Text = "Edit Consultation";
             // 
             // materialCard1
             // 
             materialCard1.BackColor = Color.FromArgb(255, 255, 255);
             materialCard1.Controls.Add(pictureBox1);
             materialCard1.Controls.Add(guna2HtmlLabel11);
-            materialCard1.Controls.Add(guna2TextBox2);
+            materialCard1.Controls.Add(Idnumber);
             materialCard1.Controls.Add(guna2HtmlLabel6);
             materialCard1.Controls.Add(guna2HtmlLabel5);
             materialCard1.Controls.Add(guna2HtmlLabel4);
             materialCard1.Controls.Add(guna2HtmlLabel10);
             materialCard1.Controls.Add(guna2HtmlLabel9);
-            materialCard1.Controls.Add(guna2TextBox4);
+            materialCard1.Controls.Add(Location);
             materialCard1.Controls.Add(guna2HtmlLabel8);
-            materialCard1.Controls.Add(guna2TextBox3);
+            materialCard1.Controls.Add(CourseCode);
             materialCard1.Controls.Add(guna2HtmlLabel7);
             materialCard1.Controls.Add(guna2Time);
-            materialCard1.Controls.Add(guna2TextBox1);
+            materialCard1.Controls.Add(Faculty);
             materialCard1.Controls.Add(Notes);
             materialCard1.Controls.Add(guna2Date);
             materialCard1.Controls.Add(guna2HtmlLabel2);
@@ -309,6 +317,17 @@
             materialCard1.Size = new Size(904, 397);
             materialCard1.TabIndex = 27;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.FromArgb(255, 136, 77);
+            pictureBox1.Image = Properties.Icons.clock;
+            pictureBox1.Location = new Point(498, 175);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(15, 15);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 37;
+            pictureBox1.TabStop = false;
+            // 
             // guna2HtmlLabel11
             // 
             guna2HtmlLabel11.BackColor = Color.White;
@@ -319,27 +338,27 @@
             guna2HtmlLabel11.TabIndex = 36;
             guna2HtmlLabel11.Text = "ID Number";
             // 
-            // guna2TextBox2
+            // Idnumber
             // 
-            guna2TextBox2.BorderColor = Color.Gainsboro;
-            guna2TextBox2.BorderRadius = 6;
-            guna2TextBox2.CustomizableEdges = customizableEdges7;
-            guna2TextBox2.DefaultText = "";
-            guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Font = new Font("Inter", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2TextBox2.ForeColor = Color.Black;
-            guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Location = new Point(17, 66);
-            guna2TextBox2.Name = "guna2TextBox2";
-            guna2TextBox2.PlaceholderText = "Enter ID Number";
-            guna2TextBox2.SelectedText = "";
-            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2TextBox2.Size = new Size(158, 45);
-            guna2TextBox2.TabIndex = 35;
+            Idnumber.BorderColor = Color.Gainsboro;
+            Idnumber.BorderRadius = 6;
+            Idnumber.CustomizableEdges = customizableEdges7;
+            Idnumber.DefaultText = "";
+            Idnumber.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            Idnumber.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            Idnumber.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            Idnumber.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            Idnumber.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            Idnumber.Font = new Font("Inter", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Idnumber.ForeColor = Color.Black;
+            Idnumber.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            Idnumber.Location = new Point(17, 66);
+            Idnumber.Name = "Idnumber";
+            Idnumber.PlaceholderText = "Enter ID Number";
+            Idnumber.SelectedText = "";
+            Idnumber.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            Idnumber.Size = new Size(158, 45);
+            Idnumber.TabIndex = 35;
             // 
             // guna2HtmlLabel6
             // 
@@ -381,27 +400,27 @@
             guna2HtmlLabel10.TabIndex = 31;
             guna2HtmlLabel10.Text = "Location";
             // 
-            // guna2TextBox4
+            // Location
             // 
-            guna2TextBox4.BorderColor = Color.Gainsboro;
-            guna2TextBox4.BorderRadius = 6;
-            guna2TextBox4.CustomizableEdges = customizableEdges9;
-            guna2TextBox4.DefaultText = "";
-            guna2TextBox4.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox4.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox4.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox4.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox4.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox4.Font = new Font("Inter", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2TextBox4.ForeColor = Color.Black;
-            guna2TextBox4.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox4.Location = new Point(17, 332);
-            guna2TextBox4.Name = "guna2TextBox4";
-            guna2TextBox4.PlaceholderText = "Enter Location";
-            guna2TextBox4.SelectedText = "";
-            guna2TextBox4.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2TextBox4.Size = new Size(410, 45);
-            guna2TextBox4.TabIndex = 30;
+            Location.BorderColor = Color.Gainsboro;
+            Location.BorderRadius = 6;
+            Location.CustomizableEdges = customizableEdges9;
+            Location.DefaultText = "";
+            Location.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            Location.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            Location.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            Location.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            Location.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            Location.Font = new Font("Inter", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Location.ForeColor = Color.Black;
+            Location.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            Location.Location = new Point(17, 332);
+            Location.Name = "Location";
+            Location.PlaceholderText = "Enter Location";
+            Location.SelectedText = "";
+            Location.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            Location.Size = new Size(410, 45);
+            Location.TabIndex = 30;
             // 
             // guna2HtmlLabel8
             // 
@@ -413,27 +432,27 @@
             guna2HtmlLabel8.TabIndex = 29;
             guna2HtmlLabel8.Text = "Course Code";
             // 
-            // guna2TextBox3
+            // CourseCode
             // 
-            guna2TextBox3.BorderColor = Color.Gainsboro;
-            guna2TextBox3.BorderRadius = 6;
-            guna2TextBox3.CustomizableEdges = customizableEdges11;
-            guna2TextBox3.DefaultText = "";
-            guna2TextBox3.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox3.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox3.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox3.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox3.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Font = new Font("Inter", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2TextBox3.ForeColor = Color.Black;
-            guna2TextBox3.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox3.Location = new Point(17, 261);
-            guna2TextBox3.Name = "guna2TextBox3";
-            guna2TextBox3.PlaceholderText = "Enter Course Code";
-            guna2TextBox3.SelectedText = "";
-            guna2TextBox3.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2TextBox3.Size = new Size(410, 45);
-            guna2TextBox3.TabIndex = 28;
+            CourseCode.BorderColor = Color.Gainsboro;
+            CourseCode.BorderRadius = 6;
+            CourseCode.CustomizableEdges = customizableEdges11;
+            CourseCode.DefaultText = "";
+            CourseCode.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            CourseCode.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            CourseCode.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            CourseCode.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            CourseCode.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            CourseCode.Font = new Font("Inter", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            CourseCode.ForeColor = Color.Black;
+            CourseCode.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            CourseCode.Location = new Point(17, 261);
+            CourseCode.Name = "CourseCode";
+            CourseCode.PlaceholderText = "Enter Course Code";
+            CourseCode.SelectedText = "";
+            CourseCode.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            CourseCode.Size = new Size(410, 45);
+            CourseCode.TabIndex = 28;
             // 
             // guna2HtmlLabel7
             // 
@@ -445,40 +464,29 @@
             guna2HtmlLabel7.TabIndex = 27;
             guna2HtmlLabel7.Text = "Assigned Faculty";
             // 
-            // guna2TextBox1
+            // Faculty
             // 
-            guna2TextBox1.BorderColor = Color.Gainsboro;
-            guna2TextBox1.BorderRadius = 6;
-            guna2TextBox1.CustomizableEdges = customizableEdges15;
-            guna2TextBox1.DefaultText = "";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Inter", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2TextBox1.ForeColor = Color.Black;
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(17, 191);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PlaceholderText = "Enter Faculty Name";
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2TextBox1.Size = new Size(410, 45);
-            guna2TextBox1.TabIndex = 26;
+            Faculty.BorderColor = Color.Gainsboro;
+            Faculty.BorderRadius = 6;
+            Faculty.CustomizableEdges = customizableEdges15;
+            Faculty.DefaultText = "";
+            Faculty.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            Faculty.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            Faculty.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            Faculty.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            Faculty.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            Faculty.Font = new Font("Inter", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Faculty.ForeColor = Color.Black;
+            Faculty.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            Faculty.Location = new Point(17, 192);
+            Faculty.Name = "Faculty";
+            Faculty.PlaceholderText = "Enter Faculty Name";
+            Faculty.SelectedText = "";
+            Faculty.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            Faculty.Size = new Size(410, 45);
+            Faculty.TabIndex = 26;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = Color.FromArgb(255, 136, 77);
-            pictureBox1.Image = Properties.Icons.clock;
-            pictureBox1.Location = new Point(498, 175);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(15, 15);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 37;
-            pictureBox1.TabStop = false;
-            // 
-            // AddSchedule
+            // EditSchedule
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -487,7 +495,7 @@
             Controls.Add(guna2CustomGradientPanel1);
             Controls.Add(materialCard1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "AddSchedule";
+            Name = "EditSchedule";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AddSchedule";
             guna2CustomGradientPanel1.ResumeLayout(false);
@@ -509,21 +517,21 @@
         private Guna.UI2.WinForms.Guna2TextBox Student;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private Guna.UI2.WinForms.Guna2Button Submitbutton;
+        private Guna.UI2.WinForms.Guna2Button btnChanges;
         private Guna.UI2.WinForms.Guna2Button cancelbutton;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private MaterialSkin.Controls.MaterialCard materialCard1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox Faculty;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
+        private Guna.UI2.WinForms.Guna2TextBox Location;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private Guna.UI2.WinForms.Guna2TextBox CourseCode;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox Idnumber;
         private PictureBox pictureBox1;
     }
 }

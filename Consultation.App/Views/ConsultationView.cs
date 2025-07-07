@@ -19,9 +19,9 @@ namespace Consultation.App.ConsultationManagement
             MoveUnderline(btnConsultation);
 
             if (csWindow == null)
-            { 
-            csWindow = new CSWindow();
-            csWindow.CardArchived += OnCardArchived;
+            {
+                csWindow = new CSWindow();
+                csWindow.CardArchived += OnCardArchived;
             }
             flowLayoutPanel1.Controls.Clear();
             flowLayoutPanel1.Controls.Add(csWindow);
@@ -63,16 +63,22 @@ namespace Consultation.App.ConsultationManagement
             underlinePanel.Visible = true;
         }
 
-        private void btnSchedule_Click_1(object sender, EventArgs e)
+        private void btnRefresh_Click_1(object sender, EventArgs e)
         {
-            if (csWindow == null)
+            if (csWindow != null)
             {
-                MessageBox.Show("Please open the Consultation view first.");
-                return;
+                flowLayoutPanel1.Controls.Clear();
+                csWindow = new CSWindow();
+                csWindow.CardArchived += OnCardArchived;
+                flowLayoutPanel1.Controls.Add(csWindow);
             }
 
-            AddSchedule addSchedule = new AddSchedule(csWindow);
-            addSchedule.ShowDialog();
+            if (archiveWindow != null && underlinePanel.Left == btnArchive.Left)
+            {
+                flowLayoutPanel1.Controls.Clear();
+                archiveWindow = new ArchiveWindow();
+                flowLayoutPanel1.Controls.Add(archiveWindow);
+            }
         }
     }
 }

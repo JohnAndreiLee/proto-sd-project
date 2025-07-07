@@ -12,6 +12,8 @@ namespace Consultation.App.ConsultationManagement
 {
     public partial class ArchiveWindow : UserControl
     {
+
+       
         public ArchiveWindow()
         {
             InitializeComponent();
@@ -20,6 +22,15 @@ namespace Consultation.App.ConsultationManagement
 
         public void AddToArchive(ConsultationCard card)
         {
+            WindowPanelArchive.Controls.Add(card);
+        }
+
+        public void AddToArchive(ConsultationCard card, Panel originalPanel = null)
+        {
+            if (originalPanel != null)
+                card.OriginalPanel = originalPanel;
+
+            card.SetAsArchived();
             WindowPanelArchive.Controls.Add(card);
         }
     }

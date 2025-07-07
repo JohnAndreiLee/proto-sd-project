@@ -20,20 +20,22 @@ namespace Consultation.App.ConsultationManagement
             InitializeComponent();
         }
 
-        public void AddConsultationCard(string date, string time, string name)
-        {
-            ConsultationCard card = new ConsultationCard();
-            card.SetData(date, time, name);
+        //No need because a schedule won't be added. 
 
-            // Subscribe to archive event
-            card.ArchiveClicked += (s, e) =>
-            {
-                // Let the main form handle it
-                CardArchived?.Invoke(this, card);
-            };
+        //public void AddConsultationCard(string date, string time, string name)
+        //{
+        //    ConsultationCard card = new ConsultationCard();
+        //    card.SetData(date, time, name);
 
-            WindowPanelConsultation.Controls.Add(card);
-        }
+        //    // Subscribe to archive event
+        //    card.ArchiveClicked += (s, e) =>
+        //    {
+        //        // Let the main form handle it
+        //        CardArchived?.Invoke(this, card);
+        //    };
+
+        //    WindowPanelConsultation.Controls.Add(card);
+        //}
 
         public void RemoveCard(ConsultationCard card)
         {
