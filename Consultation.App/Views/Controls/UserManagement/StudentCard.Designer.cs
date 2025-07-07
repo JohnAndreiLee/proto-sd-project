@@ -28,85 +28,89 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lblName = new Label();
-            lblID = new Label();
-            lblEmail = new Label();
-            pictureBox3 = new PictureBox();
-            button1 = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            lblStudName = new Label();
+            lblStudID = new Label();
+            lblStudEmail = new Label();
+            pictureBox = new PictureBox();
+            StudAction = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
             SuspendLayout();
             // 
-            // lblName
+            // lblStudName
             // 
-            lblName.AutoSize = true;
-            lblName.Location = new Point(166, 23);
-            lblName.Name = "lblName";
-            lblName.Size = new Size(104, 20);
-            lblName.TabIndex = 0;
-            lblName.Text = "Student Name";
+            lblStudName.AutoSize = true;
+            lblStudName.Font = new Font("Sans Serif Collection", 9F);
+            lblStudName.Location = new Point(93, 16);
+            lblStudName.Name = "lblStudName";
+            lblStudName.Size = new Size(118, 51);
+            lblStudName.TabIndex = 0;
+            lblStudName.Text = "Student Name";
             // 
-            // lblID
+            // lblStudID
             // 
-            lblID.AutoSize = true;
-            lblID.Location = new Point(515, 23);
-            lblID.Name = "lblID";
-            lblID.Size = new Size(27, 20);
-            lblID.TabIndex = 1;
-            lblID.Text = "I.D";
+            lblStudID.AutoSize = true;
+            lblStudID.Font = new Font("Sans Serif Collection", 9F);
+            lblStudID.Location = new Point(314, 16);
+            lblStudID.Name = "lblStudID";
+            lblStudID.Size = new Size(42, 51);
+            lblStudID.TabIndex = 1;
+            lblStudID.Text = "I.D";
             // 
-            // lblEmail
+            // lblStudEmail
             // 
-            lblEmail.AutoSize = true;
-            lblEmail.Location = new Point(753, 23);
-            lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(127, 20);
-            lblEmail.TabIndex = 3;
-            lblEmail.Text = "Umindanao Email";
+            lblStudEmail.AutoSize = true;
+            lblStudEmail.Font = new Font("Sans Serif Collection", 9F);
+            lblStudEmail.Location = new Point(488, 16);
+            lblStudEmail.Name = "lblStudEmail";
+            lblStudEmail.Size = new Size(143, 51);
+            lblStudEmail.TabIndex = 3;
+            lblStudEmail.Text = "Umindanao Email";
             // 
-            // pictureBox3
+            // pictureBox
             // 
-            pictureBox3.Image = Properties.Icons.person_b;
-            pictureBox3.Location = new Point(24, 14);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(61, 49);
-            pictureBox3.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox3.TabIndex = 11;
-            pictureBox3.TabStop = false;
+            pictureBox.Image = Properties.Icons.person_b;
+            pictureBox.Location = new Point(3, 3);
+            pictureBox.Name = "pictureBox";
+            pictureBox.Size = new Size(84, 64);
+            pictureBox.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox.TabIndex = 11;
+            pictureBox.TabStop = false;
             // 
-            // button1
+            // StudAction
             // 
-            button1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(1087, 23);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 12;
-            button1.Text = "...";
-            button1.UseVisualStyleBackColor = true;
+            StudAction.AutoSize = true;
+            StudAction.Font = new Font("Sans Serif Collection", 9F);
+            StudAction.Location = new Point(766, 16);
+            StudAction.Name = "StudAction";
+            StudAction.Size = new Size(34, 51);
+            StudAction.TabIndex = 12;
+            StudAction.Text = "...";
             // 
             // StudentCard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlLightLight;
             BorderStyle = BorderStyle.Fixed3D;
-            Controls.Add(button1);
-            Controls.Add(pictureBox3);
-            Controls.Add(lblEmail);
-            Controls.Add(lblID);
-            Controls.Add(lblName);
+            Controls.Add(StudAction);
+            Controls.Add(pictureBox);
+            Controls.Add(lblStudEmail);
+            Controls.Add(lblStudID);
+            Controls.Add(lblStudName);
             Margin = new Padding(3, 4, 3, 4);
             Name = "StudentCard";
-            Size = new Size(1267, 70);
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            Size = new Size(948, 70);
+            ((System.ComponentModel.ISupportInitialize)pictureBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label lblName;
-        private Label lblID;
-        private Label lblEmail;
-        private PictureBox pictureBox3;
-        private Button button1;
+        private Label lblStudName;
+        private Label lblStudID;
+        private Label lblStudEmail;
+        private PictureBox pictureBox;
+        private Label StudAction;
     }
 }

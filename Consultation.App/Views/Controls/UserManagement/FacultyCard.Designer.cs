@@ -28,85 +28,89 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lblFacM = new Label();
-            lblIDFM = new Label();
-            lblEmailFM = new Label();
-            pictureBox3 = new PictureBox();
-            button1 = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            FacAction = new Label();
+            lblFacEmail = new Label();
+            lblFacID = new Label();
+            lblFacName = new Label();
+            pictureBox = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
             SuspendLayout();
             // 
-            // lblFacM
+            // FacAction
             // 
-            lblFacM.AutoSize = true;
-            lblFacM.Location = new Point(166, 23);
-            lblFacM.Name = "lblFacM";
-            lblFacM.Size = new Size(98, 20);
-            lblFacM.TabIndex = 3;
-            lblFacM.Text = "Faculty Name";
+            FacAction.AutoSize = true;
+            FacAction.Font = new Font("Sans Serif Collection", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            FacAction.Location = new Point(765, 16);
+            FacAction.Name = "FacAction";
+            FacAction.Size = new Size(37, 51);
+            FacAction.TabIndex = 21;
+            FacAction.Text = "...";
             // 
-            // lblIDFM
+            // lblFacEmail
             // 
-            lblIDFM.AutoSize = true;
-            lblIDFM.Location = new Point(515, 23);
-            lblIDFM.Name = "lblIDFM";
-            lblIDFM.Size = new Size(27, 20);
-            lblIDFM.TabIndex = 4;
-            lblIDFM.Text = "I.D";
+            lblFacEmail.AutoSize = true;
+            lblFacEmail.Font = new Font("Sans Serif Collection", 9F);
+            lblFacEmail.Location = new Point(485, 16);
+            lblFacEmail.Name = "lblFacEmail";
+            lblFacEmail.Size = new Size(143, 51);
+            lblFacEmail.TabIndex = 20;
+            lblFacEmail.Text = "Umindanao Email";
             // 
-            // lblEmailFM
+            // lblFacID
             // 
-            lblEmailFM.AutoSize = true;
-            lblEmailFM.Location = new Point(753, 23);
-            lblEmailFM.Name = "lblEmailFM";
-            lblEmailFM.Size = new Size(107, 20);
-            lblEmailFM.TabIndex = 5;
-            lblEmailFM.Text = " Email Address";
+            lblFacID.AutoSize = true;
+            lblFacID.Font = new Font("Sans Serif Collection", 9F);
+            lblFacID.Location = new Point(310, 16);
+            lblFacID.Name = "lblFacID";
+            lblFacID.Size = new Size(42, 51);
+            lblFacID.TabIndex = 19;
+            lblFacID.Text = "I.D";
             // 
-            // pictureBox3
+            // lblFacName
             // 
-            pictureBox3.Image = Properties.Icons.person_b;
-            pictureBox3.Location = new Point(24, 14);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(61, 49);
-            pictureBox3.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox3.TabIndex = 10;
-            pictureBox3.TabStop = false;
-            pictureBox3.Click += pictureBox3_Click;
+            lblFacName.AutoSize = true;
+            lblFacName.Font = new Font("Sans Serif Collection", 9F);
+            lblFacName.Location = new Point(93, 16);
+            lblFacName.Name = "lblFacName";
+            lblFacName.Size = new Size(114, 51);
+            lblFacName.TabIndex = 18;
+            lblFacName.Text = "Faculty Name";
             // 
-            // button1
+            // pictureBox
             // 
-            button1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(1087, 23);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 11;
-            button1.Text = "...";
-            button1.UseVisualStyleBackColor = true;
+            pictureBox.Image = Properties.Icons.person_b;
+            pictureBox.Location = new Point(3, 3);
+            pictureBox.Name = "pictureBox";
+            pictureBox.Size = new Size(84, 64);
+            pictureBox.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox.TabIndex = 22;
+            pictureBox.TabStop = false;
             // 
             // FacultyCard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlLightLight;
             BorderStyle = BorderStyle.Fixed3D;
-            Controls.Add(button1);
-            Controls.Add(pictureBox3);
-            Controls.Add(lblEmailFM);
-            Controls.Add(lblIDFM);
-            Controls.Add(lblFacM);
+            Controls.Add(pictureBox);
+            Controls.Add(FacAction);
+            Controls.Add(lblFacEmail);
+            Controls.Add(lblFacID);
+            Controls.Add(lblFacName);
             Margin = new Padding(3, 4, 3, 4);
             Name = "FacultyCard";
-            Size = new Size(1267, 70);
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            Size = new Size(944, 70);
+            ((System.ComponentModel.ISupportInitialize)pictureBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private Label lblFacM;
-        private Label lblIDFM;
-        private Label lblEmailFM;
-        private PictureBox pictureBox3;
-        private Button button1;
+
+        private Label FacAction;
+        private Label lblFacEmail;
+        private Label lblFacID;
+        private Label lblFacName;
+        private PictureBox pictureBox;
     }
 }

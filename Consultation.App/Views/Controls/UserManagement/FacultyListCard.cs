@@ -25,7 +25,7 @@ namespace Student_Faculty
                     $"FacultyMember{i + 1}@umindanao.edu.ph",  // email
                     "Active"                       // status
                 );
-                flowLayoutPanel2.Controls.Add(faculty);
+                fLayPanFac.Controls.Add(faculty);
             }
         }
         private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)

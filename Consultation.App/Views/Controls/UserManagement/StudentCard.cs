@@ -19,10 +19,10 @@ namespace Consultation.App.Views
 
         public void SetStudentInfo(string name, string id, string course, string email, string status)
         {
-            lblName.Text = name;
-            lblID.Text = id;
+            lblStudName.Text = name;
+            lblStudID.Text = id;
             lblCourse.Text = course;
-            lblEmail.Text = email;
+            lblStudEmail.Text = email;
             lblStatus.Text = status;
         }
     }

@@ -27,7 +27,7 @@ namespace Student_Faculty
                     $"student{i + 1}@umindanao.edu.ph",
                     "Active"
                 );
-                flowLayoutPanel2.Controls.Add(student); 
+                fLayPanStud.Controls.Add(student); 
             }
         }
 

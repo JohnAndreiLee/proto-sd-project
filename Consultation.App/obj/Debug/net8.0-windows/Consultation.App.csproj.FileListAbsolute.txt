@@ -138,6 +138,7 @@ D:\Project Files\Visual Studio\repo\proto_sd\Consultation.App\obj\Debug\net8.0-w
 D:\Project Files\Visual Studio\repo\proto_sd\Consultation.App\obj\Debug\net8.0-windows\Student_Faculty.StudentListCard.resources
 D:\Project Files\Visual Studio\repo\proto_sd\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.UserManagementView.resources
 C:\Users\Asus\OneDrive\Desktop\New folder\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.csproj.AssemblyReference.cache
+C:\Users\Asus\OneDrive\Desktop\New folder\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Properties.Icons.resources
 C:\Users\Asus\OneDrive\Desktop\New folder\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.ConsultationManagement.ConsultationView.resources
 C:\Users\Asus\OneDrive\Desktop\New folder\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.ConsultationManagement.AddSchedule.resources
 C:\Users\Asus\OneDrive\Desktop\New folder\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.ConsultationManagement.ArchiveCard.resources
@@ -152,8 +153,13 @@ C:\Users\Asus\OneDrive\Desktop\New folder\Consultation.App\obj\Debug\net8.0-wind
 C:\Users\Asus\OneDrive\Desktop\New folder\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Dashboard.Upcoming_Schedule.Today.resources
 C:\Users\Asus\OneDrive\Desktop\New folder\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Dashboard.Upcoming_Schedule.TodayCard.resources
 C:\Users\Asus\OneDrive\Desktop\New folder\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.Controls.Notification.NotificationCard.resources
+C:\Users\Asus\OneDrive\Desktop\New folder\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.Controls.UserManagement.AdminAction.resources
+C:\Users\Asus\OneDrive\Desktop\New folder\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.AdminCard.resources
+C:\Users\Asus\OneDrive\Desktop\New folder\Consultation.App\obj\Debug\net8.0-windows\Student_Faculty.AdminListCard.resources
+C:\Users\Asus\OneDrive\Desktop\New folder\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.Controls.UserManagement.FacultyAction.resources
 C:\Users\Asus\OneDrive\Desktop\New folder\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.FacultyCard.resources
 C:\Users\Asus\OneDrive\Desktop\New folder\Consultation.App\obj\Debug\net8.0-windows\Student_Faculty.FacultyListCard.resources
+C:\Users\Asus\OneDrive\Desktop\New folder\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.Controls.UserManagement.StudentAction.resources
 C:\Users\Asus\OneDrive\Desktop\New folder\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.StudentCard.resources
 C:\Users\Asus\OneDrive\Desktop\New folder\Consultation.App\obj\Debug\net8.0-windows\Student_Faculty.StudentListCard.resources
 C:\Users\Asus\OneDrive\Desktop\New folder\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.DashboardView.resources
@@ -165,3 +171,8 @@ C:\Users\Asus\OneDrive\Desktop\New folder\Consultation.App\obj\Debug\net8.0-wind
 C:\Users\Asus\OneDrive\Desktop\New folder\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.TestViews.MdiParent.resources
 C:\Users\Asus\OneDrive\Desktop\New folder\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.UserManagementView.resources
 C:\Users\Asus\OneDrive\Desktop\New folder\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.csproj.GenerateResource.cache
+C:\Users\Asus\OneDrive\Desktop\New folder\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\OneDrive\Desktop\New folder\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.AssemblyInfoInputs.cache
+C:\Users\Asus\OneDrive\Desktop\New folder\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.AssemblyInfo.cs
+C:\Users\Asus\OneDrive\Desktop\New folder\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.csproj.CoreCompileInputs.cache
+C:\Users\Asus\OneDrive\Desktop\New folder\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.sourcelink.json

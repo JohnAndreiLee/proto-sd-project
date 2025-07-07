@@ -5,16 +5,55 @@
     <Compile Update="Views\Controls\Notification\NotificationCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Views\Controls\UserManagement\AdminAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\Controls\UserManagement\AdminCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\Controls\UserManagement\AdminListCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\Controls\UserManagement\EditAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\Controls\UserManagement\EditFaculty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\Controls\UserManagement\EditStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Views\Controls\UserManagement\FacultyCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Views\Controls\UserManagement\FacultyListCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Views\Controls\UserManagement\ResPasAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\Controls\UserManagement\ResPasFaculty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\Controls\UserManagement\ResPasStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Views\Controls\UserManagement\StudentCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Views\Controls\UserManagement\StudentListCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\Controls\UserManagement\StudentAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\Controls\UserManagement\ViewAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\Controls\UserManagement\ViewFaculty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Views\Controls\UserManagement\ViewStudent.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Views\UserManagementView.cs">

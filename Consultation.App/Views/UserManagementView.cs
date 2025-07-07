@@ -20,23 +20,23 @@ namespace Consultation.App.Views
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            flowLayoutPanelstudafac.Controls.Add(new StudentListCard());
+            flowLayPanSFA.Controls.Add(new StudentListCard());
         }
         private void BtnStudents_Click(object sender, EventArgs e)
         {
-            flowLayoutPanelstudafac.Controls.Clear();
-            flowLayoutPanelstudafac.Controls.Add(new StudentListCard());
+            flowLayPanSFA.Controls.Clear();
+            flowLayPanSFA.Controls.Add(new StudentListCard());
         }
 
         private void BtnFaculty_Click(object sender, EventArgs e)
         {
-            flowLayoutPanelstudafac.Controls.Clear();
-            flowLayoutPanelstudafac.Controls.Add(new FacultyListCard());
+            flowLayPanSFA.Controls.Clear();
+            flowLayPanSFA.Controls.Add(new FacultyListCard());
         }
 
         private void StudentFacultyView_Load(object sender, EventArgs e)
         {
-            flowLayoutPanelstudafac.Controls.Add(new StudentListCard());
+            flowLayPanSFA.Controls.Add(new StudentListCard());
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
