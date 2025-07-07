@@ -1,4 +1,5 @@
 ﻿using Consultation.App.Dashboard.Activity_Feed_Panel;
+using Consultation.App.Presenters;
 using Consultation.App.Views.Controls.Dashboard.Quick_Actions_Panel;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,15 +36,24 @@ namespace Consultation.App.Dashboard
             AttachHoverEvents(addUser1, addUser1_MouseEnter, addUser1_MouseLeave);
             AttachHoverEvents(systemSettings1, systemSettings1_MouseEnter, systemSettings1_MouseLeave);
         }
-
-        private void BulletinButton_Click(object sender, EventArgs e)
+        private void BulletinButton_Click_1(object sender, EventArgs e)
         {
+            ResetButtonBorders();
+            BulletinButton.CustomBorderThickness = new Padding(0, 0, 0, 3);
+            BulletinButton.CustomBorderColor = Color.Red;
+            BulletinButton.ForeColor = Color.Red;
+
             ActivityFeedPanel.Controls.Clear();
             ActivityFeedPanel.Controls.Add(new Bulletin());
         }
 
-        private void ConsultationButton_Click(object sender, EventArgs e)
+        private void ConsultationButton_Click_1(object sender, EventArgs e)
         {
+            ResetButtonBorders();
+            ConsultationButton.CustomBorderThickness = new Padding(0, 0, 0, 3);
+            ConsultationButton.CustomBorderColor = Color.Red;
+            ConsultationButton.ForeColor = Color.Red;
+
             ActivityFeedPanel.Controls.Clear();
             ActivityFeedPanel.Controls.Add(new Consultation2());
         }
@@ -53,18 +63,18 @@ namespace Consultation.App.Dashboard
             ActivityFeedPanel.Controls.Add(new Bulletin());
         }
 
-    private void AttachHoverEvents(Control parent, EventHandler onEnter, EventHandler onLeave)
-    {
-        parent.MouseEnter += onEnter;
-        parent.MouseLeave += onLeave;
-
-        foreach (Control child in parent.Controls)
+        private void AttachHoverEvents(Control parent, EventHandler onEnter, EventHandler onLeave)
         {
-            AttachHoverEvents(child, onEnter, onLeave);
-        }
-    }
+            parent.MouseEnter += onEnter;
+            parent.MouseLeave += onLeave;
 
-    private void createNewBulletin1_Load(object sender, EventArgs e)
+            foreach (Control child in parent.Controls)
+            {
+                AttachHoverEvents(child, onEnter, onLeave);
+            }
+        }
+
+        private void createNewBulletin1_Load(object sender, EventArgs e)
         {
         }
 
@@ -108,5 +118,13 @@ namespace Consultation.App.Dashboard
             systemSettings1.BackColor = consultationDefaultColor;
         }
 
+        private void ResetButtonBorders()
+        {
+            BulletinButton.CustomBorderThickness = new Padding(0, 0, 0, 0);
+            ConsultationButton.CustomBorderThickness = new Padding(0, 0, 0, 0);
+
+            BulletinButton.ForeColor = Color.Black;
+            ConsultationButton.ForeColor = Color.Black;
+        }
     }
 }

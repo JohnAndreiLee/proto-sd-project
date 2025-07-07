@@ -29,12 +29,23 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             ActivityFeedPanel = new MaterialSkin.Controls.MaterialCard();
+            BulletinButton = new Guna.UI2.WinForms.Guna2Button();
+            guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             createNewBulletin1 = new Views.Controls.Dashboard.Quick_Actions_Panel.CreateNewBulletin();
             ActivityFeedLabel = new Syncfusion.Windows.Forms.Tools.AutoLabel();
             materialCard2 = new MaterialSkin.Controls.MaterialCard();
-            ConsultationButton = new Syncfusion.WinForms.Controls.SfButton();
-            BulletinButton = new Syncfusion.WinForms.Controls.SfButton();
+            ConsultationButton = new Guna.UI2.WinForms.Guna2Button();
             materialCard3 = new MaterialSkin.Controls.MaterialCard();
             BulltinPublishedCount = new Label();
             autoLabel5 = new Syncfusion.Windows.Forms.Tools.AutoLabel();
@@ -63,33 +74,38 @@
             materialCard1 = new MaterialSkin.Controls.MaterialCard();
             ConByDepLabel = new Label();
             materialCard9 = new MaterialSkin.Controls.MaterialCard();
-            materialCard15 = new MaterialSkin.Controls.MaterialCard();
-            NumOfConsCEng = new Label();
+            card = new MaterialSkin.Controls.MaterialCard();
+            ConsultationCountCivil = new Label();
+            guna2CircleButton6 = new Guna.UI2.WinForms.Guna2CircleButton();
             label11 = new Label();
             label12 = new Label();
             panel10 = new Panel();
             materialCard14 = new MaterialSkin.Controls.MaterialCard();
-            NumOfConsCheEng = new Label();
+            ConsultationCountCHE = new Label();
+            guna2CircleButton5 = new Guna.UI2.WinForms.Guna2CircleButton();
             label9 = new Label();
             label10 = new Label();
             panel9 = new Panel();
             materialCard13 = new MaterialSkin.Controls.MaterialCard();
-            NumOfConsMEEng = new Label();
+            ConsultationCountME = new Label();
+            guna2CircleButton4 = new Guna.UI2.WinForms.Guna2CircleButton();
             label7 = new Label();
             label8 = new Label();
             panel8 = new Panel();
             materialCard12 = new MaterialSkin.Controls.MaterialCard();
-            NumOfConsEEng = new Label();
+            ConsultationCountEE = new Label();
+            guna2CircleButton3 = new Guna.UI2.WinForms.Guna2CircleButton();
             label5 = new Label();
             label6 = new Label();
             panel7 = new Panel();
             materialCard11 = new MaterialSkin.Controls.MaterialCard();
-            NumOfConsEEEng = new Label();
+            ConsultationCountECE = new Label();
+            guna2CircleButton2 = new Guna.UI2.WinForms.Guna2CircleButton();
             label3 = new Label();
             label4 = new Label();
             panel6 = new Panel();
             materialCard10 = new MaterialSkin.Controls.MaterialCard();
-            NumOfConsComEng = new Label();
+            ConsultationCountCPE = new Label();
             label2 = new Label();
             label1 = new Label();
             panel5 = new Panel();
@@ -104,7 +120,7 @@
             materialCard8.SuspendLayout();
             materialCard1.SuspendLayout();
             materialCard9.SuspendLayout();
-            materialCard15.SuspendLayout();
+            card.SuspendLayout();
             materialCard14.SuspendLayout();
             materialCard13.SuspendLayout();
             materialCard12.SuspendLayout();
@@ -125,6 +141,48 @@
             ActivityFeedPanel.Padding = new Padding(14);
             ActivityFeedPanel.Size = new Size(975, 595);
             ActivityFeedPanel.TabIndex = 0;
+            // 
+            // BulletinButton
+            // 
+            BulletinButton.Animated = true;
+            BulletinButton.BackColor = Color.Transparent;
+            BulletinButton.BorderRadius = 5;
+            BulletinButton.CustomBorderColor = Color.FromArgb(64, 64, 64);
+            BulletinButton.CustomizableEdges = customizableEdges1;
+            BulletinButton.DisabledState.BorderColor = Color.DarkGray;
+            BulletinButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            BulletinButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            BulletinButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            BulletinButton.FillColor = Color.White;
+            BulletinButton.Font = new Font("Inter Medium", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            BulletinButton.ForeColor = Color.Black;
+            BulletinButton.Location = new Point(693, 20);
+            BulletinButton.Name = "BulletinButton";
+            BulletinButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            BulletinButton.ShadowDecoration.Shadow = new Padding(0, 0, 0, 2);
+            BulletinButton.Size = new Size(122, 33);
+            BulletinButton.TabIndex = 1;
+            BulletinButton.Text = "Bulletins";
+            BulletinButton.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            BulletinButton.UseTransparentBackground = true;
+            BulletinButton.Click += BulletinButton_Click_1;
+            // 
+            // guna2CircleButton1
+            // 
+            guna2CircleButton1.DisabledState.BorderColor = Color.FromArgb(224, 224, 224);
+            guna2CircleButton1.DisabledState.CustomBorderColor = Color.FromArgb(224, 224, 224);
+            guna2CircleButton1.DisabledState.FillColor = Color.FromArgb(224, 224, 224);
+            guna2CircleButton1.DisabledState.ForeColor = Color.FromArgb(224, 224, 224);
+            guna2CircleButton1.Enabled = false;
+            guna2CircleButton1.FillColor = Color.FromArgb(224, 224, 224);
+            guna2CircleButton1.Font = new Font("Segoe UI", 9F);
+            guna2CircleButton1.ForeColor = Color.White;
+            guna2CircleButton1.Location = new Point(204, 28);
+            guna2CircleButton1.Name = "guna2CircleButton1";
+            guna2CircleButton1.ShadowDecoration.CustomizableEdges = customizableEdges3;
+            guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            guna2CircleButton1.Size = new Size(40, 40);
+            guna2CircleButton1.TabIndex = 0;
             // 
             // createNewBulletin1
             // 
@@ -166,37 +224,29 @@
             // 
             // ConsultationButton
             // 
-            ConsultationButton.BackColor = SystemColors.ButtonHighlight;
-            ConsultationButton.FlatStyle = FlatStyle.Popup;
-            ConsultationButton.FocusRectangleVisible = true;
+            ConsultationButton.Animated = true;
+            ConsultationButton.BackColor = Color.Transparent;
+            ConsultationButton.BorderRadius = 5;
+            ConsultationButton.CustomBorderColor = Color.FromArgb(64, 64, 64);
+            ConsultationButton.CustomizableEdges = customizableEdges4;
+            ConsultationButton.DisabledState.BorderColor = Color.DarkGray;
+            ConsultationButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            ConsultationButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            ConsultationButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            ConsultationButton.FillColor = Color.White;
             ConsultationButton.Font = new Font("Inter Medium", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ConsultationButton.ForeColor = Color.Black;
-            ConsultationButton.Location = new Point(837, 20);
+            ConsultationButton.Location = new Point(821, 20);
             ConsultationButton.Name = "ConsultationButton";
-            ConsultationButton.Size = new Size(111, 28);
-            ConsultationButton.Style.BackColor = SystemColors.ButtonHighlight;
-            ConsultationButton.Style.ForeColor = Color.Black;
-            ConsultationButton.TabIndex = 11;
+            ConsultationButton.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            ConsultationButton.ShadowDecoration.Depth = 100;
+            ConsultationButton.ShadowDecoration.Shadow = new Padding(0, 0, 0, 5);
+            ConsultationButton.Size = new Size(122, 33);
+            ConsultationButton.TabIndex = 2;
             ConsultationButton.Text = "Consultations";
-            ConsultationButton.UseVisualStyleBackColor = false;
-            ConsultationButton.Click += ConsultationButton_Click;
-            // 
-            // BulletinButton
-            // 
-            BulletinButton.BackColor = SystemColors.ButtonHighlight;
-            BulletinButton.FlatStyle = FlatStyle.Popup;
-            BulletinButton.FocusRectangleVisible = true;
-            BulletinButton.Font = new Font("Inter Medium", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            BulletinButton.ForeColor = Color.Black;
-            BulletinButton.Location = new Point(720, 20);
-            BulletinButton.Name = "BulletinButton";
-            BulletinButton.Size = new Size(111, 28);
-            BulletinButton.Style.BackColor = SystemColors.ButtonHighlight;
-            BulletinButton.Style.ForeColor = Color.Black;
-            BulletinButton.TabIndex = 2;
-            BulletinButton.Text = "Bulletins";
-            BulletinButton.UseVisualStyleBackColor = false;
-            BulletinButton.Click += BulletinButton_Click;
+            ConsultationButton.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            ConsultationButton.UseTransparentBackground = true;
+            ConsultationButton.Click += ConsultationButton_Click_1;
             // 
             // materialCard3
             // 
@@ -504,7 +554,7 @@
             // materialCard9
             // 
             materialCard9.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard9.Controls.Add(materialCard15);
+            materialCard9.Controls.Add(card);
             materialCard9.Controls.Add(materialCard14);
             materialCard9.Controls.Add(materialCard13);
             materialCard9.Controls.Add(materialCard12);
@@ -520,33 +570,52 @@
             materialCard9.Size = new Size(551, 344);
             materialCard9.TabIndex = 14;
             // 
-            // materialCard15
+            // card
             // 
-            materialCard15.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard15.Controls.Add(NumOfConsCEng);
-            materialCard15.Controls.Add(label11);
-            materialCard15.Controls.Add(label12);
-            materialCard15.Controls.Add(panel10);
-            materialCard15.Depth = 0;
-            materialCard15.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard15.Location = new Point(283, 232);
-            materialCard15.Margin = new Padding(14);
-            materialCard15.MouseState = MaterialSkin.MouseState.HOVER;
-            materialCard15.Name = "materialCard15";
-            materialCard15.Padding = new Padding(14);
-            materialCard15.Size = new Size(255, 95);
-            materialCard15.TabIndex = 5;
+            card.BackColor = Color.FromArgb(255, 255, 255);
+            card.Controls.Add(ConsultationCountCivil);
+            card.Controls.Add(guna2CircleButton6);
+            card.Controls.Add(label11);
+            card.Controls.Add(label12);
+            card.Controls.Add(panel10);
+            card.Depth = 0;
+            card.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            card.Location = new Point(283, 232);
+            card.Margin = new Padding(14);
+            card.MouseState = MaterialSkin.MouseState.HOVER;
+            card.Name = "card";
+            card.Padding = new Padding(14);
+            card.Size = new Size(255, 95);
+            card.TabIndex = 5;
             // 
-            // NumOfConsCEng
+            // ConsultationCountCivil
             // 
-            NumOfConsCEng.AutoSize = true;
-            NumOfConsCEng.Font = new Font("Inter", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            NumOfConsCEng.ForeColor = Color.Gray;
-            NumOfConsCEng.Location = new Point(215, 40);
-            NumOfConsCEng.Name = "NumOfConsCEng";
-            NumOfConsCEng.Size = new Size(38, 19);
-            NumOfConsCEng.TabIndex = 5;
-            NumOfConsCEng.Text = "120";
+            ConsultationCountCivil.BackColor = Color.FromArgb(224, 224, 224);
+            ConsultationCountCivil.Font = new Font("Inter", 8F, FontStyle.Bold);
+            ConsultationCountCivil.ForeColor = Color.DimGray;
+            ConsultationCountCivil.Location = new Point(210, 42);
+            ConsultationCountCivil.Name = "ConsultationCountCivil";
+            ConsultationCountCivil.Size = new Size(31, 10);
+            ConsultationCountCivil.TabIndex = 9;
+            ConsultationCountCivil.Text = "30";
+            ConsultationCountCivil.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // guna2CircleButton6
+            // 
+            guna2CircleButton6.DisabledState.BorderColor = Color.FromArgb(224, 224, 224);
+            guna2CircleButton6.DisabledState.CustomBorderColor = Color.FromArgb(224, 224, 224);
+            guna2CircleButton6.DisabledState.FillColor = Color.FromArgb(224, 224, 224);
+            guna2CircleButton6.DisabledState.ForeColor = Color.FromArgb(224, 224, 224);
+            guna2CircleButton6.Enabled = false;
+            guna2CircleButton6.FillColor = Color.FromArgb(224, 224, 224);
+            guna2CircleButton6.Font = new Font("Segoe UI", 9F);
+            guna2CircleButton6.ForeColor = Color.White;
+            guna2CircleButton6.Location = new Point(204, 28);
+            guna2CircleButton6.Name = "guna2CircleButton6";
+            guna2CircleButton6.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2CircleButton6.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            guna2CircleButton6.Size = new Size(40, 40);
+            guna2CircleButton6.TabIndex = 8;
             // 
             // label11
             // 
@@ -580,7 +649,8 @@
             // materialCard14
             // 
             materialCard14.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard14.Controls.Add(NumOfConsCheEng);
+            materialCard14.Controls.Add(ConsultationCountCHE);
+            materialCard14.Controls.Add(guna2CircleButton5);
             materialCard14.Controls.Add(label9);
             materialCard14.Controls.Add(label10);
             materialCard14.Controls.Add(panel9);
@@ -594,16 +664,34 @@
             materialCard14.Size = new Size(255, 95);
             materialCard14.TabIndex = 4;
             // 
-            // NumOfConsCheEng
+            // ConsultationCountCHE
             // 
-            NumOfConsCheEng.AutoSize = true;
-            NumOfConsCheEng.Font = new Font("Inter", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            NumOfConsCheEng.ForeColor = Color.Gray;
-            NumOfConsCheEng.Location = new Point(215, 40);
-            NumOfConsCheEng.Name = "NumOfConsCheEng";
-            NumOfConsCheEng.Size = new Size(31, 19);
-            NumOfConsCheEng.TabIndex = 5;
-            NumOfConsCheEng.Text = "30";
+            ConsultationCountCHE.BackColor = Color.FromArgb(224, 224, 224);
+            ConsultationCountCHE.Font = new Font("Inter", 8F, FontStyle.Bold);
+            ConsultationCountCHE.ForeColor = Color.DimGray;
+            ConsultationCountCHE.Location = new Point(210, 42);
+            ConsultationCountCHE.Name = "ConsultationCountCHE";
+            ConsultationCountCHE.Size = new Size(31, 10);
+            ConsultationCountCHE.TabIndex = 9;
+            ConsultationCountCHE.Text = "30";
+            ConsultationCountCHE.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // guna2CircleButton5
+            // 
+            guna2CircleButton5.DisabledState.BorderColor = Color.FromArgb(224, 224, 224);
+            guna2CircleButton5.DisabledState.CustomBorderColor = Color.FromArgb(224, 224, 224);
+            guna2CircleButton5.DisabledState.FillColor = Color.FromArgb(224, 224, 224);
+            guna2CircleButton5.DisabledState.ForeColor = Color.FromArgb(224, 224, 224);
+            guna2CircleButton5.Enabled = false;
+            guna2CircleButton5.FillColor = Color.FromArgb(224, 224, 224);
+            guna2CircleButton5.Font = new Font("Segoe UI", 9F);
+            guna2CircleButton5.ForeColor = Color.White;
+            guna2CircleButton5.Location = new Point(204, 28);
+            guna2CircleButton5.Name = "guna2CircleButton5";
+            guna2CircleButton5.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            guna2CircleButton5.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            guna2CircleButton5.Size = new Size(40, 40);
+            guna2CircleButton5.TabIndex = 8;
             // 
             // label9
             // 
@@ -637,7 +725,8 @@
             // materialCard13
             // 
             materialCard13.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard13.Controls.Add(NumOfConsMEEng);
+            materialCard13.Controls.Add(ConsultationCountME);
+            materialCard13.Controls.Add(guna2CircleButton4);
             materialCard13.Controls.Add(label7);
             materialCard13.Controls.Add(label8);
             materialCard13.Controls.Add(panel8);
@@ -651,16 +740,34 @@
             materialCard13.Size = new Size(255, 95);
             materialCard13.TabIndex = 3;
             // 
-            // NumOfConsMEEng
+            // ConsultationCountME
             // 
-            NumOfConsMEEng.AutoSize = true;
-            NumOfConsMEEng.Font = new Font("Inter", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            NumOfConsMEEng.ForeColor = Color.Gray;
-            NumOfConsMEEng.Location = new Point(215, 40);
-            NumOfConsMEEng.Name = "NumOfConsMEEng";
-            NumOfConsMEEng.Size = new Size(31, 19);
-            NumOfConsMEEng.TabIndex = 5;
-            NumOfConsMEEng.Text = "30";
+            ConsultationCountME.BackColor = Color.FromArgb(224, 224, 224);
+            ConsultationCountME.Font = new Font("Inter", 8F, FontStyle.Bold);
+            ConsultationCountME.ForeColor = Color.DimGray;
+            ConsultationCountME.Location = new Point(210, 42);
+            ConsultationCountME.Name = "ConsultationCountME";
+            ConsultationCountME.Size = new Size(31, 10);
+            ConsultationCountME.TabIndex = 8;
+            ConsultationCountME.Text = "30";
+            ConsultationCountME.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // guna2CircleButton4
+            // 
+            guna2CircleButton4.DisabledState.BorderColor = Color.FromArgb(224, 224, 224);
+            guna2CircleButton4.DisabledState.CustomBorderColor = Color.FromArgb(224, 224, 224);
+            guna2CircleButton4.DisabledState.FillColor = Color.FromArgb(224, 224, 224);
+            guna2CircleButton4.DisabledState.ForeColor = Color.FromArgb(224, 224, 224);
+            guna2CircleButton4.Enabled = false;
+            guna2CircleButton4.FillColor = Color.FromArgb(224, 224, 224);
+            guna2CircleButton4.Font = new Font("Segoe UI", 9F);
+            guna2CircleButton4.ForeColor = Color.White;
+            guna2CircleButton4.Location = new Point(204, 28);
+            guna2CircleButton4.Name = "guna2CircleButton4";
+            guna2CircleButton4.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2CircleButton4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            guna2CircleButton4.Size = new Size(40, 40);
+            guna2CircleButton4.TabIndex = 7;
             // 
             // label7
             // 
@@ -694,7 +801,8 @@
             // materialCard12
             // 
             materialCard12.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard12.Controls.Add(NumOfConsEEng);
+            materialCard12.Controls.Add(ConsultationCountEE);
+            materialCard12.Controls.Add(guna2CircleButton3);
             materialCard12.Controls.Add(label5);
             materialCard12.Controls.Add(label6);
             materialCard12.Controls.Add(panel7);
@@ -708,16 +816,35 @@
             materialCard12.Size = new Size(255, 95);
             materialCard12.TabIndex = 2;
             // 
-            // NumOfConsEEng
+            // ConsultationCountEE
             // 
-            NumOfConsEEng.AutoSize = true;
-            NumOfConsEEng.Font = new Font("Inter", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            NumOfConsEEng.ForeColor = Color.Gray;
-            NumOfConsEEng.Location = new Point(215, 40);
-            NumOfConsEEng.Name = "NumOfConsEEng";
-            NumOfConsEEng.Size = new Size(31, 19);
-            NumOfConsEEng.TabIndex = 5;
-            NumOfConsEEng.Text = "30";
+            ConsultationCountEE.BackColor = Color.FromArgb(224, 224, 224);
+            ConsultationCountEE.Enabled = false;
+            ConsultationCountEE.Font = new Font("Inter", 8F, FontStyle.Bold);
+            ConsultationCountEE.ForeColor = Color.DimGray;
+            ConsultationCountEE.Location = new Point(210, 42);
+            ConsultationCountEE.Name = "ConsultationCountEE";
+            ConsultationCountEE.Size = new Size(31, 10);
+            ConsultationCountEE.TabIndex = 5;
+            ConsultationCountEE.Text = "30";
+            ConsultationCountEE.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // guna2CircleButton3
+            // 
+            guna2CircleButton3.DisabledState.BorderColor = Color.FromArgb(224, 224, 224);
+            guna2CircleButton3.DisabledState.CustomBorderColor = Color.FromArgb(224, 224, 224);
+            guna2CircleButton3.DisabledState.FillColor = Color.FromArgb(224, 224, 224);
+            guna2CircleButton3.DisabledState.ForeColor = Color.FromArgb(224, 224, 224);
+            guna2CircleButton3.Enabled = false;
+            guna2CircleButton3.FillColor = Color.FromArgb(224, 224, 224);
+            guna2CircleButton3.Font = new Font("Segoe UI", 9F);
+            guna2CircleButton3.ForeColor = Color.White;
+            guna2CircleButton3.Location = new Point(204, 28);
+            guna2CircleButton3.Name = "guna2CircleButton3";
+            guna2CircleButton3.ShadowDecoration.CustomizableEdges = customizableEdges9;
+            guna2CircleButton3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            guna2CircleButton3.Size = new Size(40, 40);
+            guna2CircleButton3.TabIndex = 7;
             // 
             // label5
             // 
@@ -751,7 +878,8 @@
             // materialCard11
             // 
             materialCard11.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard11.Controls.Add(NumOfConsEEEng);
+            materialCard11.Controls.Add(ConsultationCountECE);
+            materialCard11.Controls.Add(guna2CircleButton2);
             materialCard11.Controls.Add(label3);
             materialCard11.Controls.Add(label4);
             materialCard11.Controls.Add(panel6);
@@ -765,16 +893,34 @@
             materialCard11.Size = new Size(255, 95);
             materialCard11.TabIndex = 1;
             // 
-            // NumOfConsEEEng
+            // ConsultationCountECE
             // 
-            NumOfConsEEEng.AutoSize = true;
-            NumOfConsEEEng.Font = new Font("Inter", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            NumOfConsEEEng.ForeColor = Color.Gray;
-            NumOfConsEEEng.Location = new Point(215, 40);
-            NumOfConsEEEng.Name = "NumOfConsEEEng";
-            NumOfConsEEEng.Size = new Size(31, 19);
-            NumOfConsEEEng.TabIndex = 5;
-            NumOfConsEEEng.Text = "30";
+            ConsultationCountECE.BackColor = Color.FromArgb(224, 224, 224);
+            ConsultationCountECE.Font = new Font("Inter", 8F, FontStyle.Bold);
+            ConsultationCountECE.ForeColor = Color.DimGray;
+            ConsultationCountECE.Location = new Point(210, 42);
+            ConsultationCountECE.Name = "ConsultationCountECE";
+            ConsultationCountECE.Size = new Size(31, 10);
+            ConsultationCountECE.TabIndex = 5;
+            ConsultationCountECE.Text = "30";
+            ConsultationCountECE.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // guna2CircleButton2
+            // 
+            guna2CircleButton2.DisabledState.BorderColor = Color.FromArgb(224, 224, 224);
+            guna2CircleButton2.DisabledState.CustomBorderColor = Color.FromArgb(224, 224, 224);
+            guna2CircleButton2.DisabledState.FillColor = Color.FromArgb(224, 224, 224);
+            guna2CircleButton2.DisabledState.ForeColor = Color.FromArgb(224, 224, 224);
+            guna2CircleButton2.Enabled = false;
+            guna2CircleButton2.FillColor = Color.FromArgb(224, 224, 224);
+            guna2CircleButton2.Font = new Font("Segoe UI", 9F);
+            guna2CircleButton2.ForeColor = Color.White;
+            guna2CircleButton2.Location = new Point(204, 28);
+            guna2CircleButton2.Name = "guna2CircleButton2";
+            guna2CircleButton2.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            guna2CircleButton2.Size = new Size(40, 40);
+            guna2CircleButton2.TabIndex = 6;
             // 
             // label3
             // 
@@ -808,8 +954,9 @@
             // materialCard10
             // 
             materialCard10.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard10.Controls.Add(NumOfConsComEng);
+            materialCard10.Controls.Add(ConsultationCountCPE);
             materialCard10.Controls.Add(label2);
+            materialCard10.Controls.Add(guna2CircleButton1);
             materialCard10.Controls.Add(label1);
             materialCard10.Controls.Add(panel5);
             materialCard10.Depth = 0;
@@ -822,16 +969,17 @@
             materialCard10.Size = new Size(255, 95);
             materialCard10.TabIndex = 0;
             // 
-            // NumOfConsComEng
+            // ConsultationCountCPE
             // 
-            NumOfConsComEng.AutoSize = true;
-            NumOfConsComEng.Font = new Font("Inter", 11.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            NumOfConsComEng.ForeColor = Color.Gray;
-            NumOfConsComEng.Location = new Point(215, 40);
-            NumOfConsComEng.Name = "NumOfConsComEng";
-            NumOfConsComEng.Size = new Size(31, 19);
-            NumOfConsComEng.TabIndex = 3;
-            NumOfConsComEng.Text = "30";
+            ConsultationCountCPE.BackColor = Color.FromArgb(224, 224, 224);
+            ConsultationCountCPE.Font = new Font("Inter", 8F, FontStyle.Bold);
+            ConsultationCountCPE.ForeColor = Color.DimGray;
+            ConsultationCountCPE.Location = new Point(210, 42);
+            ConsultationCountCPE.Name = "ConsultationCountCPE";
+            ConsultationCountCPE.Size = new Size(31, 10);
+            ConsultationCountCPE.TabIndex = 6;
+            ConsultationCountCPE.Text = "30";
+            ConsultationCountCPE.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -912,8 +1060,8 @@
             materialCard1.ResumeLayout(false);
             materialCard1.PerformLayout();
             materialCard9.ResumeLayout(false);
-            materialCard15.ResumeLayout(false);
-            materialCard15.PerformLayout();
+            card.ResumeLayout(false);
+            card.PerformLayout();
             materialCard14.ResumeLayout(false);
             materialCard14.PerformLayout();
             materialCard13.ResumeLayout(false);
@@ -932,7 +1080,6 @@
         #endregion
         private Syncfusion.Windows.Forms.Tools.AutoLabel ActivityFeedLabel;
         private MaterialSkin.Controls.MaterialCard materialCard2;
-        private Syncfusion.WinForms.Controls.SfButton BulletinButton;
         private MaterialSkin.Controls.MaterialCard materialCard3;
         private Syncfusion.Windows.Forms.Tools.AutoLabel WelcomeLabel;
         private Syncfusion.Windows.Forms.Tools.AutoLabel autoLabel3;
@@ -943,7 +1090,6 @@
         private MaterialSkin.Controls.MaterialCard materialCard8;
         private Syncfusion.WinForms.Controls.SfButton sfButton2;
         private Syncfusion.Windows.Forms.Tools.AutoLabel QuickActionsLabel;
-        private Syncfusion.WinForms.Controls.SfButton ConsultationButton;
         private Panel panel1;
         private Panel panel3;
         private Panel panel2;
@@ -960,7 +1106,7 @@
         private Views.Controls.Dashboard.Quick_Actions_Panel.ScheduleConsultation scheduleConsultation1;
         private Views.Controls.Dashboard.Quick_Actions_Panel.AddUser addUser1;
         private Views.Controls.Dashboard.Quick_Actions_Panel.SystemSettings systemSettings1;
-        private MaterialSkin.Controls.MaterialCard materialCard15;
+        private MaterialSkin.Controls.MaterialCard card;
         private MaterialSkin.Controls.MaterialCard materialCard14;
         private MaterialSkin.Controls.MaterialCard materialCard13;
         private MaterialSkin.Controls.MaterialCard materialCard12;
@@ -984,17 +1130,25 @@
         private Label label1;
         private Label label11;
         private Label label12;
-        private Label NumOfConsComEng;
         private Syncfusion.Windows.Forms.Tools.CardLayout cardLayout1;
-        private Label NumOfConsCEng;
-        private Label NumOfConsCheEng;
-        private Label NumOfConsMEEng;
-        private Label NumOfConsEEng;
-        private Label NumOfConsEEEng;
+        private Label ConsultationCountEE;
+        private Label ConsultationCountECE;
         private Label BulltinPublishedCount;
         private Label PendingApprovalsCount;
         private Label ConsultationsCompletedCount;
         private Label PendingTasksCount;
         private Label UserName;
+        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
+        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton2;
+        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton3;
+        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton6;
+        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton5;
+        private Label ConsultationCountME;
+        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton4;
+        private Label ConsultationCountCPE;
+        private Label ConsultationCountCivil;
+        private Label ConsultationCountCHE;
+        private Guna.UI2.WinForms.Guna2Button BulletinButton;
+        private Guna.UI2.WinForms.Guna2Button ConsultationButton;
     }
 }

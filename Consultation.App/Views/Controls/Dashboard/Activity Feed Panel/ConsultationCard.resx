@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ConsultationBody.Text" xml:space="preserve">
+    <value>Would you like me to generate a reusable lowercase MaterialButton and help you register it in the Toolbox for drag-and-drop use? Great question! If you're adding multiple BulletinCard controls into a FlowLayoutPanel, and you want to control the space between them, you have two clean options</value>
+  </data>
 </root>

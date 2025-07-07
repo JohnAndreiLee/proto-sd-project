@@ -36,6 +36,7 @@
             flowLayoutPanel1.AutoScroll = true;
             flowLayoutPanel1.Location = new Point(13, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Padding = new Padding(0, 0, 0, 10);
             flowLayoutPanel1.Size = new Size(962, 585);
             flowLayoutPanel1.TabIndex = 0;
             // 

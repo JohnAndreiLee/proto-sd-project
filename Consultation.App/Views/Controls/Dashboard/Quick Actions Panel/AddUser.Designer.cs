@@ -73,10 +73,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Inter Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(68, 12);
+            label1.Font = new Font("Inter Medium", 12F, FontStyle.Bold);
+            label1.Location = new Point(68, 10);
             label1.Name = "label1";
-            label1.Size = new Size(92, 14);
+            label1.Size = new Size(121, 19);
             label1.TabIndex = 4;
             label1.Text = "Add New User";
             // 
