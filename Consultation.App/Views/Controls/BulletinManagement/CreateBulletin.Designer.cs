@@ -1,4 +1,4 @@
-﻿namespace Consultation.App.BulletinManagement
+﻿namespace Consultation.App.Views.Controls.BulletinManagement
 {
     partial class CreateBulletin
     {
@@ -49,15 +49,19 @@
             btnCancel = new Guna.UI2.WinForms.Guna2Button();
             panel1 = new Panel();
             btnBack = new Guna.UI2.WinForms.Guna2Button();
-            label1 = new Label();
+            lblHeader = new Label();
             label3 = new Label();
             txtAuthor = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            pictureBox1 = new PictureBox();
+            label6 = new Label();
             label5 = new Label();
             label4 = new Label();
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
-            txtControl = new Guna.UI2.WinForms.Guna2TextBox();
+            txtContent = new Guna.UI2.WinForms.Guna2TextBox();
             panel1.SuspendLayout();
+            guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // txtTitle
@@ -100,6 +104,7 @@
             btnPublishBulletin.BackColor = Color.Transparent;
             btnPublishBulletin.BorderColor = Color.FromArgb(222, 59, 64);
             btnPublishBulletin.BorderRadius = 6;
+            btnPublishBulletin.Cursor = Cursors.Hand;
             btnPublishBulletin.CustomizableEdges = customizableEdges3;
             btnPublishBulletin.DisabledState.BorderColor = Color.DarkGray;
             btnPublishBulletin.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -112,7 +117,7 @@
             btnPublishBulletin.Image = Properties.Icons.publish;
             btnPublishBulletin.ImageOffset = new Point(-2, 0);
             btnPublishBulletin.ImageSize = new Size(17, 20);
-            btnPublishBulletin.Location = new Point(1284, 36);
+            btnPublishBulletin.Location = new Point(1281, 45);
             btnPublishBulletin.Name = "btnPublishBulletin";
             btnPublishBulletin.PressedColor = Color.Transparent;
             btnPublishBulletin.ShadowDecoration.CustomizableEdges = customizableEdges4;
@@ -126,6 +131,7 @@
             btnCancel.BackColor = Color.Transparent;
             btnCancel.BorderColor = Color.FromArgb(222, 59, 64);
             btnCancel.BorderRadius = 6;
+            btnCancel.Cursor = Cursors.Hand;
             btnCancel.CustomizableEdges = customizableEdges5;
             btnCancel.DisabledState.BorderColor = Color.DarkGray;
             btnCancel.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -138,7 +144,7 @@
             btnCancel.Image = Properties.Icons.close;
             btnCancel.ImageOffset = new Point(-2, 0);
             btnCancel.ImageSize = new Size(16, 16);
-            btnCancel.Location = new Point(1146, 36);
+            btnCancel.Location = new Point(1146, 45);
             btnCancel.Name = "btnCancel";
             btnCancel.PressedColor = Color.Transparent;
             btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges6;
@@ -151,7 +157,7 @@
             // 
             panel1.BackColor = Color.FromArgb(222, 59, 64);
             panel1.Controls.Add(btnBack);
-            panel1.Controls.Add(label1);
+            panel1.Controls.Add(lblHeader);
             panel1.Controls.Add(btnPublishBulletin);
             panel1.Controls.Add(btnCancel);
             panel1.Location = new Point(0, 0);
@@ -164,6 +170,7 @@
             btnBack.BackColor = Color.Transparent;
             btnBack.BorderColor = Color.FromArgb(222, 59, 64);
             btnBack.BorderRadius = 6;
+            btnBack.Cursor = Cursors.Hand;
             btnBack.CustomizableEdges = customizableEdges7;
             btnBack.DisabledState.BorderColor = Color.DarkGray;
             btnBack.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -185,16 +192,16 @@
             btnBack.Text = "Back to Bulletins";
             btnBack.Click += btnBack_Click;
             // 
-            // label1
+            // lblHeader
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Archivo", 17.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(25, 68);
-            label1.Name = "label1";
-            label1.Size = new Size(230, 34);
-            label1.TabIndex = 0;
-            label1.Text = "Create New Bulletin";
+            lblHeader.AutoSize = true;
+            lblHeader.Font = new Font("Archivo", 17.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblHeader.ForeColor = Color.White;
+            lblHeader.Location = new Point(25, 68);
+            lblHeader.Name = "lblHeader";
+            lblHeader.Size = new Size(230, 34);
+            lblHeader.TabIndex = 0;
+            lblHeader.Text = "Create New Bulletin";
             // 
             // label3
             // 
@@ -233,16 +240,42 @@
             // 
             // guna2Panel1
             // 
+            guna2Panel1.AllowDrop = true;
             guna2Panel1.BorderColor = Color.FromArgb(189, 193, 202);
             guna2Panel1.BorderRadius = 6;
             guna2Panel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
             guna2Panel1.BorderThickness = 2;
+            guna2Panel1.Controls.Add(pictureBox1);
+            guna2Panel1.Controls.Add(label6);
+            guna2Panel1.Cursor = Cursors.Hand;
             guna2Panel1.CustomizableEdges = customizableEdges11;
             guna2Panel1.Location = new Point(65, 571);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna2Panel1.Size = new Size(1367, 110);
             guna2Panel1.TabIndex = 28;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Icons.file;
+            pictureBox1.Location = new Point(673, 18);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(21, 24);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Inter", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.FromArgb(23, 26, 31);
+            label6.Location = new Point(565, 56);
+            label6.Name = "label6";
+            label6.Size = new Size(238, 36);
+            label6.TabIndex = 0;
+            label6.Text = "Click to upload files or drag and drop\nPDF, DOC, DOCX up to 100 MB";
+            label6.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
@@ -273,31 +306,31 @@
             guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
-            // txtControl
+            // txtContent
             // 
-            txtControl.BorderColor = Color.FromArgb(189, 193, 202);
-            txtControl.BorderRadius = 6;
-            txtControl.CustomizableEdges = customizableEdges13;
-            txtControl.DefaultText = "";
-            txtControl.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtControl.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtControl.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtControl.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtControl.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtControl.Font = new Font("Inter Medium", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtControl.ForeColor = Color.FromArgb(66, 72, 86);
-            txtControl.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtControl.Location = new Point(65, 359);
-            txtControl.Margin = new Padding(4, 6, 4, 6);
-            txtControl.Multiline = true;
-            txtControl.Name = "txtControl";
-            txtControl.PlaceholderText = "Enter Bulletin Content";
-            txtControl.ScrollBars = ScrollBars.Vertical;
-            txtControl.SelectedText = "";
-            txtControl.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            txtControl.Size = new Size(1367, 190);
-            txtControl.TabIndex = 31;
-            txtControl.TextOffset = new Point(6, 0);
+            txtContent.BorderColor = Color.FromArgb(189, 193, 202);
+            txtContent.BorderRadius = 6;
+            txtContent.CustomizableEdges = customizableEdges13;
+            txtContent.DefaultText = "";
+            txtContent.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtContent.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtContent.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtContent.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtContent.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtContent.Font = new Font("Inter Medium", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtContent.ForeColor = Color.FromArgb(66, 72, 86);
+            txtContent.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtContent.Location = new Point(65, 359);
+            txtContent.Margin = new Padding(4, 6, 4, 6);
+            txtContent.Multiline = true;
+            txtContent.Name = "txtContent";
+            txtContent.PlaceholderText = "Enter Bulletin Content";
+            txtContent.ScrollBars = ScrollBars.Vertical;
+            txtContent.SelectedText = "";
+            txtContent.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            txtContent.Size = new Size(1367, 190);
+            txtContent.TabIndex = 31;
+            txtContent.TextOffset = new Point(6, 0);
             // 
             // CreateBulletin
             // 
@@ -313,32 +346,36 @@
             Controls.Add(panel1);
             Controls.Add(label2);
             Controls.Add(txtTitle);
-            Controls.Add(txtControl);
+            Controls.Add(txtContent);
             FormBorderStyle = FormBorderStyle.None;
             Name = "CreateBulletin";
-            StartPosition = FormStartPosition.CenterParent;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Create New Bulletin";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            guna2Panel1.ResumeLayout(false);
+            guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2TextBox txtTitle;
         private Label label2;
         private Guna.UI2.WinForms.Guna2Button btnPublishBulletin;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
         private Panel panel1;
-        private Label label1;
         private Label label3;
-        private Guna.UI2.WinForms.Guna2TextBox txtAuthor;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Label label4;
         private Label label5;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
-        private Guna.UI2.WinForms.Guna2TextBox txtControl;
         private Guna.UI2.WinForms.Guna2Button btnBack;
+        private PictureBox pictureBox1;
+        private Label label6;
+        public Guna.UI2.WinForms.Guna2TextBox txtTitle;
+        public Label lblHeader;
+        public Guna.UI2.WinForms.Guna2TextBox txtAuthor;
+        public Guna.UI2.WinForms.Guna2TextBox txtContent;
     }
 }

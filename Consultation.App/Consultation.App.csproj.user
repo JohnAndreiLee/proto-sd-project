@@ -11,6 +11,9 @@
     <Compile Update="Views\Controls\BulletinManagement\BulletinCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Views\Controls\BulletinManagement\BulletinOverlay.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\Controls\BulletinManagement\CreateBulletin.cs">
       <SubType>Form</SubType>
     </Compile>

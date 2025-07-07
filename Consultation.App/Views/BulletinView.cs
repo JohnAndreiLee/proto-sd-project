@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Consultation.App.BulletinManagement;
+using Consultation.App.Views.Controls.BulletinManagement;
 
 namespace Consultation.App.Views
 {
@@ -16,6 +16,7 @@ namespace Consultation.App.Views
         public BulletinView()
         {
             InitializeComponent();
+
             btnBulletinView_Click(btnBulletinView, EventArgs.Empty);
         }
 
@@ -23,6 +24,7 @@ namespace Consultation.App.Views
         {
             CreateBulletin bulletinForm = new CreateBulletin();
             bulletinForm.ShowDialog();
+            btnBulletinView_Click(btnBulletinView, EventArgs.Empty);    // automatic refresh
         }
 
         private void btnBulletinView_Click(object sender, EventArgs e)
@@ -33,8 +35,14 @@ namespace Consultation.App.Views
             btnArchive.Font = new Font(btnArchive.Font, FontStyle.Regular);
             MoveUnderline(btnBulletinView);
 
-            panelBulletinCard.Controls.Clear();
-            panelBulletinCard.Controls.Add(new BulletinCard());
+            lblBulletinHeader.Text = "Active Bulletins";
+
+            // backend
+            flpBulletinList.Controls.Clear();
+            for (int i = 0; i < 5; ++i)
+            {
+                flpBulletinList.Controls.Add(new BulletinCard());
+            }
         }
 
         private void btnArchive_Click(object sender, EventArgs e)
@@ -45,8 +53,11 @@ namespace Consultation.App.Views
             btnBulletinView.Font = new Font(btnArchive.Font, FontStyle.Regular);
             MoveUnderline(btnArchive);
 
-            panelBulletinCard.Controls.Clear();
-            panelBulletinCard.Controls.Add(new ArchiveCard());
+            lblBulletinHeader.Text = "Archived Bulletins";
+
+            // backend
+            flpBulletinList.Controls.Clear();
+            flpBulletinList.Controls.Add(new ArchiveCard());
         }
 
         private void MoveUnderline(Guna.UI2.WinForms.Guna2Button targetButton)
@@ -55,6 +66,18 @@ namespace Consultation.App.Views
             panelUnderline.Left = targetButton.Left;
             panelUnderline.Top = targetButton.Bottom - 4;
             panelUnderline.Visible = true;
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            if (lblBulletinHeader.Text == "Active Bulletins")
+            {
+                btnBulletinView_Click(btnBulletinView, EventArgs.Empty);
+            }
+            else
+            {
+                btnArchive_Click(btnArchive, EventArgs.Empty);
+            }
         }
     }
 }

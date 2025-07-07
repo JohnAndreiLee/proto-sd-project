@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Consultation.App.BulletinManagement
+namespace Consultation.App.Views.Controls.BulletinManagement
 {
     public partial class CreateBulletin : Form
     {

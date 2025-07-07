@@ -269,7 +269,6 @@ C:\Users\user\Desktop\Projects\C#\SD_UPDATED_REPO\Consultation.App\obj\Debug\net
 C:\Users\user\Desktop\Projects\C#\SD_UPDATED_REPO\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.MainView.resources
 C:\Users\user\Desktop\Projects\C#\SD_UPDATED_REPO\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.NotificationView.resources
 C:\Users\user\Desktop\Projects\C#\SD_UPDATED_REPO\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.ReportsView.resources
-C:\Users\user\Desktop\Projects\C#\SD_UPDATED_REPO\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.TestViews.BulletinView.resources
 C:\Users\user\Desktop\Projects\C#\SD_UPDATED_REPO\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.TestViews.MdiParent.resources
 C:\Users\user\Desktop\Projects\C#\SD_UPDATED_REPO\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.UserManagementView.resources
 C:\Users\user\Desktop\Projects\C#\SD_UPDATED_REPO\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.csproj.GenerateResource.cache
@@ -285,9 +284,6 @@ C:\Users\user\Desktop\Projects\C#\SD_UPDATED_REPO\Consultation.App\obj\Debug\net
 C:\Users\user\Desktop\Projects\C#\SD_UPDATED_REPO\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.genruntimeconfig.cache
 C:\Users\user\Desktop\Projects\C#\SD_UPDATED_REPO\Consultation.App\obj\Debug\net8.0-windows\ref\Consultation.App.dll
 C:\Users\user\Desktop\Projects\C#\SD_UPDATED_REPO\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.BulletinView.resources
-C:\Users\user\Desktop\Projects\C#\SD_UPDATED_REPO\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.BulletinManagement.ArchiveCard.resources
-C:\Users\user\Desktop\Projects\C#\SD_UPDATED_REPO\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.BulletinManagement.BulletinCard.resources
-C:\Users\user\Desktop\Projects\C#\SD_UPDATED_REPO\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.BulletinManagement.CreateBulletin.resources
 C:\Users\user\Desktop\Projects\C#\SD_UPDATED_REPO\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Properties.Resources.resources
 D:\Project Files\Visual Studio\repo\proto_sd\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Properties.Resources.resources
 D:\Project Files\Visual Studio\repo\proto_sd\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.BulletinView.resources
@@ -299,3 +295,8 @@ D:\Project Files\Visual Studio\repo\proto_sd\Consultation.App\obj\Debug\net8.0-w
 D:\Project Files\Visual Studio\repo\proto_sd\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.Controls.Dashboard.Quick_Actions_Panel.ScheduleConsultation.resources
 D:\Project Files\Visual Studio\repo\proto_sd\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.Controls.Dashboard.Quick_Actions_Panel.SystemSettings.resources
 D:\Project Files\Visual Studio\repo\proto_sd\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.TestViews.TestBulletinView.resources
+C:\Users\user\Desktop\Projects\C#\SD_UPDATED_REPO\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.TestViews.TestBulletinView.resources
+C:\Users\user\Desktop\Projects\C#\SD_UPDATED_REPO\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.Controls.BulletinManagement.BulletinOverlay.resources
+C:\Users\user\Desktop\Projects\C#\SD_UPDATED_REPO\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.Controls.BulletinManagement.BulletinCard.resources
+C:\Users\user\Desktop\Projects\C#\SD_UPDATED_REPO\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.Controls.BulletinManagement.ArchiveCard.resources
+C:\Users\user\Desktop\Projects\C#\SD_UPDATED_REPO\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.Controls.BulletinManagement.CreateBulletin.resources

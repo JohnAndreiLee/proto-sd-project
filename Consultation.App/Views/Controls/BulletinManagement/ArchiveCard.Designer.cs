@@ -1,4 +1,4 @@
-﻿namespace Consultation.App.BulletinManagement
+﻿namespace Consultation.App.Views.Controls.BulletinManagement
 {
     partial class ArchiveCard
     {

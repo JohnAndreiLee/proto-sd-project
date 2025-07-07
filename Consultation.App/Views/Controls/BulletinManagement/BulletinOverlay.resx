@@ -117,7 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="guna2BorderlessForm1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>50</value>
+  </metadata>
   <data name="txtContent.Text" xml:space="preserve">
-    <value>Dear School Community, Due to an important faculty meeting scheduled for tomorrow, May 6th, 2024, the school will be closed for all regular classes. The meeting will focus on: • Curriculum updates for the upcoming semester • Student assessment strategies • Professional development initiatives • Safety protocols review All students are advised to stay home and use this time for</value>
+    <value>Dear School Community,
+
+Laro tayo? Ayaw mo? Haha sige, sorry sa lahat, sorry sa istorbo, haha, ayaw talaga sakin ng mundo. Life is so unfair, sana hindi nlng ako na buhay haha. Sensya nae to lng kasi ako haha, im just a simple person kasi, lowkey, I am just nobody walang magkakagusto sa walang kwentang tao katulod ko haha, sana hindi nlng ako nabuhay haha, sige sorry eto lng kasi ako 
+
+Key points to note:
+bawal mag selos
+dapat before 10 pm naka uwi na
+dapat may goodmorning and goodnight with matching kisses.
+
+We appreciate your understanding and cooperation.
+
+Engr. Lemuel Azaria
+School Administrator</value>
   </data>
 </root>

@@ -1,0 +1,402 @@
+﻿namespace Consultation.App.Views.Controls.BulletinManagement
+{
+    partial class BulletinOverlay
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            components = new System.ComponentModel.Container();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BulletinOverlay));
+            guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
+            panel1 = new Panel();
+            tagOffice = new Guna.UI2.WinForms.Guna2Button();
+            tagDate = new Guna.UI2.WinForms.Guna2Button();
+            tagId = new Guna.UI2.WinForms.Guna2Button();
+            btnPublish = new Guna.UI2.WinForms.Guna2Button();
+            btnDelete = new Guna.UI2.WinForms.Guna2Button();
+            btnBack = new Guna.UI2.WinForms.Guna2Button();
+            lblTitle = new Label();
+            btnEdit = new Guna.UI2.WinForms.Guna2Button();
+            txtContent = new RichTextBox();
+            lblAttachments = new Label();
+            materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            picDownload = new PictureBox();
+            lblFileSize = new Label();
+            lblFileName = new Label();
+            pictureBox1 = new PictureBox();
+            panel1.SuspendLayout();
+            materialCard1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picDownload).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
+            // 
+            // guna2BorderlessForm1
+            // 
+            guna2BorderlessForm1.BorderRadius = 12;
+            guna2BorderlessForm1.ContainerControl = this;
+            guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(222, 59, 64);
+            panel1.Controls.Add(tagOffice);
+            panel1.Controls.Add(tagDate);
+            panel1.Controls.Add(tagId);
+            panel1.Controls.Add(btnPublish);
+            panel1.Controls.Add(btnDelete);
+            panel1.Controls.Add(btnBack);
+            panel1.Controls.Add(lblTitle);
+            panel1.Controls.Add(btnEdit);
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1500, 130);
+            panel1.TabIndex = 26;
+            // 
+            // tagOffice
+            // 
+            tagOffice.BackColor = Color.Transparent;
+            tagOffice.BorderRadius = 12;
+            tagOffice.CustomizableEdges = customizableEdges1;
+            tagOffice.DisabledState.BorderColor = Color.DarkGray;
+            tagOffice.DisabledState.CustomBorderColor = Color.DarkGray;
+            tagOffice.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            tagOffice.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            tagOffice.FillColor = Color.FromArgb(253, 242, 242);
+            tagOffice.Font = new Font("Inter", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tagOffice.ForeColor = Color.FromArgb(222, 59, 64);
+            tagOffice.Image = Properties.Icons.tag_person;
+            tagOffice.ImageSize = new Size(16, 16);
+            tagOffice.Location = new Point(717, 74);
+            tagOffice.Name = "tagOffice";
+            tagOffice.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            tagOffice.Size = new Size(122, 28);
+            tagOffice.TabIndex = 28;
+            tagOffice.Text = "Admin Office";
+            // 
+            // tagDate
+            // 
+            tagDate.BackColor = Color.Transparent;
+            tagDate.BorderRadius = 12;
+            tagDate.CustomizableEdges = customizableEdges3;
+            tagDate.DisabledState.BorderColor = Color.DarkGray;
+            tagDate.DisabledState.CustomBorderColor = Color.DarkGray;
+            tagDate.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            tagDate.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            tagDate.FillColor = Color.FromArgb(253, 242, 242);
+            tagDate.Font = new Font("Inter", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tagDate.ForeColor = Color.FromArgb(222, 59, 64);
+            tagDate.Image = Properties.Icons.tag_date;
+            tagDate.ImageOffset = new Point(-1, 0);
+            tagDate.ImageSize = new Size(16, 15);
+            tagDate.Location = new Point(584, 74);
+            tagDate.Name = "tagDate";
+            tagDate.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            tagDate.Size = new Size(118, 28);
+            tagDate.TabIndex = 27;
+            tagDate.Text = "2024-05-05";
+            // 
+            // tagId
+            // 
+            tagId.BackColor = Color.Transparent;
+            tagId.BorderRadius = 12;
+            tagId.CustomizableEdges = customizableEdges5;
+            tagId.DisabledState.BorderColor = Color.DarkGray;
+            tagId.DisabledState.CustomBorderColor = Color.DarkGray;
+            tagId.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            tagId.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            tagId.FillColor = Color.FromArgb(253, 242, 242);
+            tagId.Font = new Font("Inter", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tagId.ForeColor = Color.FromArgb(222, 59, 64);
+            tagId.Location = new Point(437, 74);
+            tagId.Name = "tagId";
+            tagId.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            tagId.Size = new Size(131, 28);
+            tagId.TabIndex = 26;
+            tagId.Text = "ID: BUL-2025-001";
+            // 
+            // btnPublish
+            // 
+            btnPublish.BackColor = Color.Transparent;
+            btnPublish.BorderColor = Color.FromArgb(222, 59, 64);
+            btnPublish.BorderRadius = 6;
+            btnPublish.Cursor = Cursors.Hand;
+            btnPublish.CustomizableEdges = customizableEdges7;
+            btnPublish.DisabledState.BorderColor = Color.DarkGray;
+            btnPublish.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnPublish.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnPublish.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnPublish.FillColor = Color.White;
+            btnPublish.FocusedColor = Color.Transparent;
+            btnPublish.Font = new Font("Inter", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnPublish.ForeColor = Color.FromArgb(222, 59, 64);
+            btnPublish.Image = Properties.Icons.approve;
+            btnPublish.ImageOffset = new Point(-2, 0);
+            btnPublish.ImageSize = new Size(19, 16);
+            btnPublish.Location = new Point(1342, 45);
+            btnPublish.Name = "btnPublish";
+            btnPublish.PressedColor = Color.Transparent;
+            btnPublish.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnPublish.Size = new Size(118, 44);
+            btnPublish.TabIndex = 25;
+            btnPublish.Text = "Publish";
+            btnPublish.Click += btnPublish_Click;
+            // 
+            // btnDelete
+            // 
+            btnDelete.BackColor = Color.Transparent;
+            btnDelete.BorderColor = Color.FromArgb(222, 59, 64);
+            btnDelete.BorderRadius = 6;
+            btnDelete.Cursor = Cursors.Hand;
+            btnDelete.CustomizableEdges = customizableEdges9;
+            btnDelete.DisabledState.BorderColor = Color.DarkGray;
+            btnDelete.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnDelete.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnDelete.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnDelete.FillColor = Color.White;
+            btnDelete.FocusedColor = Color.Transparent;
+            btnDelete.Font = new Font("Inter", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnDelete.ForeColor = Color.FromArgb(222, 59, 64);
+            btnDelete.Image = Properties.Icons.delete;
+            btnDelete.ImageOffset = new Point(-2, 0);
+            btnDelete.ImageSize = new Size(16, 16);
+            btnDelete.Location = new Point(1206, 45);
+            btnDelete.Name = "btnDelete";
+            btnDelete.PressedColor = Color.Transparent;
+            btnDelete.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnDelete.Size = new Size(118, 44);
+            btnDelete.TabIndex = 24;
+            btnDelete.Text = "Delete";
+            btnDelete.Click += btnDelete_Click;
+            // 
+            // btnBack
+            // 
+            btnBack.BackColor = Color.Transparent;
+            btnBack.BorderColor = Color.FromArgb(222, 59, 64);
+            btnBack.BorderRadius = 6;
+            btnBack.Cursor = Cursors.Hand;
+            btnBack.CustomizableEdges = customizableEdges11;
+            btnBack.DisabledState.BorderColor = Color.DarkGray;
+            btnBack.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnBack.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnBack.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnBack.FillColor = Color.FromArgb(222, 59, 64);
+            btnBack.FocusedColor = Color.Transparent;
+            btnBack.Font = new Font("Inter", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnBack.ForeColor = Color.White;
+            btnBack.Image = Properties.Icons.white_arrow;
+            btnBack.ImageOffset = new Point(-2, 0);
+            btnBack.ImageSize = new Size(12, 10);
+            btnBack.Location = new Point(36, 12);
+            btnBack.Name = "btnBack";
+            btnBack.PressedColor = Color.Transparent;
+            btnBack.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnBack.Size = new Size(149, 44);
+            btnBack.TabIndex = 23;
+            btnBack.Text = "Back to Bulletins";
+            btnBack.Click += btnBack_Click;
+            // 
+            // lblTitle
+            // 
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Archivo", 17.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.ForeColor = Color.White;
+            lblTitle.Location = new Point(25, 68);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(374, 34);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "School Closure - Faculty Meeting";
+            // 
+            // btnEdit
+            // 
+            btnEdit.BackColor = Color.Transparent;
+            btnEdit.BorderColor = Color.FromArgb(222, 59, 64);
+            btnEdit.BorderRadius = 6;
+            btnEdit.Cursor = Cursors.Hand;
+            btnEdit.CustomizableEdges = customizableEdges13;
+            btnEdit.DisabledState.BorderColor = Color.DarkGray;
+            btnEdit.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnEdit.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnEdit.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnEdit.FillColor = Color.White;
+            btnEdit.FocusedColor = Color.Transparent;
+            btnEdit.Font = new Font("Inter", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnEdit.ForeColor = Color.FromArgb(222, 59, 64);
+            btnEdit.Image = Properties.Icons.edit;
+            btnEdit.ImageOffset = new Point(-2, 0);
+            btnEdit.ImageSize = new Size(16, 16);
+            btnEdit.Location = new Point(1088, 45);
+            btnEdit.Name = "btnEdit";
+            btnEdit.PressedColor = Color.Transparent;
+            btnEdit.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnEdit.Size = new Size(100, 44);
+            btnEdit.TabIndex = 22;
+            btnEdit.Text = "Edit";
+            btnEdit.Click += btnEdit_Click;
+            // 
+            // txtContent
+            // 
+            txtContent.BackColor = Color.White;
+            txtContent.BorderStyle = BorderStyle.None;
+            txtContent.Font = new Font("Inter", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtContent.ForeColor = Color.FromArgb(23, 26, 31);
+            txtContent.Location = new Point(44, 162);
+            txtContent.Name = "txtContent";
+            txtContent.ReadOnly = true;
+            txtContent.Size = new Size(1412, 364);
+            txtContent.TabIndex = 27;
+            txtContent.Text = resources.GetString("txtContent.Text");
+            // 
+            // lblAttachments
+            // 
+            lblAttachments.AutoSize = true;
+            lblAttachments.Font = new Font("Archivo SemiBold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblAttachments.ForeColor = Color.FromArgb(86, 93, 109);
+            lblAttachments.Location = new Point(44, 546);
+            lblAttachments.Name = "lblAttachments";
+            lblAttachments.Size = new Size(168, 32);
+            lblAttachments.TabIndex = 28;
+            lblAttachments.Text = "Attachments (1)";
+            // 
+            // materialCard1
+            // 
+            materialCard1.BackColor = Color.FromArgb(255, 255, 255);
+            materialCard1.Controls.Add(picDownload);
+            materialCard1.Controls.Add(lblFileSize);
+            materialCard1.Controls.Add(lblFileName);
+            materialCard1.Controls.Add(pictureBox1);
+            materialCard1.Depth = 0;
+            materialCard1.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialCard1.Location = new Point(65, 592);
+            materialCard1.Margin = new Padding(14);
+            materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
+            materialCard1.Name = "materialCard1";
+            materialCard1.Padding = new Padding(14);
+            materialCard1.Size = new Size(1367, 70);
+            materialCard1.TabIndex = 29;
+            // 
+            // picDownload
+            // 
+            picDownload.Cursor = Cursors.Hand;
+            picDownload.Image = Properties.Icons.download;
+            picDownload.Location = new Point(1314, 17);
+            picDownload.Name = "picDownload";
+            picDownload.Size = new Size(36, 36);
+            picDownload.SizeMode = PictureBoxSizeMode.Zoom;
+            picDownload.TabIndex = 30;
+            picDownload.TabStop = false;
+            picDownload.Click += picDownload_Click;
+            // 
+            // lblFileSize
+            // 
+            lblFileSize.AutoSize = true;
+            lblFileSize.Font = new Font("Inter", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblFileSize.ForeColor = Color.FromArgb(86, 93, 109);
+            lblFileSize.Location = new Point(59, 38);
+            lblFileSize.Name = "lblFileSize";
+            lblFileSize.Size = new Size(54, 18);
+            lblFileSize.TabIndex = 2;
+            lblFileSize.Text = "245 KB";
+            // 
+            // lblFileName
+            // 
+            lblFileName.AutoSize = true;
+            lblFileName.Font = new Font("Inter", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblFileName.ForeColor = Color.FromArgb(23, 36, 31);
+            lblFileName.Location = new Point(59, 17);
+            lblFileName.Name = "lblFileName";
+            lblFileName.Size = new Size(133, 18);
+            lblFileName.TabIndex = 1;
+            lblFileName.Text = "Faculty_Meeting.pdf";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Icons.attachment;
+            pictureBox1.Location = new Point(17, 17);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(36, 36);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
+            // BulletinOverlay
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ButtonHighlight;
+            ClientSize = new Size(1500, 705);
+            Controls.Add(materialCard1);
+            Controls.Add(lblAttachments);
+            Controls.Add(txtContent);
+            Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "BulletinOverlay";
+            StartPosition = FormStartPosition.CenterScreen;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            materialCard1.ResumeLayout(false);
+            materialCard1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)picDownload).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private Panel panel1;
+        private Guna.UI2.WinForms.Guna2Button btnBack;
+        private Label lblTitle;
+        private Guna.UI2.WinForms.Guna2Button btnEdit;
+        private Guna.UI2.WinForms.Guna2Button btnPublish;
+        private Guna.UI2.WinForms.Guna2Button btnDelete;
+        private RichTextBox txtContent;
+        private Label lblAttachments;
+        private MaterialSkin.Controls.MaterialCard materialCard1;
+        private PictureBox pictureBox1;
+        private Label lblFileSize;
+        private Label lblFileName;
+        private PictureBox picDownload;
+        private Guna.UI2.WinForms.Guna2Button tagOffice;
+        private Guna.UI2.WinForms.Guna2Button tagDate;
+        private Guna.UI2.WinForms.Guna2Button tagId;
+    }
+}
