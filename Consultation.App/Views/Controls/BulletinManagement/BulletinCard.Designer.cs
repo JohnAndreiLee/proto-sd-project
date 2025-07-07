@@ -47,7 +47,7 @@
             tagStatus = new Guna.UI2.WinForms.Guna2Button();
             tagId = new Guna.UI2.WinForms.Guna2Button();
             tagDate = new Guna.UI2.WinForms.Guna2Button();
-            tagOffice = new Guna.UI2.WinForms.Guna2Button();
+            tagAuthor = new Guna.UI2.WinForms.Guna2Button();
             tagAttachments = new Guna.UI2.WinForms.Guna2Button();
             materialCard1 = new MaterialSkin.Controls.MaterialCard();
             SuspendLayout();
@@ -159,26 +159,26 @@
             tagDate.TabIndex = 31;
             tagDate.Text = "2024-05-05";
             // 
-            // tagOffice
+            // tagAuthor
             // 
-            tagOffice.BackColor = Color.White;
-            tagOffice.BorderRadius = 12;
-            tagOffice.CustomizableEdges = customizableEdges21;
-            tagOffice.DisabledState.BorderColor = Color.DarkGray;
-            tagOffice.DisabledState.CustomBorderColor = Color.DarkGray;
-            tagOffice.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            tagOffice.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            tagOffice.FillColor = Color.FromArgb(243, 244, 246);
-            tagOffice.Font = new Font("Inter", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tagOffice.ForeColor = Color.FromArgb(50, 55, 67);
-            tagOffice.Image = Properties.Icons.tag_person2;
-            tagOffice.ImageSize = new Size(16, 16);
-            tagOffice.Location = new Point(312, 134);
-            tagOffice.Name = "tagOffice";
-            tagOffice.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            tagOffice.Size = new Size(122, 28);
-            tagOffice.TabIndex = 32;
-            tagOffice.Text = "Admin Office";
+            tagAuthor.BackColor = Color.White;
+            tagAuthor.BorderRadius = 12;
+            tagAuthor.CustomizableEdges = customizableEdges21;
+            tagAuthor.DisabledState.BorderColor = Color.DarkGray;
+            tagAuthor.DisabledState.CustomBorderColor = Color.DarkGray;
+            tagAuthor.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            tagAuthor.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            tagAuthor.FillColor = Color.FromArgb(243, 244, 246);
+            tagAuthor.Font = new Font("Inter", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tagAuthor.ForeColor = Color.FromArgb(50, 55, 67);
+            tagAuthor.Image = Properties.Icons.tag_person2;
+            tagAuthor.ImageSize = new Size(16, 16);
+            tagAuthor.Location = new Point(312, 134);
+            tagAuthor.Name = "tagAuthor";
+            tagAuthor.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            tagAuthor.Size = new Size(122, 28);
+            tagAuthor.TabIndex = 32;
+            tagAuthor.Text = "Admin Office";
             // 
             // tagAttachments
             // 
@@ -221,7 +221,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
             Controls.Add(tagAttachments);
-            Controls.Add(tagOffice);
+            Controls.Add(tagAuthor);
             Controls.Add(tagDate);
             Controls.Add(tagId);
             Controls.Add(tagStatus);
@@ -244,7 +244,7 @@
         private Guna.UI2.WinForms.Guna2Button tagStatus;
         private Guna.UI2.WinForms.Guna2Button tagId;
         private Guna.UI2.WinForms.Guna2Button tagDate;
-        private Guna.UI2.WinForms.Guna2Button tagOffice;
+        private Guna.UI2.WinForms.Guna2Button tagAuthor;
         private Guna.UI2.WinForms.Guna2Button tagAttachments;
         private MaterialSkin.Controls.MaterialCard materialCard1;
     }

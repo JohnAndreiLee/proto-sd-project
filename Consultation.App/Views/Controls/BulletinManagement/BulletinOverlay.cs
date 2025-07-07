@@ -27,7 +27,7 @@ namespace Consultation.App.Views.Controls.BulletinManagement
             this.Close();
             CreateBulletin bulletinForm = new CreateBulletin();
             bulletinForm.lblHeader.Text = "Edit Bulletin";
-            bulletinForm.txtAuthor.Text = "Dodong Boyaks";  // WHERE AUTHOR
+            bulletinForm.txtAuthor.Text = tagAuthor.Text;
             bulletinForm.txtTitle.Text = lblTitle.Text;
             bulletinForm.txtContent.Text = txtContent.Text;
             bulletinForm.ShowDialog();
