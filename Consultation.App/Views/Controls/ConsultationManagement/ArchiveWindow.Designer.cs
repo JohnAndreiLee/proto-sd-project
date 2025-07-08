@@ -34,9 +34,9 @@
             flowLayout2 = new Syncfusion.Windows.Forms.Tools.FlowLayout(components);
             WindowPanelArchive = new FlowLayoutPanel();
             materialCard1 = new MaterialSkin.Controls.MaterialCard();
-            guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            LabelWindow = new Guna.UI2.WinForms.Guna2HtmlLabel();
             materialCard2 = new MaterialSkin.Controls.MaterialCard();
+            LabelWindow = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)flowLayout1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)flowLayout2).BeginInit();
             materialCard1.SuspendLayout();
@@ -75,26 +75,6 @@
             materialCard1.Size = new Size(1434, 753);
             materialCard1.TabIndex = 0;
             // 
-            // guna2HtmlLabel2
-            // 
-            guna2HtmlLabel2.BackColor = Color.Transparent;
-            guna2HtmlLabel2.Font = new Font("Archivo SemiBold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel2.Location = new Point(17, 14);
-            guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(217, 34);
-            guna2HtmlLabel2.TabIndex = 0;
-            guna2HtmlLabel2.Text = "Archived Consultation";
-            // 
-            // LabelWindow
-            // 
-            LabelWindow.BackColor = Color.Transparent;
-            LabelWindow.Font = new Font("Archivo", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            LabelWindow.Location = new Point(17, 18);
-            LabelWindow.Name = "LabelWindow";
-            LabelWindow.Size = new Size(179, 31);
-            LabelWindow.TabIndex = 0;
-            LabelWindow.Text = "Active Consultation";
-            // 
             // materialCard2
             // 
             materialCard2.BackColor = Color.FromArgb(255, 255, 255);
@@ -108,6 +88,26 @@
             materialCard2.Padding = new Padding(14);
             materialCard2.Size = new Size(1434, 70);
             materialCard2.TabIndex = 2;
+            // 
+            // LabelWindow
+            // 
+            LabelWindow.BackColor = Color.Transparent;
+            LabelWindow.Font = new Font("Archivo", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LabelWindow.Location = new Point(17, 18);
+            LabelWindow.Name = "LabelWindow";
+            LabelWindow.Size = new Size(203, 31);
+            LabelWindow.TabIndex = 0;
+            LabelWindow.Text = "Archived Consultation";
+            // 
+            // guna2HtmlLabel2
+            // 
+            guna2HtmlLabel2.BackColor = Color.Transparent;
+            guna2HtmlLabel2.Font = new Font("Archivo SemiBold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel2.Location = new Point(17, 14);
+            guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            guna2HtmlLabel2.Size = new Size(217, 34);
+            guna2HtmlLabel2.TabIndex = 0;
+            guna2HtmlLabel2.Text = "Archived Consultation";
             // 
             // ArchiveWindow
             // 
