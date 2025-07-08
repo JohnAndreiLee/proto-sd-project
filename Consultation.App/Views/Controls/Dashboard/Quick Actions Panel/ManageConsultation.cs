@@ -20,8 +20,8 @@ namespace Consultation.App.Views.Controls.Dashboard.Quick_Actions_Panel
 
         private void materialCard1_Click(object sender, EventArgs e)
         {
-            AddSchedule scheduleForm = new AddSchedule();
-            scheduleForm.ShowDialog();
+         //   AddSchedule scheduleForm = new AddSchedule();
+         //   scheduleForm.ShowDialog();
         }
     }
 }
