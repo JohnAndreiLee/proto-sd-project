@@ -52,9 +52,15 @@ namespace Consultation.App.Views.Controls.BulletinManagement
         private void btnView_Click(object sender, EventArgs e)
         {
             BulletinOverlay bulletinOverlay = new BulletinOverlay();
+            bulletinOverlay.tagId.Text = tagId.Text;
+            bulletinOverlay.tagDate.Text = tagDate.Text;
+            bulletinOverlay.tagAuthor.Text = tagAuthor.Text;
+            bulletinOverlay.lblTitle.Text = lblTitle.Text;
+            bulletinOverlay.txtContent.Text = txtContent.Text;
             bulletinOverlay.ShowDialog();
 
             // backend
+            // retrieve attachment/s from db
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
@@ -94,6 +100,7 @@ namespace Consultation.App.Views.Controls.BulletinManagement
             Guna.UI2.WinForms.Guna2Button btnArchive = new Guna.UI2.WinForms.Guna2Button();
             Guna.UI2.WinForms.Guna2Button btnDelete = new Guna.UI2.WinForms.Guna2Button();
 
+            btnView.Cursor = Cursors.Hand;
             btnView.DisabledState.BorderColor = Color.DarkGray;
             btnView.DisabledState.CustomBorderColor = Color.DarkGray;
             btnView.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -117,6 +124,7 @@ namespace Consultation.App.Views.Controls.BulletinManagement
             btnView.MouseLeave += button_MouseLeave;
             btnView.Click += btnView_Click;
 
+            btnEdit.Cursor = Cursors.Hand;
             btnEdit.DisabledState.BorderColor = Color.DarkGray;
             btnEdit.DisabledState.CustomBorderColor = Color.DarkGray;
             btnEdit.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -140,6 +148,7 @@ namespace Consultation.App.Views.Controls.BulletinManagement
             btnEdit.MouseLeave += button_MouseLeave;
             btnEdit.Click += btnEdit_Click;
 
+            btnArchive.Cursor = Cursors.Hand;
             btnArchive.DisabledState.BorderColor = Color.DarkGray;
             btnArchive.DisabledState.CustomBorderColor = Color.DarkGray;
             btnArchive.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -163,6 +172,7 @@ namespace Consultation.App.Views.Controls.BulletinManagement
             btnArchive.MouseLeave += button_MouseLeave;
             btnArchive.Click += btnArchive_Click;
 
+            btnDelete.Cursor = Cursors.Hand;
             btnDelete.DisabledState.BorderColor = Color.DarkGray;
             btnDelete.DisabledState.CustomBorderColor = Color.DarkGray;
             btnDelete.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
