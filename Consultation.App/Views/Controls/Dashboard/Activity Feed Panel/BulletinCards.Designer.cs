@@ -1,6 +1,6 @@
 ﻿namespace Consultation.App.Dashboard.Activity_Feed_Panel
 {
-    partial class BulletinCard
+    partial class BulletinCards
     {
         /// <summary> 
         /// Required designer variable.

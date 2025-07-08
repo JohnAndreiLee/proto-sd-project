@@ -50,6 +50,7 @@
             materialCard1.Padding = new Padding(14);
             materialCard1.Size = new Size(251, 58);
             materialCard1.TabIndex = 0;
+            materialCard1.Click += materialCard1_Click;
             // 
             // panel1
             // 
@@ -59,6 +60,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(32, 32);
             panel1.TabIndex = 4;
+            panel1.Click += materialCard1_Click;
             // 
             // label2
             // 
@@ -69,6 +71,7 @@
             label2.Size = new Size(137, 15);
             label2.TabIndex = 7;
             label2.Text = "Manage app preferences";
+            label2.Click += materialCard1_Click;
             // 
             // label1
             // 
@@ -79,6 +82,7 @@
             label1.Size = new Size(69, 18);
             label1.TabIndex = 6;
             label1.Text = "Settings";
+            label1.Click += materialCard1_Click;
             // 
             // SystemSettings
             // 

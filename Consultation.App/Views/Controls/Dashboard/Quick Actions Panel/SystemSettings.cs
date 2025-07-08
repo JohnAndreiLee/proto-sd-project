@@ -16,5 +16,10 @@ namespace Consultation.App.Views.Controls.Dashboard.Quick_Actions_Panel
         {
             InitializeComponent();
         }
+
+        private void materialCard1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

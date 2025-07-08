@@ -11,11 +11,14 @@ using System.Windows.Forms;
 
 namespace Consultation.App.Dashboard.Activity_Feed_Panel
 {
-    public partial class ConsultationCard : UserControl
+    public partial class BulletinCards : UserControl
     {
-        public ConsultationCard(string consultationtitle, string consultationstatus, string consultationbody, string consultationdepartment, DateTime consultationdateScheduled)
+
+
+        public BulletinCards(string bulletintitle, string bulletinstatus, string bulletinbody, DateTime bulletinDatePosted)
         {
             InitializeComponent();
+
 
             this.MouseEnter += OnHoverEnter;
             this.MouseLeave += OnHoverLeave;
@@ -28,15 +31,13 @@ namespace Consultation.App.Dashboard.Activity_Feed_Panel
 
             ApplyRoundedCorners(15);
 
-             ConsultationTitle.Text = consultationtitle;
-             ConsultationStatusLabel.Text = consultationstatus;
-             ConsultationBody.Text = consultationbody;
-             ConsultationDepartment.Text = consultationdepartment;
-             ConsultationDate.Text = consultationdateScheduled.ToString("MMM dd, yyyy");
-
-             UpdateStatusAppearance();
+            BulletinTitle.Text = bulletintitle;
+            BulletinStatusLabel.Text = bulletinstatus;
+            BulletinBody.Text = bulletinbody;
+            BulletinDate.Text = bulletinDatePosted.ToString("MMM dd, yyyy");
+            
+            UpdateStatusAppearance();
         }
-
         private void OnHoverEnter(object sender, EventArgs e)
         {
             this.BackColor = Color.Gainsboro;
@@ -69,30 +70,31 @@ namespace Consultation.App.Dashboard.Activity_Feed_Panel
 
         private void UpdateStatusAppearance()
         {
-            string status = ConsultationStatusLabel.Text.Trim();
+            string status = BulletinStatusLabel.Text.Trim();
 
             if (string.Equals(status, "Pending", StringComparison.OrdinalIgnoreCase))
             {
-                ConsultationStatusPanel.FillColor = Color.Firebrick;
-                ConsultationStatusLabel.ForeColor = Color.White;
-                ConsultationStatusLabel.BackColor = Color.Firebrick;
-                ConsultationStatusLabel.Font = new Font(
-                    ConsultationStatusLabel.Font.FontFamily,
-                    ConsultationStatusLabel.Font.Size,
-                    FontStyle.Bold | FontStyle.Italic
+                BulletinStatusPanel.FillColor = Color.Firebrick;
+                BulletinStatusLabel.ForeColor = Color.White;
+                BulletinStatusLabel.BackColor = Color.Firebrick;
+                BulletinStatusLabel.Font = new Font(
+                     BulletinStatusLabel.Font.FontFamily,
+                     BulletinStatusLabel.Font.Size,
+                     FontStyle.Bold | FontStyle.Italic
                 );
             }
             else if (string.Equals(status, "Approved", StringComparison.OrdinalIgnoreCase))
             {
-                ConsultationStatusPanel.FillColor = Color.LightGreen;
-                ConsultationStatusLabel.ForeColor = Color.Black;
-                ConsultationStatusLabel.BackColor = Color.LightGreen;
-                ConsultationStatusLabel.Font = new Font(
-                    ConsultationStatusLabel.Font.FontFamily,
-                    ConsultationStatusLabel.Font.Size,
-                    FontStyle.Bold | FontStyle.Italic
+                BulletinStatusPanel.FillColor = Color.LightGreen;
+                BulletinStatusLabel.ForeColor = Color.Black;
+                BulletinStatusLabel.BackColor = Color.LightGreen;
+                BulletinStatusLabel.Font = new Font(
+                     BulletinStatusLabel.Font.FontFamily,
+                     BulletinStatusLabel.Font.Size,
+                     FontStyle.Bold | FontStyle.Italic
                 );
             }
         }
+
     }
 }

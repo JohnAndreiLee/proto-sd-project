@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Consultation.App.ConsultationManagement;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace Consultation.App.Views.Controls.Dashboard.Quick_Actions_Panel
         public ManageConsultation()
         {
             InitializeComponent();
+        }
+
+        private void materialCard1_Click(object sender, EventArgs e)
+        {
+            AddSchedule scheduleForm = new AddSchedule();
+            scheduleForm.ShowDialog();
         }
     }
 }

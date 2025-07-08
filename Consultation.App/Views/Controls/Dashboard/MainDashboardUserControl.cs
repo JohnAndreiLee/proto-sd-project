@@ -1,4 +1,5 @@
-﻿using Consultation.App.Dashboard.Activity_Feed_Panel;
+﻿using Consultation.App.BulletinManagement;
+using Consultation.App.Dashboard.Activity_Feed_Panel;
 using Consultation.App.Presenters;
 using Consultation.App.ViewModels.DashboardModels;
 using Consultation.App.Views.Controls.Dashboard.Quick_Actions_Panel;
@@ -37,6 +38,10 @@ namespace Consultation.App.Dashboard
             InitializeComponent();
             createNewBulletin1.Cursor = Cursors.Hand;
             manageConsultation1.Cursor = Cursors.Hand;
+            addUser1.Cursor = Cursors.Hand;
+            systemSettings1.Cursor = Cursors.Hand;
+            BulletinButton.Cursor = Cursors.Hand;
+            ConsultationButton.Cursor = Cursors.Hand;
 
             bulletinDefaultColor = createNewBulletin1.BackColor;
             consultationDefaultColor = manageConsultation1.BackColor;
@@ -65,7 +70,7 @@ namespace Consultation.App.Dashboard
 
             foreach (var b in bulletins)
             {
-                var card = new BulletinCard(b.Title, b.Status, b.Body, b.DatePosted);
+                var card = new BulletinCards(b.Title, b.Status, b.Body, b.DatePosted);
                 ActivityFeedPanel.Controls.Add(card);
             }
         }
@@ -76,7 +81,7 @@ namespace Consultation.App.Dashboard
 
             foreach (var c in consultations)
             {
-                var card = new ConsultationCard(c.Title, c.Status, c.Body, c.Course, c.DateScheduled);
+                var card = new ConsultationCards(c.Title, c.Status, c.Body, c.Course, c.DateScheduled);
                 ActivityFeedPanel.Controls.Add(card);
             }
         }
@@ -183,6 +188,10 @@ namespace Consultation.App.Dashboard
         private void systemSettings1_MouseLeave(object sender, EventArgs e)
         {
             systemSettings1.BackColor = consultationDefaultColor;
+        }
+
+        private void createNewBulletin1_Click(object sender, EventArgs e)
+        {
         }
     }
 }

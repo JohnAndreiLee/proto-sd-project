@@ -54,7 +54,7 @@ namespace Consultation.App.ConsultationManagement
                 return;
             }
 
-            AddSchedule addSchedule = new AddSchedule(csWindow);
+            AddSchedule addSchedule = new AddSchedule();
             addSchedule.ShowDialog();
         }
 

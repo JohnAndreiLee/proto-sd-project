@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             ActivityFeedPanel = new MaterialSkin.Controls.MaterialCard();
             BulletinButton = new Guna.UI2.WinForms.Guna2Button();
             guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -145,7 +145,7 @@
             BulletinButton.BackColor = Color.Transparent;
             BulletinButton.BorderRadius = 5;
             BulletinButton.CustomBorderColor = Color.FromArgb(64, 64, 64);
-            BulletinButton.CustomizableEdges = customizableEdges11;
+            BulletinButton.CustomizableEdges = customizableEdges1;
             BulletinButton.DisabledState.BorderColor = Color.DarkGray;
             BulletinButton.DisabledState.CustomBorderColor = Color.DarkGray;
             BulletinButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -155,7 +155,7 @@
             BulletinButton.ForeColor = Color.Black;
             BulletinButton.Location = new Point(693, 20);
             BulletinButton.Name = "BulletinButton";
-            BulletinButton.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            BulletinButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
             BulletinButton.ShadowDecoration.Shadow = new Padding(0, 0, 0, 2);
             BulletinButton.Size = new Size(122, 33);
             BulletinButton.TabIndex = 1;
@@ -176,7 +176,7 @@
             guna2CircleButton1.ForeColor = Color.White;
             guna2CircleButton1.Location = new Point(204, 28);
             guna2CircleButton1.Name = "guna2CircleButton1";
-            guna2CircleButton1.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            guna2CircleButton1.ShadowDecoration.CustomizableEdges = customizableEdges3;
             guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             guna2CircleButton1.Size = new Size(40, 40);
             guna2CircleButton1.TabIndex = 0;
@@ -190,6 +190,7 @@
             createNewBulletin1.TabIndex = 0;
             createNewBulletin1.Load += createNewBulletin1_Load;
             createNewBulletin1.CursorChanged += createNewBulletin1_Load;
+            createNewBulletin1.Click += createNewBulletin1_Click;
             createNewBulletin1.MouseEnter += createNewBulletin1_Load;
             createNewBulletin1.MouseLeave += createNewBulletin1_Load;
             // 
@@ -225,7 +226,7 @@
             ConsultationButton.BackColor = Color.Transparent;
             ConsultationButton.BorderRadius = 5;
             ConsultationButton.CustomBorderColor = Color.FromArgb(64, 64, 64);
-            ConsultationButton.CustomizableEdges = customizableEdges14;
+            ConsultationButton.CustomizableEdges = customizableEdges4;
             ConsultationButton.DisabledState.BorderColor = Color.DarkGray;
             ConsultationButton.DisabledState.CustomBorderColor = Color.DarkGray;
             ConsultationButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -235,7 +236,7 @@
             ConsultationButton.ForeColor = Color.Black;
             ConsultationButton.Location = new Point(821, 20);
             ConsultationButton.Name = "ConsultationButton";
-            ConsultationButton.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            ConsultationButton.ShadowDecoration.CustomizableEdges = customizableEdges5;
             ConsultationButton.ShadowDecoration.Depth = 100;
             ConsultationButton.ShadowDecoration.Shadow = new Padding(0, 0, 0, 5);
             ConsultationButton.Size = new Size(122, 33);
@@ -472,11 +473,11 @@
             addUser1.Size = new Size(255, 62);
             addUser1.TabIndex = 0;
             // 
-            // scheduleConsultation1
+            // manageConsultation1
             // 
             manageConsultation1.BackColor = Color.White;
             manageConsultation1.Location = new Point(11, 82);
-            manageConsultation1.Name = "scheduleConsultation1";
+            manageConsultation1.Name = "manageConsultation1";
             manageConsultation1.Size = new Size(255, 62);
             manageConsultation1.TabIndex = 0;
             // 
@@ -609,7 +610,7 @@
             guna2CircleButton6.ForeColor = Color.White;
             guna2CircleButton6.Location = new Point(204, 28);
             guna2CircleButton6.Name = "guna2CircleButton6";
-            guna2CircleButton6.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            guna2CircleButton6.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2CircleButton6.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             guna2CircleButton6.Size = new Size(40, 40);
             guna2CircleButton6.TabIndex = 8;
@@ -685,7 +686,7 @@
             guna2CircleButton5.ForeColor = Color.White;
             guna2CircleButton5.Location = new Point(204, 28);
             guna2CircleButton5.Name = "guna2CircleButton5";
-            guna2CircleButton5.ShadowDecoration.CustomizableEdges = customizableEdges17;
+            guna2CircleButton5.ShadowDecoration.CustomizableEdges = customizableEdges7;
             guna2CircleButton5.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             guna2CircleButton5.Size = new Size(40, 40);
             guna2CircleButton5.TabIndex = 8;
@@ -761,7 +762,7 @@
             guna2CircleButton4.ForeColor = Color.White;
             guna2CircleButton4.Location = new Point(204, 28);
             guna2CircleButton4.Name = "guna2CircleButton4";
-            guna2CircleButton4.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            guna2CircleButton4.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2CircleButton4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             guna2CircleButton4.Size = new Size(40, 40);
             guna2CircleButton4.TabIndex = 7;
@@ -838,7 +839,7 @@
             guna2CircleButton3.ForeColor = Color.White;
             guna2CircleButton3.Location = new Point(204, 28);
             guna2CircleButton3.Name = "guna2CircleButton3";
-            guna2CircleButton3.ShadowDecoration.CustomizableEdges = customizableEdges19;
+            guna2CircleButton3.ShadowDecoration.CustomizableEdges = customizableEdges9;
             guna2CircleButton3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             guna2CircleButton3.Size = new Size(40, 40);
             guna2CircleButton3.TabIndex = 7;
@@ -914,7 +915,7 @@
             guna2CircleButton2.ForeColor = Color.White;
             guna2CircleButton2.Location = new Point(204, 28);
             guna2CircleButton2.Name = "guna2CircleButton2";
-            guna2CircleButton2.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            guna2CircleButton2.ShadowDecoration.CustomizableEdges = customizableEdges10;
             guna2CircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             guna2CircleButton2.Size = new Size(40, 40);
             guna2CircleButton2.TabIndex = 6;

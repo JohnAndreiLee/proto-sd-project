@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using Consultation.App.Views;
+using BulletinView = Consultation.App.Views.BulletinView;
 
 namespace Consultation.App.Presenters
 {
