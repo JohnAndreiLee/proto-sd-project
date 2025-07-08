@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -66,7 +65,7 @@
             materialCard7 = new MaterialSkin.Controls.MaterialCard();
             systemSettings1 = new Views.Controls.Dashboard.Quick_Actions_Panel.SystemSettings();
             addUser1 = new Views.Controls.Dashboard.Quick_Actions_Panel.AddUser();
-            scheduleConsultation1 = new Views.Controls.Dashboard.Quick_Actions_Panel.ScheduleConsultation();
+            manageConsultation1 = new Views.Controls.Dashboard.Quick_Actions_Panel.ManageConsultation();
             materialCard8 = new MaterialSkin.Controls.MaterialCard();
             sfButton2 = new Syncfusion.WinForms.Controls.SfButton();
             QuickActionsLabel = new Syncfusion.Windows.Forms.Tools.AutoLabel();
@@ -75,7 +74,7 @@
             ConByDepLabel = new Label();
             materialCard9 = new MaterialSkin.Controls.MaterialCard();
             card = new MaterialSkin.Controls.MaterialCard();
-            ConsultationCountCivil = new Label();
+            ConsultationCountCE = new Label();
             guna2CircleButton6 = new Guna.UI2.WinForms.Guna2CircleButton();
             label11 = new Label();
             label12 = new Label();
@@ -109,7 +108,6 @@
             label2 = new Label();
             label1 = new Label();
             panel5 = new Panel();
-            cardLayout1 = new Syncfusion.Windows.Forms.Tools.CardLayout(components);
             UserName = new Label();
             materialCard2.SuspendLayout();
             materialCard3.SuspendLayout();
@@ -126,7 +124,6 @@
             materialCard12.SuspendLayout();
             materialCard11.SuspendLayout();
             materialCard10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)cardLayout1).BeginInit();
             SuspendLayout();
             // 
             // ActivityFeedPanel
@@ -449,7 +446,7 @@
             materialCard7.BackColor = Color.FromArgb(255, 255, 255);
             materialCard7.Controls.Add(systemSettings1);
             materialCard7.Controls.Add(addUser1);
-            materialCard7.Controls.Add(scheduleConsultation1);
+            materialCard7.Controls.Add(manageConsultation1);
             materialCard7.Controls.Add(createNewBulletin1);
             materialCard7.Depth = 0;
             materialCard7.ForeColor = Color.FromArgb(222, 0, 0, 0);
@@ -477,11 +474,11 @@
             // 
             // scheduleConsultation1
             // 
-            scheduleConsultation1.BackColor = Color.White;
-            scheduleConsultation1.Location = new Point(11, 82);
-            scheduleConsultation1.Name = "scheduleConsultation1";
-            scheduleConsultation1.Size = new Size(255, 62);
-            scheduleConsultation1.TabIndex = 0;
+            manageConsultation1.BackColor = Color.White;
+            manageConsultation1.Location = new Point(11, 82);
+            manageConsultation1.Name = "scheduleConsultation1";
+            manageConsultation1.Size = new Size(255, 62);
+            manageConsultation1.TabIndex = 0;
             // 
             // materialCard8
             // 
@@ -573,7 +570,7 @@
             // card
             // 
             card.BackColor = Color.FromArgb(255, 255, 255);
-            card.Controls.Add(ConsultationCountCivil);
+            card.Controls.Add(ConsultationCountCE);
             card.Controls.Add(guna2CircleButton6);
             card.Controls.Add(label11);
             card.Controls.Add(label12);
@@ -588,17 +585,17 @@
             card.Size = new Size(255, 95);
             card.TabIndex = 5;
             // 
-            // ConsultationCountCivil
+            // ConsultationCountCE
             // 
-            ConsultationCountCivil.BackColor = Color.FromArgb(224, 224, 224);
-            ConsultationCountCivil.Font = new Font("Inter", 8F, FontStyle.Bold);
-            ConsultationCountCivil.ForeColor = Color.DimGray;
-            ConsultationCountCivil.Location = new Point(210, 42);
-            ConsultationCountCivil.Name = "ConsultationCountCivil";
-            ConsultationCountCivil.Size = new Size(31, 10);
-            ConsultationCountCivil.TabIndex = 9;
-            ConsultationCountCivil.Text = "30";
-            ConsultationCountCivil.TextAlign = ContentAlignment.MiddleCenter;
+            ConsultationCountCE.BackColor = Color.FromArgb(224, 224, 224);
+            ConsultationCountCE.Font = new Font("Inter", 8F, FontStyle.Bold);
+            ConsultationCountCE.ForeColor = Color.DimGray;
+            ConsultationCountCE.Location = new Point(210, 42);
+            ConsultationCountCE.Name = "ConsultationCountCE";
+            ConsultationCountCE.Size = new Size(31, 10);
+            ConsultationCountCE.TabIndex = 9;
+            ConsultationCountCE.Text = "30";
+            ConsultationCountCE.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // guna2CircleButton6
             // 
@@ -1072,7 +1069,6 @@
             materialCard11.PerformLayout();
             materialCard10.ResumeLayout(false);
             materialCard10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)cardLayout1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1103,7 +1099,7 @@
         private Label ConByDepLabel;
         private MaterialSkin.Controls.MaterialCard materialCard9;
         private Views.Controls.Dashboard.Quick_Actions_Panel.CreateNewBulletin createNewBulletin1;
-        private Views.Controls.Dashboard.Quick_Actions_Panel.ScheduleConsultation scheduleConsultation1;
+        private Views.Controls.Dashboard.Quick_Actions_Panel.ManageConsultation manageConsultation1;
         private Views.Controls.Dashboard.Quick_Actions_Panel.AddUser addUser1;
         private Views.Controls.Dashboard.Quick_Actions_Panel.SystemSettings systemSettings1;
         private MaterialSkin.Controls.MaterialCard card;
@@ -1130,7 +1126,6 @@
         private Label label1;
         private Label label11;
         private Label label12;
-        private Syncfusion.Windows.Forms.Tools.CardLayout cardLayout1;
         private Label ConsultationCountEE;
         private Label ConsultationCountECE;
         private Label BulletinPublishedCount;
@@ -1146,7 +1141,7 @@
         private Label ConsultationCountME;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton4;
         private Label ConsultationCountCPE;
-        private Label ConsultationCountCivil;
+        private Label ConsultationCountCE;
         private Label ConsultationCountCHE;
         private Guna.UI2.WinForms.Guna2Button BulletinButton;
         private Guna.UI2.WinForms.Guna2Button ConsultationButton;

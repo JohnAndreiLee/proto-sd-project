@@ -8,7 +8,7 @@
     <Compile Update="Views\Controls\Dashboard\Quick Actions Panel\CreateNewBulletin.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Views\Controls\Dashboard\Quick Actions Panel\ScheduleConsultation.cs">
+    <Compile Update="Views\Controls\Dashboard\Quick Actions Panel\ManageConsultation.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Views\Controls\Dashboard\Quick Actions Panel\SystemSettings.cs">

@@ -1,6 +1,6 @@
 ﻿namespace Consultation.App.Views.Controls.Dashboard.Quick_Actions_Panel
 {
-    partial class ScheduleConsultation
+    partial class ManageConsultation
     {
         /// <summary> 
         /// Required designer variable.
@@ -66,9 +66,9 @@
             label2.ForeColor = Color.Gray;
             label2.Location = new Point(68, 29);
             label2.Name = "label2";
-            label2.Size = new Size(140, 15);
+            label2.Size = new Size(116, 15);
             label2.TabIndex = 3;
-            label2.Text = "Book a new appointment";
+            label2.Text = "Review appointment";
             // 
             // label1
             // 
@@ -76,17 +76,17 @@
             label1.Font = new Font("Inter Medium", 11F, FontStyle.Bold);
             label1.Location = new Point(68, 11);
             label1.Name = "label1";
-            label1.Size = new Size(174, 18);
+            label1.Size = new Size(164, 18);
             label1.TabIndex = 2;
-            label1.Text = "Schedule Consultation";
+            label1.Text = "Manage Consultation";
             // 
-            // ScheduleConsultation
+            // ManageConsultation
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             Controls.Add(materialCard1);
-            Name = "ScheduleConsultation";
+            Name = "ManageConsultation";
             Size = new Size(255, 62);
             materialCard1.ResumeLayout(false);
             materialCard1.PerformLayout();

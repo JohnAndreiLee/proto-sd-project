@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Consultation.App.Views.Controls.Dashboard.Quick_Actions_Panel
 {
-    public partial class ScheduleConsultation : UserControl
+    public partial class ManageConsultation : UserControl
     {
-        public ScheduleConsultation()
+        public ManageConsultation()
         {
             InitializeComponent();
         }

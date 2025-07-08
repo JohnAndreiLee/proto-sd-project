@@ -36,14 +36,14 @@ namespace Consultation.App.Dashboard
         {
             InitializeComponent();
             createNewBulletin1.Cursor = Cursors.Hand;
-            scheduleConsultation1.Cursor = Cursors.Hand;
+            manageConsultation1.Cursor = Cursors.Hand;
 
             bulletinDefaultColor = createNewBulletin1.BackColor;
-            consultationDefaultColor = scheduleConsultation1.BackColor;
+            consultationDefaultColor = manageConsultation1.BackColor;
 
             //hover events for buttons
             AttachHoverEvents(createNewBulletin1, createNewBulletin1_MouseEnter, createNewBulletin1_MouseLeave);
-            AttachHoverEvents(scheduleConsultation1, scheduleConsultation1_MouseEnter, scheduleConsultation1_MouseLeave);
+            AttachHoverEvents(manageConsultation1, manageConsultation1_MouseEnter, manageConsultation1_MouseLeave);
             AttachHoverEvents(addUser1, addUser1_MouseEnter, addUser1_MouseLeave);
             AttachHoverEvents(systemSettings1, systemSettings1_MouseEnter, systemSettings1_MouseLeave);
 
@@ -155,14 +155,14 @@ namespace Consultation.App.Dashboard
             createNewBulletin1.BackColor = bulletinDefaultColor;
         }
 
-        private void scheduleConsultation1_MouseEnter(object sender, EventArgs e)
+        private void manageConsultation1_MouseEnter(object sender, EventArgs e)
         {
-            scheduleConsultation1.BackColor = hoverColor;
+            manageConsultation1.BackColor = hoverColor;
         }
 
-        private void scheduleConsultation1_MouseLeave(object sender, EventArgs e)
+        private void manageConsultation1_MouseLeave(object sender, EventArgs e)
         {
-            scheduleConsultation1.BackColor = consultationDefaultColor;
+            manageConsultation1.BackColor = consultationDefaultColor;
         }
 
         private void addUser1_MouseEnter(object sender, EventArgs e)
