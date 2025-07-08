@@ -26,6 +26,9 @@
     <Compile Update="Views\Controls\UserManagement\StudentCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Views\DashboardView.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\UserManagementView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,9 +64,6 @@
     </Compile>
     <Compile Update="Views\Controls\ConsultationManagement\CSWindow.cs">
       <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="Views\DashboardView.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\Controls\Dashboard\Activity Feed Panel\Bulletin.cs">
       <SubType>UserControl</SubType>

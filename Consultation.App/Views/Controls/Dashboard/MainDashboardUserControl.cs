@@ -1,6 +1,8 @@
 ﻿using Consultation.App.Dashboard.Activity_Feed_Panel;
 using Consultation.App.Presenters;
+using Consultation.App.ViewModels.DashboardModels;
 using Consultation.App.Views.Controls.Dashboard.Quick_Actions_Panel;
+using Consultation.App.Views.IViews;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +14,7 @@ using System.Windows.Forms;
 
 namespace Consultation.App.Dashboard
 {
-    public partial class MainDashboardUserControl : UserControl
+    public partial class MainDashboardUserControl : UserControl, IDashboardView
     {
 
         public event EventHandler ButtonClick;
@@ -20,6 +22,15 @@ namespace Consultation.App.Dashboard
         private Color bulletinDefaultColor;
         private Color consultationDefaultColor;
         private Color hoverColor = Color.LightBlue;
+
+        private DashboardPresenter _presenter;
+        public string LoggedInUsername { get; private set; } = "admin";
+
+        public void DisplayUserName(string name)
+        {
+            UserName.Text = $"{name}!";
+        }
+
 
         public MainDashboardUserControl()
         {
@@ -35,7 +46,59 @@ namespace Consultation.App.Dashboard
             AttachHoverEvents(scheduleConsultation1, scheduleConsultation1_MouseEnter, scheduleConsultation1_MouseLeave);
             AttachHoverEvents(addUser1, addUser1_MouseEnter, addUser1_MouseLeave);
             AttachHoverEvents(systemSettings1, systemSettings1_MouseEnter, systemSettings1_MouseLeave);
+
+            this.Load += MainDashboardUserControl_Load;
         }
+
+        private void MainDashboardUserControl_Load(object sender, EventArgs e)
+        {
+            ActivityFeedPanel.Controls.Add(new Bulletin());
+            BulletinButton.CustomBorderThickness = new Padding(0, 0, 0, 3);
+
+            // _presenter = new DashboardPresenter(this);
+            //  _presenter.LoadDashboardData();
+        }
+
+        public void LoadRecentBulletins(List<BulletinModel> bulletins)
+        {
+            ActivityFeedPanel.Controls.Clear();
+
+            foreach (var b in bulletins)
+            {
+                var card = new BulletinCard(b.Title, b.Status, b.Body, b.DatePosted);
+                ActivityFeedPanel.Controls.Add(card);
+            }
+        }
+
+        public void LoadRecentConsultations(List<ConsultationModel> consultations)
+        {
+            ActivityFeedPanel.Controls.Clear();
+
+            foreach (var c in consultations)
+            {
+                var card = new ConsultationCard(c.Title, c.Status, c.Body, c.Course, c.DateScheduled);
+                ActivityFeedPanel.Controls.Add(card);
+            }
+        }
+
+        public void UpdateDashboardStats(int published, int pending, int completed, int upcoming)
+        {
+            BulletinPublishedCount.Text = published.ToString();
+            PendingApprovalsCount.Text = pending.ToString();
+            ConsultationsCompletedCount.Text = completed.ToString();
+            UpcomingSessionsCount.Text = upcoming.ToString();
+        }
+
+        public void UpdateConsultationStats(int CPE, int EE, int ECE, int CE, int ME, int CHE)
+        {
+            ConsultationCountCPE.Text = CPE.ToString();
+            ConsultationCountEE.Text = EE.ToString();
+            ConsultationCountECE.Text = ECE.ToString();
+            ConsultationCountCE.Text = CE.ToString();
+            ConsultationCountME.Text = ME.ToString();
+            ConsultationCountCHE.Text = CHE.ToString();
+        }
+
         private void BulletinButton_Click_1(object sender, EventArgs e)
         {
             ResetButtonBorders();
@@ -58,9 +121,13 @@ namespace Consultation.App.Dashboard
             ActivityFeedPanel.Controls.Add(new Consultation2());
         }
 
-        private void MainDashboardUserControl_Load(object sender, EventArgs e)
+        private void ResetButtonBorders()
         {
-            ActivityFeedPanel.Controls.Add(new Bulletin());
+            BulletinButton.CustomBorderThickness = new Padding(0, 0, 0, 0);
+            ConsultationButton.CustomBorderThickness = new Padding(0, 0, 0, 0);
+
+            BulletinButton.ForeColor = Color.Black;
+            ConsultationButton.ForeColor = Color.Black;
         }
 
         private void AttachHoverEvents(Control parent, EventHandler onEnter, EventHandler onLeave)
@@ -116,15 +183,6 @@ namespace Consultation.App.Dashboard
         private void systemSettings1_MouseLeave(object sender, EventArgs e)
         {
             systemSettings1.BackColor = consultationDefaultColor;
-        }
-
-        private void ResetButtonBorders()
-        {
-            BulletinButton.CustomBorderThickness = new Padding(0, 0, 0, 0);
-            ConsultationButton.CustomBorderThickness = new Padding(0, 0, 0, 0);
-
-            BulletinButton.ForeColor = Color.Black;
-            ConsultationButton.ForeColor = Color.Black;
         }
     }
 }

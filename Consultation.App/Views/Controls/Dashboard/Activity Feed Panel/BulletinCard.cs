@@ -15,7 +15,7 @@ namespace Consultation.App.Dashboard.Activity_Feed_Panel
     {
 
 
-        public BulletinCard()//(string title, string status, string body, string datePosted)
+        public BulletinCard(string bulletintitle, string bulletinstatus, string bulletinbody, DateTime bulletinDatePosted)
         {
             InitializeComponent();
 
@@ -27,15 +27,16 @@ namespace Consultation.App.Dashboard.Activity_Feed_Panel
             {
                 ctrl.MouseEnter += OnHoverEnter;
                 ctrl.MouseLeave += OnHoverLeave;
-                UpdateStatusAppearance();
             }
 
             ApplyRoundedCorners(15);
 
-            //  BulletinTitle.Text = title;
-            //  BulletinStatus.Text = status;
-            //  BulletinBody.Text = body;
-            //  BulletinDate.Text = datePosted;
+            BulletinTitle.Text = bulletintitle;
+            BulletinStatusLabel.Text = bulletinstatus;
+            BulletinBody.Text = bulletinbody;
+            BulletinDate.Text = bulletinDatePosted.ToString("MMM dd, yyyy");
+            
+            UpdateStatusAppearance();
         }
         private void OnHoverEnter(object sender, EventArgs e)
         {

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\adria\\Downloads\\newest trial\\Consultation.App\\Consultation.App.csproj": {}
+    "C:\\Users\\adria\\Downloads\\dashboard1\\Consultation.App\\Consultation.App.csproj": {}
   },
   "projects": {
-    "C:\\Users\\adria\\Downloads\\newest trial\\Consultation.App\\Consultation.App.csproj": {
+    "C:\\Users\\adria\\Downloads\\dashboard1\\Consultation.App\\Consultation.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\adria\\Downloads\\newest trial\\Consultation.App\\Consultation.App.csproj",
+        "projectUniqueName": "C:\\Users\\adria\\Downloads\\dashboard1\\Consultation.App\\Consultation.App.csproj",
         "projectName": "Consultation.App",
-        "projectPath": "C:\\Users\\adria\\Downloads\\newest trial\\Consultation.App\\Consultation.App.csproj",
+        "projectPath": "C:\\Users\\adria\\Downloads\\dashboard1\\Consultation.App\\Consultation.App.csproj",
         "packagesPath": "C:\\Users\\adria\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\adria\\Downloads\\newest trial\\Consultation.App\\obj\\",
+        "outputPath": "C:\\Users\\adria\\Downloads\\dashboard1\\Consultation.App\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\adria\\AppData\\Roaming\\NuGet\\NuGet.Config",

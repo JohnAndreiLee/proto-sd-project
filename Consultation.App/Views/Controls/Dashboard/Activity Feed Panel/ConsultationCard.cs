@@ -13,7 +13,7 @@ namespace Consultation.App.Dashboard.Activity_Feed_Panel
 {
     public partial class ConsultationCard : UserControl
     {
-        public ConsultationCard()//string title, string status, string body, string department, string dateScheduled)
+        public ConsultationCard(string consultationtitle, string consultationstatus, string consultationbody, string consultationdepartment, DateTime consultationdateScheduled)
         {
             InitializeComponent();
 
@@ -24,16 +24,17 @@ namespace Consultation.App.Dashboard.Activity_Feed_Panel
             {
                 ctrl.MouseEnter += OnHoverEnter;
                 ctrl.MouseLeave += OnHoverLeave;
-                UpdateStatusAppearance();
             }
 
             ApplyRoundedCorners(15);
 
-            // ConsultationTitle.Text = title;
-            // ConsultationStatus.Text = status;
-            // ConsultationBody.Text = body;
-            // ConsultationDepartment.Text = department;
-            // ConsultationDate.Text = dateScheduled;
+             ConsultationTitle.Text = consultationtitle;
+             ConsultationStatusLabel.Text = consultationstatus;
+             ConsultationBody.Text = consultationbody;
+             ConsultationDepartment.Text = consultationdepartment;
+             ConsultationDate.Text = consultationdateScheduled.ToString("MMM dd, yyyy");
+
+             UpdateStatusAppearance();
         }
 
         private void OnHoverEnter(object sender, EventArgs e)

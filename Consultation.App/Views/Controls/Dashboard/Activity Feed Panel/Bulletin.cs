@@ -16,16 +16,16 @@ namespace Consultation.App.Dashboard.Activity_Feed_Panel
         {
             InitializeComponent();
 
-            for (int i = 0; i < 10; i++)
-            {
-                flowLayoutPanel1.Controls.Add(new BulletinCard());
-            }
+           // for (int i = 0; i < 10; i++)
+          //  {
+           //     flowLayoutPanel1.Controls.Add(new BulletinCard());
+           // }
         }
         
-        // public int BulletinId { get; set; }
-        // public string BulletinTitle { get; set; }
-        // public string BulletinBody { get; set; }
-        // public string BulletinStatus { get; set; }
-        //public DateTime BulletinDatePosted { get; set; }
+         public int BulletinId { get; set; }
+         public string BulletinTitle { get; set; }
+         public string BulletinBody { get; set; }
+         public string BulletinStatus { get; set; }
+         public DateTime BulletinDatePosted { get; set; }
     }
  }
