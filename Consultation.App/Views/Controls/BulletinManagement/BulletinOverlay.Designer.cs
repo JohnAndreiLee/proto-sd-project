@@ -29,12 +29,6 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -43,17 +37,24 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BulletinOverlay));
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             panel1 = new Panel();
-            tagAuthor = new Guna.UI2.WinForms.Guna2Button();
-            tagDate = new Guna.UI2.WinForms.Guna2Button();
-            tagId = new Guna.UI2.WinForms.Guna2Button();
             btnPublish = new Guna.UI2.WinForms.Guna2Button();
             btnDelete = new Guna.UI2.WinForms.Guna2Button();
             btnBack = new Guna.UI2.WinForms.Guna2Button();
             lblTitle = new Label();
             btnEdit = new Guna.UI2.WinForms.Guna2Button();
+            flpTags = new FlowLayoutPanel();
+            tagId = new Guna.UI2.WinForms.Guna2Button();
+            tagDate = new Guna.UI2.WinForms.Guna2Button();
+            tagAuthor = new Guna.UI2.WinForms.Guna2Button();
             txtContent = new RichTextBox();
             lblAttachments = new Label();
             materialCard1 = new MaterialSkin.Controls.MaterialCard();
@@ -61,12 +62,11 @@
             lblFileSize = new Label();
             lblFileName = new Label();
             pictureBox1 = new PictureBox();
-            flpTags = new FlowLayoutPanel();
             panel1.SuspendLayout();
+            flpTags.SuspendLayout();
             materialCard1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picDownload).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            flpTags.SuspendLayout();
             SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -82,81 +82,12 @@
             panel1.Controls.Add(btnPublish);
             panel1.Controls.Add(btnDelete);
             panel1.Controls.Add(btnBack);
-            panel1.Controls.Add(lblTitle);
             panel1.Controls.Add(btnEdit);
             panel1.Controls.Add(flpTags);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(1500, 130);
             panel1.TabIndex = 26;
-            // 
-            // tagAuthor
-            // 
-            tagAuthor.BackColor = Color.Transparent;
-            tagAuthor.BorderRadius = 12;
-            tagAuthor.CustomizableEdges = customizableEdges13;
-            tagAuthor.DefaultAutoSize = true;
-            tagAuthor.DisabledState.BorderColor = Color.DarkGray;
-            tagAuthor.DisabledState.CustomBorderColor = Color.DarkGray;
-            tagAuthor.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            tagAuthor.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            tagAuthor.FillColor = Color.FromArgb(253, 242, 242);
-            tagAuthor.Font = new Font("Inter", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tagAuthor.ForeColor = Color.FromArgb(222, 59, 64);
-            tagAuthor.Image = Properties.Icons.tag_person;
-            tagAuthor.ImageSize = new Size(16, 16);
-            tagAuthor.Location = new Point(282, 3);
-            tagAuthor.Margin = new Padding(3, 3, 10, 3);
-            tagAuthor.Name = "tagAuthor";
-            tagAuthor.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            tagAuthor.Size = new Size(122, 26);
-            tagAuthor.TabIndex = 28;
-            tagAuthor.Text = "Admin Office";
-            // 
-            // tagDate
-            // 
-            tagDate.BackColor = Color.Transparent;
-            tagDate.BorderRadius = 12;
-            tagDate.CustomizableEdges = customizableEdges11;
-            tagDate.DefaultAutoSize = true;
-            tagDate.DisabledState.BorderColor = Color.DarkGray;
-            tagDate.DisabledState.CustomBorderColor = Color.DarkGray;
-            tagDate.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            tagDate.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            tagDate.FillColor = Color.FromArgb(253, 242, 242);
-            tagDate.Font = new Font("Inter", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tagDate.ForeColor = Color.FromArgb(222, 59, 64);
-            tagDate.Image = Properties.Icons.tag_date;
-            tagDate.ImageOffset = new Point(-1, 0);
-            tagDate.ImageSize = new Size(16, 15);
-            tagDate.Location = new Point(151, 3);
-            tagDate.Margin = new Padding(3, 3, 10, 3);
-            tagDate.Name = "tagDate";
-            tagDate.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            tagDate.Size = new Size(118, 26);
-            tagDate.TabIndex = 27;
-            tagDate.Text = "2024-05-05";
-            // 
-            // tagId
-            // 
-            tagId.BackColor = Color.Transparent;
-            tagId.BorderRadius = 12;
-            tagId.CustomizableEdges = customizableEdges9;
-            tagId.DefaultAutoSize = true;
-            tagId.DisabledState.BorderColor = Color.DarkGray;
-            tagId.DisabledState.CustomBorderColor = Color.DarkGray;
-            tagId.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            tagId.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            tagId.FillColor = Color.FromArgb(253, 242, 242);
-            tagId.Font = new Font("Inter", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tagId.ForeColor = Color.FromArgb(222, 59, 64);
-            tagId.Location = new Point(3, 3);
-            tagId.Margin = new Padding(3, 3, 10, 3);
-            tagId.Name = "tagId";
-            tagId.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            tagId.Size = new Size(135, 26);
-            tagId.TabIndex = 26;
-            tagId.Text = "ID: BUL-2025-001";
             // 
             // btnPublish
             // 
@@ -244,7 +175,8 @@
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Archivo", 17.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitle.ForeColor = Color.White;
-            lblTitle.Location = new Point(25, 68);
+            lblTitle.Location = new Point(3, 0);
+            lblTitle.Margin = new Padding(3, 0, 40, 0);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(374, 34);
             lblTitle.TabIndex = 0;
@@ -276,6 +208,87 @@
             btnEdit.TabIndex = 22;
             btnEdit.Text = "Edit";
             btnEdit.Click += btnEdit_Click;
+            // 
+            // flpTags
+            // 
+            flpTags.AutoSize = true;
+            flpTags.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            flpTags.Controls.Add(lblTitle);
+            flpTags.Controls.Add(tagId);
+            flpTags.Controls.Add(tagDate);
+            flpTags.Controls.Add(tagAuthor);
+            flpTags.Location = new Point(25, 70);
+            flpTags.Name = "flpTags";
+            flpTags.Size = new Size(831, 34);
+            flpTags.TabIndex = 29;
+            // 
+            // tagId
+            // 
+            tagId.BackColor = Color.Transparent;
+            tagId.BorderRadius = 12;
+            tagId.CustomizableEdges = customizableEdges9;
+            tagId.DefaultAutoSize = true;
+            tagId.DisabledState.BorderColor = Color.DarkGray;
+            tagId.DisabledState.CustomBorderColor = Color.DarkGray;
+            tagId.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            tagId.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            tagId.FillColor = Color.FromArgb(253, 242, 242);
+            tagId.Font = new Font("Inter", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tagId.ForeColor = Color.FromArgb(222, 59, 64);
+            tagId.Location = new Point(420, 3);
+            tagId.Margin = new Padding(3, 3, 10, 3);
+            tagId.Name = "tagId";
+            tagId.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            tagId.Size = new Size(135, 26);
+            tagId.TabIndex = 26;
+            tagId.Text = "ID: BUL-2025-001";
+            // 
+            // tagDate
+            // 
+            tagDate.BackColor = Color.Transparent;
+            tagDate.BorderRadius = 12;
+            tagDate.CustomizableEdges = customizableEdges11;
+            tagDate.DefaultAutoSize = true;
+            tagDate.DisabledState.BorderColor = Color.DarkGray;
+            tagDate.DisabledState.CustomBorderColor = Color.DarkGray;
+            tagDate.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            tagDate.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            tagDate.FillColor = Color.FromArgb(253, 242, 242);
+            tagDate.Font = new Font("Inter", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tagDate.ForeColor = Color.FromArgb(222, 59, 64);
+            tagDate.Image = Properties.Icons.tag_date;
+            tagDate.ImageOffset = new Point(-1, 0);
+            tagDate.ImageSize = new Size(16, 15);
+            tagDate.Location = new Point(568, 3);
+            tagDate.Margin = new Padding(3, 3, 10, 3);
+            tagDate.Name = "tagDate";
+            tagDate.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            tagDate.Size = new Size(118, 26);
+            tagDate.TabIndex = 27;
+            tagDate.Text = "2024-05-05";
+            // 
+            // tagAuthor
+            // 
+            tagAuthor.BackColor = Color.Transparent;
+            tagAuthor.BorderRadius = 12;
+            tagAuthor.CustomizableEdges = customizableEdges13;
+            tagAuthor.DefaultAutoSize = true;
+            tagAuthor.DisabledState.BorderColor = Color.DarkGray;
+            tagAuthor.DisabledState.CustomBorderColor = Color.DarkGray;
+            tagAuthor.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            tagAuthor.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            tagAuthor.FillColor = Color.FromArgb(253, 242, 242);
+            tagAuthor.Font = new Font("Inter", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tagAuthor.ForeColor = Color.FromArgb(222, 59, 64);
+            tagAuthor.Image = Properties.Icons.tag_person;
+            tagAuthor.ImageSize = new Size(16, 16);
+            tagAuthor.Location = new Point(699, 3);
+            tagAuthor.Margin = new Padding(3, 3, 10, 3);
+            tagAuthor.Name = "tagAuthor";
+            tagAuthor.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            tagAuthor.Size = new Size(122, 26);
+            tagAuthor.TabIndex = 28;
+            tagAuthor.Text = "Admin Office";
             // 
             // txtContent
             // 
@@ -362,18 +375,6 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // flpTags
-            // 
-            flpTags.AutoSize = true;
-            flpTags.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            flpTags.Controls.Add(tagId);
-            flpTags.Controls.Add(tagDate);
-            flpTags.Controls.Add(tagAuthor);
-            flpTags.Location = new Point(437, 70);
-            flpTags.Name = "flpTags";
-            flpTags.Size = new Size(414, 32);
-            flpTags.TabIndex = 29;
-            // 
             // BulletinOverlay
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -389,12 +390,12 @@
             StartPosition = FormStartPosition.CenterScreen;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            flpTags.ResumeLayout(false);
+            flpTags.PerformLayout();
             materialCard1.ResumeLayout(false);
             materialCard1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picDownload).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            flpTags.ResumeLayout(false);
-            flpTags.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
