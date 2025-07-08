@@ -135,6 +135,7 @@
             // 
             // Notes
             // 
+            Notes.AcceptsReturn = true;
             Notes.BorderColor = Color.Gainsboro;
             Notes.BorderRadius = 6;
             Notes.CustomizableEdges = customizableEdges17;
@@ -144,11 +145,12 @@
             Notes.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             Notes.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             Notes.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            Notes.Font = new Font("Inter", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Notes.Font = new Font("Inter", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Notes.ForeColor = Color.Black;
             Notes.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            Notes.Location = new Point(464, 234);
+            Notes.Location = new Point(477, 234);
             Notes.Name = "Notes";
-            Notes.PlaceholderForeColor = Color.Black;
+            Notes.PlaceholderForeColor = Color.Silver;
             Notes.PlaceholderText = "Add any important details and preparation notes";
             Notes.SelectedText = "";
             Notes.ShadowDecoration.CustomizableEdges = customizableEdges18;
@@ -160,7 +162,7 @@
             // 
             guna2HtmlLabel2.BackColor = Color.White;
             guna2HtmlLabel2.Font = new Font("Inter", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel2.Location = new Point(27, 114);
+            guna2HtmlLabel2.Location = new Point(27, 119);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             guna2HtmlLabel2.Size = new Size(41, 20);
             guna2HtmlLabel2.TabIndex = 10;
@@ -170,7 +172,7 @@
             // 
             guna2HtmlLabel9.BackColor = Color.Transparent;
             guna2HtmlLabel9.Font = new Font("Inter", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel9.Location = new Point(481, 223);
+            guna2HtmlLabel9.Location = new Point(481, 222);
             guna2HtmlLabel9.Name = "guna2HtmlLabel9";
             guna2HtmlLabel9.Size = new Size(41, 20);
             guna2HtmlLabel9.TabIndex = 17;
@@ -190,12 +192,13 @@
             Student.Font = new Font("Inter", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Student.ForeColor = Color.Black;
             Student.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            Student.Location = new Point(17, 126);
+            Student.Location = new Point(17, 134);
+            Student.Margin = new Padding(3, 4, 3, 4);
             Student.Name = "Student";
             Student.PlaceholderText = "Enter Student Name";
             Student.SelectedText = "";
             Student.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            Student.Size = new Size(410, 45);
+            Student.Size = new Size(410, 48);
             Student.TabIndex = 25;
             // 
             // cancelbutton
@@ -332,7 +335,7 @@
             // 
             guna2HtmlLabel11.BackColor = Color.White;
             guna2HtmlLabel11.Font = new Font("Inter", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel11.Location = new Point(27, 55);
+            guna2HtmlLabel11.Location = new Point(27, 58);
             guna2HtmlLabel11.Name = "guna2HtmlLabel11";
             guna2HtmlLabel11.Size = new Size(70, 20);
             guna2HtmlLabel11.TabIndex = 36;
@@ -352,12 +355,13 @@
             Idnumber.Font = new Font("Inter", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Idnumber.ForeColor = Color.Black;
             Idnumber.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            Idnumber.Location = new Point(17, 66);
+            Idnumber.Location = new Point(17, 70);
+            Idnumber.Margin = new Padding(3, 4, 3, 4);
             Idnumber.Name = "Idnumber";
             Idnumber.PlaceholderText = "Enter ID Number";
             Idnumber.SelectedText = "";
             Idnumber.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            Idnumber.Size = new Size(158, 45);
+            Idnumber.Size = new Size(158, 48);
             Idnumber.TabIndex = 35;
             // 
             // guna2HtmlLabel6
@@ -394,7 +398,7 @@
             // 
             guna2HtmlLabel10.BackColor = Color.White;
             guna2HtmlLabel10.Font = new Font("Inter", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel10.Location = new Point(27, 320);
+            guna2HtmlLabel10.Location = new Point(27, 314);
             guna2HtmlLabel10.Name = "guna2HtmlLabel10";
             guna2HtmlLabel10.Size = new Size(59, 20);
             guna2HtmlLabel10.TabIndex = 31;
@@ -414,19 +418,20 @@
             Location.Font = new Font("Inter", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Location.ForeColor = Color.Black;
             Location.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            Location.Location = new Point(17, 332);
+            Location.Location = new Point(17, 327);
+            Location.Margin = new Padding(3, 4, 3, 4);
             Location.Name = "Location";
             Location.PlaceholderText = "Enter Location";
             Location.SelectedText = "";
             Location.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            Location.Size = new Size(410, 45);
+            Location.Size = new Size(410, 48);
             Location.TabIndex = 30;
             // 
             // guna2HtmlLabel8
             // 
             guna2HtmlLabel8.BackColor = Color.White;
             guna2HtmlLabel8.Font = new Font("Inter", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel8.Location = new Point(27, 249);
+            guna2HtmlLabel8.Location = new Point(27, 251);
             guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             guna2HtmlLabel8.Size = new Size(86, 20);
             guna2HtmlLabel8.TabIndex = 29;
@@ -446,19 +451,20 @@
             CourseCode.Font = new Font("Inter", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             CourseCode.ForeColor = Color.Black;
             CourseCode.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            CourseCode.Location = new Point(17, 261);
+            CourseCode.Location = new Point(17, 264);
+            CourseCode.Margin = new Padding(3, 4, 3, 4);
             CourseCode.Name = "CourseCode";
             CourseCode.PlaceholderText = "Enter Course Code";
             CourseCode.SelectedText = "";
             CourseCode.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            CourseCode.Size = new Size(410, 45);
+            CourseCode.Size = new Size(410, 48);
             CourseCode.TabIndex = 28;
             // 
             // guna2HtmlLabel7
             // 
             guna2HtmlLabel7.BackColor = Color.White;
             guna2HtmlLabel7.Font = new Font("Inter", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel7.Location = new Point(27, 179);
+            guna2HtmlLabel7.Location = new Point(27, 186);
             guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             guna2HtmlLabel7.Size = new Size(115, 20);
             guna2HtmlLabel7.TabIndex = 27;
@@ -478,12 +484,13 @@
             Faculty.Font = new Font("Inter", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Faculty.ForeColor = Color.Black;
             Faculty.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            Faculty.Location = new Point(17, 192);
+            Faculty.Location = new Point(17, 201);
+            Faculty.Margin = new Padding(3, 4, 3, 4);
             Faculty.Name = "Faculty";
             Faculty.PlaceholderText = "Enter Faculty Name";
             Faculty.SelectedText = "";
             Faculty.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            Faculty.Size = new Size(410, 45);
+            Faculty.Size = new Size(410, 48);
             Faculty.TabIndex = 26;
             // 
             // EditSchedule

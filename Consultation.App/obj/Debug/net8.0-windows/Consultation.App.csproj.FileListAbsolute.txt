@@ -288,3 +288,4 @@ C:\Users\MAE DARYLE BAGNOL\Source\Repos\proto-sd-project\Consultation.App\obj\De
 C:\Users\MAE DARYLE BAGNOL\Source\Repos\proto-sd-project\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.Controls.ConsultationManagement.Reschedule.resources
 C:\Users\MAE DARYLE BAGNOL\Source\Repos\proto-sd-project\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.Controls.ConsultationManagement.ViewConsultation.resources
 C:\Users\MAE DARYLE BAGNOL\Source\Repos\proto-sd-project\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.ConsultationManagement.EditSchedule.resources
+C:\Users\MAE DARYLE BAGNOL\Source\Repos\proto-sd-project\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.Controls.ConsultationManagement.ArchiveCard.resources

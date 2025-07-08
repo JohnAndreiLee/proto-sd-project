@@ -40,7 +40,7 @@
             underlinePanel = new Panel();
             btnArchive = new Guna.UI2.WinForms.Guna2Button();
             btnConsultation = new Guna.UI2.WinForms.Guna2Button();
-            flowLayoutPanel1 = new FlowLayoutPanel();
+            WindowPanelConsultation = new FlowLayoutPanel();
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             materialCard2.SuspendLayout();
             SuspendLayout();
@@ -86,7 +86,7 @@
             btnRefresh.TabIndex = 5;
             btnRefresh.Text = "Refresh";
             btnRefresh.TextOffset = new Point(10, 0);
-            btnRefresh.Click += btnRefresh_Click_1;
+            btnRefresh.Click += btnRefresh_Click;
             // 
             // underlinePanel
             // 
@@ -137,13 +137,13 @@
             btnConsultation.Text = "Consultation";
             btnConsultation.Click += btnConsultation_Click_1;
             // 
-            // flowLayoutPanel1
+            // WindowPanelConsultation
             // 
-            flowLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            flowLayoutPanel1.Location = new Point(98, 136);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1462, 797);
-            flowLayoutPanel1.TabIndex = 3;
+            WindowPanelConsultation.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            WindowPanelConsultation.Location = new Point(98, 136);
+            WindowPanelConsultation.Name = "WindowPanelConsultation";
+            WindowPanelConsultation.Size = new Size(1462, 797);
+            WindowPanelConsultation.TabIndex = 3;
             // 
             // guna2BorderlessForm1
             // 
@@ -157,7 +157,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1658, 961);
-            Controls.Add(flowLayoutPanel1);
+            Controls.Add(WindowPanelConsultation);
             Controls.Add(materialCard2);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ConsultationView";
@@ -171,7 +171,7 @@
         private MaterialSkin.Controls.MaterialCard materialCard2;
         private Panel underlinePanel;
         private Guna.UI2.WinForms.Guna2Button btnArchive;
-        private FlowLayoutPanel flowLayoutPanel1;
+        private FlowLayoutPanel WindowPanelConsultation;
         private ConsultationCard consultationCard1;
         private Guna.UI2.WinForms.Guna2Button btnRefresh;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;

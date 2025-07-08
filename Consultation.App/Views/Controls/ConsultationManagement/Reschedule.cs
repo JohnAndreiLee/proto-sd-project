@@ -1,32 +1,48 @@
 ﻿using System;
 using System.Windows.Forms;
+using Consultation.App.ConsultationManagement;
 
 namespace Consultation.App.Views.Controls.ConsultationManagement
 {
     public partial class Reschedule : Form
     {
+        private ConsultationCard card;
 
-
-        public Reschedule()
+        public Reschedule(ConsultationCard cardToReschedule)
         {
             InitializeComponent();
+            card = cardToReschedule;
 
-        }
-
-        private void Reschedule_Load(object sender, EventArgs e)
-        {
-          
+            
+            CurrentDate.Text = card.DateText;
+            CurrentTime.Text = card.TimeText;
         }
 
         private void btnReschedule_Click(object sender, EventArgs e)
         {
-           
-            this.Close();
+          
+            string newDate = Datepicker.Value.ToString("MMMM dd, yyyy");
+            string newTime = Timepicker.Text;
+            string reason = TextBoxReason.Text;
+
+            
+            card.SetData(
+                newDate,
+                newTime,
+                card.NameText,
+                card.CourseCode,
+                card.Faculty,
+                card.LocationText,
+                card.IDNumber,
+                reason 
+            );
+
+            Close(); 
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }

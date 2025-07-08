@@ -31,18 +31,18 @@
             components = new System.ComponentModel.Container();
             flowLayout1 = new Syncfusion.Windows.Forms.Tools.FlowLayout(components);
             WindowPanelDesign = new MaterialSkin.Controls.MaterialCard();
-            materialCard2 = new MaterialSkin.Controls.MaterialCard();
-            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             WindowPanelConsultation = new FlowLayoutPanel();
+            guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            LabelWindow = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            materialCard1 = new MaterialSkin.Controls.MaterialCard();
             ((System.ComponentModel.ISupportInitialize)flowLayout1).BeginInit();
             WindowPanelDesign.SuspendLayout();
-            materialCard2.SuspendLayout();
+            materialCard1.SuspendLayout();
             SuspendLayout();
             // 
             // WindowPanelDesign
             // 
             WindowPanelDesign.BackColor = Color.FromArgb(255, 255, 255);
-            WindowPanelDesign.Controls.Add(materialCard2);
             WindowPanelDesign.Controls.Add(WindowPanelConsultation);
             WindowPanelDesign.Depth = 0;
             WindowPanelDesign.ForeColor = Color.FromArgb(222, 0, 0, 0);
@@ -54,19 +54,13 @@
             WindowPanelDesign.Size = new Size(1434, 754);
             WindowPanelDesign.TabIndex = 0;
             // 
-            // materialCard2
+            // WindowPanelConsultation
             // 
-            materialCard2.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard2.Controls.Add(guna2HtmlLabel1);
-            materialCard2.Depth = 0;
-            materialCard2.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard2.Location = new Point(0, 0);
-            materialCard2.Margin = new Padding(14);
-            materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
-            materialCard2.Name = "materialCard2";
-            materialCard2.Padding = new Padding(14);
-            materialCard2.Size = new Size(1434, 70);
-            materialCard2.TabIndex = 0;
+            WindowPanelConsultation.AutoScroll = true;
+            WindowPanelConsultation.Location = new Point(0, 71);
+            WindowPanelConsultation.Name = "WindowPanelConsultation";
+            WindowPanelConsultation.Size = new Size(1434, 683);
+            WindowPanelConsultation.TabIndex = 1;
             // 
             // guna2HtmlLabel1
             // 
@@ -78,24 +72,42 @@
             guna2HtmlLabel1.TabIndex = 1;
             guna2HtmlLabel1.Text = "Active Consultation";
             // 
-            // WindowPanelConsultation
+            // LabelWindow
             // 
-            WindowPanelConsultation.Location = new Point(0, 71);
-            WindowPanelConsultation.Name = "WindowPanelConsultation";
-            WindowPanelConsultation.Size = new Size(1434, 683);
-            WindowPanelConsultation.TabIndex = 1;
+            LabelWindow.BackColor = Color.Transparent;
+            LabelWindow.Font = new Font("Archivo", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LabelWindow.Location = new Point(17, 18);
+            LabelWindow.Name = "LabelWindow";
+            LabelWindow.Size = new Size(179, 31);
+            LabelWindow.TabIndex = 0;
+            LabelWindow.Text = "Active Consultation";
+            // 
+            // materialCard1
+            // 
+            materialCard1.BackColor = Color.FromArgb(255, 255, 255);
+            materialCard1.Controls.Add(LabelWindow);
+            materialCard1.Depth = 0;
+            materialCard1.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialCard1.Location = new Point(14, 15);
+            materialCard1.Margin = new Padding(14);
+            materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
+            materialCard1.Name = "materialCard1";
+            materialCard1.Padding = new Padding(14);
+            materialCard1.Size = new Size(1434, 70);
+            materialCard1.TabIndex = 2;
             // 
             // CSWindow
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(materialCard1);
             Controls.Add(WindowPanelDesign);
             Name = "CSWindow";
             Size = new Size(1462, 797);
             ((System.ComponentModel.ISupportInitialize)flowLayout1).EndInit();
             WindowPanelDesign.ResumeLayout(false);
-            materialCard2.ResumeLayout(false);
-            materialCard2.PerformLayout();
+            materialCard1.ResumeLayout(false);
+            materialCard1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -103,8 +115,9 @@
 
         private Syncfusion.Windows.Forms.Tools.FlowLayout flowLayout1;
         private MaterialSkin.Controls.MaterialCard WindowPanelDesign;
-        private MaterialSkin.Controls.MaterialCard materialCard2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private FlowLayoutPanel WindowPanelConsultation;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel LabelWindow;
+        private MaterialSkin.Controls.MaterialCard materialCard1;
     }
 }

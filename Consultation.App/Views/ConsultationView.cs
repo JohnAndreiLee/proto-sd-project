@@ -17,14 +17,15 @@ namespace Consultation.App.ConsultationManagement
         private void ShowConsultationView()
         {
             MoveUnderline(btnConsultation);
+            WindowPanelConsultation.Controls.Clear();
 
             if (csWindow == null)
             {
                 csWindow = new CSWindow();
-                csWindow.CardArchived += OnCardArchived;
+                csWindow.CardArchived += OnCardArchived; // Subscribe to event
             }
-            flowLayoutPanel1.Controls.Clear();
-            flowLayoutPanel1.Controls.Add(csWindow);
+
+            WindowPanelConsultation.Controls.Add(csWindow);
         }
 
         private void OnCardArchived(object sender, ConsultationCard card)
@@ -46,39 +47,27 @@ namespace Consultation.App.ConsultationManagement
         private void btnArchive_Click(object sender, EventArgs e)
         {
             MoveUnderline(btnArchive);
+
             if (archiveWindow == null)
-            {
                 archiveWindow = new ArchiveWindow();
-            }
-            flowLayoutPanel1.Controls.Clear();
-            flowLayoutPanel1.Controls.Add(archiveWindow);
+
+            WindowPanelConsultation.Controls.Clear();
+            WindowPanelConsultation.Controls.Add(archiveWindow);
+
+
         }
 
         private void MoveUnderline(Control targetButton)
         {
-
             underlinePanel.Width = targetButton.Width;
             underlinePanel.Left = targetButton.Left;
             underlinePanel.Top = targetButton.Bottom - 4;
             underlinePanel.Visible = true;
         }
 
-        private void btnRefresh_Click_1(object sender, EventArgs e)
+        private void btnRefresh_Click(object sender, EventArgs e)
         {
-            if (csWindow != null)
-            {
-                flowLayoutPanel1.Controls.Clear();
-                csWindow = new CSWindow();
-                csWindow.CardArchived += OnCardArchived;
-                flowLayoutPanel1.Controls.Add(csWindow);
-            }
 
-            if (archiveWindow != null && underlinePanel.Left == btnArchive.Left)
-            {
-                flowLayoutPanel1.Controls.Clear();
-                archiveWindow = new ArchiveWindow();
-                flowLayoutPanel1.Controls.Add(archiveWindow);
-            }
         }
     }
 }

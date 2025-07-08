@@ -11,39 +11,31 @@ namespace Consultation.App.ConsultationManagement
         public EditSchedule(ConsultationCard cardToEdit)
         {
             InitializeComponent();
-
             this.cardToEdit = cardToEdit;
 
-            
-            Student.Text = cardToEdit.NameText;
-            guna2Date.Value = DateTime.Parse(cardToEdit.DateText);
-            guna2Time.Text = cardToEdit.TimeText;
-            
+        }
 
-            btnChanges.Text = "Update"; 
-            this.Text = "Edit Schedule";
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            
+            cardToEdit.SetData(
+
+                guna2Date.Value.ToString("MMMM dd, yyyy"),
+                guna2Time.Text,
+                Student.Text,
+                CourseCode.Text,
+                Faculty.Text,
+                Location.Text,
+                Idnumber.Text,
+                Notes.Text
+            );
+
+            this.Close();
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            this.Close(); 
-        }
-
-        private void guna2Button2_Click(object sender, EventArgs e)
-        {
-
-            string studentName = Student.Text;
-            string date = guna2Date.Value.ToShortDateString();
-            string time = guna2Time.Text;
-            string notes = Notes.Text;
-            string location = Location.Text;
-            string faculty = Faculty.Text;
-            string coursecode = CourseCode.Text;
-            string idnumber = Idnumber.Text;
-
-
-            cardToEdit.SetData(date, time, studentName, coursecode, faculty, location, idnumber, notes);
-
             this.Close();
         }
     }

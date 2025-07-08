@@ -7,40 +7,41 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Consultation.App.Views.Controls.ConsultationManagement;
 
 namespace Consultation.App.ConsultationManagement
 {
 
     public partial class CSWindow : UserControl
     {
-
+       
         public event EventHandler<ConsultationCard> CardArchived;
+
         public CSWindow()
         {
             InitializeComponent();
+
+            for (int i = 0; i < 4; i++)
+            {
+                ConsultationCard card = new ConsultationCard();
+
+              
+                card.ArchiveRequested += (s, e) => CardArchived?.Invoke(s, card);
+
+                WindowPanelConsultation.Controls.Add(card);
+            }
         }
 
-        //No need because a schedule won't be added. 
-
-        //public void AddConsultationCard(string date, string time, string name)
-        //{
-        //    ConsultationCard card = new ConsultationCard();
-        //    card.SetData(date, time, name);
-
-        //    // Subscribe to archive event
-        //    card.ArchiveClicked += (s, e) =>
-        //    {
-        //        // Let the main form handle it
-        //        CardArchived?.Invoke(this, card);
-        //    };
-
-        //    WindowPanelConsultation.Controls.Add(card);
-        //}
+        private void OnArchiveRequested(ConsultationCard card)
+        {
+          
+            CardArchived?.Invoke(this, card);
+        }
 
         public void RemoveCard(ConsultationCard card)
         {
-            WindowPanelConsultation.Controls.Remove(card);
+            if (WindowPanelConsultation.Controls.Contains(card))
+                WindowPanelConsultation.Controls.Remove(card);
         }
-
     }
 }

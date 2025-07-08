@@ -15,78 +15,77 @@ namespace Consultation.App.ConsultationManagement
 {
     public partial class ConsultationCard : UserControl
     {
+        public event EventHandler ArchiveRequested;
 
-        public Panel OriginalPanel { get; set; }
-        private CSWindow csWindow;
+        public DateTime ScheduleDate { get; private set; }
 
+        
         public string NameText => LabelName.Text;
-        public string DateText => textDate.Text;
+        public string DateText => ScheduleDate.ToShortDateString(); 
         public string TimeText => textTime.Text;
+        public string CourseCode => LabelCourse.Text;
+        public string Faculty => textFaculty.Text;
+        public string LocationText => textLocation.Text;
+        public string IDNumber => textIDnumber.Text;
+        public string Notes => LabelNotes.Text;
 
         public ConsultationCard()
         {
             InitializeComponent();
         }
+
         public void SetData(string date, string time, string name, string coursecode, string faculty, string location, string idnumber, string notes)
         {
             LabelName.Text = name;
             LabelCourse.Text = coursecode;
+            LabelCourse.Location = new Point(LabelName.Right + 10, LabelCourse.Location.Y);
             LabelNotes.Text = notes;
             textDate.Text = date;
-            textDate.Width = TextRenderer.MeasureText(textDate.Text, textDate.Font).Width + 10;
             textTime.Text = time;
-            textTime.Width = TextRenderer.MeasureText(textTime.Text, textTime.Font).Width + 10;
             textFaculty.Text = faculty;
-            textFaculty.Width = TextRenderer.MeasureText(textFaculty.Text, textFaculty.Font).Width + 10;
             textIDnumber.Text = idnumber;
-            textIDnumber.Width = TextRenderer.MeasureText(textIDnumber.Text, textIDnumber.Font).Width + 10;
             textLocation.Text = location;
-            textLocation.Width = TextRenderer.MeasureText(textLocation.Text, textLocation.Font).Width + 10;
+
+            if (DateTime.TryParse(date, out DateTime parsedDate))
+            {
+                ScheduleDate = parsedDate;
+            }
+            else
+            {
+                ScheduleDate = DateTime.MinValue;
+            }
         }
-
-        public void SetAsArchived()
-        {
-            MenuContext.Items.Clear(); 
-
-            //Need restore button for the conetxtmenustrip.
-            MenuContext.Items.Add("View", null, viewToolStripMenuItem_Click);
-            MenuContext.Items.Add("Delete", null, deleteToolStripMenuItem_Click);
-        }
-
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             MenuContext.Show(guna2Button1, guna2Button1.Width / 2, guna2Button1.Height);
         }
 
-        public event EventHandler ArchiveClicked;
         private void archiveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ArchiveClicked?.Invoke(this, EventArgs.Empty);
+            ArchiveRequested?.Invoke(this, EventArgs.Empty);
         }
 
-        private void viewToolStripMenuItem_Click(object sender, EventArgs e)
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ViewConsultation viewForm = new ViewConsultation();
-            viewForm.ShowDialog();
+            EditSchedule editForm = new EditSchedule(this);
+            editForm.ShowDialog();
         }
 
         private void rescheduleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Reschedule rescheduleForm = new Reschedule();
+            Reschedule rescheduleForm = new Reschedule(this);
             rescheduleForm.ShowDialog();
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Parent.Controls.Remove(this);
+
         }
-
-        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        private void viewToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-            EditSchedule editSchedule = new EditSchedule(this);
-            editSchedule.ShowDialog();
+            ViewConsultation viewForm = new ViewConsultation(this); 
+            viewForm.ShowDialog();
         }
 
 
