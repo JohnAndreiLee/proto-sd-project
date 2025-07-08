@@ -176,3 +176,17 @@ C:\Users\Asus\OneDrive\Desktop\New folder\Consultation.App\obj\Debug\net8.0-wind
 C:\Users\Asus\OneDrive\Desktop\New folder\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.AssemblyInfo.cs
 C:\Users\Asus\OneDrive\Desktop\New folder\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.csproj.CoreCompileInputs.cache
 C:\Users\Asus\OneDrive\Desktop\New folder\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.sourcelink.json
+D:\Project Files\Visual Studio\repo\proto_sd\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.Controls.UserManagement.AdminAction.resources
+D:\Project Files\Visual Studio\repo\proto_sd\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.AdminCard.resources
+D:\Project Files\Visual Studio\repo\proto_sd\Consultation.App\obj\Debug\net8.0-windows\Student_Faculty.AdminListCard.resources
+D:\Project Files\Visual Studio\repo\proto_sd\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.Controls.UserManagement.EditAdmin.resources
+D:\Project Files\Visual Studio\repo\proto_sd\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.Controls.UserManagement.EditFaculty.resources
+D:\Project Files\Visual Studio\repo\proto_sd\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.Controls.UserManagement.EditStudent.resources
+D:\Project Files\Visual Studio\repo\proto_sd\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.Controls.UserManagement.FacultyAction.resources
+D:\Project Files\Visual Studio\repo\proto_sd\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.Controls.UserManagement.ResPasAdmin.resources
+D:\Project Files\Visual Studio\repo\proto_sd\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.Controls.UserManagement.ResPasFaculty.resources
+D:\Project Files\Visual Studio\repo\proto_sd\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.Controls.UserManagement.ResPasStudent.resources
+D:\Project Files\Visual Studio\repo\proto_sd\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.Controls.UserManagement.StudentAction.resources
+D:\Project Files\Visual Studio\repo\proto_sd\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.Controls.UserManagement.ViewAdmin.resources
+D:\Project Files\Visual Studio\repo\proto_sd\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.Controls.UserManagement.ViewFaculty.resources
+D:\Project Files\Visual Studio\repo\proto_sd\Consultation.App\obj\Debug\net8.0-windows\Consultation.App.Views.Controls.UserManagement.ViewStudent.resources
