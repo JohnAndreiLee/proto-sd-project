@@ -15,7 +15,7 @@ namespace Consultation.App.Views.Controls.ConsultationManagement
     public partial class ArchiveCard : UserControl
     {
 
-        private ConsultationData data;
+        private ConsultationData data = new ConsultationData();
         public ArchiveCard()
         {
             InitializeComponent();

@@ -13,7 +13,6 @@ namespace Consultation.App.Views.Controls.ConsultationManagement
             InitializeComponent();
             card = cardToReschedule;
 
-            
             CurrentDate.Text = card.DateText;
             CurrentTime.Text = card.TimeText;
         }
@@ -21,19 +20,6 @@ namespace Consultation.App.Views.Controls.ConsultationManagement
         private void btnReschedule_Click(object sender, EventArgs e)
         {
 
-            card.Data = new ConsultationData
-            {
-                Name = card.Data.Name,
-                CourseCode = card.Data.CourseCode,
-                Faculty = card.Data.Faculty,
-                Location = card.Data.Location,
-                IDNumber = card.Data.IDNumber,
-                Date = Date.Value.ToString("MMMM dd, yyyy"),
-                Time = Time.Text,
-                Notes = Reason.Text
-            };
-
-            Close();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

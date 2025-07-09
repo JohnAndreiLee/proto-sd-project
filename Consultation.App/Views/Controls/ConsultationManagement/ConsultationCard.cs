@@ -17,7 +17,7 @@ namespace Consultation.App.ConsultationManagement
     {
         public event EventHandler ArchiveRequested;
 
-        private ConsultationData data;
+        private ConsultationData data = new ConsultationData();
         public DateTime ScheduleDate { get; private set; }
 
         
@@ -33,6 +33,7 @@ namespace Consultation.App.ConsultationManagement
         public ConsultationCard()
         {
             InitializeComponent();
+            Data = new ConsultationData();
         }
 
         public ConsultationData Data
