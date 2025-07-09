@@ -22,16 +22,18 @@ namespace Consultation.App.ConsultationManagement
         public void AddToArchive(ConsultationCard card)
         {
             ArchiveCard archiveCard = new ArchiveCard();
-            archiveCard.SetData(
-                card.DateText,         
-                card.TimeText,
-                card.NameText,
-                card.CourseCode,
-                card.Faculty,
-                card.LocationText,
-                card.IDNumber,
-                card.Notes
-            );
+
+            archiveCard.Data = new ConsultationData
+            {
+                Date = card.DateText,
+                Time = card.TimeText,
+                Name = card.NameText,
+                CourseCode = card.CourseCode,
+                Faculty = card.Faculty,
+                Location = card.LocationText,
+                IDNumber = card.IDNumber,
+                Notes = card.Notes
+            };
 
             WindowPanelArchive.Controls.Add(archiveCard);
         }

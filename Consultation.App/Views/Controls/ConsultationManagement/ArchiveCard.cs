@@ -14,21 +14,29 @@ namespace Consultation.App.Views.Controls.ConsultationManagement
 {
     public partial class ArchiveCard : UserControl
     {
+
+        private ConsultationData data;
         public ArchiveCard()
         {
             InitializeComponent();
         }
 
-        public void SetData(string date, string time, string name, string coursecode, string faculty, string location, string idnumber, string notes)
+        public ConsultationData Data
         {
-            Student.Text = name;
-            Coursecode.Text = coursecode;
-            Notes.Text = notes;
-            Date.Text = date;
-            Time.Text = time;
-            Faculty.Text = faculty;
-            IDnumber.Text = idnumber;
-            Location.Text = location;
+            get => data;
+            set
+            {
+                data = value;
+
+                StudentName.Text = data.Name;
+                CourseCode.Text = data.CourseCode;
+                Notes.Text = data.Notes;
+                Date.Text = data.Date;
+                Time.Text = data.Time;
+                Faculty.Text = data.Faculty;
+                idnumber.Text = data.IDNumber;
+                Location.Text = data.Location;
+            }
         }
 
         private void restoreToolStripMenuItem_Click(object sender, EventArgs e)

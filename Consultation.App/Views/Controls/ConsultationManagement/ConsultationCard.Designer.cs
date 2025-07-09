@@ -44,16 +44,16 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             materialCard1 = new MaterialSkin.Controls.MaterialCard();
-            textLocation = new Guna.UI2.WinForms.Guna2TextBox();
+            Location = new Guna.UI2.WinForms.Guna2TextBox();
             guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
-            textFaculty = new Guna.UI2.WinForms.Guna2TextBox();
-            textTime = new Guna.UI2.WinForms.Guna2TextBox();
-            textDate = new Guna.UI2.WinForms.Guna2TextBox();
-            textIDnumber = new Guna.UI2.WinForms.Guna2TextBox();
+            Facultytxtbox = new Guna.UI2.WinForms.Guna2TextBox();
+            Timetxtbox = new Guna.UI2.WinForms.Guna2TextBox();
+            Date = new Guna.UI2.WinForms.Guna2TextBox();
+            idnumber = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            LabelNotes = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            LabelCourse = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            LabelName = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            Noteslabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            courseCodeLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            StudentName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             flowLayoutPanel1 = new FlowLayoutPanel();
             flowLayoutPanel2 = new FlowLayoutPanel();
             flowLayoutPanel3 = new FlowLayoutPanel();
@@ -74,16 +74,16 @@
             // materialCard1
             // 
             materialCard1.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard1.Controls.Add(textLocation);
+            materialCard1.Controls.Add(Location);
             materialCard1.Controls.Add(guna2TextBox5);
-            materialCard1.Controls.Add(textFaculty);
-            materialCard1.Controls.Add(textTime);
-            materialCard1.Controls.Add(textDate);
-            materialCard1.Controls.Add(textIDnumber);
+            materialCard1.Controls.Add(Facultytxtbox);
+            materialCard1.Controls.Add(Timetxtbox);
+            materialCard1.Controls.Add(Date);
+            materialCard1.Controls.Add(idnumber);
             materialCard1.Controls.Add(guna2Button1);
-            materialCard1.Controls.Add(LabelNotes);
-            materialCard1.Controls.Add(LabelCourse);
-            materialCard1.Controls.Add(LabelName);
+            materialCard1.Controls.Add(Noteslabel);
+            materialCard1.Controls.Add(courseCodeLabel);
+            materialCard1.Controls.Add(StudentName);
             materialCard1.Controls.Add(flowLayoutPanel1);
             materialCard1.Controls.Add(flowLayoutPanel2);
             materialCard1.Controls.Add(flowLayoutPanel3);
@@ -100,29 +100,29 @@
             materialCard1.Size = new Size(1350, 122);
             materialCard1.TabIndex = 0;
             // 
-            // textLocation
+            // Location
             // 
-            textLocation.BorderRadius = 15;
-            textLocation.CustomizableEdges = customizableEdges1;
-            textLocation.DefaultText = "2025-05-10";
-            textLocation.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            textLocation.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            textLocation.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            textLocation.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            textLocation.Enabled = false;
-            textLocation.FillColor = Color.Gainsboro;
-            textLocation.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            textLocation.Font = new Font("Segoe UI", 9F);
-            textLocation.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            textLocation.Location = new Point(712, 86);
-            textLocation.Name = "textLocation";
-            textLocation.PlaceholderText = "";
-            textLocation.ReadOnly = true;
-            textLocation.SelectedText = "";
-            textLocation.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            textLocation.Size = new Size(145, 28);
-            textLocation.TabIndex = 10;
-            textLocation.TextAlign = HorizontalAlignment.Center;
+            Location.BorderRadius = 15;
+            Location.CustomizableEdges = customizableEdges1;
+            Location.DefaultText = "2025-05-10";
+            Location.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            Location.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            Location.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            Location.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            Location.Enabled = false;
+            Location.FillColor = Color.Gainsboro;
+            Location.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            Location.Font = new Font("Segoe UI", 9F);
+            Location.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            Location.Location = new Point(712, 86);
+            Location.Name = "Location";
+            Location.PlaceholderText = "";
+            Location.ReadOnly = true;
+            Location.SelectedText = "";
+            Location.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            Location.Size = new Size(145, 28);
+            Location.TabIndex = 10;
+            Location.TextAlign = HorizontalAlignment.Center;
             // 
             // guna2TextBox5
             // 
@@ -150,101 +150,101 @@
             guna2TextBox5.TabIndex = 9;
             guna2TextBox5.TextAlign = HorizontalAlignment.Center;
             // 
-            // textFaculty
+            // Facultytxtbox
             // 
-            textFaculty.BorderRadius = 15;
-            textFaculty.CustomizableEdges = customizableEdges5;
-            textFaculty.DefaultText = "2025-05-10";
-            textFaculty.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            textFaculty.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            textFaculty.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            textFaculty.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            textFaculty.Enabled = false;
-            textFaculty.FillColor = Color.Gainsboro;
-            textFaculty.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            textFaculty.Font = new Font("Segoe UI", 9F);
-            textFaculty.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            textFaculty.Location = new Point(539, 86);
-            textFaculty.Name = "textFaculty";
-            textFaculty.PlaceholderText = "";
-            textFaculty.ReadOnly = true;
-            textFaculty.SelectedText = "";
-            textFaculty.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            textFaculty.Size = new Size(145, 28);
-            textFaculty.TabIndex = 8;
-            textFaculty.TextAlign = HorizontalAlignment.Center;
+            Facultytxtbox.BorderRadius = 15;
+            Facultytxtbox.CustomizableEdges = customizableEdges5;
+            Facultytxtbox.DefaultText = "2025-05-10";
+            Facultytxtbox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            Facultytxtbox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            Facultytxtbox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            Facultytxtbox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            Facultytxtbox.Enabled = false;
+            Facultytxtbox.FillColor = Color.Gainsboro;
+            Facultytxtbox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            Facultytxtbox.Font = new Font("Segoe UI", 9F);
+            Facultytxtbox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            Facultytxtbox.Location = new Point(539, 86);
+            Facultytxtbox.Name = "Facultytxtbox";
+            Facultytxtbox.PlaceholderText = "";
+            Facultytxtbox.ReadOnly = true;
+            Facultytxtbox.SelectedText = "";
+            Facultytxtbox.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            Facultytxtbox.Size = new Size(145, 28);
+            Facultytxtbox.TabIndex = 8;
+            Facultytxtbox.TextAlign = HorizontalAlignment.Center;
             // 
-            // textTime
+            // Timetxtbox
             // 
-            textTime.BorderRadius = 15;
-            textTime.CustomizableEdges = customizableEdges7;
-            textTime.DefaultText = "2025-05-10";
-            textTime.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            textTime.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            textTime.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            textTime.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            textTime.Enabled = false;
-            textTime.FillColor = Color.Gainsboro;
-            textTime.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            textTime.Font = new Font("Segoe UI", 9F);
-            textTime.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            textTime.Location = new Point(364, 86);
-            textTime.Name = "textTime";
-            textTime.PlaceholderText = "";
-            textTime.ReadOnly = true;
-            textTime.SelectedText = "";
-            textTime.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            textTime.Size = new Size(145, 28);
-            textTime.TabIndex = 7;
-            textTime.TextAlign = HorizontalAlignment.Center;
+            Timetxtbox.BorderRadius = 15;
+            Timetxtbox.CustomizableEdges = customizableEdges7;
+            Timetxtbox.DefaultText = "2025-05-10";
+            Timetxtbox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            Timetxtbox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            Timetxtbox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            Timetxtbox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            Timetxtbox.Enabled = false;
+            Timetxtbox.FillColor = Color.Gainsboro;
+            Timetxtbox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            Timetxtbox.Font = new Font("Segoe UI", 9F);
+            Timetxtbox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            Timetxtbox.Location = new Point(364, 86);
+            Timetxtbox.Name = "Timetxtbox";
+            Timetxtbox.PlaceholderText = "";
+            Timetxtbox.ReadOnly = true;
+            Timetxtbox.SelectedText = "";
+            Timetxtbox.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            Timetxtbox.Size = new Size(145, 28);
+            Timetxtbox.TabIndex = 7;
+            Timetxtbox.TextAlign = HorizontalAlignment.Center;
             // 
-            // textDate
+            // Date
             // 
-            textDate.BorderRadius = 15;
-            textDate.CustomizableEdges = customizableEdges9;
-            textDate.DefaultText = "2025-05-10";
-            textDate.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            textDate.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            textDate.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            textDate.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            textDate.Enabled = false;
-            textDate.FillColor = Color.Gainsboro;
-            textDate.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            textDate.Font = new Font("Segoe UI", 9F);
-            textDate.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            textDate.Location = new Point(186, 86);
-            textDate.Name = "textDate";
-            textDate.PlaceholderText = "";
-            textDate.ReadOnly = true;
-            textDate.SelectedText = "";
-            textDate.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            textDate.Size = new Size(145, 28);
-            textDate.TabIndex = 6;
-            textDate.TextAlign = HorizontalAlignment.Center;
+            Date.BorderRadius = 15;
+            Date.CustomizableEdges = customizableEdges9;
+            Date.DefaultText = "2025-05-10";
+            Date.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            Date.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            Date.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            Date.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            Date.Enabled = false;
+            Date.FillColor = Color.Gainsboro;
+            Date.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            Date.Font = new Font("Segoe UI", 9F);
+            Date.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            Date.Location = new Point(186, 86);
+            Date.Name = "Date";
+            Date.PlaceholderText = "";
+            Date.ReadOnly = true;
+            Date.SelectedText = "";
+            Date.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            Date.Size = new Size(145, 28);
+            Date.TabIndex = 6;
+            Date.TextAlign = HorizontalAlignment.Center;
             // 
-            // textIDnumber
+            // idnumber
             // 
-            textIDnumber.BorderRadius = 15;
-            textIDnumber.CustomizableEdges = customizableEdges11;
-            textIDnumber.DefaultText = "ID: CON-2025-001";
-            textIDnumber.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            textIDnumber.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            textIDnumber.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            textIDnumber.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            textIDnumber.Enabled = false;
-            textIDnumber.FillColor = Color.Gainsboro;
-            textIDnumber.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            textIDnumber.Font = new Font("Segoe UI", 9F);
-            textIDnumber.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            textIDnumber.Location = new Point(25, 86);
-            textIDnumber.Name = "textIDnumber";
-            textIDnumber.PlaceholderText = "";
-            textIDnumber.ReadOnly = true;
-            textIDnumber.SelectedText = "";
-            textIDnumber.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            textIDnumber.Size = new Size(133, 28);
-            textIDnumber.TabIndex = 5;
-            textIDnumber.TextAlign = HorizontalAlignment.Center;
+            idnumber.BorderRadius = 15;
+            idnumber.CustomizableEdges = customizableEdges11;
+            idnumber.DefaultText = "ID: CON-2025-001";
+            idnumber.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            idnumber.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            idnumber.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            idnumber.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            idnumber.Enabled = false;
+            idnumber.FillColor = Color.Gainsboro;
+            idnumber.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            idnumber.Font = new Font("Segoe UI", 9F);
+            idnumber.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            idnumber.Location = new Point(25, 86);
+            idnumber.Name = "idnumber";
+            idnumber.PlaceholderText = "";
+            idnumber.ReadOnly = true;
+            idnumber.SelectedText = "";
+            idnumber.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            idnumber.Size = new Size(133, 28);
+            idnumber.TabIndex = 5;
+            idnumber.TextAlign = HorizontalAlignment.Center;
             // 
             // guna2Button1
             // 
@@ -269,36 +269,36 @@
             guna2Button1.TabIndex = 4;
             guna2Button1.Click += guna2Button1_Click;
             // 
-            // LabelNotes
+            // Noteslabel
             // 
-            LabelNotes.BackColor = Color.Transparent;
-            LabelNotes.Font = new Font("Inter", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            LabelNotes.Location = new Point(25, 48);
-            LabelNotes.Name = "LabelNotes";
-            LabelNotes.Size = new Size(675, 25);
-            LabelNotes.TabIndex = 3;
-            LabelNotes.Text = "Student struggling with algebra concepts. Parent requested additional support strategies.";
+            Noteslabel.BackColor = Color.Transparent;
+            Noteslabel.Font = new Font("Inter", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Noteslabel.Location = new Point(25, 48);
+            Noteslabel.Name = "Noteslabel";
+            Noteslabel.Size = new Size(675, 25);
+            Noteslabel.TabIndex = 3;
+            Noteslabel.Text = "Student struggling with algebra concepts. Parent requested additional support strategies.";
             // 
-            // LabelCourse
+            // CourseCode
             // 
-            LabelCourse.BackColor = Color.Transparent;
-            LabelCourse.Font = new Font("Archivo", 15.75F, FontStyle.Bold);
-            LabelCourse.ForeColor = Color.DimGray;
-            LabelCourse.Location = new Point(242, 12);
-            LabelCourse.Name = "LabelCourse";
-            LabelCourse.Size = new Size(185, 34);
-            LabelCourse.TabIndex = 2;
-            LabelCourse.Text = "CPE 325 - L (7605)";
+            courseCodeLabel.BackColor = Color.Transparent;
+            courseCodeLabel.Font = new Font("Archivo", 15.75F, FontStyle.Bold);
+            courseCodeLabel.ForeColor = Color.DimGray;
+            courseCodeLabel.Location = new Point(242, 12);
+            courseCodeLabel.Name = "CourseCode";
+            courseCodeLabel.Size = new Size(185, 34);
+            courseCodeLabel.TabIndex = 2;
+            courseCodeLabel.Text = "CPE 325 - L (7605)";
             // 
-            // LabelName
+            // StudentName
             // 
-            LabelName.BackColor = Color.Transparent;
-            LabelName.Font = new Font("Archivo", 15.75F, FontStyle.Bold);
-            LabelName.Location = new Point(25, 12);
-            LabelName.Name = "LabelName";
-            LabelName.Size = new Size(197, 34);
-            LabelName.TabIndex = 1;
-            LabelName.Text = "Stephen Neil Garde  ";
+            StudentName.BackColor = Color.Transparent;
+            StudentName.Font = new Font("Archivo", 15.75F, FontStyle.Bold);
+            StudentName.Location = new Point(25, 12);
+            StudentName.Name = "StudentName";
+            StudentName.Size = new Size(197, 34);
+            StudentName.TabIndex = 1;
+            StudentName.Text = "Stephen Neil Garde  ";
             // 
             // flowLayoutPanel1
             // 
@@ -407,7 +407,6 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(materialCard1);
-            Location = new Point(40, 85);
             Margin = new Padding(27, 10, 27, 10);
             Name = "ConsultationCard";
             Padding = new Padding(0, 50, 0, 50);
@@ -426,14 +425,14 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel DateDay;
         private Guna.UI2.WinForms.Guna2HtmlLabel LabelTime;
         private Guna.UI2.WinForms.Guna2HtmlLabel LabelDate;
-        private Guna.UI2.WinForms.Guna2HtmlLabel LabelName;
-        private Guna.UI2.WinForms.Guna2HtmlLabel LabelCourse;
-        private Guna.UI2.WinForms.Guna2HtmlLabel LabelNotes;
+        private Guna.UI2.WinForms.Guna2HtmlLabel StudentName;
+        private Guna.UI2.WinForms.Guna2HtmlLabel courseCodeLabel;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Noteslabel;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2TextBox textFaculty;
-        private Guna.UI2.WinForms.Guna2TextBox textTime;
-        private Guna.UI2.WinForms.Guna2TextBox textDate;
-        private Guna.UI2.WinForms.Guna2TextBox textIDnumber;
+        private Guna.UI2.WinForms.Guna2TextBox Facultytxtbox;
+        private Guna.UI2.WinForms.Guna2TextBox Timetxtbox;
+        private Guna.UI2.WinForms.Guna2TextBox Date;
+        private Guna.UI2.WinForms.Guna2TextBox idnumber;
         private Guna.UI2.WinForms.Guna2ContextMenuStrip MenuContext;
         private ToolStripMenuItem viewToolStripMenuItem;
         private ToolStripMenuItem editToolStripMenuItem;
@@ -441,7 +440,7 @@
         private ToolStripMenuItem archiveToolStripMenuItem;
         private ToolStripMenuItem deleteToolStripMenuItem;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
-        private Guna.UI2.WinForms.Guna2TextBox textLocation;
+        private Guna.UI2.WinForms.Guna2TextBox Location;
         private FlowLayoutPanel flowLayoutPanel1;
         private FlowLayoutPanel flowLayoutPanel2;
         private FlowLayoutPanel flowLayoutPanel3;

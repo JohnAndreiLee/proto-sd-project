@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Consultation.App.Views.Controls.ConsultationManagement;
 using Syncfusion.Windows.Forms.Tools;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
 
 namespace Consultation.App.ConsultationManagement
 {
@@ -17,42 +17,54 @@ namespace Consultation.App.ConsultationManagement
     {
         public event EventHandler ArchiveRequested;
 
+        private ConsultationData data;
         public DateTime ScheduleDate { get; private set; }
 
         
-        public string NameText => LabelName.Text;
+        public string NameText => StudentName.Text;
         public string DateText => ScheduleDate.ToShortDateString(); 
-        public string TimeText => textTime.Text;
-        public string CourseCode => LabelCourse.Text;
-        public string Faculty => textFaculty.Text;
-        public string LocationText => textLocation.Text;
-        public string IDNumber => textIDnumber.Text;
-        public string Notes => LabelNotes.Text;
+        public string TimeText => Timetxtbox.Text;
+        public string CourseCode => courseCodeLabel.Text;
+        public string Faculty => Facultytxtbox.Text;
+        public string LocationText => Location.Text;
+        public string IDNumber => idnumber.Text;
+        public string Notes => Noteslabel.Text;
 
         public ConsultationCard()
         {
             InitializeComponent();
         }
 
-        public void SetData(string date, string time, string name, string coursecode, string faculty, string location, string idnumber, string notes)
+        public ConsultationData Data
         {
-            LabelName.Text = name;
-            LabelCourse.Text = coursecode;
-            LabelCourse.Location = new Point(LabelName.Right + 10, LabelCourse.Location.Y);
-            LabelNotes.Text = notes;
-            textDate.Text = date;
-            textTime.Text = time;
-            textFaculty.Text = faculty;
-            textIDnumber.Text = idnumber;
-            textLocation.Text = location;
-
-            if (DateTime.TryParse(date, out DateTime parsedDate))
+            get
             {
-                ScheduleDate = parsedDate;
+                
+                return data;
             }
-            else
+            set
             {
-                ScheduleDate = DateTime.MinValue;
+               
+                data = value;
+                StudentName.Text = data.Name;
+                courseCodeLabel.Text = data.CourseCode;
+                Noteslabel.Text = data.Notes;
+                Date.Text = data.Date;
+                Timetxtbox.Text = data.Time;
+                Facultytxtbox.Text = data.Faculty;
+                idnumber.Text = data.IDNumber;
+                Location.Text = data.Location;
+                courseCodeLabel.Location = new Point(StudentName.Right + 10, courseCodeLabel.Location.Y);
+
+                DateTime parsedDate;
+                if (DateTime.TryParse(data.Date, out parsedDate))
+                {
+                    ScheduleDate = parsedDate;
+                }
+                else
+                {
+                    ScheduleDate = DateTime.MinValue;
+                }
             }
         }
 

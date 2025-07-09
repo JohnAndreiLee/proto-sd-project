@@ -20,24 +20,20 @@ namespace Consultation.App.Views.Controls.ConsultationManagement
 
         private void btnReschedule_Click(object sender, EventArgs e)
         {
-          
-            string newDate = Datepicker.Value.ToString("MMMM dd, yyyy");
-            string newTime = Timepicker.Text;
-            string reason = TextBoxReason.Text;
 
-            
-            card.SetData(
-                newDate,
-                newTime,
-                card.NameText,
-                card.CourseCode,
-                card.Faculty,
-                card.LocationText,
-                card.IDNumber,
-                reason 
-            );
+            card.Data = new ConsultationData
+            {
+                Name = card.Data.Name,
+                CourseCode = card.Data.CourseCode,
+                Faculty = card.Data.Faculty,
+                Location = card.Data.Location,
+                IDNumber = card.Data.IDNumber,
+                Date = Date.Value.ToString("MMMM dd, yyyy"),
+                Time = Time.Text,
+                Notes = Reason.Text
+            };
 
-            Close(); 
+            Close();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

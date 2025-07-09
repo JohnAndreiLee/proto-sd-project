@@ -26,14 +26,14 @@ namespace Consultation.App.Views.Controls.ConsultationManagement
 
         private void LoadCardDetails()
         {
-            ViewName.Text = card.NameText;
-            ViewSched.Text = card.DateText;
-            ViewTime.Text = card.TimeText;
-            ViewCourse.Text = card.CourseCode;
-            ViewFaculty.Text = card.Faculty;
-            ViewLocation.Text = card.LocationText;
-            ViewIDnumber.Text = card.IDNumber;
-            ViewNotes.Text = card.Notes;
+            StudentName.Text = card.Data.Name;
+            Date.Text = card.Data.Date;
+            Time.Text = card.Data.Time;
+            CourseCode.Text = card.Data.CourseCode;
+            Faculty.Text = card.Data.Faculty;
+            Location.Text = card.Data.Location;
+            idnumber.Text = card.Data.IDNumber;
+            Notes.Text = card.Data.Notes;
         }
 
         private void btnReschedule_Click(object sender, EventArgs e)
