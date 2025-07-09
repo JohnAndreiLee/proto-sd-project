@@ -45,5 +45,6 @@ namespace Consultation.App.Views.Controls.ConsultationManagement
         {
             MenuContextArchive.Show(guna2Button1, guna2Button1.Width / 2, guna2Button1.Height);
         }
+
     }
 }

@@ -109,6 +109,7 @@
             textLocation.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             textLocation.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             textLocation.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            textLocation.Enabled = false;
             textLocation.FillColor = Color.Gainsboro;
             textLocation.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             textLocation.Font = new Font("Segoe UI", 9F);
@@ -121,6 +122,7 @@
             textLocation.ShadowDecoration.CustomizableEdges = customizableEdges2;
             textLocation.Size = new Size(145, 28);
             textLocation.TabIndex = 10;
+            textLocation.TextAlign = HorizontalAlignment.Center;
             // 
             // guna2TextBox5
             // 
@@ -141,6 +143,7 @@
             guna2TextBox5.Margin = new Padding(3, 4, 3, 4);
             guna2TextBox5.Name = "guna2TextBox5";
             guna2TextBox5.PlaceholderText = "";
+            guna2TextBox5.ReadOnly = true;
             guna2TextBox5.SelectedText = "";
             guna2TextBox5.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2TextBox5.Size = new Size(114, 38);
@@ -156,6 +159,7 @@
             textFaculty.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             textFaculty.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             textFaculty.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            textFaculty.Enabled = false;
             textFaculty.FillColor = Color.Gainsboro;
             textFaculty.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             textFaculty.Font = new Font("Segoe UI", 9F);
@@ -168,6 +172,7 @@
             textFaculty.ShadowDecoration.CustomizableEdges = customizableEdges6;
             textFaculty.Size = new Size(145, 28);
             textFaculty.TabIndex = 8;
+            textFaculty.TextAlign = HorizontalAlignment.Center;
             // 
             // textTime
             // 
@@ -178,6 +183,7 @@
             textTime.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             textTime.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             textTime.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            textTime.Enabled = false;
             textTime.FillColor = Color.Gainsboro;
             textTime.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             textTime.Font = new Font("Segoe UI", 9F);
@@ -190,6 +196,7 @@
             textTime.ShadowDecoration.CustomizableEdges = customizableEdges8;
             textTime.Size = new Size(145, 28);
             textTime.TabIndex = 7;
+            textTime.TextAlign = HorizontalAlignment.Center;
             // 
             // textDate
             // 
@@ -200,6 +207,7 @@
             textDate.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             textDate.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             textDate.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            textDate.Enabled = false;
             textDate.FillColor = Color.Gainsboro;
             textDate.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             textDate.Font = new Font("Segoe UI", 9F);
@@ -212,6 +220,7 @@
             textDate.ShadowDecoration.CustomizableEdges = customizableEdges10;
             textDate.Size = new Size(145, 28);
             textDate.TabIndex = 6;
+            textDate.TextAlign = HorizontalAlignment.Center;
             // 
             // textIDnumber
             // 
@@ -222,6 +231,7 @@
             textIDnumber.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             textIDnumber.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             textIDnumber.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            textIDnumber.Enabled = false;
             textIDnumber.FillColor = Color.Gainsboro;
             textIDnumber.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             textIDnumber.Font = new Font("Segoe UI", 9F);
@@ -234,6 +244,7 @@
             textIDnumber.ShadowDecoration.CustomizableEdges = customizableEdges12;
             textIDnumber.Size = new Size(133, 28);
             textIDnumber.TabIndex = 5;
+            textIDnumber.TextAlign = HorizontalAlignment.Center;
             // 
             // guna2Button1
             // 

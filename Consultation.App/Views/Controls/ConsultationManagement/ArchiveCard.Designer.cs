@@ -53,13 +53,13 @@
             Notes = new Guna.UI2.WinForms.Guna2HtmlLabel();
             Coursecode = new Guna.UI2.WinForms.Guna2HtmlLabel();
             Student = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             LabelName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             LabelCourse = new Guna.UI2.WinForms.Guna2HtmlLabel();
             LabelNotes = new Guna.UI2.WinForms.Guna2HtmlLabel();
             MenuContextArchive = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             restoreToolStripMenuItem = new ToolStripMenuItem();
             deleteToolStripMenuItem = new ToolStripMenuItem();
-            flowLayoutPanel1 = new FlowLayoutPanel();
             materialCard1.SuspendLayout();
             MenuContextArchive.SuspendLayout();
             SuspendLayout();
@@ -96,6 +96,7 @@
             IDnumber.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             IDnumber.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             IDnumber.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            IDnumber.Enabled = false;
             IDnumber.FillColor = Color.Gainsboro;
             IDnumber.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             IDnumber.Font = new Font("Segoe UI", 9F);
@@ -103,6 +104,7 @@
             IDnumber.Location = new Point(25, 86);
             IDnumber.Name = "IDnumber";
             IDnumber.PlaceholderText = "";
+            IDnumber.ReadOnly = true;
             IDnumber.SelectedText = "";
             IDnumber.ShadowDecoration.CustomizableEdges = customizableEdges4;
             IDnumber.Size = new Size(133, 28);
@@ -117,6 +119,7 @@
             Date.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             Date.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             Date.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            Date.Enabled = false;
             Date.FillColor = Color.Gainsboro;
             Date.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             Date.Font = new Font("Segoe UI", 9F);
@@ -124,6 +127,7 @@
             Date.Location = new Point(186, 86);
             Date.Name = "Date";
             Date.PlaceholderText = "";
+            Date.ReadOnly = true;
             Date.SelectedText = "";
             Date.ShadowDecoration.CustomizableEdges = customizableEdges6;
             Date.Size = new Size(145, 28);
@@ -138,6 +142,7 @@
             Time.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             Time.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             Time.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            Time.Enabled = false;
             Time.FillColor = Color.Gainsboro;
             Time.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             Time.Font = new Font("Segoe UI", 9F);
@@ -145,6 +150,7 @@
             Time.Location = new Point(364, 86);
             Time.Name = "Time";
             Time.PlaceholderText = "";
+            Time.ReadOnly = true;
             Time.SelectedText = "";
             Time.ShadowDecoration.CustomizableEdges = customizableEdges8;
             Time.Size = new Size(145, 28);
@@ -159,6 +165,7 @@
             Faculty.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             Faculty.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             Faculty.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            Faculty.Enabled = false;
             Faculty.FillColor = Color.Gainsboro;
             Faculty.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             Faculty.Font = new Font("Segoe UI", 9F);
@@ -166,6 +173,7 @@
             Faculty.Location = new Point(539, 86);
             Faculty.Name = "Faculty";
             Faculty.PlaceholderText = "";
+            Faculty.ReadOnly = true;
             Faculty.SelectedText = "";
             Faculty.ShadowDecoration.CustomizableEdges = customizableEdges10;
             Faculty.Size = new Size(145, 28);
@@ -205,6 +213,7 @@
             Location.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             Location.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             Location.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            Location.Enabled = false;
             Location.FillColor = Color.Gainsboro;
             Location.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             Location.Font = new Font("Segoe UI", 9F);
@@ -212,6 +221,7 @@
             Location.Location = new Point(712, 86);
             Location.Name = "Location";
             Location.PlaceholderText = "";
+            Location.ReadOnly = true;
             Location.SelectedText = "";
             Location.ShadowDecoration.CustomizableEdges = customizableEdges14;
             Location.Size = new Size(145, 28);
@@ -273,6 +283,13 @@
             Student.TabIndex = 11;
             Student.Text = "Stephen Neil Garde  -";
             // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.Location = new Point(0, 0);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(1350, 122);
+            flowLayoutPanel1.TabIndex = 14;
+            // 
             // LabelName
             // 
             LabelName.BackColor = Color.Transparent;
@@ -332,13 +349,6 @@
             deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
             deleteToolStripMenuItem.Size = new Size(113, 22);
             deleteToolStripMenuItem.Text = "Delete";
-            // 
-            // flowLayoutPanel1
-            // 
-            flowLayoutPanel1.Location = new Point(0, 0);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1350, 122);
-            flowLayoutPanel1.TabIndex = 14;
             // 
             // ArchiveCard
             // 
