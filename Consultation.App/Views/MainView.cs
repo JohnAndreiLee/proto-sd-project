@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Consultation.App.Consultation.Dashboard;
 
 namespace Consultation.App.Views
 {
@@ -18,15 +17,6 @@ namespace Consultation.App.Views
             InitializeComponent();
         }
 
-        private void buttonConsulation_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void buttonConsulation_Click_1(object sender, EventArgs e)
-        {
-            Dashbaord dashbaord = new Dashbaord();
-            dashbaord.Show();
-        }
     }
 }

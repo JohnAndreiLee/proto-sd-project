@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "dgSpecHash": "NXgGCXECKPldiCpAnEB6O9q3p2L4uIq4ZiObw/pMxJC4un7y8JKpPZ4TNMUMBc9hWAhpvsmk7hDO9+mjnP9Y+Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Van\\Source\\Repos\\proto-sd-project-Log-In-\\Consultation.App\\Consultation.App.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Van\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.7\\guna.ui2.winforms.2.0.4.7.nupkg.sha512",
+    "C:\\Users\\Van\\.nuget\\packages\\microsoft.winforms.designer.sdk\\1.6.0\\microsoft.winforms.designer.sdk.1.6.0.nupkg.sha512",
+    "C:\\Users\\Van\\.nuget\\packages\\syncfusion.grid.windows\\29.1.41\\syncfusion.grid.windows.29.1.41.nupkg.sha512",
+    "C:\\Users\\Van\\.nuget\\packages\\syncfusion.licensing\\29.1.41\\syncfusion.licensing.29.1.41.nupkg.sha512",
+    "C:\\Users\\Van\\.nuget\\packages\\syncfusion.shared.base\\29.1.41\\syncfusion.shared.base.29.1.41.nupkg.sha512",
+    "C:\\Users\\Van\\.nuget\\packages\\syncfusion.shared.windows\\29.1.41\\syncfusion.shared.windows.29.1.41.nupkg.sha512",
+    "C:\\Users\\Van\\.nuget\\packages\\syncfusion.shared.wpf\\29.1.41\\syncfusion.shared.wpf.29.1.41.nupkg.sha512",
+    "C:\\Users\\Van\\.nuget\\packages\\syncfusion.spellchecker.base\\29.1.41\\syncfusion.spellchecker.base.29.1.41.nupkg.sha512",
+    "C:\\Users\\Van\\.nuget\\packages\\syncfusion.tools.base\\29.1.41\\syncfusion.tools.base.29.1.41.nupkg.sha512",
+    "C:\\Users\\Van\\.nuget\\packages\\syncfusion.tools.windows\\29.1.41\\syncfusion.tools.windows.29.1.41.nupkg.sha512",
+    "C:\\Users\\Van\\.nuget\\packages\\syncfusion.tools.wpf\\29.1.41\\syncfusion.tools.wpf.29.1.41.nupkg.sha512",
+    "C:\\Users\\Van\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
+    "C:\\Users\\Van\\.nuget\\packages\\system.composition\\6.0.0\\system.composition.6.0.0.nupkg.sha512",
+    "C:\\Users\\Van\\.nuget\\packages\\system.composition.attributedmodel\\6.0.0\\system.composition.attributedmodel.6.0.0.nupkg.sha512",
+    "C:\\Users\\Van\\.nuget\\packages\\system.composition.convention\\6.0.0\\system.composition.convention.6.0.0.nupkg.sha512",
+    "C:\\Users\\Van\\.nuget\\packages\\system.composition.hosting\\6.0.0\\system.composition.hosting.6.0.0.nupkg.sha512",
+    "C:\\Users\\Van\\.nuget\\packages\\system.composition.runtime\\6.0.0\\system.composition.runtime.6.0.0.nupkg.sha512",
+    "C:\\Users\\Van\\.nuget\\packages\\system.composition.typedparts\\6.0.0\\system.composition.typedparts.6.0.0.nupkg.sha512",
+    "C:\\Users\\Van\\.nuget\\packages\\system.management\\7.0.0\\system.management.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
