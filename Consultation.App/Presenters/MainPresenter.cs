@@ -11,7 +11,7 @@ namespace Consultation.App.Presenters
     public class MainPresenter
     {
         private readonly IMainView _mainView;
-
+        private Button currentBtn;
         private enum ChildViews
         {
             Dashboard,
@@ -45,6 +45,8 @@ namespace Consultation.App.Presenters
         // Event handlers
         private void DashboardEvent(object? sender, EventArgs e)
         {
+            //Button btn = sender as Button;
+            HighlightButton(sender as Button);
             if (_currentView != ChildViews.Dashboard)
             {
                 LoadChildView(ChildViews.Dashboard);
@@ -55,6 +57,7 @@ namespace Consultation.App.Presenters
 
         private void BulletinEvent(object? sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
             if (_currentView != ChildViews.Bulletin)
             {
                 LoadChildView(ChildViews.Bulletin);
@@ -65,6 +68,7 @@ namespace Consultation.App.Presenters
 
         private void ConsultationEvent(object? sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
             if (_currentView != ChildViews.Consultation)
             {
                 LoadChildView(ChildViews.Consultation);
@@ -75,6 +79,7 @@ namespace Consultation.App.Presenters
 
         private void SFManagementEvent(object? sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
             if (_currentView != ChildViews.UserManagement)
             {
                 LoadChildView(ChildViews.UserManagement);
@@ -95,6 +100,7 @@ namespace Consultation.App.Presenters
 
         private void PreferenceEvent(object? sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
             _mainView.SetMessage("Setting Event Triggered");
         }
 
@@ -129,6 +135,26 @@ namespace Consultation.App.Presenters
                 _ => new UserControl() { Name = "NotImplementedView" }
             };
         }
+
+        private void HighlightButton(Button button)
+        {
+            if (button == null) return;
+
+            // Reset previous button (if any)
+            if (currentBtn != null)
+            {
+                currentBtn.BackColor = Color.Transparent;
+                currentBtn.ForeColor = Color.White;
+                currentBtn.ImageIndex = 0;
+            }
+
+            // Highlight new button
+            currentBtn = button;
+            currentBtn.BackColor = Color.White;
+            currentBtn.ForeColor = Color.Black;
+            currentBtn.ImageIndex = 1; // Use highlighted icon if any
+        }
+
     }
 }
 

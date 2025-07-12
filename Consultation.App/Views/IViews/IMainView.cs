@@ -9,6 +9,8 @@
         event EventHandler SFManagementEvent;
         event EventHandler ReportsEvent;
         event EventHandler PreferenceEvent;
+        event EventHandler NavButton_MouseEnter;
+        event EventHandler NavButton_MouseLeave;
 
         void Header(string header);
         void SetMessage(string message);
