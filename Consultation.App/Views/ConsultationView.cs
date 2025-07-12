@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace Consultation.App.ConsultationManagement
 {
-    public partial class ConsultationView : Form
+    public partial class ConsultationView : UserControl
     {
         private CSWindow csWindow;
         private ArchiveWindow archiveWindow;

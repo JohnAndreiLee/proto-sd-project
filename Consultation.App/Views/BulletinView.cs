@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Consultation.App.Views
 {
-    public partial class BulletinView : Form
+    public partial class BulletinView : UserControl
     {
         public BulletinView()
         {

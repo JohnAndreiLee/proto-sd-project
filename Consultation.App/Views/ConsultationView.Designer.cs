@@ -156,12 +156,11 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1658, 961);
             Controls.Add(WindowPanelConsultation);
             Controls.Add(materialCard2);
-            FormBorderStyle = FormBorderStyle.None;
+            DoubleBuffered = true;
             Name = "ConsultationView";
-            Text = "ConsultationWindow";
+            Size = new Size(1658, 961);
             materialCard2.ResumeLayout(false);
             ResumeLayout(false);
         }

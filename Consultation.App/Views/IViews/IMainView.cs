@@ -11,5 +11,7 @@
 
         void Header(string header);
         void SetMessage(string message);
+
+        Panel MainPanel { get; }
     }
 }

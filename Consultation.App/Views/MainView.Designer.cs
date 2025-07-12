@@ -51,6 +51,7 @@
             pictureBoxLogo = new PictureBox();
             labelForm = new Label();
             materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            panelContainer = new Panel();
             ((System.ComponentModel.ISupportInitialize)sidePanel).BeginInit();
             sidePanel.SuspendLayout();
             profilePanel.SuspendLayout();
@@ -331,11 +332,20 @@
             materialCard1.Size = new Size(1640, 100);
             materialCard1.TabIndex = 3;
             // 
+            // panelContainer
+            // 
+            panelContainer.Dock = DockStyle.Fill;
+            panelContainer.Location = new Point(262, 102);
+            panelContainer.Name = "panelContainer";
+            panelContainer.Size = new Size(1640, 937);
+            panelContainer.TabIndex = 5;
+            // 
             // MainView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(panelContainer);
             Controls.Add(materialCard1);
             Controls.Add(sidePanel);
             IsMdiContainer = true;
@@ -378,5 +388,6 @@
         private ImageList bulletin_icon;
         private ImageList settings_icon;
         private ImageList userManagement_icon;
+        private Panel panelContainer;
     }
 }

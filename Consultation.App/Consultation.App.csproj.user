@@ -3,7 +3,7 @@
   <PropertyGroup />
   <ItemGroup>
     <Compile Update="Views\BulletinView.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Views\Controls\BulletinManagement\ArchiveCard.cs">
       <SubType>UserControl</SubType>
@@ -129,13 +129,13 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Views\ConsultationView.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Views\Controls\ConsultationManagement\CSWindow.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Views\DashboardView.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Views\Controls\Dashboard\Activity Feed Panel\Bulletin.cs">
       <SubType>UserControl</SubType>
