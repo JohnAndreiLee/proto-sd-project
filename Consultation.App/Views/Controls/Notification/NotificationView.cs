@@ -16,5 +16,10 @@ namespace Consultation.App.Views
         {
             InitializeComponent();
         }
+
+        public void buttonClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -21,6 +21,7 @@ namespace Consultation.App.Views
             buttonBulletin.Click += (s, e) => BulletinEvent?.Invoke(s, e);
             buttonSFManagement.Click += (s, e) => SFManagementEvent?.Invoke(s, e);
             buttonPreference.Click += (s, e) => PreferenceEvent?.Invoke(s, e);
+            buttonNotification.Click += (s, e) => NotificationEvent?.Invoke(s, e);
             this.FormClosed += MainView_FormClosed;
 
             _navButtons = new[]
@@ -47,8 +48,8 @@ namespace Consultation.App.Views
         public event EventHandler ConsultationEvent;
         public event EventHandler BulletinEvent;
         public event EventHandler SFManagementEvent;
-        public event EventHandler ReportsEvent;
         public event EventHandler PreferenceEvent;
+        public event EventHandler NotificationEvent;
 
         public void HighlightButton(Button button)
         {

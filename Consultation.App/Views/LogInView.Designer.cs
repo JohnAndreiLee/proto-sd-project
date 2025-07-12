@@ -92,6 +92,7 @@
             panel1.Controls.Add(PasswordTextBox);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(EmailTextBox);
+            panel1.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold);
             panel1.Location = new Point(1180, 105);
             panel1.Name = "panel1";
             panel1.Size = new Size(589, 849);
@@ -102,7 +103,7 @@
             ErrorPassLabel.AutoSize = true;
             ErrorPassLabel.Location = new Point(69, 283);
             ErrorPassLabel.Name = "ErrorPassLabel";
-            ErrorPassLabel.Size = new Size(0, 15);
+            ErrorPassLabel.Size = new Size(0, 23);
             ErrorPassLabel.TabIndex = 17;
             // 
             // resultlabel1
@@ -111,13 +112,13 @@
             resultlabel1.BackColor = Color.Transparent;
             resultlabel1.Location = new Point(69, 151);
             resultlabel1.Name = "resultlabel1";
-            resultlabel1.Size = new Size(0, 15);
+            resultlabel1.Size = new Size(0, 23);
             resultlabel1.TabIndex = 16;
             // 
             // ShowPassButton
             // 
             ShowPassButton.Image = Properties.Icons.Untitled_design;
-            ShowPassButton.Location = new Point(485, 275);
+            ShowPassButton.Location = new Point(494, 268);
             ShowPassButton.Name = "ShowPassButton";
             ShowPassButton.Size = new Size(32, 23);
             ShowPassButton.TabIndex = 15;
@@ -129,6 +130,7 @@
             ForgotPasswordButton.BackColor = Color.Transparent;
             ForgotPasswordButton.FlatAppearance.BorderSize = 0;
             ForgotPasswordButton.FlatStyle = FlatStyle.Flat;
+            ForgotPasswordButton.Font = new Font("Inter", 8.25F);
             ForgotPasswordButton.ForeColor = Color.Red;
             ForgotPasswordButton.Location = new Point(411, 331);
             ForgotPasswordButton.Name = "ForgotPasswordButton";
@@ -141,7 +143,7 @@
             // 
             SystemBtn.BackColor = Color.Brown;
             SystemBtn.FlatStyle = FlatStyle.Flat;
-            SystemBtn.Font = new Font("Microsoft Sans Serif", 12F);
+            SystemBtn.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold);
             SystemBtn.ForeColor = Color.White;
             SystemBtn.Location = new Point(311, 647);
             SystemBtn.Name = "SystemBtn";
@@ -154,7 +156,7 @@
             // 
             ReqBtn.BackColor = Color.Brown;
             ReqBtn.FlatStyle = FlatStyle.Flat;
-            ReqBtn.Font = new Font("Microsoft Sans Serif", 12F);
+            ReqBtn.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold);
             ReqBtn.ForeColor = Color.White;
             ReqBtn.Location = new Point(97, 647);
             ReqBtn.Name = "ReqBtn";
@@ -166,20 +168,20 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F);
-            label4.Location = new Point(114, 583);
+            label4.Font = new Font("Inter", 8.25F);
+            label4.Location = new Point(151, 584);
             label4.Name = "label4";
-            label4.Size = new Size(378, 21);
+            label4.Size = new Size(307, 16);
             label4.TabIndex = 9;
             label4.Text = "------------------------Need Help?------------------------";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F);
-            label3.Location = new Point(143, 468);
+            label3.Font = new Font("Inter", 8.25F);
+            label3.Location = new Point(162, 472);
             label3.Name = "label3";
-            label3.Size = new Size(316, 21);
+            label3.Size = new Size(259, 16);
             label3.TabIndex = 7;
             label3.Text = "------------------------Or------------------------";
             // 
@@ -187,7 +189,7 @@
             // 
             GoogleSignInButton.BackColor = Color.Brown;
             GoogleSignInButton.FlatStyle = FlatStyle.Flat;
-            GoogleSignInButton.Font = new Font("Microsoft Sans Serif", 12F);
+            GoogleSignInButton.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold);
             GoogleSignInButton.ForeColor = Color.White;
             GoogleSignInButton.Location = new Point(97, 509);
             GoogleSignInButton.Name = "GoogleSignInButton";
@@ -200,7 +202,7 @@
             // 
             buttonLogIn.BackColor = Color.Brown;
             buttonLogIn.FlatStyle = FlatStyle.Flat;
-            buttonLogIn.Font = new Font("Microsoft Sans Serif", 12F);
+            buttonLogIn.Font = new Font("Inter SemiBold", 12F, FontStyle.Bold);
             buttonLogIn.ForeColor = Color.White;
             buttonLogIn.Location = new Point(201, 396);
             buttonLogIn.Name = "buttonLogIn";
@@ -212,6 +214,7 @@
             // RememberMeCheckBox
             // 
             RememberMeCheckBox.AccessibilityEnabled = true;
+            RememberMeCheckBox.Font = new Font("Inter", 8.25F);
             RememberMeCheckBox.Location = new Point(58, 331);
             RememberMeCheckBox.Name = "RememberMeCheckBox";
             RememberMeCheckBox.Size = new Size(150, 21);
@@ -221,47 +224,45 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 16F);
+            label2.Font = new Font("Inter", 15.75F);
             label2.ForeColor = Color.Gray;
             label2.Location = new Point(58, 226);
             label2.Name = "label2";
-            label2.Size = new Size(114, 26);
+            label2.Size = new Size(117, 30);
             label2.TabIndex = 3;
             label2.Text = "Password:";
             // 
             // PasswordTextBox
             // 
             PasswordTextBox.BackColor = Color.Transparent;
-            PasswordTextBox.BeforeTouchSize = new Size(470, 43);
-            PasswordTextBox.Font = new Font("Segoe UI", 12F);
+            PasswordTextBox.BeforeTouchSize = new Size(470, 30);
+            PasswordTextBox.Font = new Font("Inter", 14.25F);
             PasswordTextBox.Location = new Point(58, 266);
-            PasswordTextBox.Multiline = true;
             PasswordTextBox.Name = "PasswordTextBox";
             PasswordTextBox.PasswordChar = '●';
-            PasswordTextBox.Size = new Size(470, 43);
+            PasswordTextBox.Size = new Size(470, 30);
             PasswordTextBox.TabIndex = 2;
             PasswordTextBox.TextChanged += PasswordTextBoxV2_TextChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 16F);
+            label1.Font = new Font("Inter", 15.75F);
             label1.ForeColor = Color.Gray;
             label1.Location = new Point(58, 103);
             label1.Name = "label1";
-            label1.Size = new Size(285, 26);
+            label1.Size = new Size(289, 30);
             label1.TabIndex = 1;
             label1.Text = "Umindanao E-mail Address:";
             // 
             // EmailTextBox
             // 
             EmailTextBox.BackColor = Color.Transparent;
-            EmailTextBox.BeforeTouchSize = new Size(470, 43);
-            EmailTextBox.Font = new Font("Segoe UI", 12F);
+            EmailTextBox.BeforeTouchSize = new Size(470, 30);
+            EmailTextBox.Font = new Font("Inter", 14.25F);
             EmailTextBox.Location = new Point(58, 136);
-            EmailTextBox.Multiline = true;
             EmailTextBox.Name = "EmailTextBox";
-            EmailTextBox.Size = new Size(470, 43);
+            EmailTextBox.Size = new Size(470, 30);
             EmailTextBox.TabIndex = 0;
             EmailTextBox.TextChanged += SignInTextBox_TextChanged;
             // 

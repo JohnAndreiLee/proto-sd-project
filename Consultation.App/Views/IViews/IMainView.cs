@@ -13,8 +13,8 @@ namespace Consultation.App.Views.IViews
         event EventHandler ConsultationEvent;
         event EventHandler BulletinEvent;
         event EventHandler SFManagementEvent;
-        event EventHandler ReportsEvent;
         event EventHandler PreferenceEvent;
+        event EventHandler NotificationEvent;
 
         // Actions for styling
         void HighlightButton(Button button);

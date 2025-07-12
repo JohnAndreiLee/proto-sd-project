@@ -30,6 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainView));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             sidePanel = new Syncfusion.Windows.Forms.Tools.GradientPanel();
             pictureBoxLogo = new PictureBox();
             label3 = new Label();
@@ -50,6 +51,7 @@
             labelProfileName = new Label();
             pictureBoxProfile = new PictureBox();
             materialCard2 = new MaterialSkin.Controls.MaterialCard();
+            buttonNotification = new Guna.UI2.WinForms.Guna2CircleButton();
             labelForm = new Label();
             panel1 = new Panel();
             panelContainer = new Panel();
@@ -124,8 +126,6 @@
             buttonPreference.Text = "   Security";
             buttonPreference.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonPreference.UseVisualStyleBackColor = false;
-            //buttonPreference.MouseEnter += buttonPreference_MouseEnter;
-            //buttonPreference.MouseLeave += buttonPreference_MouseLeave;
             // 
             // settings_icon
             // 
@@ -165,8 +165,6 @@
             buttonSFManagement.TextAlign = ContentAlignment.MiddleLeft;
             buttonSFManagement.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonSFManagement.UseVisualStyleBackColor = false;
-            //buttonSFManagement.MouseEnter += buttonSFManagement_MouseEnter;
-            //buttonSFManagement.MouseLeave += buttonSFManagement_MouseLeave;
             // 
             // userManagement_icon
             // 
@@ -194,8 +192,6 @@
             buttonConsultation.TextAlign = ContentAlignment.MiddleLeft;
             buttonConsultation.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonConsultation.UseVisualStyleBackColor = false;
-            //buttonConsultation.MouseEnter += buttonConsultation_MouseEnter;
-            //buttonConsultation.MouseLeave += buttonConsultation_MouseLeave;
             // 
             // consultation_icon
             // 
@@ -222,8 +218,6 @@
             buttonBulletin.Text = "   Bulletin";
             buttonBulletin.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonBulletin.UseVisualStyleBackColor = false;
-            //buttonBulletin.MouseEnter += buttonBulletin_MouseEnter;
-            //buttonBulletin.MouseLeave += buttonBulletin_MouseLeave;
             // 
             // bulletin_icon
             // 
@@ -263,8 +257,6 @@
             buttonDashboard.Text = "   Dashboard";
             buttonDashboard.TextImageRelation = TextImageRelation.ImageBeforeText;
             buttonDashboard.UseVisualStyleBackColor = false;
-            //buttonDashboard.MouseEnter += buttonDashboard_MouseEnter;
-            //buttonDashboard.MouseLeave += buttonDashboard_MouseLeave;
             // 
             // dashboard_icon
             // 
@@ -319,6 +311,7 @@
             // materialCard2
             // 
             materialCard2.BackColor = Color.FromArgb(255, 255, 255);
+            materialCard2.Controls.Add(buttonNotification);
             materialCard2.Controls.Add(labelForm);
             materialCard2.Depth = 0;
             materialCard2.Dock = DockStyle.Top;
@@ -330,6 +323,32 @@
             materialCard2.Padding = new Padding(14);
             materialCard2.Size = new Size(1644, 100);
             materialCard2.TabIndex = 7;
+            // 
+            // buttonNotification
+            // 
+            buttonNotification.Anchor = AnchorStyles.None;
+            buttonNotification.BackColor = Color.Transparent;
+            buttonNotification.BackgroundImageLayout = ImageLayout.Center;
+            buttonNotification.Cursor = Cursors.Hand;
+            buttonNotification.DisabledState.BorderColor = Color.DarkGray;
+            buttonNotification.DisabledState.CustomBorderColor = Color.DarkGray;
+            buttonNotification.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            buttonNotification.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            buttonNotification.FillColor = Color.FromArgb(199, 38, 39);
+            buttonNotification.Font = new Font("Segoe UI", 9F);
+            buttonNotification.ForeColor = Color.White;
+            buttonNotification.Image = Properties.Icons.notification;
+            buttonNotification.ImageAlign = HorizontalAlignment.Left;
+            buttonNotification.ImageOffset = new Point(2, 0);
+            buttonNotification.ImageSize = new Size(32, 32);
+            buttonNotification.Location = new Point(1560, 25);
+            buttonNotification.Name = "buttonNotification";
+            buttonNotification.ShadowDecoration.CustomizableEdges = customizableEdges1;
+            buttonNotification.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            buttonNotification.Size = new Size(56, 56);
+            buttonNotification.TabIndex = 13;
+            buttonNotification.Tile = false;
+            buttonNotification.UseTransparentBackground = true;
             // 
             // labelForm
             // 
@@ -409,5 +428,6 @@
         private Label labelForm;
         private Panel panel1;
         private Panel panelContainer;
+        private Guna.UI2.WinForms.Guna2CircleButton buttonNotification;
     }
 }

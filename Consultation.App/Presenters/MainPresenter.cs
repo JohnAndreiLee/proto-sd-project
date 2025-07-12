@@ -19,7 +19,6 @@ namespace Consultation.App.Presenters
             Bulletin,
             Consultation,
             UserManagement,
-            Reports,
             Settings
         }
 
@@ -34,8 +33,8 @@ namespace Consultation.App.Presenters
             _mainView.BulletinEvent += BulletinEvent;
             _mainView.ConsultationEvent += ConsultationEvent;
             _mainView.SFManagementEvent += SFManagementEvent;
-            _mainView.ReportsEvent += ReportsEvent;
             _mainView.PreferenceEvent += PreferenceEvent;
+            _mainView.NotificationEvent += NotificationEvent;
 
             LoadChildView(ChildViews.Dashboard);
             _mainView.Header("Dashboard");
@@ -92,21 +91,17 @@ namespace Consultation.App.Presenters
             }
         }
 
-        private void ReportsEvent(object? sender, EventArgs e)
-        {
-            SetActiveButton(sender as Button);
-            if (_currentView != ChildViews.Reports)
-            {
-                LoadChildView(ChildViews.Reports);
-                _mainView.Header("Reports");
-                _currentView = ChildViews.Reports;
-            }
-        }
 
         private void PreferenceEvent(object? sender, EventArgs e)
         {
             SetActiveButton(sender as Button);
             _mainView.SetMessage("Settings clicked");
+        }
+
+        private void NotificationEvent(object? sender, EventArgs e)
+        {
+            NotificationView notificationView = new NotificationView();
+            notificationView.ShowDialog();
         }
 
         private void LoadChildView(ChildViews viewType)

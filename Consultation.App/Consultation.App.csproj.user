@@ -47,9 +47,6 @@
     <Compile Update="Views\Controls\Dashboard\Quick Actions Panel\SystemSettings.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Views\Controls\Notification\NotificationOverlay.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Views\Controls\UserManagement\AdminAction.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -110,7 +107,7 @@
     <Compile Update="Views\Controls\UserManagement\StudentListCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Views\NotificationView.cs">
+    <Compile Update="Views\Controls\Notification\NotificationView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\ReportsView.cs">
