@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Consultation.App.Views
 {
-    public partial class UserManagementView : Form
+    public partial class UserManagementView : UserControl
     {
         public UserManagementView()
         {

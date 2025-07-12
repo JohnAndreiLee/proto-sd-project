@@ -12,8 +12,8 @@ namespace Consultation.App.Presenters
     {
         private readonly IMainView _mainView;
 
-        // Enum to identify each child form
-        private enum ChildForms
+        // Enum to identify each child UserControl
+        private enum ChildViews
         {
             Dashboard,
             Bulletin,
@@ -23,10 +23,9 @@ namespace Consultation.App.Presenters
             Settings
         }
 
-        private ChildForms _currentForm;
-        private Form _activeForm;
+        private ChildViews _currentView;
 
-        private readonly Dictionary<ChildForms, Form> _childForms = new();
+        private readonly Dictionary<ChildViews, UserControl> _childViews = new();
 
         public MainPresenter(IMainView mainView)
         {
@@ -39,59 +38,59 @@ namespace Consultation.App.Presenters
             _mainView.ReportsEvent += ReportsEvent;
             _mainView.PreferenceEvent += PreferenceEvent;
 
-            LoadChildForm(ChildForms.Dashboard);
+            LoadChildView(ChildViews.Dashboard);
             _mainView.Header("Dashboard");
-            _currentForm = ChildForms.Dashboard;
+            _currentView = ChildViews.Dashboard;
         }
 
         // Event handlers
         private void DashboardEvent(object? sender, EventArgs e)
         {
-            if (_currentForm != ChildForms.Dashboard)
+            if (_currentView != ChildViews.Dashboard)
             {
-                LoadChildForm(ChildForms.Dashboard);
+                LoadChildView(ChildViews.Dashboard);
                 _mainView.Header("Dashboard");
-                _currentForm = ChildForms.Dashboard;
+                _currentView = ChildViews.Dashboard;
             }
         }
 
         private void BulletinEvent(object? sender, EventArgs e)
         {
-            if (_currentForm != ChildForms.Bulletin)
+            if (_currentView != ChildViews.Bulletin)
             {
-                LoadChildForm(ChildForms.Bulletin);
+                LoadChildView(ChildViews.Bulletin);
                 _mainView.Header("Bulletin");
-                _currentForm = ChildForms.Bulletin;
+                _currentView = ChildViews.Bulletin;
             }
         }
 
         private void ConsultationEvent(object? sender, EventArgs e)
         {
-            if (_currentForm != ChildForms.Consultation)
+            if (_currentView != ChildViews.Consultation)
             {
-                LoadChildForm(ChildForms.Consultation);
+                LoadChildView(ChildViews.Consultation);
                 _mainView.Header("Consultation");
-                _currentForm = ChildForms.Consultation;
+                _currentView = ChildViews.Consultation;
             }
         }
 
         private void SFManagementEvent(object? sender, EventArgs e)
         {
-            if (_currentForm != ChildForms.UserManagement)
+            if (_currentView != ChildViews.UserManagement)
             {
-                LoadChildForm(ChildForms.UserManagement);
+                LoadChildView(ChildViews.UserManagement);
                 _mainView.Header("User Management");
-                _currentForm = ChildForms.UserManagement;
+                _currentView = ChildViews.UserManagement;
             }
         }
 
         private void ReportsEvent(object? sender, EventArgs e)
         {
-            if (_currentForm != ChildForms.Reports)
+            if (_currentView != ChildViews.Reports)
             {
-                LoadChildForm(ChildForms.Reports);
+                LoadChildView(ChildViews.Reports);
                 _mainView.Header("Reports");
-                _currentForm = ChildForms.Reports;
+                _currentView = ChildViews.Reports;
             }
         }
 
@@ -100,41 +99,30 @@ namespace Consultation.App.Presenters
             _mainView.SetMessage("Setting Event Triggered");
         }
 
-        private void LoadChildForm(ChildForms formType)
+        private void LoadChildView(ChildViews viewType)
         {
-            if (_activeForm != null && !_activeForm.IsDisposed)
+            if (!_childViews.TryGetValue(viewType, out var view) || view.IsDisposed)
             {
-                _activeForm.Hide();
+                view = CreateViewByType(viewType);
+                _childViews[viewType] = view;
             }
 
-            if (!_childForms.TryGetValue(formType, out var form) || form.IsDisposed)
-            {
-                form = CreateFormByType(formType);
-                _childForms[formType] = form;
-            }
-
-            //form.FormBorderStyle = FormBorderStyle.None;
-            form.MdiParent = (Form)_mainView;
-            form.Dock = DockStyle.Fill;
-            form.ShowInTaskbar = false;
-
-            _activeForm = form;
-            form.BringToFront();
-            form.Show();
+            // Clear the container and add the new UserControl
+            _mainView.MainPanel.Controls.Clear();
+            view.Dock = DockStyle.Fill;
+            _mainView.MainPanel.Controls.Add(view);
+            view.BringToFront();
         }
 
-
-
-        private Form CreateFormByType(ChildForms formType)
+        private UserControl CreateViewByType(ChildViews viewType)
         {
-            return formType switch
+            return viewType switch
             {
-                ChildForms.Dashboard => new DashboardView(),
-                ChildForms.Consultation => new ConsultationView(),
-                ChildForms.Bulletin => new BulletinView(),
-                ChildForms.Reports => new ReportsView(),
-                ChildForms.UserManagement => new UserManagementView(),
-                _ => new Form() { Text = "Not Implemented" }
+                ChildViews.Dashboard => new DashboardView(), // Must be UserControl now
+                ChildViews.Consultation => new ConsultationView(),
+                ChildViews.Bulletin => new BulletinView(),
+                ChildViews.UserManagement => new UserManagementView(),
+                _ => new UserControl() { Name = "NotImplementedView" }
             };
         }
     }

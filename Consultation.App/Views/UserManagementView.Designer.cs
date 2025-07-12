@@ -344,7 +344,7 @@
             // 
             backStageView1.BackStage = null;
             backStageView1.HostControl = null;
-            backStageView1.HostForm = this;
+            //backStageView1.HostForm = this;
             // 
             // panel4
             // 
@@ -410,7 +410,7 @@
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panelUM);
-            FormBorderStyle = FormBorderStyle.None;
+            //FormBorderStyle = FormBorderStyle.None;
             Name = "UserManagementView";
             Text = "Form1";
             Load += StudentFacultyView_Load;

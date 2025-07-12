@@ -27,7 +27,7 @@ namespace Consultation.App.Views
 
 
         }
-
+        public Panel MainPanel => panelContainer;
         public event EventHandler DashboardEvent;
         public event EventHandler ConsultationEvent;
         public event EventHandler BulletinEvent;
