@@ -53,7 +53,7 @@ namespace Consultation.Infrastructure.Data
             DatabaseSeeder.UserSeeder("1226920F-9508-44B3-845A-ABABBBCBCF5D", "685043", "Reggie Soylon", "ReggieSoylon.6850@umindanao.edu.ph", "MyStudent123!", Domain.Enum.UserType.Student),
             DatabaseSeeder.UserSeeder("0A52E15B-95E6-40FE-9110-9A44817BFF39", "899812", "Cheley Balsomo", "CheleyBalsomo.8998@umindanao.edu.ph", "MyStudent123!", Domain.Enum.UserType.Student),
             DatabaseSeeder.UserSeeder("78B4AF2A-672F-43C5-B819-5F0B407B7187", "797132", "Jeanelle Labsan", "JeanelleLabsan.7971@umindanao.edu.ph", "MyFaculty123!", Domain.Enum.UserType.Faculty),
-            DatabaseSeeder.UserSeeder("59CF8531-68E4-466B-BAEC-45305FE16A14", "924132", "Christopher Destajo", "ChristopherDestajo.9241@umindanao.edu.ph", "MyStudent123!", Domain.Enum.UserType.Student)
+            DatabaseSeeder.UserSeeder("59CF8531-68E4-466B-BAEC-45305FE16A14", "924132", "Christopher Destajo", "ChristopherDestajo.9241@umindanao.edu.ph", "MyStudent123!", Domain.Enum.UserType.Student),
             };
 
             var departments = new List<Department>

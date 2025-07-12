@@ -1,4 +1,5 @@
-﻿using Syncfusion.WinForms.Controls;
+﻿using Consultation.App.Views.IViews;
+using Guna.UI2.WinForms.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,80 +13,46 @@ using System.Windows.Forms;
 
 namespace Consultation.App.Views
 {
-    public partial class LogInView : SfForm
+    public partial class LogInView : Form, ILoginView
     {
         public LogInView()
         {
             InitializeComponent();
-            this.AllowRoundedCorners = true;
-            SignInTextBox.TextChanged += SignInTextBox_TextChanged;
-            PasswordTextBoxV2.TextChanged += PasswordTextBoxV2_TextChanged;
+
+            EmailTextBox.TextChanged += SignInTextBox_TextChanged;
+            PasswordTextBox.TextChanged += PasswordTextBoxV2_TextChanged;
+            buttonLogIn.Click += (s, e) => LogInEvent?.Invoke(s, e);
         }
 
-        private void Log_In_Load(object sender, EventArgs e)
+        private void ShowPassButton_Click(object sender, EventArgs e)
         {
-
+            PasswordVisible = !PasswordVisible;
+            PasswordTextBox.UseSystemPasswordChar = !PasswordVisible;
         }
 
-        private bool PasswordVisible = false;
-        private const string LePassword = "admin";
-        private bool EmailIsValid(string email)
-
+        public void ShowMessage(string message)
         {
-            return Regex.IsMatch(email,
-            @"^[^@\s]+@[^@\s]+\.[^@\s]+$",
-            RegexOptions.IgnoreCase);
+            MessageBox.Show(message);
         }
 
-        private void SignInButton_Click(object sender, EventArgs e)
+        public void HideForm()
         {
-            string email = SignInTextBox.Text.Trim();
-            string password = PasswordTextBoxV2.Text.Trim();
+            this.Hide();
+        }
+        //public string useremail => EmailTextBox.Text;
 
-            bool Valid = true;
+        //public string password => PasswordTextBox.Text;
 
-            resultlabel1.Text = "";
-            ErrorPassLabel.Text = "";
+        public string useremail => EmailTextBox.Text;
 
-            if (string.IsNullOrWhiteSpace(email))
-            {
-                resultlabel1.Text = "Please enter your Email";
-                resultlabel1.ForeColor = Color.Red;
-                SignInTextBox.Clear();
-                Valid = false;
-            }
+        public string password => PasswordTextBox.Text;
 
-            if (string.IsNullOrEmpty(password))
-            {
-                ErrorPassLabel.Text = "Please Enter your Password";
-                ErrorPassLabel.ForeColor = Color.Red;
-                PasswordTextBoxV2.Clear();
-                Valid = false;
-            }
+        public event EventHandler LogInEvent;
 
-            if (!string.IsNullOrWhiteSpace(email) && !EmailIsValid(email))
-            {
-                SignInTextBox.Clear();
 
-                resultlabel1.Text = "Invalid Email, Please try again.";
-                resultlabel1.ForeColor = Color.Red;
-                Valid = false;
-            }
+        private void LogIn_Load(object sender, EventArgs e)
+        {
 
-            if (!string.IsNullOrWhiteSpace(password) && password != LePassword)
-            {
-                PasswordTextBoxV2.Clear();
-
-                ErrorPassLabel.Text = "Incorrect Password";
-                ErrorPassLabel.ForeColor = Color.Red;
-                Valid = false;
-            }
-
-            if (Valid)
-            {
-                this.DialogResult = DialogResult.OK;
-                this.Close();
-            }
         }
 
         private void SignInTextBox_TextChanged(object sender, EventArgs e)
@@ -98,10 +65,22 @@ namespace Consultation.App.Views
             ErrorPassLabel.Text = "";
         }
 
-        private void ShowPassButton_Click(object sender, EventArgs e)
+        private bool PasswordVisible = false;
+        private const string LePassword = "admin";
+
+        private bool EmailIsValid(string email)
+
         {
-            PasswordVisible = !PasswordVisible;
-            PasswordTextBoxV2.UseSystemPasswordChar = !PasswordVisible;
+            return Regex.IsMatch(email,
+            @"^[^@\s]+@[^@\s]+\.[^@\s]+$",
+            RegexOptions.IgnoreCase);
         }
+
+        //private void SignInButton_Click(object sender, EventArgs e)
+        //{
+        //    LogInEvent?.Invoke(this, EventArgs.Empty);
+
+        //}
+
     }
 }

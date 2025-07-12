@@ -24,7 +24,7 @@ namespace Consultation.App.Views
             buttonSFManagement.Click += (s, e) => SFManagementEvent?.Invoke(s, e);
             //buttonReports.Click += (s, e) => ReportsEvent?.Invoke(s, e);
             buttonPreference.Click += (s, e) => PreferenceEvent?.Invoke(s, e);
-
+            this.FormClosed += MainView_FormClosed;
 
         }
         public Panel MainPanel => panelContainer;
@@ -55,6 +55,15 @@ namespace Consultation.App.Views
         {
             buttonDashboard.ImageIndex = 1;
             buttonDashboard.ForeColor = Color.Black;
+        }
+        private void MainView_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        public void ShowForm()
+        {
+            Show();
         }
     }
 }

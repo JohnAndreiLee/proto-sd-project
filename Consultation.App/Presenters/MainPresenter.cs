@@ -114,6 +114,11 @@ namespace Consultation.App.Presenters
             view.BringToFront();
         }
 
+        //private void MainView_FormClosed(object sender, FormClosedEventArgs e)
+        //{
+        //    Application.Exit();
+        //}
+
         private UserControl CreateViewByType(ChildViews viewType)
         {
             return viewType switch

@@ -1,6 +1,8 @@
 using Consultation.App.Presenters;
 using Consultation.App.Views;
 using Consultation.App.Views.IViews;
+using Consultation.BackEndCRUD.Service;
+using Consultation.Infrastructure.Data;
 namespace Consultation.App
 {
     internal static class Program
@@ -19,17 +21,26 @@ namespace Consultation.App
 
             IMainView mainView = new MainView();
             new MainPresenter(mainView);
+            AppDbContext appDbContext = new AppDbContext();
 
-            //Application.Run(new BulletinView());    
-            using (var loginView = new LogIn())
-            {
-                if (loginView.ShowDialog() == DialogResult.OK)
-                {
-                    //LoadProgramList();
-                    Application.Run((Form)mainView);
+            var authservice = new AuthService(appDbContext);
 
-                }
-            }
+            ILoginView loginView = new LogInView();
+            new LogInPresenter(loginView, authservice);
+
+            Application.Run((Form)loginView);
+
+            ////Application.Run(new BulletinView());
+            //ILoginView loginView = new LogInView();
+            //using (new LogInPresenter(loginView, authservice))
+            //{
+            //    if (loginView.ShowDialog() == DialogResult.OK)
+            //    {
+            //        //LoadProgramList();
+            //        Application.Run((Form)mainView);
+
+            //    }
+            //}
         }
     }
            

@@ -8,9 +8,14 @@ namespace Consultation.App.Views.IViews
 {
     public interface ILoginView
     {
-        string useremail { get; set; }
-        string password { get; set; }
+        string useremail { get; }
+        string password { get; }
+        DialogResult DialogResult { get; set; }
 
         event EventHandler LogInEvent;
+
+        void HideForm();
+
+        void ShowMessage(string message);
     }
 }

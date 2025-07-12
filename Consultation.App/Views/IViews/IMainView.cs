@@ -13,6 +13,8 @@
         void Header(string header);
         void SetMessage(string message);
 
+        void ShowForm();
+
         Panel MainPanel { get; } 
     }
 }
