@@ -92,8 +92,8 @@ namespace Consultation.App.Views
 
             if (Valid)
             {
-                MainView mainView = new MainView();
-                mainView.Show();
+                //MainView mainView = new MainView();
+                //mainView.Show();
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
