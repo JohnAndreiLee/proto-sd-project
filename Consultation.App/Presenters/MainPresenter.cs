@@ -1,17 +1,18 @@
-﻿using Consultation.App.Views.IViews;
+﻿using Consultation.App.ConsultationManagement;
+using Consultation.App.Views;
+using Consultation.App.Views.IViews;
 using Consultation.App.Views.TestViews;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
-using Consultation.App.Views;
-using Consultation.App.ConsultationManagement;
 
 namespace Consultation.App.Presenters
 {
     public class MainPresenter
     {
         private readonly IMainView _mainView;
-        private Button currentBtn;
+
         private enum ChildViews
         {
             Dashboard,
@@ -23,7 +24,6 @@ namespace Consultation.App.Presenters
         }
 
         private ChildViews _currentView;
-
         private readonly Dictionary<ChildViews, UserControl> _childViews = new();
 
         public MainPresenter(IMainView mainView)
@@ -40,13 +40,17 @@ namespace Consultation.App.Presenters
             LoadChildView(ChildViews.Dashboard);
             _mainView.Header("Dashboard");
             _currentView = ChildViews.Dashboard;
+
+            // Highlight default button manually
+            if (_mainView is MainView view)
+            {
+                SetActiveButton(view.Controls.Find("buttonDashboard", true)[0] as Button);
+            }
         }
 
-        // Event handlers
         private void DashboardEvent(object? sender, EventArgs e)
         {
-            //Button btn = sender as Button;
-            HighlightButton(sender as Button);
+            SetActiveButton(sender as Button);
             if (_currentView != ChildViews.Dashboard)
             {
                 LoadChildView(ChildViews.Dashboard);
@@ -57,7 +61,7 @@ namespace Consultation.App.Presenters
 
         private void BulletinEvent(object? sender, EventArgs e)
         {
-            HighlightButton(sender as Button);
+            SetActiveButton(sender as Button);
             if (_currentView != ChildViews.Bulletin)
             {
                 LoadChildView(ChildViews.Bulletin);
@@ -68,7 +72,7 @@ namespace Consultation.App.Presenters
 
         private void ConsultationEvent(object? sender, EventArgs e)
         {
-            HighlightButton(sender as Button);
+            SetActiveButton(sender as Button);
             if (_currentView != ChildViews.Consultation)
             {
                 LoadChildView(ChildViews.Consultation);
@@ -79,7 +83,7 @@ namespace Consultation.App.Presenters
 
         private void SFManagementEvent(object? sender, EventArgs e)
         {
-            HighlightButton(sender as Button);
+            SetActiveButton(sender as Button);
             if (_currentView != ChildViews.UserManagement)
             {
                 LoadChildView(ChildViews.UserManagement);
@@ -90,6 +94,7 @@ namespace Consultation.App.Presenters
 
         private void ReportsEvent(object? sender, EventArgs e)
         {
+            SetActiveButton(sender as Button);
             if (_currentView != ChildViews.Reports)
             {
                 LoadChildView(ChildViews.Reports);
@@ -100,8 +105,8 @@ namespace Consultation.App.Presenters
 
         private void PreferenceEvent(object? sender, EventArgs e)
         {
-            HighlightButton(sender as Button);
-            _mainView.SetMessage("Setting Event Triggered");
+            SetActiveButton(sender as Button);
+            _mainView.SetMessage("Settings clicked");
         }
 
         private void LoadChildView(ChildViews viewType)
@@ -112,23 +117,17 @@ namespace Consultation.App.Presenters
                 _childViews[viewType] = view;
             }
 
-            // Clear the container and add the new UserControl
             _mainView.MainPanel.Controls.Clear();
             view.Dock = DockStyle.Fill;
             _mainView.MainPanel.Controls.Add(view);
             view.BringToFront();
         }
 
-        //private void MainView_FormClosed(object sender, FormClosedEventArgs e)
-        //{
-        //    Application.Exit();
-        //}
-
         private UserControl CreateViewByType(ChildViews viewType)
         {
             return viewType switch
             {
-                ChildViews.Dashboard => new DashboardView(), // Must be UserControl now
+                ChildViews.Dashboard => new DashboardView(),
                 ChildViews.Consultation => new ConsultationView(),
                 ChildViews.Bulletin => new BulletinView(),
                 ChildViews.UserManagement => new UserManagementView(),
@@ -136,25 +135,17 @@ namespace Consultation.App.Presenters
             };
         }
 
-        private void HighlightButton(Button button)
+        private void SetActiveButton(Button button)
         {
             if (button == null) return;
 
-            // Reset previous button (if any)
-            if (currentBtn != null)
+            if (_mainView.CurrentActiveButton != null)
             {
-                currentBtn.BackColor = Color.Transparent;
-                currentBtn.ForeColor = Color.White;
-                currentBtn.ImageIndex = 0;
+                _mainView.ResetButton(_mainView.CurrentActiveButton);
             }
 
-            // Highlight new button
-            currentBtn = button;
-            currentBtn.BackColor = Color.White;
-            currentBtn.ForeColor = Color.Black;
-            currentBtn.ImageIndex = 1; // Use highlighted icon if any
+            _mainView.HighlightButton(button);
+            _mainView.CurrentActiveButton = button;
         }
-
     }
 }
-

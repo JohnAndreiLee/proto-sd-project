@@ -16,15 +16,13 @@ namespace Consultation.App.Views
 
             profilePanel.BackColor = Color.FromArgb(50, 0, 0, 0);
 
-            // Attach click handlers
             buttonDashboard.Click += (s, e) => DashboardEvent?.Invoke(s, e);
             buttonConsultation.Click += (s, e) => ConsultationEvent?.Invoke(s, e);
             buttonBulletin.Click += (s, e) => BulletinEvent?.Invoke(s, e);
             buttonSFManagement.Click += (s, e) => SFManagementEvent?.Invoke(s, e);
             buttonPreference.Click += (s, e) => PreferenceEvent?.Invoke(s, e);
-
             this.FormClosed += MainView_FormClosed;
-            // List of nav buttons to apply hover effect
+
             _navButtons = new[]
             {
                 buttonDashboard,
@@ -34,8 +32,6 @@ namespace Consultation.App.Views
                 buttonPreference
             };
 
-
-            // Attach hover handlers to all
             foreach (var btn in _navButtons)
             {
                 btn.MouseEnter += NavButton_MouseEnter;
@@ -45,6 +41,8 @@ namespace Consultation.App.Views
 
         public Panel MainPanel => panelContainer;
 
+        public Button CurrentActiveButton { get; set; }
+
         public event EventHandler DashboardEvent;
         public event EventHandler ConsultationEvent;
         public event EventHandler BulletinEvent;
@@ -52,6 +50,43 @@ namespace Consultation.App.Views
         public event EventHandler ReportsEvent;
         public event EventHandler PreferenceEvent;
 
+        public void HighlightButton(Button button)
+        {
+            if (button == null) return;
+            button.BackColor = Color.White;
+            button.ForeColor = Color.Black;
+            button.ImageIndex = 1; // Optional: highlighted icon
+        }
+
+        public void ResetButton(Button button)
+        {
+            if (button == null) return;
+            button.BackColor = Color.Transparent;
+            button.ForeColor = Color.White;
+            button.ImageIndex = 0; // Optional: normal icon
+        }
+
+        private void NavButton_MouseEnter(object sender, EventArgs e)
+        {
+            var btn = sender as Button;
+            if (btn != null && btn != CurrentActiveButton)
+            {
+                btn.BackColor = Color.LightGray;
+                btn.ImageIndex = 1;
+                btn.ForeColor = Color.Black;
+            }
+        }
+
+        private void NavButton_MouseLeave(object sender, EventArgs e)
+        {
+            var btn = sender as Button;
+            if (btn != null && btn != CurrentActiveButton)
+            {
+                btn.BackColor = Color.Transparent;
+                btn.ForeColor = Color.White;
+                btn.ImageIndex = 0;
+            }
+        }
         public void Header(string header)
         {
             labelForm.Text = header;
@@ -60,28 +95,6 @@ namespace Consultation.App.Views
         public void SetMessage(string message)
         {
             MessageBox.Show(message);
-        }
-
-        private void NavButton_MouseEnter(object sender, EventArgs e)
-        {
-            if (sender is Button btn) ButtonHighlight(btn);
-        }
-
-        private void NavButton_MouseLeave(object sender, EventArgs e)
-        {
-            if (sender is Button btn) ButtonUnhighlight(btn);
-        }
-
-        public void ButtonHighlight(Button btn)
-        {
-            btn.ImageIndex = 1;
-            btn.ForeColor = Color.Black;
-        }
-
-        public void ButtonUnhighlight(Button btn)
-        {
-            btn.ImageIndex = 0;
-            btn.ForeColor = Color.White;
         }
         private void MainView_FormClosed(object sender, FormClosedEventArgs e)
         {

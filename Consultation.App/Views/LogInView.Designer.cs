@@ -208,7 +208,6 @@
             buttonLogIn.TabIndex = 5;
             buttonLogIn.Text = "Log In";
             buttonLogIn.UseVisualStyleBackColor = false;
-            //buttonLogIn.Click += SignInButton_Click;
             // 
             // RememberMeCheckBox
             // 
@@ -266,15 +265,16 @@
             EmailTextBox.TabIndex = 0;
             EmailTextBox.TextChanged += SignInTextBox_TextChanged;
             // 
-            // LogIn
+            // LogInView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.AppWorkspace;
             ClientSize = new Size(1924, 1041);
             Controls.Add(dockingClientPanel1);
-            Name = "LogIn";
+            Name = "LogInView";
             Text = "LogIn";
+            WindowState = FormWindowState.Maximized;
             Load += LogIn_Load;
             dockingClientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
