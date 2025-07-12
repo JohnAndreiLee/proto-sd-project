@@ -113,7 +113,7 @@ namespace Consultation.App.Presenters
                 _childForms[formType] = form;
             }
 
-            form.FormBorderStyle = FormBorderStyle.None;
+            //form.FormBorderStyle = FormBorderStyle.None;
             form.MdiParent = (Form)_mainView;
             form.Dock = DockStyle.Fill;
             form.ShowInTaskbar = false;
