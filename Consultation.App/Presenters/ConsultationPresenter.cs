@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Consultation.App.Presenters
 {
-    public class ConsultationRequestPresenter
+    public class ConsultationPresenter
     {
     }
 }

@@ -21,6 +21,8 @@ namespace Consultation.App.ConsultationManagement
         {
             InitializeComponent();
 
+
+            // what does this do??
             for (int i = 0; i < 4; i++)
             {
                 ConsultationCard card = new ConsultationCard();

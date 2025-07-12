@@ -15,6 +15,8 @@ namespace Consultation.App.ConsultationManagement
             ShowConsultationView();
         }
 
+
+        
         private void ShowConsultationView()
         {
             MoveUnderline(btnConsultation);
@@ -28,6 +30,16 @@ namespace Consultation.App.ConsultationManagement
 
             WindowPanelConsultation.Controls.Add(csWindow);
         }
+
+
+        private void MoveUnderline(Control targetButton)
+        {
+            underlinePanel.Width = targetButton.Width;
+            underlinePanel.Left = targetButton.Left;
+            underlinePanel.Top = targetButton.Bottom - 4;
+            underlinePanel.Visible = true;
+        }
+
 
         private void OnCardArchived(object sender, ConsultationCard card)
         {
@@ -56,14 +68,6 @@ namespace Consultation.App.ConsultationManagement
             WindowPanelConsultation.Controls.Add(archiveWindow);
 
 
-        }
-
-        private void MoveUnderline(Control targetButton)
-        {
-            underlinePanel.Width = targetButton.Width;
-            underlinePanel.Left = targetButton.Left;
-            underlinePanel.Top = targetButton.Bottom - 4;
-            underlinePanel.Visible = true;
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)

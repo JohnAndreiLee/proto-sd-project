@@ -46,10 +46,10 @@
             // guna2HtmlLabel1
             // 
             guna2HtmlLabel1.BackColor = Color.Transparent;
-            guna2HtmlLabel1.Font = new Font("Archivo SemiBold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel1.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel1.Location = new Point(20, 19);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(217, 34);
+            guna2HtmlLabel1.Size = new Size(234, 27);
             guna2HtmlLabel1.TabIndex = 0;
             guna2HtmlLabel1.Text = "Archived Consultation";
             // 
@@ -92,20 +92,20 @@
             // LabelWindow
             // 
             LabelWindow.BackColor = Color.Transparent;
-            LabelWindow.Font = new Font("Archivo", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LabelWindow.Font = new Font("Microsoft Sans Serif", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LabelWindow.Location = new Point(17, 18);
             LabelWindow.Name = "LabelWindow";
-            LabelWindow.Size = new Size(203, 31);
+            LabelWindow.Size = new Size(207, 26);
             LabelWindow.TabIndex = 0;
             LabelWindow.Text = "Archived Consultation";
             // 
             // guna2HtmlLabel2
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
-            guna2HtmlLabel2.Font = new Font("Archivo SemiBold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel2.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel2.Location = new Point(17, 14);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(217, 34);
+            guna2HtmlLabel2.Size = new Size(234, 27);
             guna2HtmlLabel2.TabIndex = 0;
             guna2HtmlLabel2.Text = "Archived Consultation";
             // 
