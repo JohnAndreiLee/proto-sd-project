@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Consultation.App.Views.IViews;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,14 +12,24 @@ using System.Windows.Forms;
 
 namespace Consultation.App.Views
 {
-    public partial class LogIn : Form
+    public partial class LogIn : Form, ILoginView
     {
+
+        //public string useremail => EmailTextBox.Text;
+
+        //public string password => PasswordTextBox.Text;
+
+        string ILoginView.useremail { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        string ILoginView.password { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public event EventHandler LogInEvent;
+
         public LogIn()
         {
             InitializeComponent();
 
-            SignInTextBox.TextChanged += SignInTextBox_TextChanged;
-            PasswordTextBoxV2.TextChanged += PasswordTextBoxV2_TextChanged;
+            EmailTextBox.TextChanged += SignInTextBox_TextChanged;
+            PasswordTextBox.TextChanged += PasswordTextBoxV2_TextChanged;
         }
 
         private void LogIn_Load(object sender, EventArgs e)
@@ -38,6 +49,7 @@ namespace Consultation.App.Views
 
         private bool PasswordVisible = false;
         private const string LePassword = "admin";
+
         private bool EmailIsValid(string email)
 
         {
@@ -48,61 +60,64 @@ namespace Consultation.App.Views
 
         private void SignInButton_Click(object sender, EventArgs e)
         {
-            string email = SignInTextBox.Text.Trim();
-            string password = PasswordTextBoxV2.Text.Trim();
+            LogInEvent?.Invoke(this, EventArgs.Empty);
 
-            bool Valid = true;
 
-            resultlabel1.Text = "";
-            ErrorPassLabel.Text = "";
+        //    string email = SignInTextBox.Text.Trim();
+        //    string password = PasswordTextBoxV2.Text.Trim();
 
-            if (string.IsNullOrWhiteSpace(email))
-            {
-                resultlabel1.Text = "Please enter your Email";
-                resultlabel1.ForeColor = Color.Red;
-                SignInTextBox.Clear();
-                Valid = false;
-            }
+        //    bool Valid = true;
 
-            if (string.IsNullOrEmpty(password))
-            {
-                ErrorPassLabel.Text = "Please Enter your Password";
-                ErrorPassLabel.ForeColor = Color.Red;
-                PasswordTextBoxV2.Clear();
-                Valid = false;
-            }
+        //    resultlabel1.Text = "";
+        //    ErrorPassLabel.Text = "";
 
-            if (!string.IsNullOrWhiteSpace(email) && !EmailIsValid(email))
-            {
-                SignInTextBox.Clear();
+        //    if (string.IsNullOrWhiteSpace(email))
+        //    {
+        //        resultlabel1.Text = "Please enter your Email";
+        //        resultlabel1.ForeColor = Color.Red;
+        //        SignInTextBox.Clear();
+        //        Valid = false;
+        //    }
 
-                resultlabel1.Text = "Invalid Email, Please try again.";
-                resultlabel1.ForeColor = Color.Red;
-                Valid = false;
-            }
+        //    if (string.IsNullOrEmpty(password))
+        //    {
+        //        ErrorPassLabel.Text = "Please Enter your Password";
+        //        ErrorPassLabel.ForeColor = Color.Red;
+        //        PasswordTextBoxV2.Clear();
+        //        Valid = false;
+        //    }
 
-            if (!string.IsNullOrWhiteSpace(password) && password != LePassword)
-            {
-                PasswordTextBoxV2.Clear();
+        //    if (!string.IsNullOrWhiteSpace(email) && !EmailIsValid(email))
+        //    {
+        //        SignInTextBox.Clear();
 
-                ErrorPassLabel.Text = "Incorrect Password";
-                ErrorPassLabel.ForeColor = Color.Red;
-                Valid = false;
-            }
+        //        resultlabel1.Text = "Invalid Email, Please try again.";
+        //        resultlabel1.ForeColor = Color.Red;
+        //        Valid = false;
+        //    }
 
-            if (Valid)
-            {
-                MainView mainView = new MainView();
-                mainView.Show();
-                this.DialogResult = DialogResult.OK;
-                this.Close();
-            }
+        //    if (!string.IsNullOrWhiteSpace(password) && password != LePassword)
+        //    {
+        //        PasswordTextBoxV2.Clear();
+
+        //        ErrorPassLabel.Text = "Incorrect Password";
+        //        ErrorPassLabel.ForeColor = Color.Red;
+        //        Valid = false;
+        //    }
+
+        //    if (Valid)
+        //    {
+        //        //MainView mainView = new MainView();
+        //        //mainView.Show();
+        //        this.DialogResult = DialogResult.OK;
+        //        this.Close();
+        //    }
         }
 
         private void ShowPassButton_Click(object sender, EventArgs e)
         {
             PasswordVisible = !PasswordVisible;
-            PasswordTextBoxV2.UseSystemPasswordChar = !PasswordVisible;
+            PasswordTextBox.UseSystemPasswordChar = !PasswordVisible;
         }
     }
 }
