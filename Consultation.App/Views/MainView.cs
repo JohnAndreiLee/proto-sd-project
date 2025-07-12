@@ -22,10 +22,8 @@ namespace Consultation.App.Views
             buttonBulletin.Click += (s, e) => BulletinEvent?.Invoke(s, e);
             buttonSFManagement.Click += (s, e) => SFManagementEvent?.Invoke(s, e);
             buttonPreference.Click += (s, e) => PreferenceEvent?.Invoke(s, e);
-<<<<<<< HEAD
-            this.FormClosed += MainView_FormClosed;
-=======
 
+            this.FormClosed += MainView_FormClosed;
             // List of nav buttons to apply hover effect
             _navButtons = new[]
             {
@@ -35,7 +33,7 @@ namespace Consultation.App.Views
                 buttonSFManagement,
                 buttonPreference
             };
->>>>>>> d0989aca09de3c61da6bc790767f04f19866b4ab
+
 
             // Attach hover handlers to all
             foreach (var btn in _navButtons)
