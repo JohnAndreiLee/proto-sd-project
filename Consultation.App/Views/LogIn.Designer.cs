@@ -43,15 +43,15 @@
             SignInButton = new Button();
             RememberMeCheckBox = new Syncfusion.Windows.Forms.Tools.CheckBoxAdv();
             label2 = new Label();
-            PasswordTextBoxV2 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            PasswordTextBox = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             label1 = new Label();
-            SignInTextBox = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
+            EmailTextBox = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             dockingClientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)RememberMeCheckBox).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)PasswordTextBoxV2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)SignInTextBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)PasswordTextBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)EmailTextBox).BeginInit();
             SuspendLayout();
             // 
             // dockingClientPanel1
@@ -89,9 +89,9 @@
             panel1.Controls.Add(SignInButton);
             panel1.Controls.Add(RememberMeCheckBox);
             panel1.Controls.Add(label2);
-            panel1.Controls.Add(PasswordTextBoxV2);
+            panel1.Controls.Add(PasswordTextBox);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(SignInTextBox);
+            panel1.Controls.Add(EmailTextBox);
             panel1.Location = new Point(1180, 105);
             panel1.Name = "panel1";
             panel1.Size = new Size(589, 849);
@@ -230,18 +230,18 @@
             label2.TabIndex = 3;
             label2.Text = "Password:";
             // 
-            // PasswordTextBoxV2
+            // PasswordTextBox
             // 
-            PasswordTextBoxV2.BackColor = Color.Transparent;
-            PasswordTextBoxV2.BeforeTouchSize = new Size(470, 43);
-            PasswordTextBoxV2.Font = new Font("Segoe UI", 12F);
-            PasswordTextBoxV2.Location = new Point(58, 266);
-            PasswordTextBoxV2.Multiline = true;
-            PasswordTextBoxV2.Name = "PasswordTextBoxV2";
-            PasswordTextBoxV2.PasswordChar = '●';
-            PasswordTextBoxV2.Size = new Size(470, 43);
-            PasswordTextBoxV2.TabIndex = 2;
-            PasswordTextBoxV2.TextChanged += PasswordTextBoxV2_TextChanged;
+            PasswordTextBox.BackColor = Color.Transparent;
+            PasswordTextBox.BeforeTouchSize = new Size(470, 43);
+            PasswordTextBox.Font = new Font("Segoe UI", 12F);
+            PasswordTextBox.Location = new Point(58, 266);
+            PasswordTextBox.Multiline = true;
+            PasswordTextBox.Name = "PasswordTextBox";
+            PasswordTextBox.PasswordChar = '●';
+            PasswordTextBox.Size = new Size(470, 43);
+            PasswordTextBox.TabIndex = 2;
+            PasswordTextBox.TextChanged += PasswordTextBoxV2_TextChanged;
             // 
             // label1
             // 
@@ -254,17 +254,17 @@
             label1.TabIndex = 1;
             label1.Text = "Umindanao E-mail Address:";
             // 
-            // SignInTextBox
+            // EmailTextBox
             // 
-            SignInTextBox.BackColor = Color.Transparent;
-            SignInTextBox.BeforeTouchSize = new Size(470, 43);
-            SignInTextBox.Font = new Font("Segoe UI", 12F);
-            SignInTextBox.Location = new Point(58, 136);
-            SignInTextBox.Multiline = true;
-            SignInTextBox.Name = "SignInTextBox";
-            SignInTextBox.Size = new Size(470, 43);
-            SignInTextBox.TabIndex = 0;
-            SignInTextBox.TextChanged += SignInTextBox_TextChanged;
+            EmailTextBox.BackColor = Color.Transparent;
+            EmailTextBox.BeforeTouchSize = new Size(470, 43);
+            EmailTextBox.Font = new Font("Segoe UI", 12F);
+            EmailTextBox.Location = new Point(58, 136);
+            EmailTextBox.Multiline = true;
+            EmailTextBox.Name = "EmailTextBox";
+            EmailTextBox.Size = new Size(470, 43);
+            EmailTextBox.TabIndex = 0;
+            EmailTextBox.TextChanged += SignInTextBox_TextChanged;
             // 
             // LogIn
             // 
@@ -281,8 +281,8 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)RememberMeCheckBox).EndInit();
-            ((System.ComponentModel.ISupportInitialize)PasswordTextBoxV2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)SignInTextBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)PasswordTextBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)EmailTextBox).EndInit();
             ResumeLayout(false);
         }
 
@@ -291,9 +291,9 @@
         private Syncfusion.Windows.Forms.Tools.DockingClientPanel dockingClientPanel1;
         private Panel panel1;
         private PictureBox pictureBox1;
-        private Syncfusion.Windows.Forms.Tools.TextBoxExt PasswordTextBoxV2;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt PasswordTextBox;
         private Label label1;
-        private Syncfusion.Windows.Forms.Tools.TextBoxExt SignInTextBox;
+        private Syncfusion.Windows.Forms.Tools.TextBoxExt EmailTextBox;
         private Label label2;
         private Button SignInButton;
         private Syncfusion.Windows.Forms.Tools.CheckBoxAdv RememberMeCheckBox;
