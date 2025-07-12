@@ -96,7 +96,7 @@ namespace Consultation.App.Views
         //        Valid = false;
         //    }
 
-<<<<<<< HEAD
+
         //    if (!string.IsNullOrWhiteSpace(password) && password != LePassword)
         //    {
         //        PasswordTextBoxV2.Clear();
@@ -113,15 +113,7 @@ namespace Consultation.App.Views
         //        this.DialogResult = DialogResult.OK;
         //        this.Close();
         //    }
-=======
-            if (Valid)
-            {
-                //MainView mainView = new MainView();
-                //mainView.Show();
-                this.DialogResult = DialogResult.OK;
-                this.Close();
-            }
->>>>>>> 6fcd5bd347e8840ff5f28401054f762afcefdad2
+
         }
 
         private void ShowPassButton_Click(object sender, EventArgs e)
