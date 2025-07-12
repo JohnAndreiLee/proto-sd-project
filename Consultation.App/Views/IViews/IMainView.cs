@@ -2,6 +2,7 @@
 {
     public interface IMainView
     {
+        //coment
         event EventHandler DashboardEvent;
         event EventHandler ConsultationEvent;
         event EventHandler BulletinEvent;
