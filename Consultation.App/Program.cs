@@ -21,7 +21,15 @@ namespace Consultation.App
             new MainPresenter(mainView);
 
             //Application.Run(new BulletinView());    
-            Application.Run((Form)mainView);
+            using (var loginView = new LogIn())
+            {
+                if (loginView.ShowDialog() == DialogResult.OK)
+                {
+                    //LoadProgramList();
+                    Application.Run((Form)mainView);
+
+                }
+            }
         }
     }
            

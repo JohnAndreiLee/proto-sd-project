@@ -221,7 +221,7 @@
             Controls.Add(materialCard1);
             Controls.Add(materialCard2);
             DoubleBuffered = true;
-            FormBorderStyle = FormBorderStyle.None;
+            //FormBorderStyle = FormBorderStyle.None;
             Name = "BulletinView";
             Text = "BulletinsForm";
             materialCard1.ResumeLayout(false);

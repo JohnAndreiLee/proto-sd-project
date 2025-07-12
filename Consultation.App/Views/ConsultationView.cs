@@ -4,7 +4,11 @@ using System.Windows.Forms;
 
 namespace Consultation.App.ConsultationManagement
 {
+<<<<<<< HEAD
     public partial class ConsultationView : Form, IConsultationView
+=======
+    public partial class ConsultationView : UserControl
+>>>>>>> 6fcd5bd347e8840ff5f28401054f762afcefdad2
     {
         private CSWindow csWindow;
         private ArchiveWindow archiveWindow;
