@@ -159,6 +159,7 @@
             ClientSize = new Size(1658, 961);
             Controls.Add(WindowPanelConsultation);
             Controls.Add(materialCard2);
+            DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
             Name = "ConsultationView";
             Text = "ConsultationWindow";
