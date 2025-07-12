@@ -12,7 +12,6 @@ namespace Consultation.App.Presenters
     {
         private readonly IMainView _mainView;
 
-        // Enum to identify each child UserControl
         private enum ChildViews
         {
             Dashboard,
@@ -127,3 +126,4 @@ namespace Consultation.App.Presenters
         }
     }
 }
+
