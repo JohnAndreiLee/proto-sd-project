@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Consultation.App.Views.IViews;
+using System;
 using System.Windows.Forms;
 
 namespace Consultation.App.ConsultationManagement
 {
-    public partial class ConsultationView : Form
+    public partial class ConsultationView : Form, IConsultationView
     {
         private CSWindow csWindow;
         private ArchiveWindow archiveWindow;

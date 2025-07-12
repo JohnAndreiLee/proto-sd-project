@@ -86,11 +86,11 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Inter", 14.25F, FontStyle.Bold);
+            label3.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold);
             label3.ForeColor = SystemColors.ControlLightLight;
             label3.Location = new Point(24, 554);
             label3.Name = "label3";
-            label3.Size = new Size(89, 27);
+            label3.Size = new Size(84, 24);
             label3.TabIndex = 11;
             label3.Text = "Settings";
             // 
@@ -99,7 +99,7 @@
             buttonPreference.BackColor = Color.Transparent;
             buttonPreference.FlatAppearance.BorderSize = 0;
             buttonPreference.FlatStyle = FlatStyle.Flat;
-            buttonPreference.Font = new Font("Inter", 11.25F);
+            buttonPreference.Font = new Font("Microsoft Sans Serif", 11.25F);
             buttonPreference.ForeColor = SystemColors.ControlLightLight;
             buttonPreference.ImageAlign = ContentAlignment.MiddleLeft;
             buttonPreference.ImageIndex = 0;
@@ -124,11 +124,11 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Inter", 14.25F, FontStyle.Bold);
+            label2.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold);
             label2.ForeColor = SystemColors.ControlLightLight;
             label2.Location = new Point(24, 424);
             label2.Name = "label2";
-            label2.Size = new Size(134, 27);
+            label2.Size = new Size(131, 24);
             label2.TabIndex = 7;
             label2.Text = "Management";
             // 
@@ -137,7 +137,7 @@
             buttonSFManagement.BackColor = Color.Transparent;
             buttonSFManagement.FlatAppearance.BorderSize = 0;
             buttonSFManagement.FlatStyle = FlatStyle.Flat;
-            buttonSFManagement.Font = new Font("Inter", 11.25F);
+            buttonSFManagement.Font = new Font("Microsoft Sans Serif", 11.25F);
             buttonSFManagement.ForeColor = SystemColors.ControlLightLight;
             buttonSFManagement.ImageAlign = ContentAlignment.MiddleLeft;
             buttonSFManagement.ImageIndex = 0;
@@ -164,7 +164,7 @@
             buttonConsultation.BackColor = Color.Transparent;
             buttonConsultation.FlatAppearance.BorderSize = 0;
             buttonConsultation.FlatStyle = FlatStyle.Flat;
-            buttonConsultation.Font = new Font("Inter", 11.25F);
+            buttonConsultation.Font = new Font("Microsoft Sans Serif", 11.25F);
             buttonConsultation.ForeColor = SystemColors.ControlLightLight;
             buttonConsultation.ImageAlign = ContentAlignment.MiddleLeft;
             buttonConsultation.ImageIndex = 0;
@@ -191,7 +191,7 @@
             buttonBulletin.BackColor = Color.Transparent;
             buttonBulletin.FlatAppearance.BorderSize = 0;
             buttonBulletin.FlatStyle = FlatStyle.Flat;
-            buttonBulletin.Font = new Font("Inter", 11.25F);
+            buttonBulletin.Font = new Font("Microsoft Sans Serif", 11.25F);
             buttonBulletin.ForeColor = SystemColors.ControlLightLight;
             buttonBulletin.ImageAlign = ContentAlignment.MiddleLeft;
             buttonBulletin.ImageIndex = 0;
@@ -216,11 +216,11 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Inter", 14.25F, FontStyle.Bold);
+            label1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold);
             label1.ForeColor = SystemColors.ControlLightLight;
             label1.Location = new Point(24, 192);
             label1.Name = "label1";
-            label1.Size = new Size(58, 27);
+            label1.Size = new Size(55, 24);
             label1.TabIndex = 3;
             label1.Text = "Main";
             // 
@@ -230,7 +230,7 @@
             buttonDashboard.Cursor = Cursors.Hand;
             buttonDashboard.FlatAppearance.BorderSize = 0;
             buttonDashboard.FlatStyle = FlatStyle.Flat;
-            buttonDashboard.Font = new Font("Inter", 11.25F);
+            buttonDashboard.Font = new Font("Microsoft Sans Serif", 11.25F);
             buttonDashboard.ForeColor = SystemColors.ControlLightLight;
             buttonDashboard.ImageAlign = ContentAlignment.MiddleLeft;
             buttonDashboard.ImageIndex = 0;
@@ -268,10 +268,10 @@
             // 
             labelProfileRole.AutoSize = true;
             labelProfileRole.BackColor = Color.Transparent;
-            labelProfileRole.Font = new Font("Inter", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelProfileRole.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelProfileRole.Location = new Point(88, 48);
             labelProfileRole.Name = "labelProfileRole";
-            labelProfileRole.Size = new Size(42, 22);
+            labelProfileRole.Size = new Size(39, 18);
             labelProfileRole.TabIndex = 2;
             labelProfileRole.Text = "Role";
             // 
@@ -279,10 +279,10 @@
             // 
             labelProfileName.AutoSize = true;
             labelProfileName.BackColor = Color.Transparent;
-            labelProfileName.Font = new Font("Inter SemiBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelProfileName.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelProfileName.Location = new Point(88, 24);
             labelProfileName.Name = "labelProfileName";
-            labelProfileName.Size = new Size(93, 22);
+            labelProfileName.Size = new Size(94, 18);
             labelProfileName.TabIndex = 1;
             labelProfileName.Text = "John Name";
             // 
@@ -309,10 +309,10 @@
             // 
             labelForm.AutoSize = true;
             labelForm.BackColor = Color.Transparent;
-            labelForm.Font = new Font("Inter", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelForm.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelForm.Location = new Point(17, 25);
             labelForm.Name = "labelForm";
-            labelForm.Size = new Size(200, 45);
+            labelForm.Size = new Size(197, 37);
             labelForm.TabIndex = 12;
             labelForm.Text = "Form Name";
             // 
@@ -335,6 +335,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Window;
             ClientSize = new Size(1904, 1041);
             Controls.Add(materialCard1);
             Controls.Add(sidePanel);
