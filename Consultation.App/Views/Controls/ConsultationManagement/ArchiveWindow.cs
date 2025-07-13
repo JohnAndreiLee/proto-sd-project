@@ -23,6 +23,11 @@ namespace Consultation.App.ConsultationManagement
         {
             ArchiveCard archiveCard = new ArchiveCard();
 
+            //'ConsultationData' does not contain a definition for
+            //'Notes' and no accessible extension method 'Notes' accepting
+            //a first argument of type 'ConsultationData' could be found
+            //(are you missing a using directive or an assembly reference?)
+
             archiveCard.Data = new ConsultationData
             {
                 Date = card.DateText,
@@ -32,7 +37,7 @@ namespace Consultation.App.ConsultationManagement
                 Faculty = card.Faculty,
                 Location = card.LocationText,
                 IDNumber = card.IDNumber,
-                Notes = card.Notes
+                //Notes = card.Notes
             };
 
             WindowPanelArchive.Controls.Add(archiveCard);

@@ -11,5 +11,7 @@ namespace Consultation.BackEndCRUD.Repository.IRepository
     {
         Task<ConsultationRequest?> GetConsultationRequests(int studentId);
 
+        Task<IEnumerable<ConsultationRequest>> GetConsultationRequestsAsync();
+
     }
 }

@@ -13,9 +13,12 @@ namespace Consultation.App.Views.Controls.ConsultationManagement
         public string Faculty { get; set; }
         public string Location { get; set; }
         public string IDNumber { get; set; }
-        public string Notes { get; set; }
+        public string Concern { get; set; }
         public string Date { get; set; }
         public string Time { get; set; }
+
+        public string status { get; set; }
+        public ConsultationData Data { get; internal set; }
     }
 
 }

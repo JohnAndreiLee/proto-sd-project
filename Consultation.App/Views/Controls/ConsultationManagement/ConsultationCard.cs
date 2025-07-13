@@ -17,55 +17,57 @@ namespace Consultation.App.ConsultationManagement
     {
         public event EventHandler ArchiveRequested;
 
-        private ConsultationData data = new ConsultationData();
+        private ConsultationData data;
         public DateTime ScheduleDate { get; private set; }
 
         
-        public string NameText => StudentName.Text;
+        public string NameText => lblStudentName.Text;
         public string DateText => ScheduleDate.ToShortDateString(); 
-        public string TimeText => Timetxtbox.Text;
-        public string CourseCode => courseCodeLabel.Text;
-        public string Faculty => Facultytxtbox.Text;
+        public string TimeText => txtboxTimeStart.Text;
+        public string CourseCode => lblCourseCode.Text;
+        public string Faculty => txtboxFaculty.Text;
         public string LocationText => Location.Text;
-        public string IDNumber => idnumber.Text;
-        public string Notes => Noteslabel.Text;
+        public string IDNumber => txtboxIdNumber.Text;
+        public string Notes => lblConcern.Text;
 
-        public ConsultationCard()
+        public ConsultationCard(ConsultationData _data)
         {
             InitializeComponent();
-            Data = new ConsultationData();
+            Data = _data;
         }
 
         public ConsultationData Data
         {
             get
             {
-                
+
                 return data;
             }
             set
             {
-               
-                data = value;
-                StudentName.Text = data.Name;
-                courseCodeLabel.Text = data.CourseCode;
-                Noteslabel.Text = data.Notes;
-                Date.Text = data.Date;
-                Timetxtbox.Text = data.Time;
-                Facultytxtbox.Text = data.Faculty;
-                idnumber.Text = data.IDNumber;
-                Location.Text = data.Location;
-                courseCodeLabel.Location = new Point(StudentName.Right + 10, courseCodeLabel.Location.Y);
 
-                DateTime parsedDate;
-                if (DateTime.TryParse(data.Date, out parsedDate))
-                {
-                    ScheduleDate = parsedDate;
-                }
-                else
-                {
-                    ScheduleDate = DateTime.MinValue;
-                }
+                data = value;
+                lblStudentName.Text = data.Name;
+                lblCourseCode.Text = data.CourseCode;
+                lblConcern.Text = data.Concern;
+
+                txtboxDateSchedule.Text = data.Date;
+                txtboxTimeStart.Text = data.Time;
+                txtboxFaculty.Text = data.Faculty;
+                txtboxIdNumber.Text = data.IDNumber;
+                Location.Text = data.Location;
+                guna2txtboxStatus.Text = data.status;
+                //courseCodeLabel.Location = new Point(StudentName.Right + 10, courseCodeLabel.Location.Y);
+
+                //DateTime parsedDate;
+                //if (DateTime.TryParse(data.Date, out parsedDate))
+                //{
+                //    ScheduleDate = parsedDate;
+                //}
+                //else
+                //{
+                //    ScheduleDate = DateTime.MinValue;
+                //}
             }
         }
 

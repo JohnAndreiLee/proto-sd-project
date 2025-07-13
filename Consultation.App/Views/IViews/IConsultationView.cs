@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Consultation.App.Views.IViews
 {
-    internal interface IConsultationView
+    public interface IConsultationView
     {
+        //event EventHandler 
     }
 }

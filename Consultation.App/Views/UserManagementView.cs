@@ -48,5 +48,10 @@ namespace Consultation.App.Views
         {
 
         }
+
+        private void BtnAdmin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

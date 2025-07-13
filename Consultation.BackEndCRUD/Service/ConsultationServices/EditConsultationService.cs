@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Consultation.BackEndCRUD.Service
+namespace Consultation.BackEndCRUD.Service.ConsultationServices
 {
     public class EditConsultationService : IEditConsultationService
     {
@@ -22,6 +22,25 @@ namespace Consultation.BackEndCRUD.Service
            _editRepo = new EditConsultationrequestRepository(appDbContext);
 
         }
+
+        // Getting all of the Consultion Request
+        public async Task<IEnumerable<EditConsultationViewModel>> getAllConsultations()
+        {
+           var results = await _editRepo.GetConsultationRequestsAsync();
+
+                return results.Select(c => new EditConsultationViewModel
+                {
+                    studentName = c.Student.StudentName,
+                    courseCode = c.SubjectCode,
+                    studentUMID = c.Student.StudentUMID,
+                    concernDescription = c.Concern,
+                    dateSchedule = c.DateSchedule,
+                    startedTime = c.StartedTime,
+                    Status = c.Status
+                }).ToList();
+        }
+
+        // Getting only One specific Consultation Request
         public async Task<EditConsultationViewModel> getEditConsultation(int studentID)
         {
             var editConsultation = await _editRepo.GetConsultationRequests(studentID);

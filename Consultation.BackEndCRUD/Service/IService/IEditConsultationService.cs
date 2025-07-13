@@ -11,5 +11,7 @@ namespace Consultation.BackEndCRUD.Service.IService
     public interface IEditConsultationService
     {
         Task<EditConsultationViewModel> getEditConsultation(int studentID);
+
+        Task<IEnumerable<EditConsultationViewModel>> getAllConsultations();
     }
 }

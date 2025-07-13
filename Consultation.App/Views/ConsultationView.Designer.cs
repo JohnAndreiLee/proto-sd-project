@@ -41,8 +41,10 @@
             btnArchive = new Guna.UI2.WinForms.Guna2Button();
             btnConsultation = new Guna.UI2.WinForms.Guna2Button();
             WindowPanelConsultation = new FlowLayoutPanel();
+            csWindow1 = new CSWindow();
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             materialCard2.SuspendLayout();
+            WindowPanelConsultation.SuspendLayout();
             SuspendLayout();
             // 
             // materialCard2
@@ -61,6 +63,7 @@
             materialCard2.Padding = new Padding(14);
             materialCard2.Size = new Size(1600, 80);
             materialCard2.TabIndex = 1;
+            materialCard2.Paint += materialCard2_Paint;
             // 
             // btnRefresh
             // 
@@ -132,7 +135,7 @@
             btnConsultation.Name = "btnConsultation";
             btnConsultation.PressedColor = Color.Transparent;
             btnConsultation.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnConsultation.Size = new Size(142, 53);
+            btnConsultation.Size = new Size(137, 53);
             btnConsultation.TabIndex = 2;
             btnConsultation.Text = "Consultation";
             btnConsultation.Click += btnConsultation_Click_1;
@@ -140,10 +143,18 @@
             // WindowPanelConsultation
             // 
             WindowPanelConsultation.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            WindowPanelConsultation.Controls.Add(csWindow1);
             WindowPanelConsultation.Location = new Point(98, 136);
             WindowPanelConsultation.Name = "WindowPanelConsultation";
             WindowPanelConsultation.Size = new Size(1462, 797);
             WindowPanelConsultation.TabIndex = 3;
+            // 
+            // csWindow1
+            // 
+            csWindow1.Location = new Point(3, 3);
+            csWindow1.Name = "csWindow1";
+            csWindow1.Size = new Size(1462, 797);
+            csWindow1.TabIndex = 0;
             // 
             // guna2BorderlessForm1
             // 
@@ -156,14 +167,13 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1658, 961);
             Controls.Add(WindowPanelConsultation);
             Controls.Add(materialCard2);
             DoubleBuffered = true;
-            //FormBorderStyle = FormBorderStyle.None;
             Name = "ConsultationView";
-            Text = "ConsultationWindow";
+            Size = new Size(1658, 961);
             materialCard2.ResumeLayout(false);
+            WindowPanelConsultation.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -176,5 +186,6 @@
         private ConsultationCard consultationCard1;
         private Guna.UI2.WinForms.Guna2Button btnRefresh;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private CSWindow csWindow1;
     }
 }

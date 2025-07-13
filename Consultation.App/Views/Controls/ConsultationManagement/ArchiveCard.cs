@@ -30,7 +30,7 @@ namespace Consultation.App.Views.Controls.ConsultationManagement
 
                 StudentName.Text = data.Name;
                 CourseCode.Text = data.CourseCode;
-                Notes.Text = data.Notes;
+                //Notes.Text = data.Notes;
                 Date.Text = data.Date;
                 Time.Text = data.Time;
                 Faculty.Text = data.Faculty;
