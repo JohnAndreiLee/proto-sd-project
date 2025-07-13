@@ -1,10 +1,9 @@
 ﻿using Consultation.App.ConsultationManagement;
+using Consultation.App.Dashboard;
 using Consultation.App.Views;
 using Consultation.App.Views.IViews;
-using Consultation.App.Views.TestViews;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace Consultation.App.Presenters
@@ -18,12 +17,12 @@ namespace Consultation.App.Presenters
             Dashboard,
             Bulletin,
             Consultation,
-            UserManagement,
-            Settings
+            UserManagement
         }
 
         private ChildViews _currentView;
-        private readonly Dictionary<ChildViews, UserControl> _childViews = new();
+
+        private readonly Dictionary<ChildViews, IChildView> _childViews = new();
 
         public MainPresenter(IMainView mainView)
         {
@@ -33,14 +32,11 @@ namespace Consultation.App.Presenters
             _mainView.BulletinEvent += BulletinEvent;
             _mainView.ConsultationEvent += ConsultationEvent;
             _mainView.SFManagementEvent += SFManagementEvent;
-            _mainView.PreferenceEvent += PreferenceEvent;
-            _mainView.NotificationEvent += NotificationEvent;
 
             LoadChildView(ChildViews.Dashboard);
             _mainView.Header("Dashboard");
             _currentView = ChildViews.Dashboard;
 
-            // Highlight default button manually
             if (_mainView is MainView view)
             {
                 SetActiveButton(view.Controls.Find("buttonDashboard", true)[0] as Button);
@@ -91,46 +87,44 @@ namespace Consultation.App.Presenters
             }
         }
 
-
-        private void PreferenceEvent(object? sender, EventArgs e)
-        {
-            SetActiveButton(sender as Button);
-            _mainView.SetMessage("Settings clicked");
-        }
-
-        private void NotificationEvent(object? sender, EventArgs e)
-        {
-            NotificationView notificationView = new NotificationView();
-            notificationView.ShowDialog();
-        }
-
         private void LoadChildView(ChildViews viewType)
         {
-            if (!_childViews.TryGetValue(viewType, out var view) || view.IsDisposed)
+            if (!_childViews.TryGetValue(viewType, out var view))
             {
                 view = CreateViewByType(viewType);
+                //if (view == null)
+                    //throw new Exception($"CreateViewByType({viewType}) returned null!");
                 _childViews[viewType] = view;
             }
 
+            if (_mainView == null)
+                throw new Exception("_mainView is null!");
+
+            if (_mainView.MainPanel == null)
+                throw new Exception("_mainView.MainPanel is null!");
+
+            if (view.AsUserControl == null)
+                throw new Exception($"view.AsUserControl is null for {viewType}!");
+
             _mainView.MainPanel.Controls.Clear();
-            view.Dock = DockStyle.Fill;
-            _mainView.MainPanel.Controls.Add(view);
-            view.BringToFront();
+            view.AsUserControl.Dock = DockStyle.Fill;
+            _mainView.MainPanel.Controls.Add(view.AsUserControl);
+            view.AsUserControl.BringToFront();
         }
 
-        private UserControl CreateViewByType(ChildViews viewType)
+        private IChildView CreateViewByType(ChildViews viewType)
         {
             return viewType switch
             {
-                ChildViews.Dashboard => new DashboardView(),
-                ChildViews.Consultation => new ConsultationView(),
-                ChildViews.Bulletin => new BulletinView(),
-                ChildViews.UserManagement => new UserManagementView(),
-                _ => new UserControl() { Name = "NotImplementedView" }
+                ChildViews.Dashboard => new MainDashboardUserControl(),
+                ChildViews.Consultation => new ConsultationView() as IConsultationView,
+                ChildViews.Bulletin => new BulletinView() as IBulletinView,
+                ChildViews.UserManagement => new UserManagementView() as IUserManagementView,
+                _   => throw new NotImplementedException()
             };
         }
 
-        private void SetActiveButton(Button button)
+        private void SetActiveButton(Button? button)
         {
             if (button == null) return;
 

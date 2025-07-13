@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Consultation.App.Views.IViews
 {
-    public interface IConsultationView : IChildView
+    public interface IChildView
     {
-        //event EventHandler 
+        UserControl AsUserControl { get; }
     }
 }

@@ -89,6 +89,9 @@
     <Compile Update="Views\Controls\UserManagement\StudentCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Views\Controls\UserManagement\UserCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Views\Controls\UserManagement\ViewAdmin.cs">
       <SubType>UserControl</SubType>
     </Compile>

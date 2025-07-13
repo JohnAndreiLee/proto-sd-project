@@ -32,6 +32,7 @@ namespace Consultation.App.Dashboard
             UserName.Text = $"{name}!";
         }
 
+        public UserControl AsUserControl => this;
 
         public MainDashboardUserControl()
         {

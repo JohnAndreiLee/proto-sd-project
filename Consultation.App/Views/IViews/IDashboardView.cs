@@ -3,7 +3,7 @@ using Consultation.App.ViewModels.DashboardModels;
 
 namespace Consultation.App.Views.IViews
 {
-    public interface IDashboardView
+    public interface IDashboardView : IChildView
     {
         string LoggedInUsername { get; }
 

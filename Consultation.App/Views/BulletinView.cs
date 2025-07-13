@@ -1,4 +1,5 @@
 ﻿using Consultation.App.Views.Controls.BulletinManagement;
+using Consultation.App.Views.IViews;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Consultation.App.Views
 {
-    public partial class BulletinView : UserControl
+    public partial class BulletinView : UserControl, IBulletinView
     {
         public BulletinView()
         {
@@ -19,6 +20,8 @@ namespace Consultation.App.Views
 
             btnBulletinView_Click(btnBulletinView, EventArgs.Empty);
         }
+
+        public UserControl AsUserControl => this;
 
         private void btnCreateBulletin_Click(object sender, EventArgs e)
         {

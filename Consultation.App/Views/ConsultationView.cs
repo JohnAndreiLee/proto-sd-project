@@ -16,6 +16,7 @@ namespace Consultation.App.ConsultationManagement
             MoveUnderline(btnConsultation);
             ShowConsultationView();
         }
+        public UserControl AsUserControl => this;
 
 
 

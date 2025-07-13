@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             BtnNext = new Button();
             BtnPreview = new Button();
             button4 = new Button();
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
-            BtnAdmin = new Button();
-            flowLayPanSFA = new FlowLayoutPanel();
-            BtnFaculty = new Button();
-            BtnStudents = new Button();
+            buttonAdmin = new Button();
+            flPanelUserCard = new FlowLayoutPanel();
+            buttonFaculty = new Button();
+            buttonStudents = new Button();
             pictureBox1 = new PictureBox();
             TotalStudents = new Label();
             label1 = new Label();
@@ -64,12 +64,12 @@
             materialCard2 = new MaterialSkin.Controls.MaterialCard();
             materialCard3 = new MaterialSkin.Controls.MaterialCard();
             materialCard4 = new MaterialSkin.Controls.MaterialCard();
+            materialCard5 = new MaterialSkin.Controls.MaterialCard();
             CBoxCourseCode = new Guna.UI2.WinForms.Guna2ComboBox();
             CBoxYear = new Guna.UI2.WinForms.Guna2ComboBox();
             CBoxCourse = new Guna.UI2.WinForms.Guna2ComboBox();
-            CBoxSort = new Guna.UI2.WinForms.Guna2ComboBox();
+            cboxSort = new Guna.UI2.WinForms.Guna2ComboBox();
             textBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            materialCard5 = new MaterialSkin.Controls.MaterialCard();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -83,7 +83,7 @@
             // 
             BtnNext.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             BtnNext.ForeColor = Color.Red;
-            BtnNext.Location = new Point(1118, 743);
+            BtnNext.Location = new Point(270, 918);
             BtnNext.Margin = new Padding(3, 2, 3, 2);
             BtnNext.Name = "BtnNext";
             BtnNext.Size = new Size(44, 22);
@@ -95,7 +95,7 @@
             // 
             BtnPreview.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             BtnPreview.ForeColor = Color.Red;
-            BtnPreview.Location = new Point(870, 742);
+            BtnPreview.Location = new Point(22, 917);
             BtnPreview.Margin = new Padding(3, 2, 3, 2);
             BtnPreview.Name = "BtnPreview";
             BtnPreview.Size = new Size(44, 22);
@@ -107,7 +107,7 @@
             // 
             button4.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button4.ForeColor = Color.Red;
-            button4.Location = new Point(1068, 743);
+            button4.Location = new Point(220, 918);
             button4.Margin = new Padding(3, 2, 3, 2);
             button4.Name = "button4";
             button4.Size = new Size(44, 22);
@@ -119,7 +119,7 @@
             // 
             button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button3.ForeColor = Color.Red;
-            button3.Location = new Point(1018, 742);
+            button3.Location = new Point(170, 917);
             button3.Margin = new Padding(3, 2, 3, 2);
             button3.Name = "button3";
             button3.Size = new Size(44, 22);
@@ -131,7 +131,7 @@
             // 
             button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.Red;
-            button2.Location = new Point(968, 743);
+            button2.Location = new Point(120, 918);
             button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
             button2.Size = new Size(44, 22);
@@ -143,7 +143,7 @@
             // 
             button1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.Red;
-            button1.Location = new Point(919, 742);
+            button1.Location = new Point(71, 917);
             button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
             button1.Size = new Size(44, 22);
@@ -151,61 +151,63 @@
             button1.Text = "1";
             button1.UseVisualStyleBackColor = true;
             // 
-            // BtnAdmin
+            // buttonAdmin
             // 
-            BtnAdmin.BackColor = Color.Transparent;
-            BtnAdmin.FlatAppearance.BorderSize = 0;
-            BtnAdmin.FlatStyle = FlatStyle.Flat;
-            BtnAdmin.Font = new Font("Inter", 12F, FontStyle.Bold);
-            BtnAdmin.ForeColor = Color.FromArgb(192, 0, 0);
-            BtnAdmin.Location = new Point(1062, 90);
-            BtnAdmin.Name = "BtnAdmin";
-            BtnAdmin.Size = new Size(100, 30);
-            BtnAdmin.TabIndex = 7;
-            BtnAdmin.Text = "Admin";
-            BtnAdmin.UseVisualStyleBackColor = false;
-            BtnAdmin.Click += BtnAdmin_Click;
+            buttonAdmin.BackColor = Color.Transparent;
+            buttonAdmin.FlatAppearance.BorderSize = 0;
+            buttonAdmin.FlatStyle = FlatStyle.Flat;
+            buttonAdmin.Font = new Font("Inter", 9.75F, FontStyle.Bold);
+            buttonAdmin.ForeColor = Color.FromArgb(192, 0, 0);
+            buttonAdmin.Location = new Point(1090, 101);
+            buttonAdmin.Name = "buttonAdmin";
+            buttonAdmin.Size = new Size(72, 25);
+            buttonAdmin.TabIndex = 7;
+            buttonAdmin.Text = "Admin";
+            buttonAdmin.UseVisualStyleBackColor = false;
+            //buttonAdmin.Click += BtnAdmin_Click;
             // 
-            // flowLayPanSFA
+            // flPanelUserCard
             // 
-            flowLayPanSFA.BackColor = SystemColors.Control;
-            flowLayPanSFA.BorderStyle = BorderStyle.FixedSingle;
-            flowLayPanSFA.Location = new Point(178, 243);
-            flowLayPanSFA.Name = "flowLayPanSFA";
-            flowLayPanSFA.Size = new Size(993, 482);
-            flowLayPanSFA.TabIndex = 6;
-            flowLayPanSFA.Paint += flowLayoutPanelstudafac_Paint;
+            flPanelUserCard.AutoScroll = true;
+            flPanelUserCard.BackColor = Color.Transparent;
+            flPanelUserCard.FlowDirection = FlowDirection.TopDown;
+            flPanelUserCard.Location = new Point(178, 223);
+            flPanelUserCard.Name = "flPanelUserCard";
+            flPanelUserCard.Size = new Size(993, 508);
+            flPanelUserCard.TabIndex = 6;
+            flPanelUserCard.WrapContents = false;
+            ///flPanelUserCard.Paint += flowLayoutPanelstudafac_Paint;
             // 
-            // BtnFaculty
+            // buttonFaculty
             // 
-            BtnFaculty.BackColor = Color.Transparent;
-            BtnFaculty.FlatAppearance.BorderSize = 0;
-            BtnFaculty.FlatStyle = FlatStyle.Flat;
-            BtnFaculty.Font = new Font("Inter", 12F, FontStyle.Bold);
-            BtnFaculty.ForeColor = Color.FromArgb(192, 0, 0);
-            BtnFaculty.Location = new Point(962, 90);
-            BtnFaculty.Name = "BtnFaculty";
-            BtnFaculty.Size = new Size(100, 30);
-            BtnFaculty.TabIndex = 1;
-            BtnFaculty.Text = "Faculty";
-            BtnFaculty.UseVisualStyleBackColor = false;
-            BtnFaculty.Click += BtnFaculty_Click;
+            buttonFaculty.BackColor = Color.Transparent;
+            buttonFaculty.FlatAppearance.BorderSize = 0;
+            buttonFaculty.FlatStyle = FlatStyle.Flat;
+            buttonFaculty.Font = new Font("Inter", 9.75F, FontStyle.Bold);
+            buttonFaculty.ForeColor = Color.FromArgb(192, 0, 0);
+            buttonFaculty.Location = new Point(1015, 101);
+            buttonFaculty.Name = "buttonFaculty";
+            buttonFaculty.Size = new Size(72, 25);
+            buttonFaculty.TabIndex = 1;
+            buttonFaculty.Text = "Faculty";
+            buttonFaculty.UseVisualStyleBackColor = false;
+            //buttonFaculty.Click += BtnFaculty_Click;
             // 
-            // BtnStudents
+            // buttonStudents
             // 
-            BtnStudents.BackColor = Color.Transparent;
-            BtnStudents.BackgroundImageLayout = ImageLayout.None;
-            BtnStudents.FlatAppearance.BorderSize = 0;
-            BtnStudents.FlatStyle = FlatStyle.Flat;
-            BtnStudents.Font = new Font("Inter", 12F, FontStyle.Bold);
-            BtnStudents.ForeColor = Color.FromArgb(192, 0, 0);
-            BtnStudents.Location = new Point(856, 90);
-            BtnStudents.Name = "BtnStudents";
-            BtnStudents.Size = new Size(100, 30);
-            BtnStudents.TabIndex = 0;
-            BtnStudents.Text = "Students";
-            BtnStudents.UseVisualStyleBackColor = false;
-            BtnStudents.Click += BtnStudents_Click;
+            buttonStudents.BackColor = Color.Transparent;
+            buttonStudents.BackgroundImageLayout = ImageLayout.None;
+            buttonStudents.FlatAppearance.BorderSize = 0;
+            buttonStudents.FlatStyle = FlatStyle.Flat;
+            buttonStudents.Font = new Font("Inter", 9.75F, FontStyle.Bold);
+            buttonStudents.ForeColor = Color.FromArgb(192, 0, 0);
+            buttonStudents.Location = new Point(935, 101);
+            buttonStudents.Name = "buttonStudents";
+            buttonStudents.Size = new Size(72, 25);
+            buttonStudents.TabIndex = 0;
+            buttonStudents.Text = "Students";
+            buttonStudents.UseVisualStyleBackColor = false;
+            //buttonStudents.Click += BtnStudents_Click;
             // 
             // pictureBox1
             // 
@@ -367,22 +369,16 @@
             // materialCard4
             // 
             materialCard4.BackColor = Color.FromArgb(255, 255, 255);
+            materialCard4.Controls.Add(flPanelUserCard);
             materialCard4.Controls.Add(materialCard5);
             materialCard4.Controls.Add(CBoxCourseCode);
             materialCard4.Controls.Add(CBoxYear);
             materialCard4.Controls.Add(CBoxCourse);
-            materialCard4.Controls.Add(CBoxSort);
+            materialCard4.Controls.Add(cboxSort);
             materialCard4.Controls.Add(textBoxSearch);
-            materialCard4.Controls.Add(BtnNext);
-            materialCard4.Controls.Add(button4);
-            materialCard4.Controls.Add(BtnPreview);
-            materialCard4.Controls.Add(button3);
-            materialCard4.Controls.Add(button2);
-            materialCard4.Controls.Add(button1);
-            materialCard4.Controls.Add(BtnStudents);
-            materialCard4.Controls.Add(flowLayPanSFA);
-            materialCard4.Controls.Add(BtnAdmin);
-            materialCard4.Controls.Add(BtnFaculty);
+            materialCard4.Controls.Add(buttonStudents);
+            materialCard4.Controls.Add(buttonAdmin);
+            materialCard4.Controls.Add(buttonFaculty);
             materialCard4.Depth = 0;
             materialCard4.ForeColor = Color.FromArgb(222, 0, 0, 0);
             materialCard4.Location = new Point(140, 137);
@@ -390,14 +386,27 @@
             materialCard4.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard4.Name = "materialCard4";
             materialCard4.Padding = new Padding(14);
-            materialCard4.Size = new Size(1396, 790);
+            materialCard4.Size = new Size(1396, 765);
             materialCard4.TabIndex = 10;
+            // 
+            // materialCard5
+            // 
+            materialCard5.BackColor = Color.FromArgb(255, 255, 255);
+            materialCard5.Depth = 0;
+            materialCard5.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialCard5.Location = new Point(178, 143);
+            materialCard5.Margin = new Padding(14);
+            materialCard5.MouseState = MaterialSkin.MouseState.HOVER;
+            materialCard5.Name = "materialCard5";
+            materialCard5.Padding = new Padding(14);
+            materialCard5.Size = new Size(993, 63);
+            materialCard5.TabIndex = 20;
             // 
             // CBoxCourseCode
             // 
             CBoxCourseCode.BackColor = Color.Transparent;
             CBoxCourseCode.BorderRadius = 6;
-            CBoxCourseCode.CustomizableEdges = customizableEdges31;
+            CBoxCourseCode.CustomizableEdges = customizableEdges1;
             CBoxCourseCode.DrawMode = DrawMode.OwnerDrawFixed;
             CBoxCourseCode.DropDownStyle = ComboBoxStyle.DropDownList;
             CBoxCourseCode.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -407,7 +416,7 @@
             CBoxCourseCode.ItemHeight = 30;
             CBoxCourseCode.Location = new Point(657, 90);
             CBoxCourseCode.Name = "CBoxCourseCode";
-            CBoxCourseCode.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            CBoxCourseCode.ShadowDecoration.CustomizableEdges = customizableEdges2;
             CBoxCourseCode.Size = new Size(140, 36);
             CBoxCourseCode.TabIndex = 19;
             // 
@@ -415,7 +424,7 @@
             // 
             CBoxYear.BackColor = Color.Transparent;
             CBoxYear.BorderRadius = 6;
-            CBoxYear.CustomizableEdges = customizableEdges33;
+            CBoxYear.CustomizableEdges = customizableEdges3;
             CBoxYear.DrawMode = DrawMode.OwnerDrawFixed;
             CBoxYear.DropDownStyle = ComboBoxStyle.DropDownList;
             CBoxYear.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -425,7 +434,7 @@
             CBoxYear.ItemHeight = 30;
             CBoxYear.Location = new Point(496, 90);
             CBoxYear.Name = "CBoxYear";
-            CBoxYear.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            CBoxYear.ShadowDecoration.CustomizableEdges = customizableEdges4;
             CBoxYear.Size = new Size(140, 36);
             CBoxYear.TabIndex = 18;
             // 
@@ -433,7 +442,7 @@
             // 
             CBoxCourse.BackColor = Color.Transparent;
             CBoxCourse.BorderRadius = 6;
-            CBoxCourse.CustomizableEdges = customizableEdges35;
+            CBoxCourse.CustomizableEdges = customizableEdges5;
             CBoxCourse.DrawMode = DrawMode.OwnerDrawFixed;
             CBoxCourse.DropDownStyle = ComboBoxStyle.DropDownList;
             CBoxCourse.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -443,32 +452,32 @@
             CBoxCourse.ItemHeight = 30;
             CBoxCourse.Location = new Point(335, 90);
             CBoxCourse.Name = "CBoxCourse";
-            CBoxCourse.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            CBoxCourse.ShadowDecoration.CustomizableEdges = customizableEdges6;
             CBoxCourse.Size = new Size(140, 36);
             CBoxCourse.TabIndex = 17;
             // 
-            // CBoxSort
+            // cboxSort
             // 
-            CBoxSort.BackColor = Color.Transparent;
-            CBoxSort.BorderRadius = 6;
-            CBoxSort.CustomizableEdges = customizableEdges37;
-            CBoxSort.DrawMode = DrawMode.OwnerDrawFixed;
-            CBoxSort.DropDownStyle = ComboBoxStyle.DropDownList;
-            CBoxSort.FocusedColor = Color.FromArgb(94, 148, 255);
-            CBoxSort.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            CBoxSort.Font = new Font("Segoe UI", 10F);
-            CBoxSort.ForeColor = Color.FromArgb(68, 88, 112);
-            CBoxSort.ItemHeight = 30;
-            CBoxSort.Location = new Point(178, 90);
-            CBoxSort.Name = "CBoxSort";
-            CBoxSort.ShadowDecoration.CustomizableEdges = customizableEdges38;
-            CBoxSort.Size = new Size(140, 36);
-            CBoxSort.TabIndex = 16;
+            cboxSort.BackColor = Color.Transparent;
+            cboxSort.BorderRadius = 6;
+            cboxSort.CustomizableEdges = customizableEdges7;
+            cboxSort.DrawMode = DrawMode.OwnerDrawFixed;
+            cboxSort.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboxSort.FocusedColor = Color.FromArgb(94, 148, 255);
+            cboxSort.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cboxSort.Font = new Font("Segoe UI", 10F);
+            cboxSort.ForeColor = Color.FromArgb(68, 88, 112);
+            cboxSort.ItemHeight = 30;
+            cboxSort.Location = new Point(178, 90);
+            cboxSort.Name = "cboxSort";
+            cboxSort.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            cboxSort.Size = new Size(140, 36);
+            cboxSort.TabIndex = 16;
             // 
             // textBoxSearch
             // 
             textBoxSearch.BorderRadius = 6;
-            textBoxSearch.CustomizableEdges = customizableEdges39;
+            textBoxSearch.CustomizableEdges = customizableEdges9;
             textBoxSearch.DefaultText = "Search by name, ID number, or email";
             textBoxSearch.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             textBoxSearch.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -481,22 +490,9 @@
             textBoxSearch.Name = "textBoxSearch";
             textBoxSearch.PlaceholderText = "";
             textBoxSearch.SelectedText = "";
-            textBoxSearch.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            textBoxSearch.ShadowDecoration.CustomizableEdges = customizableEdges10;
             textBoxSearch.Size = new Size(984, 41);
             textBoxSearch.TabIndex = 15;
-            // 
-            // materialCard5
-            // 
-            materialCard5.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard5.Depth = 0;
-            materialCard5.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard5.Location = new Point(178, 163);
-            materialCard5.Margin = new Padding(14);
-            materialCard5.MouseState = MaterialSkin.MouseState.HOVER;
-            materialCard5.Name = "materialCard5";
-            materialCard5.Padding = new Padding(14);
-            materialCard5.Size = new Size(993, 63);
-            materialCard5.TabIndex = 20;
             // 
             // UserManagementView
             // 
@@ -508,9 +504,15 @@
             Controls.Add(materialCard2);
             Controls.Add(materialCard1);
             Controls.Add(BtnRefresh);
+            Controls.Add(BtnPreview);
+            Controls.Add(button1);
+            Controls.Add(BtnNext);
+            Controls.Add(button2);
+            Controls.Add(button4);
+            Controls.Add(button3);
             Name = "UserManagementView";
             Size = new Size(1644, 941);
-            Load += StudentFacultyView_Load;
+            //Load += StudentFacultyView_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
@@ -528,20 +530,20 @@
         //private ComboBox CBoxYear;
         //private ComboBox CBoxCourse;
         //private ComboBox CBoxSort;
-        private Button BtnFaculty;
-        private Button BtnStudents;
+        private Button buttonFaculty;
+        private Button buttonStudents;
         private Label TotalStudents;
         private Label label1;
         private Label TotalFacultyMem;
         private Label label4;
-        private FlowLayoutPanel flowLayPanSFA;
+        private FlowLayoutPanel flPanelUserCard;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private Syncfusion.Windows.Forms.BackStageView backStageView1;
         private PictureBox pictureBox3;
         private Label TotalAdmin;
         private Label label6;
-        private Button BtnAdmin;
+        private Button buttonAdmin;
         //private ComboBox CBoxCourseCode;
         private Button button4;
         private Button button3;
@@ -554,7 +556,7 @@
         private MaterialSkin.Controls.MaterialCard materialCard2;
         private MaterialSkin.Controls.MaterialCard materialCard3;
         private MaterialSkin.Controls.MaterialCard materialCard4;
-        private Guna.UI2.WinForms.Guna2ComboBox CBoxSort;
+        private Guna.UI2.WinForms.Guna2ComboBox cboxSort;
         private Guna.UI2.WinForms.Guna2TextBox textBoxSearch;
         private Guna.UI2.WinForms.Guna2ComboBox CBoxCourseCode;
         private Guna.UI2.WinForms.Guna2ComboBox CBoxYear;

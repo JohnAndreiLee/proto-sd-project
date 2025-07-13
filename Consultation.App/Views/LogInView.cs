@@ -24,6 +24,7 @@ namespace Consultation.App.Views
             buttonLogIn.Click += (s, e) => LogInEvent?.Invoke(s, e);
         }
 
+
         private void ShowPassButton_Click(object sender, EventArgs e)
         {
             PasswordVisible = !PasswordVisible;

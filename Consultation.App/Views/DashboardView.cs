@@ -8,5 +8,6 @@ namespace Consultation.App
         {
             InitializeComponent();
         }
+        public UserControl AsUserControl => this;
     }
 }
