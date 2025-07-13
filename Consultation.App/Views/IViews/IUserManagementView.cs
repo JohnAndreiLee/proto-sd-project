@@ -1,4 +1,6 @@
-﻿namespace Consultation.App.Views.IViews
+﻿using Consultation.App.Views.Controls.UserManagement;
+
+namespace Consultation.App.Views.IViews
 {
     public interface IUserManagementView : IChildView
     {
@@ -7,5 +9,6 @@
         event EventHandler AdminManagementEvent;
 
         void AddUserCard(string name);
+        void Message(string message);
     }
 }

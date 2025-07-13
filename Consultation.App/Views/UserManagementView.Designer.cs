@@ -164,7 +164,6 @@
             buttonAdmin.TabIndex = 7;
             buttonAdmin.Text = "Admin";
             buttonAdmin.UseVisualStyleBackColor = false;
-            //buttonAdmin.Click += BtnAdmin_Click;
             // 
             // flPanelUserCard
             // 
@@ -176,7 +175,6 @@
             flPanelUserCard.Size = new Size(993, 508);
             flPanelUserCard.TabIndex = 6;
             flPanelUserCard.WrapContents = false;
-            ///flPanelUserCard.Paint += flowLayoutPanelstudafac_Paint;
             // 
             // buttonFaculty
             // 
@@ -191,7 +189,6 @@
             buttonFaculty.TabIndex = 1;
             buttonFaculty.Text = "Faculty";
             buttonFaculty.UseVisualStyleBackColor = false;
-            //buttonFaculty.Click += BtnFaculty_Click;
             // 
             // buttonStudents
             // 
@@ -201,13 +198,12 @@
             buttonStudents.FlatStyle = FlatStyle.Flat;
             buttonStudents.Font = new Font("Inter", 9.75F, FontStyle.Bold);
             buttonStudents.ForeColor = Color.FromArgb(192, 0, 0);
-            buttonStudents.Location = new Point(935, 101);
+            buttonStudents.Location = new Point(929, 101);
             buttonStudents.Name = "buttonStudents";
-            buttonStudents.Size = new Size(72, 25);
+            buttonStudents.Size = new Size(78, 25);
             buttonStudents.TabIndex = 0;
             buttonStudents.Text = "Students";
             buttonStudents.UseVisualStyleBackColor = false;
-            //buttonStudents.Click += BtnStudents_Click;
             // 
             // pictureBox1
             // 
@@ -512,7 +508,6 @@
             Controls.Add(button3);
             Name = "UserManagementView";
             Size = new Size(1644, 941);
-            //Load += StudentFacultyView_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();

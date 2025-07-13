@@ -23,16 +23,8 @@ namespace Consultation.App.Views
             buttonFaculty.Click += (s, e) => FacultyManagementEvent?.Invoke(s, e);
             buttonAdmin.Click += (s, e) => AdminManagementEvent?.Invoke(s, e);
 
-            //Load += StudentFacultyView_Load;
-            //flPanelUserCard.Controls.Add(new UserCard("John Lee", "547546", "genericEmail@hotmail.net"));
-            //flPanelUserCard.Controls.Add(new UserCard("John Lee", "547546", "genericEmail@hotmail.net"));
-            //flPanelUserCard.Controls.Add(new UserCard("John Lee", "547546", "genericEmail@hotmail.net"));
-            //flPanelUserCard.Controls.Add(new UserCard("John Lee", "547546", "genericEmail@hotmail.net"));
-            //flPanelUserCard.Controls.Add(new UserCard("John Lee", "547546", "genericEmail@hotmail.net"));
-            //flPanelUserCard.Controls.Add(new UserCard("John Lee", "547546", "genericEmail@hotmail.net"));
-            //flPanelUserCard.Controls.Add(new UserCard("John Lee", "547546", "genericEmail@hotmail.net"));
-            //flPanelUserCard.Controls.Add(new UserCard("John Lee", "547546", "genericEmail@hotmail.net"));
-            //generate same code above  but with different string
+            //AddUserCard("JLE");
+            //Message("we weorks");
 
         }
 
@@ -46,6 +38,9 @@ namespace Consultation.App.Views
         public void AddUserCard(string name)
         {
             flPanelUserCard.Controls.Add(new UserCard(name, "547546", "genericEmail@hotmail.net"));
+        }
+        public void Message(string message) { 
+                MessageBox.Show(message, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

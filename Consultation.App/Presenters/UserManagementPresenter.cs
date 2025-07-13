@@ -19,22 +19,27 @@ namespace Consultation.App.Presenters
             _userManagementView.FacultyManagementEvent += FacultyManagementEvent;
             _userManagementView.AdminManagementEvent += AdminManagementEvent;
 
-            LoadTestCards("Joan de Arc", 10);
+            
         }
 
         private void StudentManagementEvent(object? sender, EventArgs e)
         {
             // Logic for handling student management event
+            LoadTestCards("Joan de Arc", 10);
+            _userManagementView.Message("runnin");
+
 
         }
         private void FacultyManagementEvent(object? sender, EventArgs e)
         {
             // Logic for handling faculty management event
+            LoadTestCards("Stephen", 10);
 
         }
         private void AdminManagementEvent(object? sender, EventArgs e)
         {
             // Logic for handling admin management event
+            LoadTestCards("Hesus", 10);
         }
         public void LoadTestCards(string name, int amount)
         {
@@ -42,6 +47,7 @@ namespace Consultation.App.Presenters
             {
                 _userManagementView.AddUserCard(String.Concat(name, i));
             }
+            _userManagementView.Message("runnin");
         }
     }
 }
