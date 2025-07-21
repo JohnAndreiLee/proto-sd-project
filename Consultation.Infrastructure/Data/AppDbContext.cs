@@ -130,7 +130,7 @@ namespace Consultation.Infrastructure.Data
 
         public DbSet<ActionLog> ActionLog { get; set; }
         public DbSet<Admin> Admin { get; set; }
-        public DbSet<Bulletin> Bulletin { get; set; }
+        public DbSet<Bulletin> Bulletins { get; set; }
         public DbSet<ConsultationRequest> ConsultationRequest { get; set; }
         public DbSet<Department> Department { get; set; }
         public DbSet<EnrolledCourse> EnrolledCourse { get; set; }

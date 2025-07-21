@@ -65,16 +65,16 @@
             tagStatus.DisabledState.CustomBorderColor = Color.DarkGray;
             tagStatus.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             tagStatus.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            tagStatus.FillColor = Color.FromArgb(238, 253, 243);
+            tagStatus.FillColor = Color.FromArgb(255, 240, 240);
             tagStatus.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tagStatus.ForeColor = Color.FromArgb(17, 123, 52);
+            tagStatus.ForeColor = Color.FromArgb(190, 0, 2);
             tagStatus.ImageSize = new Size(16, 16);
             tagStatus.Location = new Point(1232, 26);
             tagStatus.Name = "tagStatus";
             tagStatus.ShadowDecoration.CustomizableEdges = customizableEdges2;
             tagStatus.Size = new Size(100, 32);
             tagStatus.TabIndex = 38;
-            tagStatus.Text = "Published";
+            tagStatus.Text = "Pending";
             // 
             // btnMore
             // 

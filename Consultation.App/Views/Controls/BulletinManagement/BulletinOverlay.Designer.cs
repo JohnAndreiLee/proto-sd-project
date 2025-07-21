@@ -49,9 +49,9 @@
             btnPublish = new Guna.UI2.WinForms.Guna2Button();
             btnDelete = new Guna.UI2.WinForms.Guna2Button();
             btnBack = new Guna.UI2.WinForms.Guna2Button();
-            lblTitle = new Label();
             btnEdit = new Guna.UI2.WinForms.Guna2Button();
             flpTags = new FlowLayoutPanel();
+            lblTitle = new Label();
             tagId = new Guna.UI2.WinForms.Guna2Button();
             tagDate = new Guna.UI2.WinForms.Guna2Button();
             tagAuthor = new Guna.UI2.WinForms.Guna2Button();
@@ -170,18 +170,6 @@
             btnBack.Text = "Back to Bulletins";
             btnBack.Click += btnBack_Click;
             // 
-            // lblTitle
-            // 
-            lblTitle.AutoSize = true;
-            lblTitle.Font = new Font("Archivo", 17.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitle.ForeColor = Color.White;
-            lblTitle.Location = new Point(3, 0);
-            lblTitle.Margin = new Padding(3, 0, 40, 0);
-            lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(374, 34);
-            lblTitle.TabIndex = 0;
-            lblTitle.Text = "School Closure - Faculty Meeting";
-            // 
             // btnEdit
             // 
             btnEdit.BackColor = Color.Transparent;
@@ -221,6 +209,18 @@
             flpTags.Name = "flpTags";
             flpTags.Size = new Size(831, 34);
             flpTags.TabIndex = 29;
+            // 
+            // lblTitle
+            // 
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Archivo", 17.2499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.ForeColor = Color.White;
+            lblTitle.Location = new Point(3, 0);
+            lblTitle.Margin = new Padding(3, 0, 40, 0);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(374, 34);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "School Closure - Faculty Meeting";
             // 
             // tagId
             // 
@@ -312,7 +312,7 @@
             lblAttachments.Name = "lblAttachments";
             lblAttachments.Size = new Size(168, 32);
             lblAttachments.TabIndex = 28;
-            lblAttachments.Text = "Attachments (1)";
+            lblAttachments.Text = "Attachments (0)";
             // 
             // materialCard1
             // 
@@ -350,9 +350,9 @@
             lblFileSize.ForeColor = Color.FromArgb(86, 93, 109);
             lblFileSize.Location = new Point(59, 38);
             lblFileSize.Name = "lblFileSize";
-            lblFileSize.Size = new Size(54, 18);
+            lblFileSize.Size = new Size(38, 18);
             lblFileSize.TabIndex = 2;
-            lblFileSize.Text = "245 KB";
+            lblFileSize.Text = "0 KB";
             // 
             // lblFileName
             // 
@@ -361,9 +361,9 @@
             lblFileName.ForeColor = Color.FromArgb(23, 36, 31);
             lblFileName.Location = new Point(59, 17);
             lblFileName.Name = "lblFileName";
-            lblFileName.Size = new Size(133, 18);
+            lblFileName.Size = new Size(92, 18);
             lblFileName.TabIndex = 1;
-            lblFileName.Text = "Faculty_Meeting.pdf";
+            lblFileName.Text = "file_name.pdf";
             // 
             // pictureBox1
             // 
@@ -406,7 +406,6 @@
         private Panel panel1;
         private Guna.UI2.WinForms.Guna2Button btnBack;
         private Guna.UI2.WinForms.Guna2Button btnEdit;
-        private Guna.UI2.WinForms.Guna2Button btnPublish;
         private Guna.UI2.WinForms.Guna2Button btnDelete;
         private Label lblAttachments;
         private MaterialSkin.Controls.MaterialCard materialCard1;
@@ -420,5 +419,6 @@
         public Guna.UI2.WinForms.Guna2Button tagDate;
         public Guna.UI2.WinForms.Guna2Button tagId;
         private FlowLayoutPanel flpTags;
+        public Guna.UI2.WinForms.Guna2Button btnPublish;
     }
 }

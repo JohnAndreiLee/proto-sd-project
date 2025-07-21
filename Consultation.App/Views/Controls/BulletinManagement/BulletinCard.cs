@@ -7,16 +7,58 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Consultation.Domain;
+using Consultation.Infrastructure.Data;
 using Guna.UI2.WinForms.Suite;
 
 namespace Consultation.App.Views.Controls.BulletinManagement
 {
     public partial class BulletinCard : UserControl
     {
-        public BulletinCard()
+        public event EventHandler<BulletinEventArgs> ViewClicked;
+        public event EventHandler<BulletinEventArgs> EditClicked;
+        public event EventHandler<BulletinEventArgs> ArchiveClicked;
+        public event EventHandler<BulletinEventArgs> DeleteClicked;
+        public event EventHandler<BulletinEventArgs> PublishClicked;
+
+        private ToolStripDropDown _activeDropDown;
+
+        public BulletinCard(Consultation.Domain.Bulletin bulletin)
         {
             InitializeComponent();
+
+            lblTitle.Text = bulletin.Title;
+            txtContent.Text = bulletin.Content;
+            tagDate.Text = bulletin.DatePublished.ToString("yyyy-MM-dd");  // alternative format: ToString("MMMM dd, yyyy")
+            tagId.Text = "ID: BUL-2025-00" + bulletin.BulletinID.ToString();
+            tagAuthor.Text = bulletin.Author;
+            tagAttachments.Text = bulletin.FileCount.ToString() + " file (s)";
+            tagStatus.Text = bulletin.Status;
+
+            BulletinID = bulletin.BulletinID;
+            Title = bulletin.Title;
+            Author = bulletin.Author;
+            Content = bulletin.Content;
+            DatePublished = bulletin.DatePublished;
+            Status = bulletin.Status;
+            FileCount = bulletin.FileCount;
+            IsArchived = bulletin.IsArchived;
+
+            if (this.Status == "Published")
+            {
+                tagStatus.FillColor = Color.FromArgb(238, 253, 243);
+                tagStatus.ForeColor = Color.FromArgb(17, 123, 52);
+            }
         }
+
+        public int BulletinID { get; set; }
+        public string Title { get; set; }
+        public string Author { get; set; }
+        public string Content { get; set; }
+        public DateTime DatePublished { get; set; }
+        public string Status { get; set; }
+        public int FileCount { get; set; }
+        public bool IsArchived { get; set; }
 
         private void btnMore_Click(object sender, EventArgs e)
         {
@@ -51,36 +93,63 @@ namespace Consultation.App.Views.Controls.BulletinManagement
 
         private void btnView_Click(object sender, EventArgs e)
         {
-            BulletinOverlay bulletinOverlay = new BulletinOverlay();
-            bulletinOverlay.tagId.Text = tagId.Text;
-            bulletinOverlay.tagDate.Text = tagDate.Text;
-            bulletinOverlay.tagAuthor.Text = tagAuthor.Text;
-            bulletinOverlay.lblTitle.Text = lblTitle.Text;
-            bulletinOverlay.txtContent.Text = txtContent.Text;
+            BulletinOverlay bulletinOverlay = new BulletinOverlay
+            {
+                BulletinID = this.BulletinID,
+                Title = this.Title,
+                Author = this.Author,
+                Content = this.Content,
+                DatePublished = this.DatePublished,
+                Status = this.Status,
+                FileCount = this.FileCount,
+                IsArchived = this.IsArchived
+            };
+
+            bulletinOverlay.tagId.Text = "ID: BUL-2025-00" + BulletinID;
+            bulletinOverlay.tagDate.Text = DatePublished.ToString("yyyy-MM-dd");
+            bulletinOverlay.tagAuthor.Text = Author;
+            bulletinOverlay.lblTitle.Text = Title;
+            bulletinOverlay.txtContent.Text = Content;
+
+            bulletinOverlay.EditClicked += (s2, e2) => { EditClicked?.Invoke(this, e2); };
+            bulletinOverlay.DeleteClicked += (s2, e2) => { DeleteClicked?.Invoke(this, e2); };
+            bulletinOverlay.PublishClicked += (s2, e2) => { PublishClicked?.Invoke(this, e2); };
+
+            if (this.Status == "Published")
+                bulletinOverlay.btnPublish.Enabled = false;
+
             bulletinOverlay.ShowDialog();
 
-            // backend
-            // retrieve attachment/s from db
+            CloseDropdown();
+            ViewClicked?.Invoke(this, new BulletinEventArgs(this.BulletinID));
+            // retrieve attachment/s from db not implemented
         }
+
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            CreateBulletin bulletinForm = new CreateBulletin();
-            bulletinForm.lblHeader.Text = "Edit Bulletin";
-            bulletinForm.txtAuthor.Text = tagAuthor.Text;
-            bulletinForm.txtTitle.Text = lblTitle.Text;
-            bulletinForm.txtContent.Text = txtContent.Text;
-            bulletinForm.ShowDialog();
-
-            // backend
+            CloseDropdown();
+            EditClicked?.Invoke(this, new BulletinEventArgs(this.BulletinID));
         }
+
         private void btnArchive_Click(object sender, EventArgs e)
         {
-            // backend
-            // maybe set a variable like isArchived = true (initialized to false)
+            CloseDropdown();
+            var confirm = MessageBox.Show("Archive this bulletin?", "Confirm Archive", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (confirm != DialogResult.Yes) return;
+            ArchiveClicked?.Invoke(this, new BulletinEventArgs(this.BulletinID));
         }
+
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            // backend
+            CloseDropdown();
+            var confirm = MessageBox.Show("Delete this bulletin?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (confirm != DialogResult.Yes) return;
+            DeleteClicked?.Invoke(this, new BulletinEventArgs(this.BulletinID));
+        }
+
+        public void CloseDropdown()
+        {
+            _activeDropDown?.Close();
         }
 
         private void Initialize_btnMoreComponents()
@@ -208,15 +277,14 @@ namespace Consultation.App.Views.Controls.BulletinManagement
                 AutoSize = true
             };
 
-            ToolStripDropDown dropDown = new ToolStripDropDown
+            _activeDropDown = new ToolStripDropDown
             {
                 AutoClose = true,
                 Margin = Padding.Empty,
                 Padding = Padding.Empty
             };
-            dropDown.Items.Add(host);
-
-            dropDown.Show(btnMore, new Point(0, btnMore.Height));
+            _activeDropDown.Items.Add(host);
+            _activeDropDown.Show(btnMore, new Point(0, btnMore.Height));
         }
     }
 }
