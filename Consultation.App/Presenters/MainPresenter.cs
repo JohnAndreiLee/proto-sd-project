@@ -123,19 +123,36 @@ namespace Consultation.App.Presenters
             form.Show();
         }
 
-
-
+        //private Form CreateFormByType(ChildForms formType)
+        //{
+        //    return formType switch
+        //    {
+        //        ChildForms.Dashboard => new DashboardView(),
+        //        ChildForms.Consultation => new ConsultationView(),
+        //        ChildForms.Bulletin => new BulletinView(),
+        //        ChildForms.Reports => new ReportsView(),
+        //        ChildForms.UserManagement => new UserManagementView(),
+        //        _ => new Form() { Text = "Not Implemented" }
+        //    };
+        //}
         private Form CreateFormByType(ChildForms formType)
         {
             return formType switch
             {
                 ChildForms.Dashboard => new DashboardView(),
                 ChildForms.Consultation => new ConsultationView(),
-                ChildForms.Bulletin => new BulletinView(),
+                ChildForms.Bulletin => CreateBulletinForm(),
                 ChildForms.Reports => new ReportsView(),
                 ChildForms.UserManagement => new UserManagementView(),
                 _ => new Form() { Text = "Not Implemented" }
             };
+        }
+
+        private Form CreateBulletinForm()
+        {
+            IBulletinView bulletinView = new BulletinView();
+            new BulletinPresenter(bulletinView);
+            return (Form)bulletinView;
         }
     }
 }

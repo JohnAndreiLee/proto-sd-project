@@ -45,7 +45,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             txtTitle = new Guna.UI2.WinForms.Guna2TextBox();
             label2 = new Label();
-            btnPublishBulletin = new Guna.UI2.WinForms.Guna2Button();
+            btnSave = new Guna.UI2.WinForms.Guna2Button();
             btnCancel = new Guna.UI2.WinForms.Guna2Button();
             panel1 = new Panel();
             btnBack = new Guna.UI2.WinForms.Guna2Button();
@@ -99,32 +99,32 @@
             label2.TabIndex = 12;
             label2.Text = "Title";
             // 
-            // btnPublishBulletin
+            // btnSave
             // 
-            btnPublishBulletin.BackColor = Color.Transparent;
-            btnPublishBulletin.BorderColor = Color.FromArgb(222, 59, 64);
-            btnPublishBulletin.BorderRadius = 6;
-            btnPublishBulletin.Cursor = Cursors.Hand;
-            btnPublishBulletin.CustomizableEdges = customizableEdges3;
-            btnPublishBulletin.DisabledState.BorderColor = Color.DarkGray;
-            btnPublishBulletin.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnPublishBulletin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnPublishBulletin.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnPublishBulletin.FillColor = Color.White;
-            btnPublishBulletin.FocusedColor = Color.Transparent;
-            btnPublishBulletin.Font = new Font("Inter", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnPublishBulletin.ForeColor = Color.FromArgb(222, 59, 64);
-            btnPublishBulletin.Image = Properties.Icons.publish;
-            btnPublishBulletin.ImageOffset = new Point(-2, 0);
-            btnPublishBulletin.ImageSize = new Size(17, 20);
-            btnPublishBulletin.Location = new Point(1281, 45);
-            btnPublishBulletin.Name = "btnPublishBulletin";
-            btnPublishBulletin.PressedColor = Color.Transparent;
-            btnPublishBulletin.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnPublishBulletin.Size = new Size(181, 44);
-            btnPublishBulletin.TabIndex = 21;
-            btnPublishBulletin.Text = "Publish Bulletin";
-            btnPublishBulletin.Click += btnPublishBulletin_Click;
+            btnSave.BackColor = Color.Transparent;
+            btnSave.BorderColor = Color.FromArgb(222, 59, 64);
+            btnSave.BorderRadius = 6;
+            btnSave.Cursor = Cursors.Hand;
+            btnSave.CustomizableEdges = customizableEdges3;
+            btnSave.DisabledState.BorderColor = Color.DarkGray;
+            btnSave.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnSave.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnSave.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSave.FillColor = Color.White;
+            btnSave.FocusedColor = Color.Transparent;
+            btnSave.Font = new Font("Inter", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSave.ForeColor = Color.FromArgb(222, 59, 64);
+            btnSave.Image = Properties.Icons.publish;
+            btnSave.ImageOffset = new Point(-2, 0);
+            btnSave.ImageSize = new Size(17, 20);
+            btnSave.Location = new Point(1354, 45);
+            btnSave.Name = "btnSave";
+            btnSave.PressedColor = Color.Transparent;
+            btnSave.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnSave.Size = new Size(108, 44);
+            btnSave.TabIndex = 21;
+            btnSave.Text = "Save";
+            btnSave.Click += btnSave_Click;
             // 
             // btnCancel
             // 
@@ -144,7 +144,7 @@
             btnCancel.Image = Properties.Icons.close;
             btnCancel.ImageOffset = new Point(-2, 0);
             btnCancel.ImageSize = new Size(16, 16);
-            btnCancel.Location = new Point(1146, 45);
+            btnCancel.Location = new Point(1218, 45);
             btnCancel.Name = "btnCancel";
             btnCancel.PressedColor = Color.Transparent;
             btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges6;
@@ -158,7 +158,7 @@
             panel1.BackColor = Color.FromArgb(222, 59, 64);
             panel1.Controls.Add(btnBack);
             panel1.Controls.Add(lblHeader);
-            panel1.Controls.Add(btnPublishBulletin);
+            panel1.Controls.Add(btnSave);
             panel1.Controls.Add(btnCancel);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -362,7 +362,7 @@
 
         #endregion
         private Label label2;
-        private Guna.UI2.WinForms.Guna2Button btnPublishBulletin;
+        private Guna.UI2.WinForms.Guna2Button btnSave;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
         private Panel panel1;
         private Label label3;

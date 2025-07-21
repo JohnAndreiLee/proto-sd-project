@@ -10,20 +10,14 @@ namespace Consultation.Domain
 {
     public class Bulletin
     {
-
         [Key]
         public int BulletinID { get; set; }
-
         public string Title { get; set; }
-
-        public string Description { get; set; }
-
-        public string ImageURL { get; set; }
-
+        public string Author { get; set; }
+        public string Content { get; set; }
         public DateTime DatePublished { get; set; }
-
-        public int Priority { get; set; }
-
-        public string Notify { get; set; }
+        public string Status { get; set; }
+        public int FileCount { get; set; }
+        public bool IsArchived { get; set; } = false;
     }
 }
