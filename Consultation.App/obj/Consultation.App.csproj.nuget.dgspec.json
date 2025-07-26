@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Van\\Source\\Repos\\proto-sd-project-Log-In-\\Consultation.App\\Consultation.App.csproj": {}
+    "C:\\Users\\Van\\source\\repos\\proto-sd-project-Log-In-\\Consultation.App\\Consultation.App.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Van\\Source\\Repos\\proto-sd-project-Log-In-\\Consultation.App\\Consultation.App.csproj": {
+    "C:\\Users\\Van\\source\\repos\\proto-sd-project-Log-In-\\Consultation.App\\Consultation.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Van\\Source\\Repos\\proto-sd-project-Log-In-\\Consultation.App\\Consultation.App.csproj",
+        "projectUniqueName": "C:\\Users\\Van\\source\\repos\\proto-sd-project-Log-In-\\Consultation.App\\Consultation.App.csproj",
         "projectName": "Consultation.App",
-        "projectPath": "C:\\Users\\Van\\Source\\Repos\\proto-sd-project-Log-In-\\Consultation.App\\Consultation.App.csproj",
+        "projectPath": "C:\\Users\\Van\\source\\repos\\proto-sd-project-Log-In-\\Consultation.App\\Consultation.App.csproj",
         "packagesPath": "C:\\Users\\Van\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Van\\Source\\Repos\\proto-sd-project-Log-In-\\Consultation.App\\obj\\",
+        "outputPath": "C:\\Users\\Van\\source\\repos\\proto-sd-project-Log-In-\\Consultation.App\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

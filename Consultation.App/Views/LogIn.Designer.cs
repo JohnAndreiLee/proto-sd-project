@@ -29,15 +29,14 @@
         private void InitializeComponent()
         {
             dockingClientPanel1 = new Syncfusion.Windows.Forms.Tools.DockingClientPanel();
-            pictureBox1 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            pictureBox2 = new PictureBox();
             panel1 = new Panel();
+            pictureBox1 = new PictureBox();
             ErrorPassLabel = new Label();
             resultlabel1 = new Label();
             ShowPassButton = new Button();
             ForgotPasswordButton = new Button();
-            SystemBtn = new Button();
-            ReqBtn = new Button();
-            label4 = new Label();
             label3 = new Label();
             GoogleSignInButton = new Button();
             SignInButton = new Button();
@@ -47,8 +46,10 @@
             label1 = new Label();
             SignInTextBox = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             dockingClientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)RememberMeCheckBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PasswordTextBoxV2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)SignInTextBox).BeginInit();
@@ -56,34 +57,42 @@
             // 
             // dockingClientPanel1
             // 
-            dockingClientPanel1.BackgroundImage = Properties.Icons.RedBg_1_;
-            dockingClientPanel1.Controls.Add(pictureBox1);
-            dockingClientPanel1.Controls.Add(panel1);
-            dockingClientPanel1.Location = new Point(-23, 0);
+            dockingClientPanel1.BackgroundImage = Properties.Icons.NewBGV2;
+            dockingClientPanel1.Controls.Add(pictureBox3);
+            dockingClientPanel1.Controls.Add(pictureBox2);
+            dockingClientPanel1.Location = new Point(0, 1);
             dockingClientPanel1.Name = "dockingClientPanel1";
-            dockingClientPanel1.Size = new Size(1940, 1080);
+            dockingClientPanel1.Size = new Size(515, 548);
             dockingClientPanel1.TabIndex = 0;
             // 
-            // pictureBox1
+            // pictureBox3
             // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = Properties.Icons.Untitled__Logo_;
-            pictureBox1.Location = new Point(23, 25);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(872, 987);
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
+            pictureBox3.BackColor = Color.Transparent;
+            pictureBox3.Image = Properties.Icons.Namelogo_removebg_preview1;
+            pictureBox3.Location = new Point(68, 369);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(406, 117);
+            pictureBox3.TabIndex = 1;
+            pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.Transparent;
+            pictureBox2.Image = Properties.Icons.Newlogo_againV2_removebg_preview;
+            pictureBox2.Location = new Point(128, 79);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(271, 248);
+            pictureBox2.TabIndex = 0;
+            pictureBox2.TabStop = false;
             // 
             // panel1
             // 
             panel1.BackColor = SystemColors.Control;
+            panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(ErrorPassLabel);
             panel1.Controls.Add(resultlabel1);
             panel1.Controls.Add(ShowPassButton);
             panel1.Controls.Add(ForgotPasswordButton);
-            panel1.Controls.Add(SystemBtn);
-            panel1.Controls.Add(ReqBtn);
-            panel1.Controls.Add(label4);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(GoogleSignInButton);
             panel1.Controls.Add(SignInButton);
@@ -92,15 +101,26 @@
             panel1.Controls.Add(PasswordTextBoxV2);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(SignInTextBox);
-            panel1.Location = new Point(1180, 105);
+            panel1.Location = new Point(511, 1);
             panel1.Name = "panel1";
-            panel1.Size = new Size(589, 849);
+            panel1.Size = new Size(488, 548);
             panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.ForestGreen;
+            pictureBox1.Image = Properties.Icons.Gmail_Image_removebg_preview;
+            pictureBox1.Location = new Point(141, 418);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(59, 53);
+            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox1.TabIndex = 18;
+            pictureBox1.TabStop = false;
             // 
             // ErrorPassLabel
             // 
             ErrorPassLabel.AutoSize = true;
-            ErrorPassLabel.Location = new Point(69, 283);
+            ErrorPassLabel.Location = new Point(39, 211);
             ErrorPassLabel.Name = "ErrorPassLabel";
             ErrorPassLabel.Size = new Size(0, 15);
             ErrorPassLabel.TabIndex = 17;
@@ -109,7 +129,7 @@
             // 
             resultlabel1.AutoSize = true;
             resultlabel1.BackColor = Color.Transparent;
-            resultlabel1.Location = new Point(69, 151);
+            resultlabel1.Location = new Point(39, 79);
             resultlabel1.Name = "resultlabel1";
             resultlabel1.Size = new Size(0, 15);
             resultlabel1.TabIndex = 16;
@@ -117,7 +137,7 @@
             // ShowPassButton
             // 
             ShowPassButton.Image = Properties.Icons.Untitled_design;
-            ShowPassButton.Location = new Point(485, 275);
+            ShowPassButton.Location = new Point(403, 203);
             ShowPassButton.Name = "ShowPassButton";
             ShowPassButton.Size = new Size(32, 23);
             ShowPassButton.TabIndex = 15;
@@ -130,54 +150,18 @@
             ForgotPasswordButton.FlatAppearance.BorderSize = 0;
             ForgotPasswordButton.FlatStyle = FlatStyle.Flat;
             ForgotPasswordButton.ForeColor = Color.Red;
-            ForgotPasswordButton.Location = new Point(411, 331);
+            ForgotPasswordButton.Location = new Point(329, 260);
             ForgotPasswordButton.Name = "ForgotPasswordButton";
             ForgotPasswordButton.Size = new Size(117, 23);
             ForgotPasswordButton.TabIndex = 14;
             ForgotPasswordButton.Text = "Forgot Password?";
             ForgotPasswordButton.UseVisualStyleBackColor = false;
             // 
-            // SystemBtn
-            // 
-            SystemBtn.BackColor = Color.Brown;
-            SystemBtn.FlatStyle = FlatStyle.Flat;
-            SystemBtn.Font = new Font("Microsoft Sans Serif", 12F);
-            SystemBtn.ForeColor = Color.White;
-            SystemBtn.Location = new Point(311, 647);
-            SystemBtn.Name = "SystemBtn";
-            SystemBtn.Size = new Size(197, 40);
-            SystemBtn.TabIndex = 13;
-            SystemBtn.Text = "System Status";
-            SystemBtn.UseVisualStyleBackColor = false;
-            // 
-            // ReqBtn
-            // 
-            ReqBtn.BackColor = Color.Brown;
-            ReqBtn.FlatStyle = FlatStyle.Flat;
-            ReqBtn.Font = new Font("Microsoft Sans Serif", 12F);
-            ReqBtn.ForeColor = Color.White;
-            ReqBtn.Location = new Point(97, 647);
-            ReqBtn.Name = "ReqBtn";
-            ReqBtn.Size = new Size(197, 40);
-            ReqBtn.TabIndex = 12;
-            ReqBtn.Text = "Request Access";
-            ReqBtn.UseVisualStyleBackColor = false;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F);
-            label4.Location = new Point(114, 583);
-            label4.Name = "label4";
-            label4.Size = new Size(378, 21);
-            label4.TabIndex = 9;
-            label4.Text = "------------------------Need Help?------------------------";
-            // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F);
-            label3.Location = new Point(143, 468);
+            label3.Location = new Point(95, 380);
             label3.Name = "label3";
             label3.Size = new Size(316, 21);
             label3.TabIndex = 7;
@@ -185,26 +169,27 @@
             // 
             // GoogleSignInButton
             // 
-            GoogleSignInButton.BackColor = Color.Brown;
-            GoogleSignInButton.FlatStyle = FlatStyle.Flat;
+            GoogleSignInButton.BackColor = Color.LimeGreen;
+            GoogleSignInButton.FlatStyle = FlatStyle.Popup;
             GoogleSignInButton.Font = new Font("Microsoft Sans Serif", 12F);
             GoogleSignInButton.ForeColor = Color.White;
-            GoogleSignInButton.Location = new Point(97, 509);
+            GoogleSignInButton.ImageAlign = ContentAlignment.TopRight;
+            GoogleSignInButton.Location = new Point(141, 418);
             GoogleSignInButton.Name = "GoogleSignInButton";
-            GoogleSignInButton.Size = new Size(411, 40);
+            GoogleSignInButton.Size = new Size(218, 53);
             GoogleSignInButton.TabIndex = 6;
-            GoogleSignInButton.Text = "Log In with Google";
+            GoogleSignInButton.Text = "              Log In with Google";
             GoogleSignInButton.UseVisualStyleBackColor = false;
             // 
             // SignInButton
             // 
             SignInButton.BackColor = Color.Brown;
-            SignInButton.FlatStyle = FlatStyle.Flat;
+            SignInButton.FlatStyle = FlatStyle.Popup;
             SignInButton.Font = new Font("Microsoft Sans Serif", 12F);
             SignInButton.ForeColor = Color.White;
-            SignInButton.Location = new Point(201, 396);
+            SignInButton.Location = new Point(157, 314);
             SignInButton.Name = "SignInButton";
-            SignInButton.Size = new Size(197, 40);
+            SignInButton.Size = new Size(183, 40);
             SignInButton.TabIndex = 5;
             SignInButton.Text = "Log In";
             SignInButton.UseVisualStyleBackColor = false;
@@ -213,7 +198,7 @@
             // RememberMeCheckBox
             // 
             RememberMeCheckBox.AccessibilityEnabled = true;
-            RememberMeCheckBox.Location = new Point(58, 331);
+            RememberMeCheckBox.Location = new Point(26, 262);
             RememberMeCheckBox.Name = "RememberMeCheckBox";
             RememberMeCheckBox.Size = new Size(150, 21);
             RememberMeCheckBox.TabIndex = 4;
@@ -222,47 +207,47 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 16F);
+            label2.Font = new Font("Microsoft Sans Serif", 13F);
             label2.ForeColor = Color.Gray;
-            label2.Location = new Point(58, 226);
+            label2.Location = new Point(28, 154);
             label2.Name = "label2";
-            label2.Size = new Size(114, 26);
+            label2.Size = new Size(94, 22);
             label2.TabIndex = 3;
             label2.Text = "Password:";
             // 
             // PasswordTextBoxV2
             // 
             PasswordTextBoxV2.BackColor = Color.Transparent;
-            PasswordTextBoxV2.BeforeTouchSize = new Size(470, 43);
+            PasswordTextBoxV2.BeforeTouchSize = new Size(418, 43);
             PasswordTextBoxV2.Font = new Font("Segoe UI", 12F);
-            PasswordTextBoxV2.Location = new Point(58, 266);
+            PasswordTextBoxV2.Location = new Point(28, 194);
             PasswordTextBoxV2.Multiline = true;
             PasswordTextBoxV2.Name = "PasswordTextBoxV2";
             PasswordTextBoxV2.PasswordChar = '●';
-            PasswordTextBoxV2.Size = new Size(470, 43);
+            PasswordTextBoxV2.Size = new Size(418, 43);
             PasswordTextBoxV2.TabIndex = 2;
             PasswordTextBoxV2.TextChanged += PasswordTextBoxV2_TextChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 16F);
+            label1.Font = new Font("Microsoft Sans Serif", 13F);
             label1.ForeColor = Color.Gray;
-            label1.Location = new Point(58, 103);
+            label1.Location = new Point(28, 57);
             label1.Name = "label1";
-            label1.Size = new Size(285, 26);
+            label1.Size = new Size(232, 22);
             label1.TabIndex = 1;
             label1.Text = "Umindanao E-mail Address:";
             // 
             // SignInTextBox
             // 
             SignInTextBox.BackColor = Color.Transparent;
-            SignInTextBox.BeforeTouchSize = new Size(470, 43);
+            SignInTextBox.BeforeTouchSize = new Size(418, 43);
             SignInTextBox.Font = new Font("Segoe UI", 12F);
-            SignInTextBox.Location = new Point(58, 136);
+            SignInTextBox.Location = new Point(28, 90);
             SignInTextBox.Multiline = true;
             SignInTextBox.Name = "SignInTextBox";
-            SignInTextBox.Size = new Size(470, 43);
+            SignInTextBox.Size = new Size(418, 43);
             SignInTextBox.TabIndex = 0;
             SignInTextBox.TextChanged += SignInTextBox_TextChanged;
             // 
@@ -271,15 +256,18 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.AppWorkspace;
-            ClientSize = new Size(1924, 1041);
+            ClientSize = new Size(995, 542);
+            Controls.Add(panel1);
             Controls.Add(dockingClientPanel1);
             Name = "LogIn";
             Text = "LogIn";
             Load += LogIn_Load;
             dockingClientPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)RememberMeCheckBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)PasswordTextBoxV2).EndInit();
             ((System.ComponentModel.ISupportInitialize)SignInTextBox).EndInit();
@@ -290,21 +278,20 @@
 
         private Syncfusion.Windows.Forms.Tools.DockingClientPanel dockingClientPanel1;
         private Panel panel1;
-        private PictureBox pictureBox1;
         private Syncfusion.Windows.Forms.Tools.TextBoxExt PasswordTextBoxV2;
         private Label label1;
         private Syncfusion.Windows.Forms.Tools.TextBoxExt SignInTextBox;
         private Label label2;
         private Button SignInButton;
-        private Syncfusion.Windows.Forms.Tools.CheckBoxAdv RememberMeCheckBox;
         private Button GoogleSignInButton;
         private Label label3;
-        private Button SystemBtn;
-        private Button ReqBtn;
-        private Label label4;
         private Button ForgotPasswordButton;
         private Button ShowPassButton;
         private Label ErrorPassLabel;
         private Label resultlabel1;
+        private Syncfusion.Windows.Forms.Tools.CheckBoxAdv RememberMeCheckBox;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
     }
 }

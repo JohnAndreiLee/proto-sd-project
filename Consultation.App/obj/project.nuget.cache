@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NXgGCXECKPldiCpAnEB6O9q3p2L4uIq4ZiObw/pMxJC4un7y8JKpPZ4TNMUMBc9hWAhpvsmk7hDO9+mjnP9Y+Q==",
+  "dgSpecHash": "GzRGzx9mWbnrUFKar2el2+7ajEW3i45w7y0KQPuj2iSrYSRHKKSu6xs05UhAMHcfubqmHx74RXCBROxncYnI3w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Van\\Source\\Repos\\proto-sd-project-Log-In-\\Consultation.App\\Consultation.App.csproj",
+  "projectFilePath": "C:\\Users\\Van\\source\\repos\\proto-sd-project-Log-In-\\Consultation.App\\Consultation.App.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Van\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.7\\guna.ui2.winforms.2.0.4.7.nupkg.sha512",
     "C:\\Users\\Van\\.nuget\\packages\\microsoft.winforms.designer.sdk\\1.6.0\\microsoft.winforms.designer.sdk.1.6.0.nupkg.sha512",
