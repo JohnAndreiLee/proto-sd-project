@@ -1,3 +1,5 @@
+using Consultation.App.Views.Controls.UserManagement;
+using Consultation.App.Views.IViews;
 using Student_Faculty;
 using System;
 using System.Collections.Generic;
@@ -11,42 +13,34 @@ using System.Windows.Forms;
 
 namespace Consultation.App.Views
 {
-    public partial class UserManagementView : Form
+    public partial class UserManagementView : UserControl, IUserManagementView
     {
         public UserManagementView()
         {
             InitializeComponent();
-            Load += StudentFacultyView_Load;
-        }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            flowLayPanSFA.Controls.Add(new StudentListCard());
-        }
-        private void BtnStudents_Click(object sender, EventArgs e)
-        {
-            flowLayPanSFA.Controls.Clear();
-            flowLayPanSFA.Controls.Add(new StudentListCard());
-        }
 
-        private void BtnFaculty_Click(object sender, EventArgs e)
-        {
-            flowLayPanSFA.Controls.Clear();
-            flowLayPanSFA.Controls.Add(new FacultyListCard());
-        }
+            buttonStudents.Click += (s, e) => StudentManagementEvent?.Invoke(s, e);
+            buttonFaculty.Click += (s, e) => FacultyManagementEvent?.Invoke(s, e);
+            buttonAdmin.Click += (s, e) => AdminManagementEvent?.Invoke(s, e);
 
-        private void StudentFacultyView_Load(object sender, EventArgs e)
-        {
-            flowLayPanSFA.Controls.Add(new StudentListCard());
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
+            //AddUserCard("JLE");
+            //Message("we weorks");
 
         }
 
-        private void flowLayoutPanelstudafac_Paint(object sender, PaintEventArgs e)
-        {
+        public event EventHandler StudentManagementEvent;
+        public event EventHandler FacultyManagementEvent;
+        public event EventHandler AdminManagementEvent;
 
+        public UserControl AsUserControl => this;
+
+        //for adding user cards; change if needed
+        public void AddUserCard(string name)
+        {
+            flPanelUserCard.Controls.Add(new UserCard(name, "547546", "genericEmail@hotmail.net"));
+        }
+        public void Message(string message) { 
+                MessageBox.Show(message, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

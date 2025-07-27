@@ -23,5 +23,13 @@ namespace Consultation.BackEndCRUD.Repository
                                 .FirstOrDefaultAsync(c => c.StudentID == studentId);
                                     
         }
+
+        public async Task<IEnumerable<ConsultationRequest>> GetConsultationRequestsAsync()
+        {
+            return await _context.ConsultationRequest
+                .Include(c => c.Student)
+                .Include(c => c.Faculty)
+                .ToListAsync();
+        }
     }
 }

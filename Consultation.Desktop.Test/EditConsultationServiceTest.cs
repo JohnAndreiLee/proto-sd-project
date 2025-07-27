@@ -1,4 +1,4 @@
-﻿using Consultation.BackEndCRUD.Service;
+﻿using Consultation.BackEndCRUD.Service.ConsultationServices;
 using Consultation.BackEndCRUD.ViewModel.ConsultationViewModel;
 using Consultation.Domain.Enum;
 using Consultation.Infrastructure.Data;

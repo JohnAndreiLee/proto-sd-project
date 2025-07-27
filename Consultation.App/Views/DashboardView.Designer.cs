@@ -47,7 +47,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1644, 941);
             Controls.Add(mainDashboardUserControl1);
-            FormBorderStyle = FormBorderStyle.None;
+            DoubleBuffered = true;
+            //FormBorderStyle = FormBorderStyle.None;
             Name = "DashboardView";
             Text = "Form1";
             ResumeLayout(false);

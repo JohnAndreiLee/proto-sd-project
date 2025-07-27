@@ -1,10 +1,11 @@
-﻿using Consultation.App.Views.IViews;
-using Consultation.App.Views.TestViews;
+﻿using Consultation.App.ConsultationManagement;
+using Consultation.App.Dashboard;
+using Consultation.App.Presenters; // <-- If your presenters are here
+using Consultation.App.Views;
+using Consultation.App.Views.IViews;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using Consultation.App.Views;
-using Consultation.App.ConsultationManagement;
 
 namespace Consultation.App.Presenters
 {
@@ -12,130 +13,162 @@ namespace Consultation.App.Presenters
     {
         private readonly IMainView _mainView;
 
-        // Enum to identify each child form
-        private enum ChildForms
+        private enum ChildViews
         {
             Dashboard,
             Bulletin,
             Consultation,
             UserManagement,
-            Reports,
             Settings
         }
 
-        private ChildForms _currentForm;
-        private Form _activeForm;
-
-        private readonly Dictionary<ChildForms, Form> _childForms = new();
+        private ChildViews _currentView;
+        private readonly Dictionary<ChildViews, IChildView> _childViews = new();
 
         public MainPresenter(IMainView mainView)
         {
             _mainView = mainView;
 
+            // Hook up nav events
             _mainView.DashboardEvent += DashboardEvent;
             _mainView.BulletinEvent += BulletinEvent;
             _mainView.ConsultationEvent += ConsultationEvent;
             _mainView.SFManagementEvent += SFManagementEvent;
-            _mainView.ReportsEvent += ReportsEvent;
             _mainView.PreferenceEvent += PreferenceEvent;
+            _mainView.NotificationEvent += NotificationEvent;
 
-            LoadChildForm(ChildForms.Dashboard);
+            // Load default view
+            LoadChildView(ChildViews.Dashboard);
             _mainView.Header("Dashboard");
-            _currentForm = ChildForms.Dashboard;
+            _currentView = ChildViews.Dashboard;
+
+            if (_mainView is MainView view)
+            {
+                SetActiveButton(view.Controls.Find("buttonDashboard", true)[0] as Button);
+            }
         }
 
-        // Event handlers
         private void DashboardEvent(object? sender, EventArgs e)
         {
-            if (_currentForm != ChildForms.Dashboard)
+            SetActiveButton(sender as Button);
+            if (_currentView != ChildViews.Dashboard)
             {
-                LoadChildForm(ChildForms.Dashboard);
+                LoadChildView(ChildViews.Dashboard);
                 _mainView.Header("Dashboard");
-                _currentForm = ChildForms.Dashboard;
+                _currentView = ChildViews.Dashboard;
             }
         }
 
         private void BulletinEvent(object? sender, EventArgs e)
         {
-            if (_currentForm != ChildForms.Bulletin)
+            SetActiveButton(sender as Button);
+            if (_currentView != ChildViews.Bulletin)
             {
-                LoadChildForm(ChildForms.Bulletin);
+                LoadChildView(ChildViews.Bulletin);
                 _mainView.Header("Bulletin");
-                _currentForm = ChildForms.Bulletin;
+                _currentView = ChildViews.Bulletin;
             }
         }
 
         private void ConsultationEvent(object? sender, EventArgs e)
         {
-            if (_currentForm != ChildForms.Consultation)
+            SetActiveButton(sender as Button);
+            if (_currentView != ChildViews.Consultation)
             {
-                LoadChildForm(ChildForms.Consultation);
+                LoadChildView(ChildViews.Consultation);
                 _mainView.Header("Consultation");
-                _currentForm = ChildForms.Consultation;
+                _currentView = ChildViews.Consultation;
             }
         }
 
         private void SFManagementEvent(object? sender, EventArgs e)
         {
-            if (_currentForm != ChildForms.UserManagement)
+            SetActiveButton(sender as Button);
+            if (_currentView != ChildViews.UserManagement)
             {
-                LoadChildForm(ChildForms.UserManagement);
+                LoadChildView(ChildViews.UserManagement);
                 _mainView.Header("User Management");
-                _currentForm = ChildForms.UserManagement;
-            }
-        }
-
-        private void ReportsEvent(object? sender, EventArgs e)
-        {
-            if (_currentForm != ChildForms.Reports)
-            {
-                LoadChildForm(ChildForms.Reports);
-                _mainView.Header("Reports");
-                _currentForm = ChildForms.Reports;
+                _currentView = ChildViews.UserManagement;
             }
         }
 
         private void PreferenceEvent(object? sender, EventArgs e)
         {
-            _mainView.SetMessage("Setting Event Triggered");
+            SetActiveButton(sender as Button);
+            _mainView.SetMessage("Settings clicked");
         }
 
-        private void LoadChildForm(ChildForms formType)
+        private void NotificationEvent(object? sender, EventArgs e)
         {
-            if (_activeForm != null && !_activeForm.IsDisposed)
-            {
-                _activeForm.Hide();
-            }
-
-            if (!_childForms.TryGetValue(formType, out var form) || form.IsDisposed)
-            {
-                form = CreateFormByType(formType);
-                _childForms[formType] = form;
-            }
-
-            form.FormBorderStyle = FormBorderStyle.None;
-            form.MdiParent = (Form)_mainView;
-            form.Dock = DockStyle.Fill;
-            form.ShowInTaskbar = false;
-
-            _activeForm = form;
-            form.BringToFront();
-            form.Show();
+            var notificationView = new NotificationView();
+            notificationView.ShowDialog();
         }
 
-
-
-        private Form CreateFormByType(ChildForms formType)
+        private void LoadChildView(ChildViews viewType)
         {
-            return formType switch
+            if (!_childViews.TryGetValue(viewType, out var view))
             {
-                ChildForms.Dashboard => new DashboardView(),
-                ChildForms.Consultation => new ConsultationView(),
-                ChildForms.Bulletin => new BulletinView(),
-                ChildForms.Reports => new ReportsView(),
-                ChildForms.UserManagement => new UserManagementView(),
-                _ => new Form() { Text = "Not Implemented" }
+                view = CreateViewByType(viewType);
+                _childViews[viewType] = view;
+            }
+
+            _mainView.MainPanel.Controls.Clear();
+            view.AsUserControl.Dock = DockStyle.Fill;
+            _mainView.MainPanel.Controls.Add(view.AsUserControl);
+            view.AsUserControl.BringToFront();
+        }
+
+        private IChildView CreateViewByType(ChildViews viewType)
+        {
+            return viewType switch
+            {
+                ChildViews.Dashboard => CreateDashboardView(),
+                ChildViews.Consultation => CreateConsultationView(),
+                ChildViews.Bulletin => CreateBulletinView(),
+                ChildViews.UserManagement => CreateUserManagementView(),
+                _ => throw new NotImplementedException()
             };
+        }
+
+        private IChildView CreateDashboardView()
+        {
+            var view = new MainDashboardUserControl();
+            var presenter = new DashboardPresenter(view);
+            return view;
+        }
+
+        private IChildView CreateConsultationView()
+        {
+            var view = new ConsultationView();
+            //var presenter = new ConsultationPresenter(view);
+            return view;
+        }
+
+        private IChildView CreateBulletinView()
+        {
+            var view = new BulletinView();
+            var presenter = new BulletinPresenter(view);
+            return view;
+        }
+
+        private IChildView CreateUserManagementView()
+        {
+            var view = new UserManagementView();
+            var presenter = new UserManagementPresenter(view);
+            return view;
+        }
+
+        private void SetActiveButton(Button button)
+        {
+            if (button == null) return;
+
+            if (_mainView.CurrentActiveButton != null)
+            {
+                _mainView.ResetButton(_mainView.CurrentActiveButton);
+            }
+
+            _mainView.HighlightButton(button);
+            _mainView.CurrentActiveButton = button;
         }
     }
 }

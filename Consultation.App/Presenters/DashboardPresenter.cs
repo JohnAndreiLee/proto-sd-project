@@ -10,16 +10,17 @@ namespace Consultation.App.Presenters
 {
     public class DashboardPresenter
     {
-        /* 
-          private readonly IDashboardView _view;
-          private readonly AppDbContext _dbContext;
 
+        
+          private readonly IDashboardView _view;
+          //private readonly AppDbContext _dbContext;
+        
           public DashboardPresenter(IDashboardView view)
           {
               _view = view;
-              _dbContext = new AppDbContext(); // Or inject it via DI
+             // _dbContext = new AppDbContext(); // Or inject it via DI
           }
-
+        /*
           public void LoadDashboardData()
           {
               var user = _dbContext.Users.FirstOrDefault(u => u.Username == _view.LoggedInUsername);

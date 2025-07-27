@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             materialCard1 = new MaterialSkin.Controls.MaterialCard();
             btnRefresh = new Guna.UI2.WinForms.Guna2Button();
             panelUnderline = new Panel();
@@ -74,7 +74,7 @@
             btnRefresh.BorderColor = Color.Transparent;
             btnRefresh.BorderRadius = 6;
             btnRefresh.Cursor = Cursors.Hand;
-            btnRefresh.CustomizableEdges = customizableEdges9;
+            btnRefresh.CustomizableEdges = customizableEdges1;
             btnRefresh.DisabledState.BorderColor = Color.DarkGray;
             btnRefresh.DisabledState.CustomBorderColor = Color.DarkGray;
             btnRefresh.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -87,7 +87,7 @@
             btnRefresh.ImageSize = new Size(14, 14);
             btnRefresh.Location = new Point(1319, 22);
             btnRefresh.Name = "btnRefresh";
-            btnRefresh.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnRefresh.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnRefresh.Size = new Size(97, 36);
             btnRefresh.TabIndex = 7;
             btnRefresh.Text = "Refresh";
@@ -104,7 +104,7 @@
             // btnBulletinView
             // 
             btnBulletinView.Cursor = Cursors.Hand;
-            btnBulletinView.CustomizableEdges = customizableEdges11;
+            btnBulletinView.CustomizableEdges = customizableEdges3;
             btnBulletinView.DisabledState.BorderColor = Color.DarkGray;
             btnBulletinView.DisabledState.CustomBorderColor = Color.DarkGray;
             btnBulletinView.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -114,7 +114,7 @@
             btnBulletinView.ForeColor = Color.FromArgb(190, 0, 2);
             btnBulletinView.Location = new Point(12, 12);
             btnBulletinView.Name = "btnBulletinView";
-            btnBulletinView.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnBulletinView.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnBulletinView.Size = new Size(136, 56);
             btnBulletinView.TabIndex = 5;
             btnBulletinView.Text = "Bulletin View";
@@ -124,7 +124,7 @@
             // 
             btnArchive.BackColor = Color.White;
             btnArchive.Cursor = Cursors.Hand;
-            btnArchive.CustomizableEdges = customizableEdges13;
+            btnArchive.CustomizableEdges = customizableEdges5;
             btnArchive.DisabledState.BorderColor = Color.DarkGray;
             btnArchive.DisabledState.CustomBorderColor = Color.DarkGray;
             btnArchive.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -134,7 +134,7 @@
             btnArchive.ForeColor = Color.FromArgb(86, 93, 109);
             btnArchive.Location = new Point(154, 12);
             btnArchive.Name = "btnArchive";
-            btnArchive.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnArchive.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnArchive.Size = new Size(136, 56);
             btnArchive.TabIndex = 4;
             btnArchive.Text = "Archive";
@@ -145,7 +145,7 @@
             btnCreateBulletin.BorderColor = Color.Transparent;
             btnCreateBulletin.BorderRadius = 6;
             btnCreateBulletin.Cursor = Cursors.Hand;
-            btnCreateBulletin.CustomizableEdges = customizableEdges15;
+            btnCreateBulletin.CustomizableEdges = customizableEdges7;
             btnCreateBulletin.DisabledState.BorderColor = Color.DarkGray;
             btnCreateBulletin.DisabledState.CustomBorderColor = Color.DarkGray;
             btnCreateBulletin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -158,7 +158,7 @@
             btnCreateBulletin.ImageSize = new Size(14, 14);
             btnCreateBulletin.Location = new Point(1431, 22);
             btnCreateBulletin.Name = "btnCreateBulletin";
-            btnCreateBulletin.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnCreateBulletin.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnCreateBulletin.Size = new Size(143, 36);
             btnCreateBulletin.TabIndex = 3;
             btnCreateBulletin.Text = "Create Bulletin";
@@ -181,11 +181,11 @@
             // lblBulletinHeader
             // 
             lblBulletinHeader.AutoSize = true;
-            lblBulletinHeader.Font = new Font("Archivo", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblBulletinHeader.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblBulletinHeader.ForeColor = Color.FromArgb(23, 26, 31);
             lblBulletinHeader.Location = new Point(17, 17);
             lblBulletinHeader.Name = "lblBulletinHeader";
-            lblBulletinHeader.Size = new Size(189, 36);
+            lblBulletinHeader.Size = new Size(194, 29);
             lblBulletinHeader.TabIndex = 0;
             lblBulletinHeader.Text = "Bulletin Header";
             // 
@@ -220,7 +220,8 @@
             Controls.Add(panelHeader);
             Controls.Add(materialCard1);
             Controls.Add(materialCard2);
-            FormBorderStyle = FormBorderStyle.None;
+            DoubleBuffered = true;
+            //FormBorderStyle = FormBorderStyle.None;
             Name = "BulletinView";
             Text = "BulletinsForm";
             materialCard1.ResumeLayout(false);

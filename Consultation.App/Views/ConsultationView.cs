@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Consultation.App.Views.IViews;
+using System;
 using System.Windows.Forms;
 
 namespace Consultation.App.ConsultationManagement
 {
-    public partial class ConsultationView : Form
+
+    public partial class ConsultationView : UserControl, IConsultationView
     {
         private CSWindow csWindow;
         private ArchiveWindow archiveWindow;
@@ -11,13 +13,17 @@ namespace Consultation.App.ConsultationManagement
         public ConsultationView()
         {
             InitializeComponent();
+            MoveUnderline(btnConsultation);
             ShowConsultationView();
         }
+        public UserControl AsUserControl => this;
+
+
 
         private void ShowConsultationView()
         {
-            MoveUnderline(btnConsultation);
-            WindowPanelConsultation.Controls.Clear();
+           
+           WindowPanelConsultation.Controls.Clear();
 
             if (csWindow == null)
             {
@@ -28,7 +34,17 @@ namespace Consultation.App.ConsultationManagement
             WindowPanelConsultation.Controls.Add(csWindow);
         }
 
-        private void OnCardArchived(object sender, ConsultationCard card)
+        // What does this method do, Only Displaying The Higlight line Under the button
+        private void MoveUnderline(Control targetButton)
+        {
+            underlinePanel.Width = targetButton.Width;
+            underlinePanel.Left = targetButton.Left;
+            underlinePanel.Top = targetButton.Bottom - 4;
+            underlinePanel.Visible = true;
+        }
+
+        //This is the Function For the Archived
+        private void OnCardArchived(object? sender, ConsultationCard card)
         {
             csWindow.RemoveCard(card);
 
@@ -38,13 +54,14 @@ namespace Consultation.App.ConsultationManagement
             archiveWindow.AddToArchive(card);
         }
 
-        private void btnConsultation_Click_1(object sender, EventArgs e)
+       
+        private void btnConsultation_Click_1(object? sender, EventArgs e)
         {
+            MoveUnderline(btnConsultation);
             ShowConsultationView();
-
         }
 
-        private void btnArchive_Click(object sender, EventArgs e)
+        private void btnArchive_Click(object? sender, EventArgs e)
         {
             MoveUnderline(btnArchive);
 
@@ -57,15 +74,13 @@ namespace Consultation.App.ConsultationManagement
 
         }
 
-        private void MoveUnderline(Control targetButton)
+        // No I logic for this button in the original code, but keeping it for consistency
+        private void btnRefresh_Click(object? sender, EventArgs e)
         {
-            underlinePanel.Width = targetButton.Width;
-            underlinePanel.Left = targetButton.Left;
-            underlinePanel.Top = targetButton.Bottom - 4;
-            underlinePanel.Visible = true;
+
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
+        private void materialCard2_Paint(object? sender, PaintEventArgs e)
         {
 
         }

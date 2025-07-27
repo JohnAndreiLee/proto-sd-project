@@ -3,7 +3,7 @@
   <PropertyGroup />
   <ItemGroup>
     <Compile Update="Views\BulletinView.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Views\Controls\BulletinManagement\ArchiveCard.cs">
       <SubType>UserControl</SubType>
@@ -47,9 +47,6 @@
     <Compile Update="Views\Controls\Dashboard\Quick Actions Panel\SystemSettings.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Views\Controls\Notification\NotificationOverlay.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Views\Controls\UserManagement\AdminAction.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -92,6 +89,9 @@
     <Compile Update="Views\Controls\UserManagement\StudentCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Views\Controls\UserManagement\UserCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Views\Controls\UserManagement\ViewAdmin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -101,19 +101,16 @@
     <Compile Update="Views\Controls\UserManagement\ViewStudent.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Views\LogIn.cs">
+    <Compile Update="Views\LogInView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\UserManagementView.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Views\Controls\UserManagement\StudentListCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Views\LogInView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Views\NotificationView.cs">
+    <Compile Update="Views\Controls\Notification\NotificationView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\ReportsView.cs">
@@ -132,13 +129,13 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Views\ConsultationView.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Views\Controls\ConsultationManagement\CSWindow.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Views\DashboardView.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Views\Controls\Dashboard\Activity Feed Panel\Bulletin.cs">
       <SubType>UserControl</SubType>

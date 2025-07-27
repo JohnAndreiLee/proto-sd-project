@@ -29,31 +29,31 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             materialCard1 = new MaterialSkin.Controls.MaterialCard();
             Location = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
-            Facultytxtbox = new Guna.UI2.WinForms.Guna2TextBox();
-            Timetxtbox = new Guna.UI2.WinForms.Guna2TextBox();
-            Date = new Guna.UI2.WinForms.Guna2TextBox();
-            idnumber = new Guna.UI2.WinForms.Guna2TextBox();
+            guna2txtboxStatus = new Guna.UI2.WinForms.Guna2TextBox();
+            txtboxFaculty = new Guna.UI2.WinForms.Guna2TextBox();
+            txtboxTimeStart = new Guna.UI2.WinForms.Guna2TextBox();
+            txtboxDateSchedule = new Guna.UI2.WinForms.Guna2TextBox();
+            txtboxIdNumber = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            Noteslabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            courseCodeLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            StudentName = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            lblConcern = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            lblCourseCode = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            lblStudentName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             flowLayoutPanel1 = new FlowLayoutPanel();
             flowLayoutPanel2 = new FlowLayoutPanel();
             flowLayoutPanel3 = new FlowLayoutPanel();
@@ -75,15 +75,15 @@
             // 
             materialCard1.BackColor = Color.FromArgb(255, 255, 255);
             materialCard1.Controls.Add(Location);
-            materialCard1.Controls.Add(guna2TextBox5);
-            materialCard1.Controls.Add(Facultytxtbox);
-            materialCard1.Controls.Add(Timetxtbox);
-            materialCard1.Controls.Add(Date);
-            materialCard1.Controls.Add(idnumber);
+            materialCard1.Controls.Add(guna2txtboxStatus);
+            materialCard1.Controls.Add(txtboxFaculty);
+            materialCard1.Controls.Add(txtboxTimeStart);
+            materialCard1.Controls.Add(txtboxDateSchedule);
+            materialCard1.Controls.Add(txtboxIdNumber);
             materialCard1.Controls.Add(guna2Button1);
-            materialCard1.Controls.Add(Noteslabel);
-            materialCard1.Controls.Add(courseCodeLabel);
-            materialCard1.Controls.Add(StudentName);
+            materialCard1.Controls.Add(lblConcern);
+            materialCard1.Controls.Add(lblCourseCode);
+            materialCard1.Controls.Add(lblStudentName);
             materialCard1.Controls.Add(flowLayoutPanel1);
             materialCard1.Controls.Add(flowLayoutPanel2);
             materialCard1.Controls.Add(flowLayoutPanel3);
@@ -103,7 +103,7 @@
             // Location
             // 
             Location.BorderRadius = 15;
-            Location.CustomizableEdges = customizableEdges1;
+            Location.CustomizableEdges = customizableEdges15;
             Location.DefaultText = "2025-05-10";
             Location.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             Location.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -119,137 +119,137 @@
             Location.PlaceholderText = "";
             Location.ReadOnly = true;
             Location.SelectedText = "";
-            Location.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            Location.ShadowDecoration.CustomizableEdges = customizableEdges16;
             Location.Size = new Size(145, 28);
             Location.TabIndex = 10;
             Location.TextAlign = HorizontalAlignment.Center;
             // 
-            // guna2TextBox5
+            // guna2txtboxStatus
             // 
-            guna2TextBox5.BackColor = Color.Transparent;
-            guna2TextBox5.BorderRadius = 15;
-            guna2TextBox5.CustomizableEdges = customizableEdges3;
-            guna2TextBox5.DefaultText = "Pending";
-            guna2TextBox5.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox5.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox5.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox5.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox5.FillColor = Color.MistyRose;
-            guna2TextBox5.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox5.Font = new Font("Inter", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2TextBox5.ForeColor = Color.Red;
-            guna2TextBox5.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox5.Location = new Point(1176, 13);
-            guna2TextBox5.Margin = new Padding(3, 4, 3, 4);
-            guna2TextBox5.Name = "guna2TextBox5";
-            guna2TextBox5.PlaceholderText = "";
-            guna2TextBox5.ReadOnly = true;
-            guna2TextBox5.SelectedText = "";
-            guna2TextBox5.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2TextBox5.Size = new Size(114, 38);
-            guna2TextBox5.TabIndex = 9;
-            guna2TextBox5.TextAlign = HorizontalAlignment.Center;
+            guna2txtboxStatus.BackColor = Color.Transparent;
+            guna2txtboxStatus.BorderRadius = 15;
+            guna2txtboxStatus.CustomizableEdges = customizableEdges17;
+            guna2txtboxStatus.DefaultText = "Pending";
+            guna2txtboxStatus.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            guna2txtboxStatus.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            guna2txtboxStatus.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            guna2txtboxStatus.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            guna2txtboxStatus.FillColor = Color.MistyRose;
+            guna2txtboxStatus.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2txtboxStatus.Font = new Font("Inter", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            guna2txtboxStatus.ForeColor = Color.Red;
+            guna2txtboxStatus.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2txtboxStatus.Location = new Point(1176, 13);
+            guna2txtboxStatus.Margin = new Padding(3, 4, 3, 4);
+            guna2txtboxStatus.Name = "guna2txtboxStatus";
+            guna2txtboxStatus.PlaceholderText = "";
+            guna2txtboxStatus.ReadOnly = true;
+            guna2txtboxStatus.SelectedText = "";
+            guna2txtboxStatus.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            guna2txtboxStatus.Size = new Size(114, 38);
+            guna2txtboxStatus.TabIndex = 9;
+            guna2txtboxStatus.TextAlign = HorizontalAlignment.Center;
             // 
-            // Facultytxtbox
+            // txtboxFaculty
             // 
-            Facultytxtbox.BorderRadius = 15;
-            Facultytxtbox.CustomizableEdges = customizableEdges5;
-            Facultytxtbox.DefaultText = "2025-05-10";
-            Facultytxtbox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            Facultytxtbox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            Facultytxtbox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            Facultytxtbox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            Facultytxtbox.Enabled = false;
-            Facultytxtbox.FillColor = Color.Gainsboro;
-            Facultytxtbox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            Facultytxtbox.Font = new Font("Segoe UI", 9F);
-            Facultytxtbox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            Facultytxtbox.Location = new Point(539, 86);
-            Facultytxtbox.Name = "Facultytxtbox";
-            Facultytxtbox.PlaceholderText = "";
-            Facultytxtbox.ReadOnly = true;
-            Facultytxtbox.SelectedText = "";
-            Facultytxtbox.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            Facultytxtbox.Size = new Size(145, 28);
-            Facultytxtbox.TabIndex = 8;
-            Facultytxtbox.TextAlign = HorizontalAlignment.Center;
+            txtboxFaculty.BorderRadius = 15;
+            txtboxFaculty.CustomizableEdges = customizableEdges19;
+            txtboxFaculty.DefaultText = "2025-05-10";
+            txtboxFaculty.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtboxFaculty.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtboxFaculty.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtboxFaculty.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtboxFaculty.Enabled = false;
+            txtboxFaculty.FillColor = Color.Gainsboro;
+            txtboxFaculty.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtboxFaculty.Font = new Font("Segoe UI", 9F);
+            txtboxFaculty.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtboxFaculty.Location = new Point(539, 86);
+            txtboxFaculty.Name = "txtboxFaculty";
+            txtboxFaculty.PlaceholderText = "";
+            txtboxFaculty.ReadOnly = true;
+            txtboxFaculty.SelectedText = "";
+            txtboxFaculty.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            txtboxFaculty.Size = new Size(145, 28);
+            txtboxFaculty.TabIndex = 8;
+            txtboxFaculty.TextAlign = HorizontalAlignment.Center;
             // 
-            // Timetxtbox
+            // txtboxTimeStart
             // 
-            Timetxtbox.BorderRadius = 15;
-            Timetxtbox.CustomizableEdges = customizableEdges7;
-            Timetxtbox.DefaultText = "2025-05-10";
-            Timetxtbox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            Timetxtbox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            Timetxtbox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            Timetxtbox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            Timetxtbox.Enabled = false;
-            Timetxtbox.FillColor = Color.Gainsboro;
-            Timetxtbox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            Timetxtbox.Font = new Font("Segoe UI", 9F);
-            Timetxtbox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            Timetxtbox.Location = new Point(364, 86);
-            Timetxtbox.Name = "Timetxtbox";
-            Timetxtbox.PlaceholderText = "";
-            Timetxtbox.ReadOnly = true;
-            Timetxtbox.SelectedText = "";
-            Timetxtbox.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            Timetxtbox.Size = new Size(145, 28);
-            Timetxtbox.TabIndex = 7;
-            Timetxtbox.TextAlign = HorizontalAlignment.Center;
+            txtboxTimeStart.BorderRadius = 15;
+            txtboxTimeStart.CustomizableEdges = customizableEdges21;
+            txtboxTimeStart.DefaultText = "2025-05-10";
+            txtboxTimeStart.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtboxTimeStart.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtboxTimeStart.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtboxTimeStart.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtboxTimeStart.Enabled = false;
+            txtboxTimeStart.FillColor = Color.Gainsboro;
+            txtboxTimeStart.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtboxTimeStart.Font = new Font("Segoe UI", 9F);
+            txtboxTimeStart.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtboxTimeStart.Location = new Point(364, 86);
+            txtboxTimeStart.Name = "txtboxTimeStart";
+            txtboxTimeStart.PlaceholderText = "";
+            txtboxTimeStart.ReadOnly = true;
+            txtboxTimeStart.SelectedText = "";
+            txtboxTimeStart.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            txtboxTimeStart.Size = new Size(145, 28);
+            txtboxTimeStart.TabIndex = 7;
+            txtboxTimeStart.TextAlign = HorizontalAlignment.Center;
             // 
-            // Date
+            // txtboxDateSchedule
             // 
-            Date.BorderRadius = 15;
-            Date.CustomizableEdges = customizableEdges9;
-            Date.DefaultText = "2025-05-10";
-            Date.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            Date.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            Date.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            Date.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            Date.Enabled = false;
-            Date.FillColor = Color.Gainsboro;
-            Date.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            Date.Font = new Font("Segoe UI", 9F);
-            Date.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            Date.Location = new Point(186, 86);
-            Date.Name = "Date";
-            Date.PlaceholderText = "";
-            Date.ReadOnly = true;
-            Date.SelectedText = "";
-            Date.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            Date.Size = new Size(145, 28);
-            Date.TabIndex = 6;
-            Date.TextAlign = HorizontalAlignment.Center;
+            txtboxDateSchedule.BorderRadius = 15;
+            txtboxDateSchedule.CustomizableEdges = customizableEdges23;
+            txtboxDateSchedule.DefaultText = "2025-05-10";
+            txtboxDateSchedule.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtboxDateSchedule.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtboxDateSchedule.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtboxDateSchedule.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtboxDateSchedule.Enabled = false;
+            txtboxDateSchedule.FillColor = Color.Gainsboro;
+            txtboxDateSchedule.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtboxDateSchedule.Font = new Font("Segoe UI", 9F);
+            txtboxDateSchedule.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtboxDateSchedule.Location = new Point(186, 86);
+            txtboxDateSchedule.Name = "txtboxDateSchedule";
+            txtboxDateSchedule.PlaceholderText = "";
+            txtboxDateSchedule.ReadOnly = true;
+            txtboxDateSchedule.SelectedText = "";
+            txtboxDateSchedule.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            txtboxDateSchedule.Size = new Size(145, 28);
+            txtboxDateSchedule.TabIndex = 6;
+            txtboxDateSchedule.TextAlign = HorizontalAlignment.Center;
             // 
-            // idnumber
+            // txtboxIdNumber
             // 
-            idnumber.BorderRadius = 15;
-            idnumber.CustomizableEdges = customizableEdges11;
-            idnumber.DefaultText = "ID: CON-2025-001";
-            idnumber.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            idnumber.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            idnumber.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            idnumber.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            idnumber.Enabled = false;
-            idnumber.FillColor = Color.Gainsboro;
-            idnumber.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            idnumber.Font = new Font("Segoe UI", 9F);
-            idnumber.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            idnumber.Location = new Point(25, 86);
-            idnumber.Name = "idnumber";
-            idnumber.PlaceholderText = "";
-            idnumber.ReadOnly = true;
-            idnumber.SelectedText = "";
-            idnumber.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            idnumber.Size = new Size(133, 28);
-            idnumber.TabIndex = 5;
-            idnumber.TextAlign = HorizontalAlignment.Center;
+            txtboxIdNumber.BorderRadius = 15;
+            txtboxIdNumber.CustomizableEdges = customizableEdges25;
+            txtboxIdNumber.DefaultText = "ID: CON-2025-001";
+            txtboxIdNumber.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtboxIdNumber.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtboxIdNumber.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtboxIdNumber.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtboxIdNumber.Enabled = false;
+            txtboxIdNumber.FillColor = Color.Gainsboro;
+            txtboxIdNumber.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtboxIdNumber.Font = new Font("Segoe UI", 9F);
+            txtboxIdNumber.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtboxIdNumber.Location = new Point(25, 86);
+            txtboxIdNumber.Name = "txtboxIdNumber";
+            txtboxIdNumber.PlaceholderText = "";
+            txtboxIdNumber.ReadOnly = true;
+            txtboxIdNumber.SelectedText = "";
+            txtboxIdNumber.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            txtboxIdNumber.Size = new Size(133, 28);
+            txtboxIdNumber.TabIndex = 5;
+            txtboxIdNumber.TextAlign = HorizontalAlignment.Center;
             // 
             // guna2Button1
             // 
             guna2Button1.BackColor = Color.Transparent;
-            guna2Button1.CustomizableEdges = customizableEdges13;
+            guna2Button1.CustomizableEdges = customizableEdges27;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -264,41 +264,41 @@
             guna2Button1.ImageSize = new Size(25, 25);
             guna2Button1.Location = new Point(1302, 13);
             guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges28;
             guna2Button1.Size = new Size(36, 36);
             guna2Button1.TabIndex = 4;
             guna2Button1.Click += guna2Button1_Click;
             // 
-            // Noteslabel
+            // lblConcern
             // 
-            Noteslabel.BackColor = Color.Transparent;
-            Noteslabel.Font = new Font("Inter", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Noteslabel.Location = new Point(25, 48);
-            Noteslabel.Name = "Noteslabel";
-            Noteslabel.Size = new Size(675, 25);
-            Noteslabel.TabIndex = 3;
-            Noteslabel.Text = "Student struggling with algebra concepts. Parent requested additional support strategies.";
+            lblConcern.BackColor = Color.Transparent;
+            lblConcern.Font = new Font("Inter", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblConcern.Location = new Point(25, 44);
+            lblConcern.Name = "lblConcern";
+            lblConcern.Size = new Size(675, 25);
+            lblConcern.TabIndex = 3;
+            lblConcern.Text = "Student struggling with algebra concepts. Parent requested additional support strategies.";
             // 
-            // CourseCode
+            // lblCourseCode
             // 
-            courseCodeLabel.BackColor = Color.Transparent;
-            courseCodeLabel.Font = new Font("Archivo", 15.75F, FontStyle.Bold);
-            courseCodeLabel.ForeColor = Color.DimGray;
-            courseCodeLabel.Location = new Point(242, 12);
-            courseCodeLabel.Name = "CourseCode";
-            courseCodeLabel.Size = new Size(185, 34);
-            courseCodeLabel.TabIndex = 2;
-            courseCodeLabel.Text = "CPE 325 - L (7605)";
+            lblCourseCode.BackColor = Color.Transparent;
+            lblCourseCode.Font = new Font("Archivo", 15.75F, FontStyle.Bold);
+            lblCourseCode.ForeColor = Color.DimGray;
+            lblCourseCode.Location = new Point(242, 12);
+            lblCourseCode.Name = "lblCourseCode";
+            lblCourseCode.Size = new Size(185, 34);
+            lblCourseCode.TabIndex = 2;
+            lblCourseCode.Text = "CPE 325 - L (7605)";
             // 
-            // StudentName
+            // lblStudentName
             // 
-            StudentName.BackColor = Color.Transparent;
-            StudentName.Font = new Font("Archivo", 15.75F, FontStyle.Bold);
-            StudentName.Location = new Point(25, 12);
-            StudentName.Name = "StudentName";
-            StudentName.Size = new Size(197, 34);
-            StudentName.TabIndex = 1;
-            StudentName.Text = "Stephen Neil Garde  ";
+            lblStudentName.BackColor = Color.Transparent;
+            lblStudentName.Font = new Font("Archivo", 15.75F, FontStyle.Bold);
+            lblStudentName.Location = new Point(25, 12);
+            lblStudentName.Name = "lblStudentName";
+            lblStudentName.Size = new Size(197, 34);
+            lblStudentName.TabIndex = 1;
+            lblStudentName.Text = "Stephen Neil Garde  ";
             // 
             // flowLayoutPanel1
             // 
@@ -425,21 +425,21 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel DateDay;
         private Guna.UI2.WinForms.Guna2HtmlLabel LabelTime;
         private Guna.UI2.WinForms.Guna2HtmlLabel LabelDate;
-        private Guna.UI2.WinForms.Guna2HtmlLabel StudentName;
-        private Guna.UI2.WinForms.Guna2HtmlLabel courseCodeLabel;
-        private Guna.UI2.WinForms.Guna2HtmlLabel Noteslabel;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblStudentName;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblCourseCode;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblConcern;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2TextBox Facultytxtbox;
-        private Guna.UI2.WinForms.Guna2TextBox Timetxtbox;
-        private Guna.UI2.WinForms.Guna2TextBox Date;
-        private Guna.UI2.WinForms.Guna2TextBox idnumber;
+        private Guna.UI2.WinForms.Guna2TextBox txtboxFaculty;
+        private Guna.UI2.WinForms.Guna2TextBox txtboxTimeStart;
+        private Guna.UI2.WinForms.Guna2TextBox txtboxDateSchedule;
+        private Guna.UI2.WinForms.Guna2TextBox txtboxIdNumber;
         private Guna.UI2.WinForms.Guna2ContextMenuStrip MenuContext;
         private ToolStripMenuItem viewToolStripMenuItem;
         private ToolStripMenuItem editToolStripMenuItem;
         private ToolStripMenuItem rescheduleToolStripMenuItem;
         private ToolStripMenuItem archiveToolStripMenuItem;
         private ToolStripMenuItem deleteToolStripMenuItem;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
+        private Guna.UI2.WinForms.Guna2TextBox guna2txtboxStatus;
         private Guna.UI2.WinForms.Guna2TextBox Location;
         private FlowLayoutPanel flowLayoutPanel1;
         private FlowLayoutPanel flowLayoutPanel2;
