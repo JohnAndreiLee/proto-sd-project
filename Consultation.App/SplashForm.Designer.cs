@@ -41,14 +41,14 @@
             gradientPanel1.Controls.Add(pictureBox1);
             gradientPanel1.Location = new Point(-2, 0);
             gradientPanel1.Name = "gradientPanel1";
-            gradientPanel1.Size = new Size(999, 543);
+            gradientPanel1.Size = new Size(722, 543);
             gradientPanel1.TabIndex = 0;
             // 
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = Properties.Icons.SampleSplash2_removebg_preview;
-            pictureBox1.Location = new Point(332, 70);
+            pictureBox1.Location = new Point(187, 62);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(354, 381);
             pictureBox1.TabIndex = 0;
@@ -58,7 +58,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(995, 542);
+            ClientSize = new Size(717, 542);
             Controls.Add(gradientPanel1);
             Name = "SplashForm";
             Text = "SplashForm";

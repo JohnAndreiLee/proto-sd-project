@@ -36,11 +36,9 @@
             ErrorPassLabel = new Label();
             resultlabel1 = new Label();
             ShowPassButton = new Button();
-            ForgotPasswordButton = new Button();
             label3 = new Label();
             GoogleSignInButton = new Button();
             SignInButton = new Button();
-            RememberMeCheckBox = new Syncfusion.Windows.Forms.Tools.CheckBoxAdv();
             label2 = new Label();
             PasswordTextBoxV2 = new Syncfusion.Windows.Forms.Tools.TextBoxExt();
             label1 = new Label();
@@ -50,7 +48,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)RememberMeCheckBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PasswordTextBoxV2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)SignInTextBox).BeginInit();
             SuspendLayout();
@@ -92,11 +89,9 @@
             panel1.Controls.Add(ErrorPassLabel);
             panel1.Controls.Add(resultlabel1);
             panel1.Controls.Add(ShowPassButton);
-            panel1.Controls.Add(ForgotPasswordButton);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(GoogleSignInButton);
             panel1.Controls.Add(SignInButton);
-            panel1.Controls.Add(RememberMeCheckBox);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(PasswordTextBoxV2);
             panel1.Controls.Add(label1);
@@ -110,7 +105,7 @@
             // 
             pictureBox1.BackColor = Color.ForestGreen;
             pictureBox1.Image = Properties.Icons.Gmail_Image_removebg_preview;
-            pictureBox1.Location = new Point(141, 418);
+            pictureBox1.Location = new Point(140, 391);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(59, 53);
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
@@ -144,24 +139,11 @@
             ShowPassButton.UseVisualStyleBackColor = true;
             ShowPassButton.Click += ShowPassButton_Click;
             // 
-            // ForgotPasswordButton
-            // 
-            ForgotPasswordButton.BackColor = Color.Transparent;
-            ForgotPasswordButton.FlatAppearance.BorderSize = 0;
-            ForgotPasswordButton.FlatStyle = FlatStyle.Flat;
-            ForgotPasswordButton.ForeColor = Color.Red;
-            ForgotPasswordButton.Location = new Point(329, 260);
-            ForgotPasswordButton.Name = "ForgotPasswordButton";
-            ForgotPasswordButton.Size = new Size(117, 23);
-            ForgotPasswordButton.TabIndex = 14;
-            ForgotPasswordButton.Text = "Forgot Password?";
-            ForgotPasswordButton.UseVisualStyleBackColor = false;
-            // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F);
-            label3.Location = new Point(95, 380);
+            label3.Location = new Point(94, 353);
             label3.Name = "label3";
             label3.Size = new Size(316, 21);
             label3.TabIndex = 7;
@@ -174,7 +156,7 @@
             GoogleSignInButton.Font = new Font("Microsoft Sans Serif", 12F);
             GoogleSignInButton.ForeColor = Color.White;
             GoogleSignInButton.ImageAlign = ContentAlignment.TopRight;
-            GoogleSignInButton.Location = new Point(141, 418);
+            GoogleSignInButton.Location = new Point(140, 391);
             GoogleSignInButton.Name = "GoogleSignInButton";
             GoogleSignInButton.Size = new Size(218, 53);
             GoogleSignInButton.TabIndex = 6;
@@ -187,22 +169,12 @@
             SignInButton.FlatStyle = FlatStyle.Popup;
             SignInButton.Font = new Font("Microsoft Sans Serif", 12F);
             SignInButton.ForeColor = Color.White;
-            SignInButton.Location = new Point(157, 314);
+            SignInButton.Location = new Point(156, 287);
             SignInButton.Name = "SignInButton";
             SignInButton.Size = new Size(183, 40);
             SignInButton.TabIndex = 5;
             SignInButton.Text = "Log In";
             SignInButton.UseVisualStyleBackColor = false;
-            SignInButton.Click += SignInButton_Click;
-            // 
-            // RememberMeCheckBox
-            // 
-            RememberMeCheckBox.AccessibilityEnabled = true;
-            RememberMeCheckBox.Location = new Point(26, 262);
-            RememberMeCheckBox.Name = "RememberMeCheckBox";
-            RememberMeCheckBox.Size = new Size(150, 21);
-            RememberMeCheckBox.TabIndex = 4;
-            RememberMeCheckBox.Text = "Remember Me?";
             // 
             // label2
             // 
@@ -268,7 +240,6 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)RememberMeCheckBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)PasswordTextBoxV2).EndInit();
             ((System.ComponentModel.ISupportInitialize)SignInTextBox).EndInit();
             ResumeLayout(false);
@@ -285,11 +256,9 @@
         private Button SignInButton;
         private Button GoogleSignInButton;
         private Label label3;
-        private Button ForgotPasswordButton;
         private Button ShowPassButton;
         private Label ErrorPassLabel;
         private Label resultlabel1;
-        private Syncfusion.Windows.Forms.Tools.CheckBoxAdv RememberMeCheckBox;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;

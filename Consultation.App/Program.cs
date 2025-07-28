@@ -1,4 +1,9 @@
+using Consultation.App.Presenter;
+using Consultation.App.Services;
+using Consultation.App.Services.IServices;
 using Consultation.App.Views;
+using Consultation.App.Views.IViews;
+using Consultation.Infrastructure.Data;
 using System.Threading; // Add this for Thread.Sleep (optional)
 
 namespace Consultation.App
@@ -11,6 +16,12 @@ namespace Consultation.App
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/...");
 
             ApplicationConfiguration.Initialize();
+            AppDbContext context = new AppDbContext();
+
+            ILogin login = new LogIn();
+            IAuthenticationServices authenticationServices = new AuthenticationServices(context);
+
+            new LoginViewPresenter(authenticationServices, login);
 
             SplashForm splash = new SplashForm();
             splash.Show();
@@ -22,10 +33,7 @@ namespace Consultation.App
 
             LogIn loginForm = new LogIn();
 
-            if (loginForm.ShowDialog() == DialogResult.OK)
-            {
-                Application.Run(new MainView());
-            }
+            Application.Run((Form)login);
         }
     }
 }
