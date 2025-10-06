@@ -20,8 +20,8 @@ namespace Consultation.App.ConsultationManagement
 
             for (int i = 0; i < 4; i++)
             {
-                var card = new ConsultationCard();
-                card.Data = new ConsultationData();
+                var consultationData = new ConsultationData();
+                var card = new ConsultationCard(consultationData);
                 card.ArchiveRequested += (s, e) => ArchiveCard(card);
                 activeCards.Add(card);
             }
@@ -66,16 +66,7 @@ namespace Consultation.App.ConsultationManagement
         }
 
 
-        private void OnCardArchived(object sender, ConsultationCard card)
-        {
-            WindowPanelConsultation.Controls.Remove(card);
-            archivedCards.Remove(card);
-            var consultationCard = new ConsultationCard();
-            consultationCard.Data = card.Data;
-            consultationCard.ArchiveRequested += (s, e) => ArchiveCard(consultationCard);
-            activeCards.Add(consultationCard);
-
-        }
+        // Method removed - was not being used and had incorrect logic
 
         private void ShowArchivedConsultations()
         {
@@ -118,6 +109,24 @@ namespace Consultation.App.ConsultationManagement
         private void materialCard1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        public void RestoreCard(ArchiveCard archiveCard)
+        {
+            // Remove from archived cards
+            WindowPanelConsultation.Controls.Remove(archiveCard);
+            archivedCards.Remove(archiveCard);
+            
+            // Create new active consultation card
+            var consultationCard = new ConsultationCard(archiveCard.Data);
+            consultationCard.ArchiveRequested += (s, e) => ArchiveCard(consultationCard);
+            activeCards.Add(consultationCard);
+            
+            // If currently showing active consultations, add to display
+            if (LabelHeader.Text == "Active Consultation")
+            {
+                WindowPanelConsultation.Controls.Add(consultationCard);
+            }
         }
     }
 }

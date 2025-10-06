@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace Consultation.App.Views
 {
-    public partial class MainView : Form, IMainView
+    public partial class MainView : Form, IMainView//
     {
         private readonly Button[] _navButtons;
 

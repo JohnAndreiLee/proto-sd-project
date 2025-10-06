@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication Testing - Consultation Management System API</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .auth-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            background-color: #fafafa;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button.secondary {
+            background-color: #6c757d;
+        }
+        button.success {
+            background-color: #28a745;
+        }
+        button.danger {
+            background-color: #dc3545;
+        }
+        .response-area {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .token-display {
+            background-color: #e7f3ff;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 10px 0;
+            word-break: break-all;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+        }
+        .tab.active {
+            border-bottom-color: #007bff;
+            color: #007bff;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .example-request {
+            background-color: #f1f3f4;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .copy-button {
+            background-color: #17a2b8;
+            font-size: 12px;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Authentication Testing Tool</h1>
+        <p>Test and explore the authentication features of the Consultation Management System API.</p>
+
+        <div class="tabs">
+            <div class="tab active" onclick="showTab('register')">Registration</div>
+            <div class="tab" onclick="showTab('login')">Login</div>
+            <div class="tab" onclick="showTab('testing')">API Testing</div>
+            <div class="tab" onclick="showTab('examples')">Examples</div>
+            <div class="tab" onclick="showTab('troubleshooting')">Troubleshooting</div>
+        </div>
+
+        <!-- Registration Tab -->
+        <div id="register" class="tab-content active">
+            <div class="auth-section">
+                <h2>User Registration</h2>
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="regEmail">Email:</label>
+                        <input type="email" id="regEmail" placeholder="user@university.edu" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regUMID">UMID:</label>
+                        <input type="text" id="regUMID" placeholder="2024001" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regPassword">Password:</label>
+                        <input type="password" id="regPassword" placeholder="SecurePassword123!" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regUserType">User Type:</label>
+                        <select id="regUserType" onchange="updateNameField()">
+                            <option value="0">Student</option>
+                            <option value="1">Faculty</option>
+                            <option value="2">Admin</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="regName">Name:</label>
+                        <input type="text" id="regName" placeholder="John Doe" required>
+                    </div>
+                    <button type="submit">Register User</button>
+                    <button type="button" class="secondary" onclick="fillSampleRegistration()">Fill Sample Data</button>
+                </form>
+                <div id="registerResponse" class="response-area" style="display: none;"></div>
+            </div>
+        </div>
+
+        <!-- Login Tab -->
+        <div id="login" class="tab-content">
+            <div class="auth-section">
+                <h2>User Login</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="loginEmail">Email:</label>
+                        <input type="email" id="loginEmail" placeholder="user@university.edu" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password:</label>
+                        <input type="password" id="loginPassword" placeholder="SecurePassword123!" required>
+                    </div>
+                    <button type="submit">Login</button>
+                    <button type="button" class="secondary" onclick="fillSampleLogin()">Fill Sample Data</button>
+                </form>
+                <div id="loginResponse" class="response-area" style="display: none;"></div>
+                <div id="tokenDisplay" class="token-display" style="display: none;">
+                    <h3>JWT Token:</h3>
+                    <div id="tokenValue"></div>
+                    <button class="copy-button" onclick="copyToken()">Copy Token</button>
+                    <button class="copy-button" onclick="copyBearerToken()">Copy Bearer Format</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- API Testing Tab -->
+        <div id="testing" class="tab-content">
+            <div class="auth-section">
+                <h2>Authenticated API Testing</h2>
+                <div class="form-group">
+                    <label for="authToken">Authorization Token:</label>
+                    <input type="text" id="authToken" placeholder="Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...">
+                    <button class="copy-button" onclick="useStoredToken()">Use Stored Token</button>
+                </div>
+                
+                <h3>Quick Tests</h3>
+                <button onclick="testDashboard()">Test Dashboard</button>
+                <button onclick="testConsultations()">Test Consultations</button>
+                <button onclick="testStudentCourses()">Test Student Courses</button>
+                <button class="danger" onclick="testUnauthorized()">Test Unauthorized</button>
+                
+                <h3>Custom Request</h3>
+                <div class="form-group">
+                    <label for="customMethod">Method:</label>
+                    <select id="customMethod">
+                        <option value="GET">GET</option>
+                        <option value="POST">POST</option>
+                        <option value="PUT">PUT</option>
+                        <option value="DELETE">DELETE</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="customUrl">URL:</label>
+                    <input type="text" id="customUrl" placeholder="/api/Dashboard/ShowForStudents/1">
+                </div>
+                <div class="form-group">
+                    <label for="customBody">Request Body (JSON):</label>
+                    <textarea id="customBody" rows="4" placeholder='{"key": "value"}'></textarea>
+                </div>
+                <button onclick="sendCustomRequest()">Send Request</button>
+                
+                <div id="testResponse" class="response-area" style="display: none;"></div>
+            </div>
+        </div>
+
+        <!-- Examples Tab -->
+        <div id="examples" class="tab-content">
+            <div class="auth-section">
+                <h2>Authentication Examples</h2>
+                
+                <h3>JWT Bearer Token Format</h3>
+                <div class="example-request">
+                    <strong>Header:</strong> Authorization<br>
+                    <strong>Value:</strong> Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...<br>
+                    <button class="copy-button" onclick="copyToClipboard('Bearer ')">Copy Format</button>
+                </div>
+
+                <h3>API Key Format</h3>
+                <div class="example-request">
+                    <strong>Header:</strong> X-API-Key<br>
+                    <strong>Value:</strong> your-api-key-here<br>
+                    <button class="copy-button" onclick="copyToClipboard('your-api-key-here')">Copy Example</button>
+                </div>
+
+                <h3>Sample Registration Requests</h3>
+                <div class="example-request">
+                    <strong>Student Registration:</strong>
+                    <pre>{
+  "userEmail": "student@university.edu",
+  "umid": "2024001",
+  "userPassword": "SecurePassword123!",
+  "studentName": "John Doe",
+  "userType": 0
+}</pre>
+                    <button class="copy-button" onclick="copyToClipboard(JSON.stringify({userEmail: 'student@university.edu', umid: '2024001', userPassword: 'SecurePassword123!', studentName: 'John Doe', userType: 0}, null, 2))">Copy JSON</button>
+                </div>
+
+                <h3>Sample Login Request</h3>
+                <div class="example-request">
+                    <pre>{
+  "userEmail": "student@university.edu",
+  "userPassword": "SecurePassword123!"
+}</pre>
+                    <button class="copy-button" onclick="copyToClipboard(JSON.stringify({userEmail: 'student@university.edu', userPassword: 'SecurePassword123!'}, null, 2))">Copy JSON</button>
+                </div>
+
+                <h3>cURL Examples</h3>
+                <div class="example-request">
+                    <strong>Login with cURL:</strong>
+                    <pre>curl -X POST "http://localhost:5000/api/Authentication/UserLogin" \
+  -H "Content-Type: application/json" \
+  -d '{"userEmail": "student@university.edu", "userPassword": "SecurePassword123!"}'</pre>
+                    <button class="copy-button" onclick="copyToClipboard('curl -X POST \"http://localhost:5000/api/Authentication/UserLogin\" -H \"Content-Type: application/json\" -d \'{\"userEmail\": \"student@university.edu\", \"userPassword\": \"SecurePassword123!\"}\'')">Copy cURL</button>
+                </div>
+
+                <div class="example-request">
+                    <strong>Authenticated Request with cURL:</strong>
+                    <pre>curl -X GET "http://localhost:5000/api/Dashboard/ShowForStudents/1" \
+  -H "Authorization: Bearer YOUR_JWT_TOKEN_HERE"</pre>
+                    <button class="copy-button" onclick="copyToClipboard('curl -X GET \"http://localhost:5000/api/Dashboard/ShowForStudents/1\" -H \"Authorization: Bearer YOUR_JWT_TOKEN_HERE\"')">Copy cURL</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Troubleshooting Tab -->
+        <div id="troubleshooting" class="tab-content">
+            <div class="auth-section">
+                <h2>Troubleshooting Guide</h2>
+                
+                <h3>Common Issues</h3>
+                
+                <h4>401 Unauthorized Errors</h4>
+                <ul>
+                    <li><strong>Missing Token:</strong> Ensure Authorization header is included</li>
+                    <li><strong>Wrong Format:</strong> Token must start with "Bearer "</li>
+                    <li><strong>Expired Token:</strong> Login again to get a fresh token</li>
+                    <li><strong>Invalid Token:</strong> Check token was copied correctly</li>
+                </ul>
+
+                <h4>403 Forbidden Errors</h4>
+                <ul>
+                    <li><strong>Wrong Role:</strong> Check if your user role has required permissions</li>
+                    <li><strong>Endpoint Restrictions:</strong> Some endpoints require specific roles</li>
+                    <li><strong>Token Claims:</strong> Verify token contains correct role information</li>
+                </ul>
+
+                <h4>Login Issues</h4>
+                <ul>
+                    <li><strong>Account Not Found:</strong> Register the account first</li>
+                    <li><strong>Wrong Password:</strong> Check password requirements and spelling</li>
+                    <li><strong>Email Format:</strong> Ensure email is in correct format</li>
+                </ul>
+
+                <h3>Token Validation</h3>
+                <div class="form-group">
+                    <label for="validateToken">Token to Validate:</label>
+                    <input type="text" id="validateToken" placeholder="Paste JWT token here">
+                </div>
+                <button onclick="validateJWTToken()">Validate Token</button>
+                <div id="tokenValidation" class="response-area" style="display: none;"></div>
+
+                <h3>Test Connectivity</h3>
+                <button onclick="testConnection()">Test API Connection</button>
+                <div id="connectionTest" class="response-area" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let storedToken = '';
+
+        // Tab functionality
+        function showTab(tabName) {
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            
+            event.target.classList.add('active');
+            document.getElementById(tabName).classList.add('active');
+        }
+
+        // Registration form
+        document.getElementById('registerForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = {
+                userEmail: document.getElementById('regEmail').value,
+                umid: document.getElementById('regUMID').value,
+                userPassword: document.getElementById('regPassword').value,
+                userType: parseInt(document.getElementById('regUserType').value)
+            };
+
+            const userType = parseInt(document.getElementById('regUserType').value);
+            const name = document.getElementById('regName').value;
+            
+            if (userType === 0) formData.studentName = name;
+            else if (userType === 1) formData.facultyName = name;
+            else if (userType === 2) formData.adminName = name;
+
+            try {
+                const response = await fetch('/api/Authentication/UserRegister', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.text();
+                document.getElementById('registerResponse').style.display = 'block';
+                document.getElementById('registerResponse').textContent = `Status: ${response.status}\n\n${result}`;
+                
+                if (response.ok) {
+                    document.getElementById('registerResponse').className = 'response-area success';
+                } else {
+                    document.getElementById('registerResponse').className = 'response-area error';
+                }
+            } catch (error) {
+                document.getElementById('registerResponse').style.display = 'block';
+                document.getElementById('registerResponse').textContent = `Error: ${error.message}`;
+                document.getElementById('registerResponse').className = 'response-area error';
+            }
+        });
+
+        // Login form
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = {
+                userEmail: document.getElementById('loginEmail').value,
+                userPassword: document.getElementById('loginPassword').value
+            };
+
+            try {
+                const response = await fetch('/api/Authentication/UserLogin', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.text();
+                document.getElementById('loginResponse').style.display = 'block';
+                document.getElementById('loginResponse').textContent = `Status: ${response.status}\n\n${result}`;
+                
+                if (response.ok) {
+                    document.getElementById('loginResponse').className = 'response-area success';
+                    
+                    // Try to extract token from response
+                    try {
+                        const jsonResult = JSON.parse(result);
+                        if (jsonResult.token) {
+                            storedToken = jsonResult.token;
+                            document.getElementById('tokenDisplay').style.display = 'block';
+                            document.getElementById('tokenValue').textContent = jsonResult.token;
+                            document.getElementById('authToken').value = `Bearer ${jsonResult.token}`;
+                        }
+                    } catch (e) {
+                        // Response might not be JSON or might not contain token
+                    }
+                } else {
+                    document.getElementById('loginResponse').className = 'response-area error';
+                }
+            } catch (error) {
+                document.getElementById('loginResponse').style.display = 'block';
+                document.getElementById('loginResponse').textContent = `Error: ${error.message}`;
+                document.getElementById('loginResponse').className = 'response-area error';
+            }
+        });
+
+        // Helper functions
+        function updateNameField() {
+            const userType = document.getElementById('regUserType').value;
+            const nameField = document.getElementById('regName');
+            
+            if (userType === '0') {
+                nameField.placeholder = 'John Doe';
+            } else if (userType === '1') {
+                nameField.placeholder = 'Dr. Jane Smith';
+            } else if (userType === '2') {
+                nameField.placeholder = 'System Administrator';
+            }
+        }
+
+        function fillSampleRegistration() {
+            document.getElementById('regEmail').value = 'test.student@university.edu';
+            document.getElementById('regUMID').value = 'TEST2024001';
+            document.getElementById('regPassword').value = 'TestPassword123!';
+            document.getElementById('regUserType').value = '0';
+            document.getElementById('regName').value = 'Test Student';
+        }
+
+        function fillSampleLogin() {
+            document.getElementById('loginEmail').value = 'test.student@university.edu';
+            document.getElementById('loginPassword').value = 'TestPassword123!';
+        }
+
+        function copyToken() {
+            navigator.clipboard.writeText(storedToken);
+            alert('Token copied to clipboard!');
+        }
+
+        function copyBearerToken() {
+            navigator.clipboard.writeText(`Bearer ${storedToken}`);
+            alert('Bearer token copied to clipboard!');
+        }
+
+        function useStoredToken() {
+            if (storedToken) {
+                document.getElementById('authToken').value = `Bearer ${storedToken}`;
+            } else {
+                alert('No stored token. Please login first.');
+            }
+        }
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text);
+            alert('Copied to clipboard!');
+        }
+
+        // API Testing functions
+        async function testDashboard() {
+            await sendAuthenticatedRequest('GET', '/api/Dashboard/ShowForStudents/1');
+        }
+
+        async function testConsultations() {
+            await sendAuthenticatedRequest('GET', '/api/Consultation/ShowConsultation/1');
+        }
+
+        async function testStudentCourses() {
+            await sendAuthenticatedRequest('GET', '/api/Consultation/GetStudentCourses/1');
+        }
+
+        async function testUnauthorized() {
+            await sendRequest('GET', '/api/Dashboard/ShowForStudents/1', null, {});
+        }
+
+        async function sendCustomRequest() {
+            const method = document.getElementById('customMethod').value;
+            const url = document.getElementById('customUrl').value;
+            const body = document.getElementById('customBody').value;
+            
+            let parsedBody = null;
+            if (body.trim()) {
+                try {
+                    parsedBody = JSON.parse(body);
+                } catch (e) {
+                    alert('Invalid JSON in request body');
+                    return;
+                }
+            }
+
+            await sendAuthenticatedRequest(method, url, parsedBody);
+        }
+
+        async function sendAuthenticatedRequest(method, url, body = null) {
+            const token = document.getElementById('authToken').value;
+            const headers = { 'Content-Type': 'application/json' };
+            
+            if (token) {
+                headers['Authorization'] = token;
+            }
+
+            await sendRequest(method, url, body, headers);
+        }
+
+        async function sendRequest(method, url, body, headers) {
+            try {
+                const options = { method, headers };
+                if (body && (method === 'POST' || method === 'PUT')) {
+                    options.body = JSON.stringify(body);
+                }
+
+                const response = await fetch(url, options);
+                const result = await response.text();
+                
+                document.getElementById('testResponse').style.display = 'block';
+                document.getElementById('testResponse').textContent = `Status: ${response.status} ${response.statusText}\n\nHeaders:\n${JSON.stringify(Object.fromEntries(response.headers), null, 2)}\n\nResponse:\n${result}`;
+                
+                if (response.ok) {
+                    document.getElementById('testResponse').className = 'response-area success';
+                } else {
+                    document.getElementById('testResponse').className = 'response-area error';
+                }
+            } catch (error) {
+                document.getElementById('testResponse').style.display = 'block';
+                document.getElementById('testResponse').textContent = `Error: ${error.message}`;
+                document.getElementById('testResponse').className = 'response-area error';
+            }
+        }
+
+        // Troubleshooting functions
+        function validateJWTToken() {
+            const token = document.getElementById('validateToken').value.trim();
+            
+            if (!token) {
+                alert('Please enter a token to validate');
+                return;
+            }
+
+            try {
+                let jwtToken = token;
+                if (token.startsWith('Bearer ')) {
+                    jwtToken = token.substring(7);
+                }
+
+                const parts = jwtToken.split('.');
+                if (parts.length !== 3) {
+                    throw new Error('Invalid JWT format - should have 3 parts separated by dots');
+                }
+
+                const header = JSON.parse(atob(parts[0]));
+                const payload = JSON.parse(atob(parts[1]));
+                
+                const now = Math.floor(Date.now() / 1000);
+                const isExpired = payload.exp && payload.exp < now;
+                
+                const validation = {
+                    valid: true,
+                    header: header,
+                    payload: payload,
+                    isExpired: isExpired,
+                    expiresAt: payload.exp ? new Date(payload.exp * 1000).toISOString() : 'No expiration',
+                    timeLeft: payload.exp ? Math.max(0, payload.exp - now) : 'No expiration'
+                };
+
+                document.getElementById('tokenValidation').style.display = 'block';
+                document.getElementById('tokenValidation').textContent = JSON.stringify(validation, null, 2);
+                document.getElementById('tokenValidation').className = isExpired ? 'response-area error' : 'response-area success';
+                
+            } catch (error) {
+                document.getElementById('tokenValidation').style.display = 'block';
+                document.getElementById('tokenValidation').textContent = `Token validation failed: ${error.message}`;
+                document.getElementById('tokenValidation').className = 'response-area error';
+            }
+        }
+
+        async function testConnection() {
+            try {
+                const response = await fetch('/swagger/v1/swagger.json');
+                const result = response.ok ? 'API is accessible' : `API returned status ${response.status}`;
+                
+                document.getElementById('connectionTest').style.display = 'block';
+                document.getElementById('connectionTest').textContent = `Connection test: ${result}`;
+                document.getElementById('connectionTest').className = response.ok ? 'response-area success' : 'response-area error';
+            } catch (error) {
+                document.getElementById('connectionTest').style.display = 'block';
+                document.getElementById('connectionTest').textContent = `Connection failed: ${error.message}`;
+                document.getElementById('connectionTest').className = 'response-area error';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -21,14 +21,53 @@ namespace Consultation.App.Views
 
             EmailTextBox.TextChanged += SignInTextBox_TextChanged;
             PasswordTextBox.TextChanged += PasswordTextBoxV2_TextChanged;
-            buttonLogIn.Click += (s, e) => LogInEvent?.Invoke(s, e);
+            buttonLogIn.Click += ButtonLogIn_Click;
+        }
+
+        private void ButtonLogIn_Click(object sender, EventArgs e)
+        {
+            // Clear previous error messages
+            resultlabel1.Text = "";
+            ErrorPassLabel.Text = "";
+
+            // Basic validation
+            if (string.IsNullOrWhiteSpace(EmailTextBox.Text))
+            {
+                resultlabel1.Text = "Please enter your email";
+                resultlabel1.ForeColor = Color.Red;
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(PasswordTextBox.Text))
+            {
+                ErrorPassLabel.Text = "Please enter your password";
+                ErrorPassLabel.ForeColor = Color.Red;
+                return;
+            }
+
+            if (!EmailIsValid(EmailTextBox.Text))
+            {
+                resultlabel1.Text = "Please enter a valid email address";
+                resultlabel1.ForeColor = Color.Red;
+                return;
+            }
+
+            // Trigger the login event
+            LogInEvent?.Invoke(this, EventArgs.Empty);
         }
 
 
         private void ShowPassButton_Click(object sender, EventArgs e)
         {
             PasswordVisible = !PasswordVisible;
-            PasswordTextBox.UseSystemPasswordChar = !PasswordVisible;
+            if (PasswordVisible)
+            {
+                PasswordTextBox.PasswordChar = '\0'; // Show password
+            }
+            else
+            {
+                PasswordTextBox.PasswordChar = '●'; // Hide password
+            }
         }
 
         public void ShowMessage(string message)

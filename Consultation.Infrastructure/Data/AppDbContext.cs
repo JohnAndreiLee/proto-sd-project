@@ -25,22 +25,26 @@ namespace Consultation.Infrastructure.Data
               
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //Connection to Local SQL Server Database
-            optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;" +
-                "Initial Catalog=ConsultationDatabase;" +
-                "Integrated Security=True;Connect Timeout=30;" +
-                "Encrypt=False;Trust Server Certificate=False;" +
-                "Application Intent=ReadWrite;Multi Subnet Failover=False");
+            // Only configure if options haven't been set (e.g., in tests)
+            if (!optionsBuilder.IsConfigured)
+            {
+                //Connection to Local SQL Server Database
+                optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;" +
+                    "Initial Catalog=ConsultationDatabase;" +
+                    "Integrated Security=True;Connect Timeout=30;" +
+                    "Encrypt=False;Trust Server Certificate=False;" +
+                    "Application Intent=ReadWrite;Multi Subnet Failover=False");
 
-            //Connection string for Azure SQL Database
-            //optionsBuilder.UseSqlServer("Server=tcp:consultationserver.database.windows.net,1433;" +
-            //    "Initial Catalog=ConsultationDatabaseTesting2;Persist Security Info=False;" +
-            //    "User ID=ConsultationDB;Password=ServerAdmin123;" +
-            //    "MultipleActiveResultSets=False;" +
-            //    "Encrypt=True;" +
-            //    "TrustServerCertificate=False;Connection Timeout=30;");
+                //Connection string for Azure SQL Database
+                //optionsBuilder.UseSqlServer("Server=tcp:consultationserver.database.windows.net,1433;" +
+                //    "Initial Catalog=ConsultationDatabaseTesting2;Persist Security Info=False;" +
+                //    "User ID=ConsultationDB;Password=ServerAdmin123;" +
+                //    "MultipleActiveResultSets=False;" +
+                //    "Encrypt=True;" +
+                //    "TrustServerCertificate=False;Connection Timeout=30;");
+            }
 
-           optionsBuilder.ConfigureWarnings(w => w.Ignore(RelationalEventId.PendingModelChangesWarning));
+           // Configure warnings - removed deprecated PendingModelChangesWarning
         }
         protected override void OnModelCreating(ModelBuilder builder)
         {

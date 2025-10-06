@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using Consultation.App.ConsultationManagement;
+using Consultation.App.Views;
 
 namespace Consultation.App.Views.Controls.ConsultationManagement
 {
@@ -48,7 +49,14 @@ namespace Consultation.App.Views.Controls.ConsultationManagement
 
         private void restoreToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            ((ConsultationView)this.FindForm()).RestoreCard(this);
+            // Find the parent ConsultationView control
+            Control parent = this.Parent;
+            while (parent != null && !(parent is Consultation.App.ConsultationManagement.ConsultationView))
+            {
+                parent = parent.Parent;
+            }
+            var form = parent as Consultation.App.ConsultationManagement.ConsultationView;
+            form?.RestoreCard(this);
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)

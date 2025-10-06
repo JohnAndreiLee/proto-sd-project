@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Consultation.App.Views.Controls.ConsultationManagement;
+using Consultation.App.Views;
 using Syncfusion.Windows.Forms.Tools;
 
 
@@ -26,7 +27,7 @@ namespace Consultation.App.ConsultationManagement
         public string CourseCode => courseCodeLabel.Text;
         public string Faculty => faculty.Text;
         public string LocationText => Location.Text;
-        public string IDNumber => idnumber.Text;
+        public string IDNumber => Idnumber.Text;
         public string Notes => Noteslabel.Text;
 
         public ConsultationCard(ConsultationData _data)
@@ -50,11 +51,11 @@ namespace Consultation.App.ConsultationManagement
                 courseCodeLabel.Text = data.CourseCode;
                 Noteslabel.Text = data.Notes;
                 Date.Text = data.Date;
-                Timetxtbox.Text = data.Time;
-                Facultytxtbox.Text = data.Faculty;
-                idnumber.Text = data.IDNumber;
+                Time.Text = data.Time;
+                faculty.Text = data.Faculty;
+                Idnumber.Text = data.IDNumber;
                 Location.Text = data.Location;
-                guna2txtboxStatus.Text = data.status;
+                // guna2txtboxStatus.Text = data.Status; // Comment out if this control doesn't exist
                 //courseCodeLabel.Location = new Point(StudentName.Right + 10, courseCodeLabel.Location.Y);
 
                 //DateTime parsedDate;
@@ -76,7 +77,14 @@ namespace Consultation.App.ConsultationManagement
 
         private void archiveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ((ConsultationView)this.FindForm()).ArchiveCard(this);
+            // Find the parent ConsultationView control
+            Control parent = this.Parent;
+            while (parent != null && !(parent is Consultation.App.ConsultationManagement.ConsultationView))
+            {
+                parent = parent.Parent;
+            }
+            var form = parent as Consultation.App.ConsultationManagement.ConsultationView;
+            form?.ArchiveCard(this);
         }
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)

@@ -1,0 +1,372 @@
+{
+  "authenticationExamples": {
+    "registration": {
+      "description": "Register a new user account",
+      "endpoint": "POST /api/Authentication/UserRegister",
+      "examples": {
+        "student": {
+          "description": "Register a new student account",
+          "request": {
+            "userEmail": "john.doe@university.edu",
+            "umid": "2024001",
+            "userPassword": "SecurePassword123!",
+            "studentName": "John Doe",
+            "userType": 0
+          },
+          "response": {
+            "success": {
+              "message": "Student registration successful",
+              "userId": "user_12345"
+            },
+            "error": {
+              "message": "Registration failed",
+              "error": "User registration validation failed",
+              "trackingId": "REG-2024-12-15-001",
+              "validationErrors": {
+                "UserEmail": ["Email address is already in use"]
+              }
+            }
+          }
+        },
+        "faculty": {
+          "description": "Register a new faculty account",
+          "request": {
+            "userEmail": "dr.smith@university.edu",
+            "umid": "FAC2024001",
+            "userPassword": "FacultyPassword123!",
+            "facultyName": "Dr. Jane Smith",
+            "userType": 1
+          },
+          "response": {
+            "success": {
+              "message": "Faculty registration successful",
+              "userId": "user_12346"
+            }
+          }
+        },
+        "admin": {
+          "description": "Register a new admin account",
+          "request": {
+            "userEmail": "admin@university.edu",
+            "umid": "ADM2024001",
+            "userPassword": "AdminPassword123!",
+            "adminName": "System Administrator",
+            "userType": 2
+          },
+          "response": {
+            "success": {
+              "message": "Admin registration successful",
+              "userId": "user_12347"
+            }
+          }
+        }
+      }
+    },
+    "login": {
+      "description": "Authenticate user and obtain access token",
+      "endpoint": "POST /api/Authentication/UserLogin",
+      "examples": {
+        "successful": {
+          "description": "Successful login with valid credentials",
+          "request": {
+            "userEmail": "john.doe@university.edu",
+            "userPassword": "SecurePassword123!"
+          },
+          "response": {
+            "message": "Login successful",
+            "username": "john.doe@university.edu",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huLmRvZUB1bml2ZXJzaXR5LmVkdSIsImp0aSI6IjEyMzQ1Njc4LTkwYWItY2RlZi0xMjM0LTU2Nzg5MGFiY2RlZiIsInJvbGUiOiJTdHVkZW50IiwiaWF0IjoxNjM5NTc2ODAwLCJleHAiOjE2Mzk2NjMyMDB9.signature",
+            "expiresAt": "2024-12-15T18:30:00Z",
+            "userType": "Student",
+            "roles": ["Student"]
+          }
+        },
+        "failed": {
+          "description": "Failed login with invalid credentials",
+          "request": {
+            "userEmail": "john.doe@university.edu",
+            "userPassword": "WrongPassword"
+          },
+          "response": {
+            "message": "Authentication failed",
+            "error": "Invalid username or password",
+            "trackingId": "AUTH-2024-12-15-001"
+          }
+        }
+      }
+    },
+    "tokenUsage": {
+      "description": "Using JWT tokens for authenticated requests",
+      "examples": {
+        "bearerToken": {
+          "description": "Using Bearer token in Authorization header",
+          "headers": {
+            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+            "Content-Type": "application/json"
+          },
+          "requests": {
+            "getDashboard": {
+              "method": "GET",
+              "url": "/api/Dashboard/ShowForStudents/1",
+              "description": "Get student dashboard with authentication"
+            },
+            "createConsultation": {
+              "method": "POST",
+              "url": "/api/Consultation/RequestConsultation",
+              "description": "Create consultation request with authentication",
+              "body": {
+                "studentName": "John Doe",
+                "facultyName": "Dr. Jane Smith",
+                "courseCode": "CS101",
+                "concern": "Need help with assignment",
+                "dateOfConsultation": "2024-12-20T14:30:00Z"
+              }
+            }
+          }
+        },
+        "apiKey": {
+          "description": "Using API key for server-to-server authentication",
+          "headers": {
+            "X-API-Key": "your-api-key-here",
+            "Content-Type": "application/json"
+          },
+          "requests": {
+            "getConsultations": {
+              "method": "GET",
+              "url": "/api/Consultation/ShowConsultation/1",
+              "description": "Get consultations using API key"
+            }
+          }
+        }
+      }
+    },
+    "errorScenarios": {
+      "description": "Common authentication error scenarios and responses",
+      "examples": {
+        "missingToken": {
+          "description": "Request without authentication token",
+          "request": {
+            "method": "GET",
+            "url": "/api/Dashboard/ShowForStudents/1",
+            "headers": {}
+          },
+          "response": {
+            "status": 401,
+            "body": {
+              "message": "Authentication required",
+              "error": "Valid JWT token must be provided",
+              "timestamp": "2024-12-15T14:30:00Z",
+              "trackingId": "AUTH-2024-12-15-001"
+            }
+          }
+        },
+        "expiredToken": {
+          "description": "Request with expired JWT token",
+          "request": {
+            "method": "GET",
+            "url": "/api/Dashboard/ShowForStudents/1",
+            "headers": {
+              "Authorization": "Bearer expired.jwt.token"
+            }
+          },
+          "response": {
+            "status": 401,
+            "body": {
+              "message": "Token expired",
+              "error": "JWT token has expired and must be renewed",
+              "timestamp": "2024-12-15T14:30:00Z",
+              "trackingId": "TOKEN-2024-12-15-001"
+            }
+          }
+        },
+        "invalidToken": {
+          "description": "Request with malformed JWT token",
+          "request": {
+            "method": "GET",
+            "url": "/api/Dashboard/ShowForStudents/1",
+            "headers": {
+              "Authorization": "Bearer invalid-token-format"
+            }
+          },
+          "response": {
+            "status": 401,
+            "body": {
+              "message": "Invalid token",
+              "error": "JWT token is malformed or invalid",
+              "timestamp": "2024-12-15T14:30:00Z",
+              "trackingId": "TOKEN-2024-12-15-002"
+            }
+          }
+        },
+        "insufficientPermissions": {
+          "description": "Request with valid token but insufficient permissions",
+          "request": {
+            "method": "GET",
+            "url": "/api/Admin/SystemSettings",
+            "headers": {
+              "Authorization": "Bearer valid.student.token"
+            }
+          },
+          "response": {
+            "status": 403,
+            "body": {
+              "message": "Access denied",
+              "error": "Admin role required",
+              "timestamp": "2024-12-15T14:30:00Z",
+              "trackingId": "PERM-2024-12-15-001"
+            }
+          }
+        }
+      }
+    },
+    "testingScenarios": {
+      "description": "Testing scenarios for different authentication methods",
+      "examples": {
+        "studentWorkflow": {
+          "description": "Complete student authentication and usage workflow",
+          "steps": [
+            {
+              "step": 1,
+              "description": "Register student account",
+              "method": "POST",
+              "url": "/api/Authentication/UserRegister",
+              "body": {
+                "userEmail": "test.student@university.edu",
+                "umid": "TEST2024001",
+                "userPassword": "TestPassword123!",
+                "studentName": "Test Student",
+                "userType": 0
+              }
+            },
+            {
+              "step": 2,
+              "description": "Login to get JWT token",
+              "method": "POST",
+              "url": "/api/Authentication/UserLogin",
+              "body": {
+                "userEmail": "test.student@university.edu",
+                "userPassword": "TestPassword123!"
+              }
+            },
+            {
+              "step": 3,
+              "description": "Access student dashboard",
+              "method": "GET",
+              "url": "/api/Dashboard/ShowForStudents/1",
+              "headers": {
+                "Authorization": "Bearer {token_from_step_2}"
+              }
+            },
+            {
+              "step": 4,
+              "description": "Create consultation request",
+              "method": "POST",
+              "url": "/api/Consultation/RequestConsultation",
+              "headers": {
+                "Authorization": "Bearer {token_from_step_2}",
+                "Content-Type": "application/json"
+              },
+              "body": {
+                "studentName": "Test Student",
+                "facultyName": "Dr. Test Faculty",
+                "courseCode": "TEST101",
+                "concern": "Test consultation request",
+                "dateOfConsultation": "2024-12-20T14:30:00Z"
+              }
+            }
+          ]
+        },
+        "facultyWorkflow": {
+          "description": "Complete faculty authentication and usage workflow",
+          "steps": [
+            {
+              "step": 1,
+              "description": "Register faculty account",
+              "method": "POST",
+              "url": "/api/Authentication/UserRegister",
+              "body": {
+                "userEmail": "test.faculty@university.edu",
+                "umid": "TESTFAC2024001",
+                "userPassword": "TestFacultyPassword123!",
+                "facultyName": "Dr. Test Faculty",
+                "userType": 1
+              }
+            },
+            {
+              "step": 2,
+              "description": "Login to get JWT token",
+              "method": "POST",
+              "url": "/api/Authentication/UserLogin",
+              "body": {
+                "userEmail": "test.faculty@university.edu",
+                "userPassword": "TestFacultyPassword123!"
+              }
+            },
+            {
+              "step": 3,
+              "description": "View consultation requests",
+              "method": "GET",
+              "url": "/api/Consultation/ShowConsultation/1",
+              "headers": {
+                "Authorization": "Bearer {token_from_step_2}"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "troubleshooting": {
+      "description": "Common authentication issues and solutions",
+      "scenarios": {
+        "tokenNotWorking": {
+          "problem": "JWT token is not working",
+          "possibleCauses": [
+            "Token has expired",
+            "Token format is incorrect",
+            "Missing 'Bearer ' prefix",
+            "Token was not properly copied"
+          ],
+          "solutions": [
+            "Check token expiration time",
+            "Ensure token starts with 'Bearer '",
+            "Login again to get a fresh token",
+            "Verify token was copied completely"
+          ],
+          "testCommands": [
+            "Check token format: should be 'Bearer eyJ...'",
+            "Decode token payload to check expiration",
+            "Try login endpoint to get new token"
+          ]
+        },
+        "permissionDenied": {
+          "problem": "Getting 403 Forbidden errors",
+          "possibleCauses": [
+            "User role doesn't have required permissions",
+            "Token is valid but for wrong user type",
+            "Endpoint requires specific role"
+          ],
+          "solutions": [
+            "Check user role in token payload",
+            "Verify endpoint permission requirements",
+            "Use account with appropriate role"
+          ]
+        },
+        "loginFailing": {
+          "problem": "Cannot login with correct credentials",
+          "possibleCauses": [
+            "Account not registered",
+            "Password incorrect",
+            "Email format wrong",
+            "Account locked or disabled"
+          ],
+          "solutions": [
+            "Verify account exists by trying registration",
+            "Check password requirements",
+            "Ensure email format is correct",
+            "Contact administrator if account is locked"
+          ]
+        }
+      }
+    }
+  }
+}

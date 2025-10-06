@@ -2,12 +2,15 @@ using Consultation.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Consultation.Domain;
 using Microsoft.AspNetCore.Identity;
+using FlutterAPI.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Database configuration
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-// Add services to the container.
 
+// Identity configuration
 builder.Services.AddIdentity<Users, IdentityRole>(opts => {
     opts.Password.RequireDigit = true;
     opts.Password.RequiredLength = 10;
@@ -16,29 +19,32 @@ builder.Services.AddIdentity<Users, IdentityRole>(opts => {
 .AddEntityFrameworkStores<AppDbContext>()
 .AddDefaultTokenProviders();
 
+// Password hasher service
+builder.Services.AddScoped<IPasswordHasher<Users>, PasswordHasher<Users>>();
 
-
-//Builder para sa hasher
-builder.Services
-    .AddScoped<IPasswordHasher<Users>, PasswordHasher<Users>>();
-
+// Controller services
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+// API Explorer for Swagger
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
+// Enhanced Swagger configuration
+builder.Services.ConfigureSwagger(builder.Configuration);
 
 var app = builder.Build();
 
-
+// Development environment configuration
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
-    app.UseSwagger();
-    app.UseSwaggerUI();
 }
+
+// Enhanced Swagger UI configuration
+app.ConfigureSwaggerUI(builder.Configuration);
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

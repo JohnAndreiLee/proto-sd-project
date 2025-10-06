@@ -26,35 +26,62 @@ namespace Consultation.BackEndCRUD.Service.ConsultationServices
         // Getting all of the Consultion Request
         public async Task<IEnumerable<EditConsultationViewModel>> getAllConsultations()
         {
-           var results = await _editRepo.GetConsultationRequestsAsync();
+            try
+            {
+                var results = await _editRepo.GetConsultationRequestsAsync();
+
+                if (results == null)
+                    return new List<EditConsultationViewModel>();
 
                 return results.Select(c => new EditConsultationViewModel
                 {
-                    studentName = c.Student.StudentName,
-                    courseCode = c.SubjectCode,
-                    studentUMID = c.Student.StudentUMID,
-                    concernDescription = c.Concern,
+                    studentName = c.Student?.StudentName ?? "Unknown Student",
+                    courseCode = c.SubjectCode ?? "N/A",
+                    studentUMID = c.Student?.StudentUMID ?? "N/A",
+                    concernDescription = c.Concern ?? "No concern provided",
                     dateSchedule = c.DateSchedule,
                     startedTime = c.StartedTime,
                     Status = c.Status
                 }).ToList();
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (in a real app, use proper logging)
+                System.Diagnostics.Debug.WriteLine($"Error getting all consultations: {ex.Message}");
+                return new List<EditConsultationViewModel>();
+            }
         }
 
         // Getting only One specific Consultation Request
-        public async Task<EditConsultationViewModel> getEditConsultation(int studentID)
+        public async Task<EditConsultationViewModel?> getEditConsultation(int studentID)
         {
-            var editConsultation = await _editRepo.GetConsultationRequests(studentID);
-
-            return new EditConsultationViewModel
+            try
             {
-                studentName = editConsultation.Student.StudentName,
-                courseCode = editConsultation.SubjectCode,
-                studentUMID = editConsultation.Student.StudentUMID,
-                concernDescription = editConsultation.Concern,
-                dateSchedule = editConsultation.DateSchedule,
-                startedTime = editConsultation.StartedTime,
-                Status = editConsultation.Status
-            };
+                if (studentID <= 0)
+                    return null;
+
+                var editConsultation = await _editRepo.GetConsultationRequests(studentID);
+
+                if (editConsultation == null)
+                    return null;
+
+                return new EditConsultationViewModel
+                {
+                    studentName = editConsultation.Student?.StudentName ?? "Unknown Student",
+                    courseCode = editConsultation.SubjectCode ?? "N/A",
+                    studentUMID = editConsultation.Student?.StudentUMID ?? "N/A",
+                    concernDescription = editConsultation.Concern ?? "No concern provided",
+                    dateSchedule = editConsultation.DateSchedule,
+                    startedTime = editConsultation.StartedTime,
+                    Status = editConsultation.Status
+                };
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (in a real app, use proper logging)
+                System.Diagnostics.Debug.WriteLine($"Error getting consultation for student {studentID}: {ex.Message}");
+                return null;
+            }
         }
     }
 }

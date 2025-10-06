@@ -1,5 +1,4 @@
 ﻿using Consultation.Domain;
-using Microsoft.AspNet.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using System;
