@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Consultation.App.Views.IViews;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Versioning;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -11,7 +13,7 @@ using System.Windows.Forms;
 
 namespace Consultation.App.Views
 {
-    public partial class LogIn : Form
+    public partial class LogIn : Form, ILogin
     {
         public LogIn()
         {
@@ -19,6 +21,8 @@ namespace Consultation.App.Views
 
             SignInTextBox.TextChanged += SignInTextBox_TextChanged;
             PasswordTextBoxV2.TextChanged += PasswordTextBoxV2_TextChanged;
+
+            SignInButton.Click += (s, e) => LogInEvent?.Invoke(s, e);
         }
 
         private void LogIn_Load(object sender, EventArgs e)
@@ -37,7 +41,16 @@ namespace Consultation.App.Views
         }
 
         private bool PasswordVisible = false;
+
+        //Fake Password
         private const string LePassword = "admin";
+        //==============
+
+        public event EventHandler LogInEvent;
+
+        public string email => SignInTextBox.Text;
+        public string password => PasswordTextBoxV2.Text;
+
         private bool EmailIsValid(string email)
 
         {
@@ -46,7 +59,9 @@ namespace Consultation.App.Views
             RegexOptions.IgnoreCase);
         }
 
-        private void SignInButton_Click(object sender, EventArgs e)
+        //Password checker V1 logic
+
+        /*private void SignInButton_Click(object sender, EventArgs e)
         {
             string email = SignInTextBox.Text.Trim();
             string password = PasswordTextBoxV2.Text.Trim();
@@ -55,7 +70,7 @@ namespace Consultation.App.Views
 
             resultlabel1.Text = "";
             ErrorPassLabel.Text = "";
-
+          
             if (string.IsNullOrWhiteSpace(email))
             {
                 resultlabel1.Text = "Please enter your Email";
@@ -97,12 +112,17 @@ namespace Consultation.App.Views
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
-        }
+        }*/
 
         private void ShowPassButton_Click(object sender, EventArgs e)
         {
             PasswordVisible = !PasswordVisible;
             PasswordTextBoxV2.UseSystemPasswordChar = !PasswordVisible;
+        }
+
+        public void AuthenticationMessage(string message)
+        {
+            MessageBox.Show($"{message}");
         }
     }
 }
